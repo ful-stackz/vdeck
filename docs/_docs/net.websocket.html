@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>net.websocket | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li class="active"><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_net.websocket" class="doc-node">
+							<div class="title"><h1> net.websocket <a href="#readme_net.websocket">#</a></h1></div>
+
+</section>
+
+						<section id="new_client" class="doc-node">
+							<div class="title"><h2>fn new_client <a href="#new_client">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_client</span><span class="token punctuation">(</span>address <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token operator">&</span>Client</code></pre>
+<p>new_client instance a new websocket client</p>
+
+</section>
+						<section id="new_server" class="doc-node">
+							<div class="title"><h2>fn new_server <a href="#new_server">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_server</span><span class="token punctuation">(</span>family net<span class="token punctuation">.</span>AddrFamily<span class="token punctuation">,</span> port <span class="token builtin">int</span><span class="token punctuation">,</span> route <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">&</span>Server</code></pre>
+<p>new_server instance a new websocket server on provided port and route</p>
+
+</section>
+						<section id="SocketOpenFn" class="doc-node">
+							<div class="title"><h2>type SocketOpenFn <a href="#SocketOpenFn">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> SocketOpenFn <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Client<span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="SocketOpenFn2" class="doc-node">
+							<div class="title"><h2>type SocketOpenFn2 <a href="#SocketOpenFn2">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> SocketOpenFn2 <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Client<span class="token punctuation">,</span> v <span class="token builtin">voidptr</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="AcceptClientFn" class="doc-node">
+							<div class="title"><h2>type AcceptClientFn <a href="#AcceptClientFn">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> AcceptClientFn <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c ServerClient<span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="SocketMessageFn2" class="doc-node">
+							<div class="title"><h2>type SocketMessageFn2 <a href="#SocketMessageFn2">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> SocketMessageFn2 <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Client<span class="token punctuation">,</span> msg <span class="token operator">&</span>Message<span class="token punctuation">,</span> v <span class="token builtin">voidptr</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="SocketMessageFn" class="doc-node">
+							<div class="title"><h2>type SocketMessageFn <a href="#SocketMessageFn">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> SocketMessageFn <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Client<span class="token punctuation">,</span> msg <span class="token operator">&</span>Message<span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="SocketCloseFn" class="doc-node">
+							<div class="title"><h2>type SocketCloseFn <a href="#SocketCloseFn">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> SocketCloseFn <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Client<span class="token punctuation">,</span> code <span class="token builtin">int</span><span class="token punctuation">,</span> reason <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="SocketCloseFn2" class="doc-node">
+							<div class="title"><h2>type SocketCloseFn2 <a href="#SocketCloseFn2">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> SocketCloseFn2 <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Client<span class="token punctuation">,</span> code <span class="token builtin">int</span><span class="token punctuation">,</span> reason <span class="token builtin">string</span><span class="token punctuation">,</span> v <span class="token builtin">voidptr</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="SocketErrorFn" class="doc-node">
+							<div class="title"><h2>type SocketErrorFn <a href="#SocketErrorFn">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> SocketErrorFn <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Client<span class="token punctuation">,</span> err <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="SocketErrorFn2" class="doc-node">
+							<div class="title"><h2>type SocketErrorFn2 <a href="#SocketErrorFn2">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> SocketErrorFn2 <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Client<span class="token punctuation">,</span> err <span class="token builtin">string</span><span class="token punctuation">,</span> v <span class="token builtin">voidptr</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="Uri.str" class="doc-node">
+							<div class="title"><h2>fn (Uri) str <a href="#Uri.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>u Uri<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>str returns the string representation of the Uri</p>
+
+</section>
+						<section id="State" class="doc-node">
+							<div class="title"><h2>enum State <a href="#State">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">State</span> <span class="token punctuation">{</span>
+	connecting <span class="token operator">=</span> <span class="token number">0</span>
+	open
+	closing
+	closed
+<span class="token punctuation">}</span></code></pre>
+<p>State represents the state of the websocket connection.</p>
+
+</section>
+						<section id="OPCode" class="doc-node">
+							<div class="title"><h2>enum OPCode <a href="#OPCode">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">OPCode</span> <span class="token punctuation">{</span>
+	continuation <span class="token operator">=</span> <span class="token number">0x00</span>
+	text_frame <span class="token operator">=</span> <span class="token number">0x01</span>
+	binary_frame <span class="token operator">=</span> <span class="token number">0x02</span>
+	close <span class="token operator">=</span> <span class="token number">0x08</span>
+	ping <span class="token operator">=</span> <span class="token number">0x09</span>
+	pong <span class="token operator">=</span> <span class="token number">0x0A</span>
+<span class="token punctuation">}</span></code></pre>
+<p>OPCode represents the supported websocket frame types</p>
+
+</section>
+						<section id="Client" class="doc-node">
+							<div class="title"><h2>struct Client <a href="#Client">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Client</span> <span class="token punctuation">{</span>
+	is_server <span class="token builtin">bool</span>
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	ssl_conn          <span class="token operator">&</span>openssl<span class="token punctuation">.</span>SSLConn
+	flags             <span class="token punctuation">[</span><span class="token punctuation">]</span>Flag
+	fragments         <span class="token punctuation">[</span><span class="token punctuation">]</span>Fragment
+	message_callbacks <span class="token punctuation">[</span><span class="token punctuation">]</span>MessageEventHandler
+	error_callbacks   <span class="token punctuation">[</span><span class="token punctuation">]</span>ErrorEventHandler
+	open_callbacks    <span class="token punctuation">[</span><span class="token punctuation">]</span>OpenEventHandler
+	close_callbacks   <span class="token punctuation">[</span><span class="token punctuation">]</span>CloseEventHandler
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	is_ssl <span class="token builtin">bool</span>
+	uri    Uri
+	id     <span class="token builtin">string</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	header            http<span class="token punctuation">.</span>Header
+	conn              <span class="token operator">&</span>net<span class="token punctuation">.</span>TcpConn
+	nonce_size        <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">16</span>
+	panic_on_callback <span class="token builtin">bool</span>
+	state             State
+	logger            <span class="token operator">&</span>log<span class="token punctuation">.</span>Log
+	resource_name     <span class="token builtin">string</span>
+	last_pong_ut      <span class="token builtin">u64</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Client represents websocket client</p>
+
+</section>
+						<section id="Client.close" class="doc-node">
+							<div class="title"><h2>fn (Client) close <a href="#Client.close">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">close</span><span class="token punctuation">(</span>code <span class="token builtin">int</span><span class="token punctuation">,</span> message <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>close closes the websocket connection</p>
+
+</section>
+						<section id="Client.connect" class="doc-node">
+							<div class="title"><h2>fn (Client) connect <a href="#Client.connect">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+<p>connect connects to remote websocket server</p>
+
+</section>
+						<section id="Client.free" class="doc-node">
+							<div class="title"><h2>fn (Client) free <a href="#Client.free">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>Client<span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>free handles manual free memory of Client struct</p>
+
+</section>
+						<section id="Client.listen" class="doc-node">
+							<div class="title"><h2>fn (Client) listen <a href="#Client.listen">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">listen</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+<p>listen listens and processes incoming messages</p>
+
+</section>
+						<section id="Client.on_close" class="doc-node">
+							<div class="title"><h2>fn (Client) on_close <a href="#Client.on_close">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">on_close</span><span class="token punctuation">(</span>fun SocketCloseFn<span class="token punctuation">)</span></code></pre>
+<p>on_close registers a callback on closed socket</p>
+
+</section>
+						<section id="Client.on_close_ref" class="doc-node">
+							<div class="title"><h2>fn (Client) on_close_ref <a href="#Client.on_close_ref">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">on_close_ref</span><span class="token punctuation">(</span>fun SocketCloseFn2<span class="token punctuation">,</span> ref <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+<p>on_close_ref registers a callback on closed socket and provides a reference object</p>
+
+</section>
+						<section id="Client.on_error" class="doc-node">
+							<div class="title"><h2>fn (Client) on_error <a href="#Client.on_error">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">on_error</span><span class="token punctuation">(</span>fun SocketErrorFn<span class="token punctuation">)</span></code></pre>
+<p>on_error registers a callback on errors</p>
+
+</section>
+						<section id="Client.on_error_ref" class="doc-node">
+							<div class="title"><h2>fn (Client) on_error_ref <a href="#Client.on_error_ref">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">on_error_ref</span><span class="token punctuation">(</span>fun SocketErrorFn2<span class="token punctuation">,</span> ref <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+<p>on_error_ref registers a callback on errors and provides a reference object</p>
+
+</section>
+						<section id="Client.on_message" class="doc-node">
+							<div class="title"><h2>fn (Client) on_message <a href="#Client.on_message">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">on_message</span><span class="token punctuation">(</span>fun SocketMessageFn<span class="token punctuation">)</span></code></pre>
+<p>on_message registers a callback on new messages</p>
+
+</section>
+						<section id="Client.on_message_ref" class="doc-node">
+							<div class="title"><h2>fn (Client) on_message_ref <a href="#Client.on_message_ref">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">on_message_ref</span><span class="token punctuation">(</span>fun SocketMessageFn2<span class="token punctuation">,</span> ref <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+<p>on_message_ref registers a callback on new messages and provides a reference object</p>
+
+</section>
+						<section id="Client.on_open" class="doc-node">
+							<div class="title"><h2>fn (Client) on_open <a href="#Client.on_open">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">on_open</span><span class="token punctuation">(</span>fun SocketOpenFn<span class="token punctuation">)</span></code></pre>
+<p>on_open registers a callback on successful opening the websocket</p>
+
+</section>
+						<section id="Client.on_open_ref" class="doc-node">
+							<div class="title"><h2>fn (Client) on_open_ref <a href="#Client.on_open_ref">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">on_open_ref</span><span class="token punctuation">(</span>fun SocketOpenFn2<span class="token punctuation">,</span> ref <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+<p>on_open_ref registers a callback on successful opening the websocket  and provides a reference object</p>
+
+</section>
+						<section id="Client.parse_frame_header" class="doc-node">
+							<div class="title"><h2>fn (Client) parse_frame_header <a href="#Client.parse_frame_header">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">parse_frame_header</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?Frame</code></pre>
+<p>parse_frame_header parses next message by decoding the incoming frames</p>
+
+</section>
+						<section id="Client.ping" class="doc-node">
+							<div class="title"><h2>fn (Client) ping <a href="#Client.ping">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">ping</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+<p>ping sends ping message to server</p>
+
+</section>
+						<section id="Client.pong" class="doc-node">
+							<div class="title"><h2>fn (Client) pong <a href="#Client.pong">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">pong</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+<p>pong sends pong message to server,</p>
+
+</section>
+						<section id="Client.read_next_message" class="doc-node">
+							<div class="title"><h2>fn (Client) read_next_message <a href="#Client.read_next_message">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">read_next_message</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?Message</code></pre>
+<p>read_next_message reads 1 to n frames to compose a message</p>
+
+</section>
+						<section id="Client.validate_frame" class="doc-node">
+							<div class="title"><h2>fn (Client) validate_frame <a href="#Client.validate_frame">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">validate_frame</span><span class="token punctuation">(</span>frame <span class="token operator">&</span>Frame<span class="token punctuation">)</span> ?</code></pre>
+<p>validate_client validates client frame rules from RFC6455</p>
+
+</section>
+						<section id="Client.write" class="doc-node">
+							<div class="title"><h2>fn (Client) write <a href="#Client.write">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">write</span><span class="token punctuation">(</span>bytes <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">,</span> code OPCode<span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>write writes a byte array with a websocket messagetype to socket</p>
+
+</section>
+						<section id="Client.write_ptr" class="doc-node">
+							<div class="title"><h2>fn (Client) write_ptr <a href="#Client.write_ptr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">write_ptr</span><span class="token punctuation">(</span>bytes <span class="token operator">&</span><span class="token builtin">byte</span><span class="token punctuation">,</span> payload_len <span class="token builtin">int</span><span class="token punctuation">,</span> code OPCode<span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>write_ptr writes len bytes provided a byteptr with a websocket messagetype</p>
+
+</section>
+						<section id="Client.write_str" class="doc-node">
+							<div class="title"><h2>fn (Client) write_str <a href="#Client.write_str">#</a></h2></div><div class="attributes"><div class="attribute attribute-deprecated">deprecated</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">write_str</span><span class="token punctuation">(</span>str <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>write_string, writes a string with a websocket texttype to socket</p>
+
+</section>
+						<section id="Client.write_string" class="doc-node">
+							<div class="title"><h2>fn (Client) write_string <a href="#Client.write_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ws Client<span class="token punctuation">)</span> <span class="token function">write_string</span><span class="token punctuation">(</span>str <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>write_str, writes a string with a websocket texttype to socket</p>
+
+</section>
+						<section id="Message" class="doc-node">
+							<div class="title"><h2>struct Message <a href="#Message">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Message</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	opcode  OPCode
+	payload <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Message represents a whole message combined from 1 to n frames</p>
+
+</section>
+						<section id="Message.free" class="doc-node">
+							<div class="title"><h2>fn (Message) free <a href="#Message.free">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>m <span class="token operator">&</span>Message<span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>free handles manual free memory of Message struct</p>
+
+</section>
+						<section id="Server" class="doc-node">
+							<div class="title"><h2>struct Server <a href="#Server">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Server</span> <span class="token punctuation">{</span>
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	logger                  <span class="token operator">&</span>log<span class="token punctuation">.</span>Log
+	ls                      <span class="token operator">&</span>net<span class="token punctuation">.</span>TcpListener
+	accept_client_callbacks <span class="token punctuation">[</span><span class="token punctuation">]</span>AcceptClientFn
+	message_callbacks       <span class="token punctuation">[</span><span class="token punctuation">]</span>MessageEventHandler
+	close_callbacks         <span class="token punctuation">[</span><span class="token punctuation">]</span>CloseEventHandler
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	family net<span class="token punctuation">.</span>AddrFamily <span class="token operator">=</span> <span class="token punctuation">.</span>ip
+	port   <span class="token builtin">int</span>
+	is_ssl <span class="token builtin">bool</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	clients       <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token operator">&</span>ServerClient
+	ping_interval <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">30</span>
+	state         State
+<span class="token punctuation">}</span></code></pre>
+<p>Server represents a websocket server connection</p>
+
+</section>
+						<section id="Server.listen" class="doc-node">
+							<div class="title"><h2>fn (Server) listen <a href="#Server.listen">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s Server<span class="token punctuation">)</span> <span class="token function">listen</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+<p>listen start listen and process to incoming connections from websocket clients</p>
+
+</section>
+						<section id="Server.on_close" class="doc-node">
+							<div class="title"><h2>fn (Server) on_close <a href="#Server.on_close">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s Server<span class="token punctuation">)</span> <span class="token function">on_close</span><span class="token punctuation">(</span>fun SocketCloseFn<span class="token punctuation">)</span></code></pre>
+<p>on_close registers a callback on closed socket</p>
+
+</section>
+						<section id="Server.on_close_ref" class="doc-node">
+							<div class="title"><h2>fn (Server) on_close_ref <a href="#Server.on_close_ref">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s Server<span class="token punctuation">)</span> <span class="token function">on_close_ref</span><span class="token punctuation">(</span>fun SocketCloseFn2<span class="token punctuation">,</span> ref <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+<p>on_close_ref registers a callback on closed socket and provides a reference object</p>
+
+</section>
+						<section id="Server.on_connect" class="doc-node">
+							<div class="title"><h2>fn (Server) on_connect <a href="#Server.on_connect">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s Server<span class="token punctuation">)</span> <span class="token function">on_connect</span><span class="token punctuation">(</span>fun AcceptClientFn<span class="token punctuation">)</span> ?</code></pre>
+<p>on_connect registers a callback when client connects to the server</p>
+
+</section>
+						<section id="Server.on_message" class="doc-node">
+							<div class="title"><h2>fn (Server) on_message <a href="#Server.on_message">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s Server<span class="token punctuation">)</span> <span class="token function">on_message</span><span class="token punctuation">(</span>fun SocketMessageFn<span class="token punctuation">)</span></code></pre>
+<p>on_message registers a callback on new messages</p>
+
+</section>
+						<section id="Server.on_message_ref" class="doc-node">
+							<div class="title"><h2>fn (Server) on_message_ref <a href="#Server.on_message_ref">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s Server<span class="token punctuation">)</span> <span class="token function">on_message_ref</span><span class="token punctuation">(</span>fun SocketMessageFn2<span class="token punctuation">,</span> ref <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+<p>on_message_ref registers a callback on new messages and provides a reference object</p>
+
+</section>
+						<section id="Server.set_ping_interval" class="doc-node">
+							<div class="title"><h2>fn (Server) set_ping_interval <a href="#Server.set_ping_interval">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s Server<span class="token punctuation">)</span> <span class="token function">set_ping_interval</span><span class="token punctuation">(</span>seconds <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>set_ping_interval sets the interval that the server will send ping messages to clients</p>
+
+</section>
+						<section id="Server.free" class="doc-node">
+							<div class="title"><h2>fn (Server) free <a href="#Server.free">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s Server<span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>free manages manual free of memory for Server instance</p>
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:26
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#new_client">fn new_client</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new_server">fn new_server</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#SocketOpenFn">type SocketOpenFn</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#SocketOpenFn2">type SocketOpenFn2</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#AcceptClientFn">type AcceptClientFn</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#SocketMessageFn2">type SocketMessageFn2</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#SocketMessageFn">type SocketMessageFn</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#SocketCloseFn">type SocketCloseFn</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#SocketCloseFn2">type SocketCloseFn2</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#SocketErrorFn">type SocketErrorFn</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#SocketErrorFn2">type SocketErrorFn2</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Uri.str">type Uri</a>        <ul>
+<li><a href="#Uri.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#State">enum State</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#OPCode">enum OPCode</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Client">struct Client</a>        <ul>
+<li><a href="#Client.close">fn close</a></li>
+<li><a href="#Client.connect">fn connect</a></li>
+<li><a href="#Client.free">fn free</a></li>
+<li><a href="#Client.listen">fn listen</a></li>
+<li><a href="#Client.on_close">fn on_close</a></li>
+<li><a href="#Client.on_close_ref">fn on_close_ref</a></li>
+<li><a href="#Client.on_error">fn on_error</a></li>
+<li><a href="#Client.on_error_ref">fn on_error_ref</a></li>
+<li><a href="#Client.on_message">fn on_message</a></li>
+<li><a href="#Client.on_message_ref">fn on_message_ref</a></li>
+<li><a href="#Client.on_open">fn on_open</a></li>
+<li><a href="#Client.on_open_ref">fn on_open_ref</a></li>
+<li><a href="#Client.parse_frame_header">fn parse_frame_header</a></li>
+<li><a href="#Client.ping">fn ping</a></li>
+<li><a href="#Client.pong">fn pong</a></li>
+<li><a href="#Client.read_next_message">fn read_next_message</a></li>
+<li><a href="#Client.validate_frame">fn validate_frame</a></li>
+<li><a href="#Client.write">fn write</a></li>
+<li><a href="#Client.write_ptr">fn write_ptr</a></li>
+<li><a href="#Client.write_str">fn write_str</a></li>
+<li><a href="#Client.write_string">fn write_string</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Message">struct Message</a>        <ul>
+<li><a href="#Message.free">fn free</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Server">struct Server</a>        <ul>
+<li><a href="#Server.listen">fn listen</a></li>
+<li><a href="#Server.on_close">fn on_close</a></li>
+<li><a href="#Server.on_close_ref">fn on_close_ref</a></li>
+<li><a href="#Server.on_connect">fn on_connect</a></li>
+<li><a href="#Server.on_message">fn on_message</a></li>
+<li><a href="#Server.on_message_ref">fn on_message_ref</a></li>
+<li><a href="#Server.set_ping_interval">fn set_ping_interval</a></li>
+<li><a href="#Server.free">fn free</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

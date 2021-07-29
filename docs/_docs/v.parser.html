@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>v.parser | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li class="active"><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_v.parser" class="doc-node">
+							<div class="title"><h1> v.parser <a href="#readme_v.parser">#</a></h1></div>
+
+</section>
+
+						<section id="parse_file" class="doc-node">
+							<div class="title"><h2>fn parse_file <a href="#parse_file">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse_file</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> table <span class="token operator">&</span>ast<span class="token punctuation">.</span>Table<span class="token punctuation">,</span> comments_mode scanner<span class="token punctuation">.</span>CommentsMode<span class="token punctuation">,</span> pref <span class="token operator">&</span>pref<span class="token punctuation">.</span>Preferences<span class="token punctuation">)</span> <span class="token operator">&</span>ast<span class="token punctuation">.</span>File</code></pre>
+
+
+</section>
+						<section id="parse_files" class="doc-node">
+							<div class="title"><h2>fn parse_files <a href="#parse_files">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse_files</span><span class="token punctuation">(</span>paths <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> table <span class="token operator">&</span>ast<span class="token punctuation">.</span>Table<span class="token punctuation">,</span> pref <span class="token operator">&</span>pref<span class="token punctuation">.</span>Preferences<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&</span>ast<span class="token punctuation">.</span>File</code></pre>
+
+
+</section>
+						<section id="parse_stmt" class="doc-node">
+							<div class="title"><h2>fn parse_stmt <a href="#parse_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse_stmt</span><span class="token punctuation">(</span>text <span class="token builtin">string</span><span class="token punctuation">,</span> table <span class="token operator">&</span>ast<span class="token punctuation">.</span>Table<span class="token punctuation">,</span> scope <span class="token operator">&</span>ast<span class="token punctuation">.</span>Scope<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Stmt</code></pre>
+<p>for tests</p>
+
+</section>
+						<section id="parse_text" class="doc-node">
+							<div class="title"><h2>fn parse_text <a href="#parse_text">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse_text</span><span class="token punctuation">(</span>text <span class="token builtin">string</span><span class="token punctuation">,</span> path <span class="token builtin">string</span><span class="token punctuation">,</span> table <span class="token operator">&</span>ast<span class="token punctuation">.</span>Table<span class="token punctuation">,</span> comments_mode scanner<span class="token punctuation">.</span>CommentsMode<span class="token punctuation">,</span> pref <span class="token operator">&</span>pref<span class="token punctuation">.</span>Preferences<span class="token punctuation">)</span> <span class="token operator">&</span>ast<span class="token punctuation">.</span>File</code></pre>
+
+
+</section>
+						<section id="parse_vet_file" class="doc-node">
+							<div class="title"><h2>fn parse_vet_file <a href="#parse_vet_file">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse_vet_file</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> table_ <span class="token operator">&</span>ast<span class="token punctuation">.</span>Table<span class="token punctuation">,</span> pref <span class="token operator">&</span>pref<span class="token punctuation">.</span>Preferences<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">&</span>ast<span class="token punctuation">.</span>File<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>vet<span class="token punctuation">.</span>Error<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="parse_comptime" class="doc-node">
+							<div class="title"><h2>fn parse_comptime <a href="#parse_comptime">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse_comptime</span><span class="token punctuation">(</span>text <span class="token builtin">string</span><span class="token punctuation">,</span> table <span class="token operator">&</span>ast<span class="token punctuation">.</span>Table<span class="token punctuation">,</span> pref <span class="token operator">&</span>pref<span class="token punctuation">.</span>Preferences<span class="token punctuation">,</span> scope <span class="token operator">&</span>ast<span class="token punctuation">.</span>Scope<span class="token punctuation">)</span> <span class="token operator">&</span>ast<span class="token punctuation">.</span>File</code></pre>
+
+
+</section>
+						<section id="Parser" class="doc-node">
+							<div class="title"><h2>struct Parser <a href="#Parser">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Parser</span> <span class="token punctuation">{</span>
+	pref <span class="token operator">&</span>pref<span class="token punctuation">.</span>Preferences
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	file_base         <span class="token builtin">string</span>
+	file_name         <span class="token builtin">string</span>
+	file_name_dir     <span class="token builtin">string</span>
+	unique_prefix     <span class="token builtin">string</span>
+	file_backend_mode ast<span class="token punctuation">.</span>Language
+	scanner           <span class="token operator">&</span>scanner<span class="token punctuation">.</span>Scanner
+	comments_mode     scanner<span class="token punctuation">.</span>CommentsMode <span class="token operator">=</span> <span class="token punctuation">.</span>skip_comments
+
+	tok                 token<span class="token punctuation">.</span>Token
+	prev_tok            token<span class="token punctuation">.</span>Token
+	peek_tok            token<span class="token punctuation">.</span>Token
+	table               <span class="token operator">&</span>ast<span class="token punctuation">.</span>Table
+	language            ast<span class="token punctuation">.</span>Language
+	inside_test_file    <span class="token builtin">bool</span>
+	inside_if           <span class="token builtin">bool</span>
+	inside_if_expr      <span class="token builtin">bool</span>
+	inside_ct_if_expr   <span class="token builtin">bool</span>
+	inside_or_expr      <span class="token builtin">bool</span>
+	inside_for          <span class="token builtin">bool</span>
+	inside_fn           <span class="token builtin">bool</span>
+	inside_unsafe_fn    <span class="token builtin">bool</span>
+	inside_str_interp   <span class="token builtin">bool</span>
+	inside_array_lit    <span class="token builtin">bool</span>
+	or_is_handled       <span class="token builtin">bool</span>
+	builtin_mod         <span class="token builtin">bool</span>
+	mod                 <span class="token builtin">string</span>
+	is_manualfree       <span class="token builtin">bool</span>
+	attrs               <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Attr
+	expr_mod            <span class="token builtin">string</span>
+	scope               <span class="token operator">&</span>ast<span class="token punctuation">.</span>Scope
+	imports             <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	ast_imports         <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Import
+	used_imports        <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	auto_imports        <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	imported_symbols    <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	is_amp              <span class="token builtin">bool</span>
+	returns             <span class="token builtin">bool</span>
+	inside_match        <span class="token builtin">bool</span>
+	inside_select       <span class="token builtin">bool</span>
+	inside_match_case   <span class="token builtin">bool</span>
+	inside_match_body   <span class="token builtin">bool</span>
+	inside_unsafe       <span class="token builtin">bool</span>
+	is_stmt_ident       <span class="token builtin">bool</span>
+	expecting_type      <span class="token builtin">bool</span>
+	errors              <span class="token punctuation">[</span><span class="token punctuation">]</span>errors<span class="token punctuation">.</span>Error
+	warnings            <span class="token punctuation">[</span><span class="token punctuation">]</span>errors<span class="token punctuation">.</span>Warning
+	notices             <span class="token punctuation">[</span><span class="token punctuation">]</span>errors<span class="token punctuation">.</span>Notice
+	vet_errors          <span class="token punctuation">[</span><span class="token punctuation">]</span>vet<span class="token punctuation">.</span>Error
+	cur_fn_name         <span class="token builtin">string</span>
+	label_names         <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	in_generic_params   <span class="token builtin">bool</span>
+	name_error          <span class="token builtin">bool</span>
+	n_asm               <span class="token builtin">int</span>
+	inside_asm_template <span class="token builtin">bool</span>
+	inside_asm          <span class="token builtin">bool</span>
+	global_labels       <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	inside_defer        <span class="token builtin">bool</span>
+	comp_if_cond        <span class="token builtin">bool</span>
+	defer_vars          <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Ident
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Parser.call_args" class="doc-node">
+							<div class="title"><h2>fn (Parser) call_args <a href="#Parser.call_args">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">call_args</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>CallArg</code></pre>
+
+
+</section>
+						<section id="Parser.call_expr" class="doc-node">
+							<div class="title"><h2>fn (Parser) call_expr <a href="#Parser.call_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">call_expr</span><span class="token punctuation">(</span>language ast<span class="token punctuation">.</span>Language<span class="token punctuation">,</span> mod <span class="token builtin">string</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>CallExpr</code></pre>
+
+
+</section>
+						<section id="Parser.check_comment" class="doc-node">
+							<div class="title"><h2>fn (Parser) check_comment <a href="#Parser.check_comment">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">check_comment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Comment</code></pre>
+<p>TODO [if vfmt]</p>
+
+</section>
+						<section id="Parser.check_expr" class="doc-node">
+							<div class="title"><h2>fn (Parser) check_expr <a href="#Parser.check_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">check_expr</span><span class="token punctuation">(</span>precedence <span class="token builtin">int</span><span class="token punctuation">)</span> ?ast<span class="token punctuation">.</span>Expr</code></pre>
+
+
+</section>
+						<section id="Parser.check_for_impure_v" class="doc-node">
+							<div class="title"><h2>fn (Parser) check_for_impure_v <a href="#Parser.check_for_impure_v">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">check_for_impure_v</span><span class="token punctuation">(</span>language ast<span class="token punctuation">.</span>Language<span class="token punctuation">,</span> pos token<span class="token punctuation">.</span>Position<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Parser.close_scope" class="doc-node">
+							<div class="title"><h2>fn (Parser) close_scope <a href="#Parser.close_scope">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">close_scope</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Parser.comment" class="doc-node">
+							<div class="title"><h2>fn (Parser) comment <a href="#Parser.comment">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">comment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Comment</code></pre>
+
+
+</section>
+						<section id="Parser.comment_stmt" class="doc-node">
+							<div class="title"><h2>fn (Parser) comment_stmt <a href="#Parser.comment_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">comment_stmt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>ExprStmt</code></pre>
+
+
+</section>
+						<section id="Parser.compile_template_file" class="doc-node">
+							<div class="title"><h2>fn (Parser) compile_template_file <a href="#Parser.compile_template_file">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">compile_template_file</span><span class="token punctuation">(</span>template_file <span class="token builtin">string</span><span class="token punctuation">,</span> fn_name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>compile_file compiles the content of a file by the given path as a template</p>
+
+</section>
+						<section id="Parser.eat_comments" class="doc-node">
+							<div class="title"><h2>fn (Parser) eat_comments <a href="#Parser.eat_comments">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">eat_comments</span><span class="token punctuation">(</span>cfg EatCommentsConfig<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Comment</code></pre>
+
+
+</section>
+						<section id="Parser.error" class="doc-node">
+							<div class="title"><h2>fn (Parser) error <a href="#Parser.error">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">error</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>NodeError</code></pre>
+
+
+</section>
+						<section id="Parser.error_with_error" class="doc-node">
+							<div class="title"><h2>fn (Parser) error_with_error <a href="#Parser.error_with_error">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">error_with_error</span><span class="token punctuation">(</span>error errors<span class="token punctuation">.</span>Error<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Parser.error_with_pos" class="doc-node">
+							<div class="title"><h2>fn (Parser) error_with_pos <a href="#Parser.error_with_pos">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">error_with_pos</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">,</span> pos token<span class="token punctuation">.</span>Position<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>NodeError</code></pre>
+
+
+</section>
+						<section id="Parser.expr" class="doc-node">
+							<div class="title"><h2>fn (Parser) expr <a href="#Parser.expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">expr</span><span class="token punctuation">(</span>precedence <span class="token builtin">int</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Expr</code></pre>
+
+
+</section>
+						<section id="Parser.expr_with_left" class="doc-node">
+							<div class="title"><h2>fn (Parser) expr_with_left <a href="#Parser.expr_with_left">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">expr_with_left</span><span class="token punctuation">(</span>left ast<span class="token punctuation">.</span>Expr<span class="token punctuation">,</span> precedence <span class="token builtin">int</span><span class="token punctuation">,</span> is_stmt_ident <span class="token builtin">bool</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Expr</code></pre>
+
+
+</section>
+						<section id="Parser.free" class="doc-node">
+							<div class="title"><h2>fn (Parser) free <a href="#Parser.free">#</a></h2></div><div class="attributes"><div class="attribute">unsafe</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Parser.init_parse_fns" class="doc-node">
+							<div class="title"><h2>fn (Parser) init_parse_fns <a href="#Parser.init_parse_fns">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">init_parse_fns</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Parser.known_import" class="doc-node">
+							<div class="title"><h2>fn (Parser) known_import <a href="#Parser.known_import">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>p <span class="token operator">&</span>Parser<span class="token punctuation">)</span> <span class="token function">known_import</span><span class="token punctuation">(</span>mod <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>return true if file being parsed imports <code>mod</code></p>
+
+</section>
+						<section id="Parser.mark_var_as_used" class="doc-node">
+							<div class="title"><h2>fn (Parser) mark_var_as_used <a href="#Parser.mark_var_as_used">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">mark_var_as_used</span><span class="token punctuation">(</span>varname <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="Parser.name_expr" class="doc-node">
+							<div class="title"><h2>fn (Parser) name_expr <a href="#Parser.name_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">name_expr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Expr</code></pre>
+
+
+</section>
+						<section id="Parser.note" class="doc-node">
+							<div class="title"><h2>fn (Parser) note <a href="#Parser.note">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">note</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Parser.note_with_pos" class="doc-node">
+							<div class="title"><h2>fn (Parser) note_with_pos <a href="#Parser.note_with_pos">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">note_with_pos</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">,</span> pos token<span class="token punctuation">.</span>Position<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Parser.open_scope" class="doc-node">
+							<div class="title"><h2>fn (Parser) open_scope <a href="#Parser.open_scope">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">open_scope</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Parser.parse" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse <a href="#Parser.parse">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&</span>ast<span class="token punctuation">.</span>File</code></pre>
+
+
+</section>
+						<section id="Parser.parse_any_type" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_any_type <a href="#Parser.parse_any_type">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_any_type</span><span class="token punctuation">(</span>language ast<span class="token punctuation">.</span>Language<span class="token punctuation">,</span> is_ptr <span class="token builtin">bool</span><span class="token punctuation">,</span> check_dot <span class="token builtin">bool</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Parser.parse_array_type" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_array_type <a href="#Parser.parse_array_type">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_array_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Parser.parse_block" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_block <a href="#Parser.parse_block">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_block</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Stmt</code></pre>
+
+
+</section>
+						<section id="Parser.parse_block_no_scope" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_block_no_scope <a href="#Parser.parse_block_no_scope">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_block_no_scope</span><span class="token punctuation">(</span>is_top_level <span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Stmt</code></pre>
+
+
+</section>
+						<section id="Parser.parse_chan_type" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_chan_type <a href="#Parser.parse_chan_type">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_chan_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Parser.parse_enum_or_struct_type" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_enum_or_struct_type <a href="#Parser.parse_enum_or_struct_type">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_enum_or_struct_type</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> language ast<span class="token punctuation">.</span>Language<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Parser.parse_fn_type" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_fn_type <a href="#Parser.parse_fn_type">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_fn_type</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+<p>given anon name based off signature when <code>name</code> is blank</p>
+
+</section>
+						<section id="Parser.parse_generic_struct_inst_type" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_generic_struct_inst_type <a href="#Parser.parse_generic_struct_inst_type">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_generic_struct_inst_type</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Parser.parse_generic_template_type" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_generic_template_type <a href="#Parser.parse_generic_template_type">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_generic_template_type</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Parser.parse_ident" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_ident <a href="#Parser.parse_ident">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_ident</span><span class="token punctuation">(</span>language ast<span class="token punctuation">.</span>Language<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Ident</code></pre>
+
+
+</section>
+						<section id="Parser.parse_language" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_language <a href="#Parser.parse_language">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_language</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Language</code></pre>
+<p>Parses any language indicators on a type.</p>
+
+</section>
+						<section id="Parser.parse_map_type" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_map_type <a href="#Parser.parse_map_type">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_map_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Parser.parse_multi_return_type" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_multi_return_type <a href="#Parser.parse_multi_return_type">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_multi_return_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Parser.parse_thread_type" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_thread_type <a href="#Parser.parse_thread_type">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_thread_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Parser.parse_type" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_type <a href="#Parser.parse_type">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Parser.parse_type_with_mut" class="doc-node">
+							<div class="title"><h2>fn (Parser) parse_type_with_mut <a href="#Parser.parse_type_with_mut">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">parse_type_with_mut</span><span class="token punctuation">(</span>is_mut <span class="token builtin">bool</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Parser.peek_token" class="doc-node">
+							<div class="title"><h2>fn (Parser) peek_token <a href="#Parser.peek_token">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>p <span class="token operator">&</span>Parser<span class="token punctuation">)</span> <span class="token function">peek_token</span><span class="token punctuation">(</span>n <span class="token builtin">int</span><span class="token punctuation">)</span> token<span class="token punctuation">.</span>Token</code></pre>
+
+
+</section>
+						<section id="Parser.read_first_token" class="doc-node">
+							<div class="title"><h2>fn (Parser) read_first_token <a href="#Parser.read_first_token">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">read_first_token</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Parser.set_path" class="doc-node">
+							<div class="title"><h2>fn (Parser) set_path <a href="#Parser.set_path">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">set_path</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Parser.stmt" class="doc-node">
+							<div class="title"><h2>fn (Parser) stmt <a href="#Parser.stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">stmt</span><span class="token punctuation">(</span>is_top_level <span class="token builtin">bool</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Stmt</code></pre>
+
+
+</section>
+						<section id="Parser.top_stmt" class="doc-node">
+							<div class="title"><h2>fn (Parser) top_stmt <a href="#Parser.top_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">top_stmt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Stmt</code></pre>
+
+
+</section>
+						<section id="Parser.vet_error" class="doc-node">
+							<div class="title"><h2>fn (Parser) vet_error <a href="#Parser.vet_error">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">vet_error</span><span class="token punctuation">(</span>msg <span class="token builtin">string</span><span class="token punctuation">,</span> line <span class="token builtin">int</span><span class="token punctuation">,</span> fix vet<span class="token punctuation">.</span>FixKind<span class="token punctuation">,</span> typ vet<span class="token punctuation">.</span>ErrorType<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Parser.warn" class="doc-node">
+							<div class="title"><h2>fn (Parser) warn <a href="#Parser.warn">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">warn</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Parser.warn_with_pos" class="doc-node">
+							<div class="title"><h2>fn (Parser) warn_with_pos <a href="#Parser.warn_with_pos">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Parser<span class="token punctuation">)</span> <span class="token function">warn_with_pos</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">,</span> pos token<span class="token punctuation">.</span>Position<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:28
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#parse_file">fn parse_file</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#parse_files">fn parse_files</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#parse_stmt">fn parse_stmt</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#parse_text">fn parse_text</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#parse_vet_file">fn parse_vet_file</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#parse_comptime">fn parse_comptime</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Parser">struct Parser</a>        <ul>
+<li><a href="#Parser.call_args">fn call_args</a></li>
+<li><a href="#Parser.call_expr">fn call_expr</a></li>
+<li><a href="#Parser.check_comment">fn check_comment</a></li>
+<li><a href="#Parser.check_expr">fn check_expr</a></li>
+<li><a href="#Parser.check_for_impure_v">fn check_for_impure_v</a></li>
+<li><a href="#Parser.close_scope">fn close_scope</a></li>
+<li><a href="#Parser.comment">fn comment</a></li>
+<li><a href="#Parser.comment_stmt">fn comment_stmt</a></li>
+<li><a href="#Parser.compile_template_file">fn compile_template_file</a></li>
+<li><a href="#Parser.eat_comments">fn eat_comments</a></li>
+<li><a href="#Parser.error">fn error</a></li>
+<li><a href="#Parser.error_with_error">fn error_with_error</a></li>
+<li><a href="#Parser.error_with_pos">fn error_with_pos</a></li>
+<li><a href="#Parser.expr">fn expr</a></li>
+<li><a href="#Parser.expr_with_left">fn expr_with_left</a></li>
+<li><a href="#Parser.free">fn free</a></li>
+<li><a href="#Parser.init_parse_fns">fn init_parse_fns</a></li>
+<li><a href="#Parser.known_import">fn known_import</a></li>
+<li><a href="#Parser.mark_var_as_used">fn mark_var_as_used</a></li>
+<li><a href="#Parser.name_expr">fn name_expr</a></li>
+<li><a href="#Parser.note">fn note</a></li>
+<li><a href="#Parser.note_with_pos">fn note_with_pos</a></li>
+<li><a href="#Parser.open_scope">fn open_scope</a></li>
+<li><a href="#Parser.parse">fn parse</a></li>
+<li><a href="#Parser.parse_any_type">fn parse_any_type</a></li>
+<li><a href="#Parser.parse_array_type">fn parse_array_type</a></li>
+<li><a href="#Parser.parse_block">fn parse_block</a></li>
+<li><a href="#Parser.parse_block_no_scope">fn parse_block_no_scope</a></li>
+<li><a href="#Parser.parse_chan_type">fn parse_chan_type</a></li>
+<li><a href="#Parser.parse_enum_or_struct_type">fn parse_enum_or_struct_type</a></li>
+<li><a href="#Parser.parse_fn_type">fn parse_fn_type</a></li>
+<li><a href="#Parser.parse_generic_struct_inst_type">fn parse_generic_struct_inst_type</a></li>
+<li><a href="#Parser.parse_generic_template_type">fn parse_generic_template_type</a></li>
+<li><a href="#Parser.parse_ident">fn parse_ident</a></li>
+<li><a href="#Parser.parse_language">fn parse_language</a></li>
+<li><a href="#Parser.parse_map_type">fn parse_map_type</a></li>
+<li><a href="#Parser.parse_multi_return_type">fn parse_multi_return_type</a></li>
+<li><a href="#Parser.parse_thread_type">fn parse_thread_type</a></li>
+<li><a href="#Parser.parse_type">fn parse_type</a></li>
+<li><a href="#Parser.parse_type_with_mut">fn parse_type_with_mut</a></li>
+<li><a href="#Parser.peek_token">fn peek_token</a></li>
+<li><a href="#Parser.read_first_token">fn read_first_token</a></li>
+<li><a href="#Parser.set_path">fn set_path</a></li>
+<li><a href="#Parser.stmt">fn stmt</a></li>
+<li><a href="#Parser.top_stmt">fn top_stmt</a></li>
+<li><a href="#Parser.vet_error">fn vet_error</a></li>
+<li><a href="#Parser.warn">fn warn</a></li>
+<li><a href="#Parser.warn_with_pos">fn warn_with_pos</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

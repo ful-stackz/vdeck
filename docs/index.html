@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span>1.0.0</span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><a href="#create_deck">fn create_deck</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#create_standard_deck">fn create_standard_deck</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#create_uno_deck">fn create_uno_deck</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Deck<T>.shuffle">type Deck<T></a>        <ul>
+<li><a href="#Deck<T>.shuffle">fn shuffle</a></li>
+<li><a href="#Deck<T>.peek">fn peek</a></li>
+<li><a href="#Deck<T>.peekn">fn peekn</a></li>
+<li><a href="#Deck<T>.peek_middle">fn peek_middle</a></li>
+<li><a href="#Deck<T>.peek_bottom">fn peek_bottom</a></li>
+<li><a href="#Deck<T>.peek_bottomn">fn peek_bottomn</a></li>
+<li><a href="#Deck<T>.peek_random">fn peek_random</a></li>
+<li><a href="#Deck<T>.peek_randomn">fn peek_randomn</a></li>
+<li><a href="#Deck<T>.peek_at">fn peek_at</a></li>
+<li><a href="#Deck<T>.draw">fn draw</a></li>
+<li><a href="#Deck<T>.drawn">fn drawn</a></li>
+<li><a href="#Deck<T>.draw_middle">fn draw_middle</a></li>
+<li><a href="#Deck<T>.draw_bottom">fn draw_bottom</a></li>
+<li><a href="#Deck<T>.draw_bottomn">fn draw_bottomn</a></li>
+<li><a href="#Deck<T>.draw_random">fn draw_random</a></li>
+<li><a href="#Deck<T>.draw_randomn">fn draw_randomn</a></li>
+<li><a href="#Deck<T>.draw_at">fn draw_at</a></li>
+<li><a href="#Deck<T>.add">fn add</a></li>
+<li><a href="#Deck<T>.add_middle">fn add_middle</a></li>
+<li><a href="#Deck<T>.add_bottom">fn add_bottom</a></li>
+<li><a href="#Deck<T>.add_at">fn add_at</a></li>
+<li><a href="#Deck<T>.add_random">fn add_random</a></li>
+<li><a href="#Deck<T>.get_cards">fn get_cards</a></li>
+<li><a href="#Deck<T>.count_cards">fn count_cards</a></li>
+<li><a href="#Deck<T>.has_cards">fn has_cards</a></li>
+<li><a href="#Deck<T>.contains">fn contains</a></li>
+<li><a href="#Deck<T>.index_of">fn index_of</a></li>
+</ul>
+</li>
+<li class="open"><a href="#UnoCard">type UnoCard</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Suit">enum Suit</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#UnoColor">enum UnoColor</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#UnoAction">enum UnoAction</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#UnoWildAction">enum UnoWildAction</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Deck">struct Deck</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#UnoNumberCard">struct UnoNumberCard</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Card">struct Card</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#UnoActionCard">struct UnoActionCard</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#UnoWildCard">struct UnoWildCard</a>        <ul>
+</ul>
+</li>
+
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="" class="doc-node">
+
+
+</section>
+
+						<section id="create_deck" class="doc-node">
+							<div class="title"><h2>fn create_deck <a href="#create_deck">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> create_deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span>cards <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">T</span><span class="token punctuation">)</span> Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span></code></pre>
+<p>Creates a deck from the provided set of cards.</p>
+
+</section>
+						<section id="create_standard_deck" class="doc-node">
+							<div class="title"><h2>fn create_standard_deck <a href="#create_standard_deck">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">create_standard_deck</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Deck<span class="token operator"><</span><span class="token punctuation">.</span>Card<span class="token operator">></span></code></pre>
+<p>Creates a deck of 52 cards (2 through 10, Jock, Queen, King and Ace)  of the 4 standard suits - Clubs, Diamonds, Hearts and Spades.</p>
+
+</section>
+						<section id="create_uno_deck" class="doc-node">
+							<div class="title"><h2>fn create_uno_deck <a href="#create_uno_deck">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">create_uno_deck</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Deck<span class="token operator"><</span><span class="token punctuation">.</span>UnoCard<span class="token operator">></span></code></pre>
+<p>Creates a standard deck of 108 Uno cards, including  one <code>0</code> of each color, four <code>1</code> - <code>9</code> of each color,  four <code>skip</code>, <code>reverse</code> and <code>draw two</code> of each color,  and four <code>change color</code> and <code>draw four</code> (each) wild cards.</p>
+
+</section>
+						<section id="Deck<T>.shuffle" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) shuffle <a href="#Deck<T>.shuffle">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">shuffle</span><span class="token punctuation">(</span>times ...<span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>Shuffles the deck. Optionally specify how many times to shuffle it.  <code>deck.shuffle()</code> - shuffles the deck once.  <code>deck.shuffle(3)</code> - shuffles the deck 3 times.</p>
+
+</section>
+						<section id="Deck<T>.peek" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) peek <a href="#Deck<T>.peek">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">T</span></code></pre>
+<p>Peeks the card at the top of the deck.  Does not draw/remove the card from the deck.</p>
+
+</section>
+						<section id="Deck<T>.peekn" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) peekn <a href="#Deck<T>.peekn">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">peekn</span><span class="token punctuation">(</span>amount <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">T</span></code></pre>
+<p>Peeks a specified amount of cards from the top of the deck.  Does not draw/remove the cards from the deck.</p>
+
+</section>
+						<section id="Deck<T>.peek_middle" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) peek_middle <a href="#Deck<T>.peek_middle">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">peek_middle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">T</span></code></pre>
+<p>Peeks the card at the middle of the deck.  Does not draw/remove the card from the deck.</p>
+
+</section>
+						<section id="Deck<T>.peek_bottom" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) peek_bottom <a href="#Deck<T>.peek_bottom">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">peek_bottom</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">T</span></code></pre>
+<p>Peeks the card at the bottom of the deck.  Does not draw/remove the card from the deck.</p>
+
+</section>
+						<section id="Deck<T>.peek_bottomn" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) peek_bottomn <a href="#Deck<T>.peek_bottomn">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">peek_bottomn</span><span class="token punctuation">(</span>amount <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">T</span></code></pre>
+<p>Peeks a specified amount of cards from the bottom of the deck.  Does not draw/remove the cards from the deck.</p>
+
+</section>
+						<section id="Deck<T>.peek_random" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) peek_random <a href="#Deck<T>.peek_random">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">peek_random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">T</span></code></pre>
+<p>Peeks a card from a random position in the deck.  Does not draw/remove the card from the deck.</p>
+
+</section>
+						<section id="Deck<T>.peek_randomn" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) peek_randomn <a href="#Deck<T>.peek_randomn">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">peek_randomn</span><span class="token punctuation">(</span>amount <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">T</span></code></pre>
+<p>Peeks a specified amount of cards from random, non-repeating positions in the deck.  Does not draw/remove the cards from the deck.</p>
+
+</section>
+						<section id="Deck<T>.peek_at" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) peek_at <a href="#Deck<T>.peek_at">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">peek_at</span><span class="token punctuation">(</span>position <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">T</span></code></pre>
+<p>Peeks the card at the specified position in the deck.  Does not draw/remove the card from the deck.</p>
+
+</section>
+						<section id="Deck<T>.draw" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) draw <a href="#Deck<T>.draw">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">T</span></code></pre>
+<p>Draws a card from the top of the deck.  The card is then removed from the deck.</p>
+
+</section>
+						<section id="Deck<T>.drawn" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) drawn <a href="#Deck<T>.drawn">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">drawn</span><span class="token punctuation">(</span>amount <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">T</span></code></pre>
+<p>Draws a specified amount of cards from the top of the deck.  The cards are then removed from the deck.</p>
+
+</section>
+						<section id="Deck<T>.draw_middle" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) draw_middle <a href="#Deck<T>.draw_middle">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">draw_middle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">T</span></code></pre>
+<p>Draws the card at the middle of the deck.  The card is then removed from the deck.</p>
+
+</section>
+						<section id="Deck<T>.draw_bottom" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) draw_bottom <a href="#Deck<T>.draw_bottom">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">draw_bottom</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">T</span></code></pre>
+<p>Draws a single cards from the bottom of the deck.  The card is then removed from the deck.</p>
+
+</section>
+						<section id="Deck<T>.draw_bottomn" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) draw_bottomn <a href="#Deck<T>.draw_bottomn">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">draw_bottomn</span><span class="token punctuation">(</span>amount <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">T</span></code></pre>
+<p>Draws a specified amount of cards from the bottom of the deck.  The cards are then removed from the deck.</p>
+
+</section>
+						<section id="Deck<T>.draw_random" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) draw_random <a href="#Deck<T>.draw_random">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">draw_random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">T</span></code></pre>
+<p>Draws a card from a random position in the deck.  The card is then removed from the deck.</p>
+
+</section>
+						<section id="Deck<T>.draw_randomn" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) draw_randomn <a href="#Deck<T>.draw_randomn">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">draw_randomn</span><span class="token punctuation">(</span>amount <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">T</span></code></pre>
+<p>Draws a specified amount of cards from random positions in the deck.  The cards are then removed from the deck.</p>
+
+</section>
+						<section id="Deck<T>.draw_at" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) draw_at <a href="#Deck<T>.draw_at">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">draw_at</span><span class="token punctuation">(</span>position <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">T</span></code></pre>
+<p>Draws the card from the specified position in the deck.  The card is then removed from the deck.</p>
+
+</section>
+						<section id="Deck<T>.add" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) add <a href="#Deck<T>.add">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">add</span><span class="token punctuation">(</span>card <span class="token builtin">T</span><span class="token punctuation">)</span></code></pre>
+<p>Adds the specified card to the top of the deck.</p>
+
+</section>
+						<section id="Deck<T>.add_middle" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) add_middle <a href="#Deck<T>.add_middle">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">add_middle</span><span class="token punctuation">(</span>card <span class="token builtin">T</span><span class="token punctuation">)</span></code></pre>
+<p>Adds the specified card to the middle of the deck.</p>
+
+</section>
+						<section id="Deck<T>.add_bottom" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) add_bottom <a href="#Deck<T>.add_bottom">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">add_bottom</span><span class="token punctuation">(</span>card <span class="token builtin">T</span><span class="token punctuation">)</span></code></pre>
+<p>Adds the specified card to the bottom of the deck.</p>
+
+</section>
+						<section id="Deck<T>.add_at" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) add_at <a href="#Deck<T>.add_at">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">add_at</span><span class="token punctuation">(</span>position <span class="token builtin">int</span><span class="token punctuation">,</span> card <span class="token builtin">T</span><span class="token punctuation">)</span></code></pre>
+<p>Adds the specified card at the specified position in the deck.</p>
+
+</section>
+						<section id="Deck<T>.add_random" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) add_random <a href="#Deck<T>.add_random">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">add_random</span><span class="token punctuation">(</span>card <span class="token builtin">T</span><span class="token punctuation">)</span></code></pre>
+<p>Adds the specified card at a random position in the deck.</p>
+
+</section>
+						<section id="Deck<T>.get_cards" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) get_cards <a href="#Deck<T>.get_cards">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">get_cards</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">T</span></code></pre>
+<p>Returns the cards currently in the deck.</p>
+
+</section>
+						<section id="Deck<T>.count_cards" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) count_cards <a href="#Deck<T>.count_cards">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">count_cards</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Returns the current amount of cards in the deck.</p>
+
+</section>
+						<section id="Deck<T>.has_cards" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) has_cards <a href="#Deck<T>.has_cards">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">has_cards</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>Returns a boolean indicating whether there is atleast 1 card in the deck.</p>
+
+</section>
+						<section id="Deck<T>.contains" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) contains <a href="#Deck<T>.contains">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">contains</span><span class="token punctuation">(</span>card <span class="token builtin">T</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>Checks whether the specified card is contained in the deck.</p>
+
+</section>
+						<section id="Deck<T>.index_of" class="doc-node">
+							<div class="title"><h2>fn (Deck<T>) index_of <a href="#Deck<T>.index_of">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>deck Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token function">index_of</span><span class="token punctuation">(</span>card <span class="token builtin">T</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Returns the index of the specified card in the deck.  Returns <code>-1</code> if the card is not contained in the deck.</p>
+
+</section>
+						<section id="UnoCard" class="doc-node">
+							<div class="title"><h2>type UnoCard <a href="#UnoCard">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> UnoCard <span class="token operator">=</span> UnoActionCard <span class="token operator">|</span> UnoNumberCard <span class="token operator">|</span> UnoWildCard</code></pre>
+
+
+</section>
+						<section id="Suit" class="doc-node">
+							<div class="title"><h2>enum Suit <a href="#Suit">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Suit</span> <span class="token punctuation">{</span>
+	@<span class="token builtin">none</span>
+	diamond
+	club
+	heart
+	spade
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="UnoColor" class="doc-node">
+							<div class="title"><h2>enum UnoColor <a href="#UnoColor">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">UnoColor</span> <span class="token punctuation">{</span>
+	red
+	yellow
+	green
+	blue
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="UnoAction" class="doc-node">
+							<div class="title"><h2>enum UnoAction <a href="#UnoAction">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">UnoAction</span> <span class="token punctuation">{</span>
+	skip
+	reverse
+	draw_two
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="UnoWildAction" class="doc-node">
+							<div class="title"><h2>enum UnoWildAction <a href="#UnoWildAction">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">UnoWildAction</span> <span class="token punctuation">{</span>
+	change_color
+	draw_four
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Deck" class="doc-node">
+							<div class="title"><h2>struct Deck <a href="#Deck">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> Deck<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span> <span class="token punctuation">{</span>
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	cards <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">T</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Represents a deck of cards.</p>
+
+</section>
+						<section id="UnoNumberCard" class="doc-node">
+							<div class="title"><h2>struct UnoNumberCard <a href="#UnoNumberCard">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">UnoNumberCard</span> <span class="token punctuation">{</span>
+	color  UnoColor
+	number <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Card" class="doc-node">
+							<div class="title"><h2>struct Card <a href="#Card">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Card</span> <span class="token punctuation">{</span>
+	suit Suit
+	rank CardRank
+<span class="token punctuation">}</span></code></pre>
+<p>Represents a standard playing card with a rank and a suit.</p>
+
+</section>
+						<section id="UnoActionCard" class="doc-node">
+							<div class="title"><h2>struct UnoActionCard <a href="#UnoActionCard">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">UnoActionCard</span> <span class="token punctuation">{</span>
+	color  UnoColor
+	action UnoAction
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="UnoWildCard" class="doc-node">
+							<div class="title"><h2>struct UnoWildCard <a href="#UnoWildCard">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">UnoWildCard</span> <span class="token punctuation">{</span>
+	action UnoWildAction
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 23:57:39
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

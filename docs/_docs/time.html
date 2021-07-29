@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>time | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open active"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_time" class="doc-node">
+							<div class="title"><h1> time <a href="#readme_time">#</a></h1></div>
+
+</section>
+
+						<section id="Constants" class="doc-node const">
+							<div class="title"><h2>Constants <a href="#Constants">#</a></h2></div>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	days_string        <span class="token operator">=</span> <span class="token string">'MonTueWedThuFriSatSun'</span>
+	month_days         <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">]</span>
+	months_string      <span class="token operator">=</span> <span class="token string">'JanFebMarAprMayJunJulAugSepOctNovDec'</span>
+
+	absolute_zero_year <span class="token operator">=</span> <span class="token builtin">i64</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">292277022399</span><span class="token punctuation">)</span>
+	seconds_per_minute <span class="token operator">=</span> <span class="token number">60</span>
+	seconds_per_hour   <span class="token operator">=</span> <span class="token number">60</span> <span class="token operator">*</span> seconds_per_minute
+	seconds_per_day    <span class="token operator">=</span> <span class="token number">24</span> <span class="token operator">*</span> seconds_per_hour
+	seconds_per_week   <span class="token operator">=</span> <span class="token number">7</span> <span class="token operator">*</span> seconds_per_day
+	days_per_400_years <span class="token operator">=</span> <span class="token number">365</span> <span class="token operator">*</span> <span class="token number">400</span> <span class="token operator">+</span> <span class="token number">97</span>
+	days_per_100_years <span class="token operator">=</span> <span class="token number">365</span> <span class="token operator">*</span> <span class="token number">100</span> <span class="token operator">+</span> <span class="token number">24</span>
+	days_per_4_years   <span class="token operator">=</span> <span class="token number">365</span> <span class="token operator">*</span> <span class="token number">4</span> <span class="token operator">+</span> <span class="token number">1</span>
+	days_before        <span class="token operator">=</span> <span class="token punctuation">[</span>
+		<span class="token number">0</span><span class="token punctuation">,</span>
+		<span class="token number">31</span><span class="token punctuation">,</span>
+		<span class="token number">31</span> <span class="token operator">+</span> <span class="token number">28</span><span class="token punctuation">,</span>
+		<span class="token number">31</span> <span class="token operator">+</span> <span class="token number">28</span> <span class="token operator">+</span> <span class="token number">31</span><span class="token punctuation">,</span>
+		<span class="token number">31</span> <span class="token operator">+</span> <span class="token number">28</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span><span class="token punctuation">,</span>
+		<span class="token number">31</span> <span class="token operator">+</span> <span class="token number">28</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span><span class="token punctuation">,</span>
+		<span class="token number">31</span> <span class="token operator">+</span> <span class="token number">28</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span><span class="token punctuation">,</span>
+		<span class="token number">31</span> <span class="token operator">+</span> <span class="token number">28</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span><span class="token punctuation">,</span>
+		<span class="token number">31</span> <span class="token operator">+</span> <span class="token number">28</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">31</span><span class="token punctuation">,</span>
+		<span class="token number">31</span> <span class="token operator">+</span> <span class="token number">28</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span><span class="token punctuation">,</span>
+		<span class="token number">31</span> <span class="token operator">+</span> <span class="token number">28</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span><span class="token punctuation">,</span>
+		<span class="token number">31</span> <span class="token operator">+</span> <span class="token number">28</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span><span class="token punctuation">,</span>
+		<span class="token number">31</span> <span class="token operator">+</span> <span class="token number">28</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span> <span class="token operator">+</span> <span class="token number">30</span> <span class="token operator">+</span> <span class="token number">31</span><span class="token punctuation">,</span>
+	<span class="token punctuation">]</span>
+	long_days          <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Monday'</span><span class="token punctuation">,</span> <span class="token string">'Tuesday'</span><span class="token punctuation">,</span> <span class="token string">'Wednesday'</span><span class="token punctuation">,</span> <span class="token string">'Thursday'</span><span class="token punctuation">,</span> <span class="token string">'Friday'</span><span class="token punctuation">,</span> <span class="token string">'Saturday'</span><span class="token punctuation">,</span>
+		<span class="token string">'Sunday'</span><span class="token punctuation">,</span>
+	<span class="token punctuation">]</span>
+<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	nanosecond  <span class="token operator">=</span> <span class="token function">Duration</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+	microsecond <span class="token operator">=</span> <span class="token function">Duration</span><span class="token punctuation">(</span><span class="token number">1000</span> <span class="token operator">*</span> nanosecond<span class="token punctuation">)</span>
+	millisecond <span class="token operator">=</span> <span class="token function">Duration</span><span class="token punctuation">(</span><span class="token number">1000</span> <span class="token operator">*</span> microsecond<span class="token punctuation">)</span>
+	second      <span class="token operator">=</span> <span class="token function">Duration</span><span class="token punctuation">(</span><span class="token number">1000</span> <span class="token operator">*</span> millisecond<span class="token punctuation">)</span>
+	minute      <span class="token operator">=</span> <span class="token function">Duration</span><span class="token punctuation">(</span><span class="token number">60</span> <span class="token operator">*</span> second<span class="token punctuation">)</span>
+	hour        <span class="token operator">=</span> <span class="token function">Duration</span><span class="token punctuation">(</span><span class="token number">60</span> <span class="token operator">*</span> minute<span class="token punctuation">)</span>
+	infinite    <span class="token operator">=</span> <span class="token function">Duration</span><span class="token punctuation">(</span>C<span class="token punctuation">.</span>INT64_MAX<span class="token punctuation">)</span>
+<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="parse" class="doc-node">
+							<div class="title"><h2>fn parse <a href="#parse">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> ?Time</code></pre>
+<p>parse returns time from a date string in &quot;YYYY-MM-DD HH:MM:SS&quot; format.</p>
+
+</section>
+						<section id="darwin_now" class="doc-node">
+							<div class="title"><h2>fn darwin_now <a href="#darwin_now">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">darwin_now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Time</code></pre>
+<p>dummy to compile with all compilers</p>
+
+</section>
+						<section id="darwin_utc" class="doc-node">
+							<div class="title"><h2>fn darwin_utc <a href="#darwin_utc">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">darwin_utc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Time</code></pre>
+<p>dummy to compile with all compilers</p>
+
+</section>
+						<section id="day_of_week" class="doc-node">
+							<div class="title"><h2>fn day_of_week <a href="#day_of_week">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">day_of_week</span><span class="token punctuation">(</span>y <span class="token builtin">int</span><span class="token punctuation">,</span> m <span class="token builtin">int</span><span class="token punctuation">,</span> d <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>day_of_week returns the current day of a given year, month, and day,  as an integer.</p>
+
+</section>
+						<section id="days_in_month" class="doc-node">
+							<div class="title"><h2>fn days_in_month <a href="#days_in_month">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">days_in_month</span><span class="token punctuation">(</span>month <span class="token builtin">int</span><span class="token punctuation">,</span> year <span class="token builtin">int</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>days_in_month returns a number of days in a given month.</p>
+
+</section>
+						<section id="utc" class="doc-node">
+							<div class="title"><h2>fn utc <a href="#utc">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">utc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Time</code></pre>
+<p>utc returns the current UTC time.</p>
+
+</section>
+						<section id="usleep" class="doc-node">
+							<div class="title"><h2>fn usleep <a href="#usleep">#</a></h2></div><div class="attributes"><div class="attribute attribute-deprecated">deprecated</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">usleep</span><span class="token punctuation">(</span>microseconds <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>usleep makes the calling thread sleep for a given number of microseconds.</p>
+
+</section>
+						<section id="unix2" class="doc-node">
+							<div class="title"><h2>fn unix2 <a href="#unix2">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">unix2</span><span class="token punctuation">(</span>abs <span class="token builtin">i64</span><span class="token punctuation">,</span> microsecond <span class="token builtin">int</span><span class="token punctuation">)</span> Time</code></pre>
+<p>unix2 returns a time struct from Unix time and microsecond value</p>
+
+</section>
+						<section id="unix" class="doc-node">
+							<div class="title"><h2>fn unix <a href="#unix">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">unix</span><span class="token punctuation">(</span>abs <span class="token builtin">int</span><span class="token punctuation">)</span> Time</code></pre>
+<p>unix returns a time struct from Unix time.</p>
+
+</section>
+						<section id="is_leap_year" class="doc-node">
+							<div class="title"><h2>fn is_leap_year <a href="#is_leap_year">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">is_leap_year</span><span class="token punctuation">(</span>year <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_leap_year checks if a given a year is a leap year.</p>
+
+</section>
+						<section id="linux_now" class="doc-node">
+							<div class="title"><h2>fn linux_now <a href="#linux_now">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">linux_now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Time</code></pre>
+<p>dummy to compile with all compilers</p>
+
+</section>
+						<section id="linux_utc" class="doc-node">
+							<div class="title"><h2>fn linux_utc <a href="#linux_utc">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">linux_utc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Time</code></pre>
+<p>dummy to compile with all compilers</p>
+
+</section>
+						<section id="new_stopwatch" class="doc-node">
+							<div class="title"><h2>fn new_stopwatch <a href="#new_stopwatch">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_stopwatch</span><span class="token punctuation">(</span>opts StopWatchOptions<span class="token punctuation">)</span> StopWatch</code></pre>
+<p>new_stopwatch initializes a new StopWatch with the current time as start.</p>
+
+</section>
+						<section id="new_time" class="doc-node">
+							<div class="title"><h2>fn new_time <a href="#new_time">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_time</span><span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> Time</code></pre>
+<p>new_time returns a time struct with calculated Unix time.</p>
+
+</section>
+						<section id="now" class="doc-node">
+							<div class="title"><h2>fn now <a href="#now">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Time</code></pre>
+
+
+</section>
+						<section id="offset" class="doc-node">
+							<div class="title"><h2>fn offset <a href="#offset">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>offset returns time zone UTC offset in seconds.</p>
+
+</section>
+						<section id="wait" class="doc-node">
+							<div class="title"><h2>fn wait <a href="#wait">#</a></h2></div><div class="attributes"><div class="attribute attribute-deprecated">deprecated</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">wait</span><span class="token punctuation">(</span>duration Duration<span class="token punctuation">)</span></code></pre>
+<p>wait makes the calling thread sleep for a given duration (in nanoseconds).</p>
+
+</section>
+						<section id="parse_iso8601" class="doc-node">
+							<div class="title"><h2>fn parse_iso8601 <a href="#parse_iso8601">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse_iso8601</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> ?Time</code></pre>
+<p>parse_iso8601 parses rfc8601 time format yyyy-MM-ddTHH:mm:ss.dddddd+dd:dd as local time  the fraction part is difference in milli seconds and the last part is offset  from UTC time and can be both +/- HH:mm  remarks: not all iso8601 is supported  also checks and support for leapseconds should be added in future PR</p>
+
+</section>
+						<section id="parse_rfc2822" class="doc-node">
+							<div class="title"><h2>fn parse_rfc2822 <a href="#parse_rfc2822">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse_rfc2822</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> ?Time</code></pre>
+<p>parse_rfc2822 returns time from a date string in RFC 2822 datetime format.</p>
+
+</section>
+						<section id="sleep" class="doc-node">
+							<div class="title"><h2>fn sleep <a href="#sleep">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">sleep</span><span class="token punctuation">(</span>duration Duration<span class="token punctuation">)</span></code></pre>
+<p>sleep makes the calling thread sleep for a given duration (in nanoseconds).</p>
+
+</section>
+						<section id="sleep_ms" class="doc-node">
+							<div class="title"><h2>fn sleep_ms <a href="#sleep_ms">#</a></h2></div><div class="attributes"><div class="attribute attribute-deprecated">deprecated</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">sleep_ms</span><span class="token punctuation">(</span>milliseconds <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>sleep_ms makes the calling thread sleep for a given number of milliseconds.</p>
+
+</section>
+						<section id="solaris_now" class="doc-node">
+							<div class="title"><h2>fn solaris_now <a href="#solaris_now">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">solaris_now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Time</code></pre>
+<p>dummy to compile with all compilers</p>
+
+</section>
+						<section id="solaris_utc" class="doc-node">
+							<div class="title"><h2>fn solaris_utc <a href="#solaris_utc">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">solaris_utc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Time</code></pre>
+<p>dummy to compile with all compilers</p>
+
+</section>
+						<section id="ticks" class="doc-node">
+							<div class="title"><h2>fn ticks <a href="#ticks">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">ticks</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">i64</span></code></pre>
+<p>ticks returns a number of milliseconds elapsed since system start.</p>
+
+</section>
+						<section id="sys_mono_now" class="doc-node">
+							<div class="title"><h2>fn sys_mono_now <a href="#sys_mono_now">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">sys_mono_now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">u64</span></code></pre>
+<p>sys_mono_now returns a <em>monotonically increasing time</em>, NOT a time adjusted for daylight savings, location etc.</p>
+
+</section>
+						<section id="SystemTime.unix_time" class="doc-node">
+							<div class="title"><h2>fn (SystemTime) unix_time <a href="#SystemTime.unix_time">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>st SystemTime<span class="token punctuation">)</span> <span class="token function">unix_time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>unix_time returns Unix time.</p>
+
+</section>
+						<section id="Duration" class="doc-node">
+							<div class="title"><h2>type Duration <a href="#Duration">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> Duration <span class="token operator">=</span> <span class="token builtin">i64</span></code></pre>
+<p>A lot of these are taken from the Go library.</p>
+
+</section>
+						<section id="Duration.microseconds" class="doc-node">
+							<div class="title"><h2>fn (Duration) microseconds <a href="#Duration.microseconds">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>d Duration<span class="token punctuation">)</span> <span class="token function">microseconds</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">i64</span></code></pre>
+<p>microseconds returns the duration as an integer number of microseconds.</p>
+
+</section>
+						<section id="Duration.milliseconds" class="doc-node">
+							<div class="title"><h2>fn (Duration) milliseconds <a href="#Duration.milliseconds">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>d Duration<span class="token punctuation">)</span> <span class="token function">milliseconds</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">i64</span></code></pre>
+<p>milliseconds returns the duration as an integer number of milliseconds.</p>
+
+</section>
+						<section id="Duration.minutes" class="doc-node">
+							<div class="title"><h2>fn (Duration) minutes <a href="#Duration.minutes">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>d Duration<span class="token punctuation">)</span> <span class="token function">minutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">f64</span></code></pre>
+<p>minutes returns the duration as a floating point number of minutes.</p>
+
+</section>
+						<section id="Duration.nanoseconds" class="doc-node">
+							<div class="title"><h2>fn (Duration) nanoseconds <a href="#Duration.nanoseconds">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>d Duration<span class="token punctuation">)</span> <span class="token function">nanoseconds</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">i64</span></code></pre>
+<p>nanoseconds returns the duration as an integer number of nanoseconds.</p>
+
+</section>
+						<section id="Duration.seconds" class="doc-node">
+							<div class="title"><h2>fn (Duration) seconds <a href="#Duration.seconds">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>d Duration<span class="token punctuation">)</span> <span class="token function">seconds</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">f64</span></code></pre>
+<p>The following functions return floating point numbers because it's common to  consider all of them in sub-one intervals  seconds returns the duration as a floating point number of seconds.</p>
+
+</section>
+						<section id="Duration.sys_milliseconds" class="doc-node">
+							<div class="title"><h2>fn (Duration) sys_milliseconds <a href="#Duration.sys_milliseconds">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>d Duration<span class="token punctuation">)</span> <span class="token function">sys_milliseconds</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">u32</span></code></pre>
+<p>some Windows system functions (e.g. <code>C.WaitForSingleObject()</code>) accept an <code>u32</code>  value as <em>timeout in milliseconds</em> with the special value <code>u32(-1)</code> meaning &quot;infinite&quot;</p>
+
+</section>
+						<section id="Duration.hours" class="doc-node">
+							<div class="title"><h2>fn (Duration) hours <a href="#Duration.hours">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>d Duration<span class="token punctuation">)</span> <span class="token function">hours</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">f64</span></code></pre>
+<p>hours returns the duration as a floating point number of hours.</p>
+
+</section>
+						<section id="FormatDate" class="doc-node">
+							<div class="title"><h2>enum FormatDate <a href="#FormatDate">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">FormatDate</span> <span class="token punctuation">{</span>
+	ddmmyy
+	ddmmyyyy
+	mmddyy
+	mmddyyyy
+	mmmd
+	mmmdd
+	mmmddyy
+	mmmddyyyy
+	no_date
+	yyyymmdd
+	yymmdd
+<span class="token punctuation">}</span></code></pre>
+<p>FormatDelimiter contains different date formats.</p>
+
+</section>
+						<section id="FormatDelimiter" class="doc-node">
+							<div class="title"><h2>enum FormatDelimiter <a href="#FormatDelimiter">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">FormatDelimiter</span> <span class="token punctuation">{</span>
+	dot
+	hyphen
+	slash
+	space
+	no_delimiter
+<span class="token punctuation">}</span></code></pre>
+<p>FormatDelimiter contains different time/date delimiters.</p>
+
+</section>
+						<section id="FormatTime" class="doc-node">
+							<div class="title"><h2>enum FormatTime <a href="#FormatTime">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">FormatTime</span> <span class="token punctuation">{</span>
+	hhmm12
+	hhmm24
+	hhmmss12
+	hhmmss24
+	hhmmss24_milli
+	hhmmss24_micro
+	no_time
+<span class="token punctuation">}</span></code></pre>
+<p>FormatDelimiter contains different time formats.</p>
+
+</section>
+						<section id="StopWatchOptions" class="doc-node">
+							<div class="title"><h2>struct StopWatchOptions <a href="#StopWatchOptions">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">StopWatchOptions</span> <span class="token punctuation">{</span>
+	auto_start <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Time" class="doc-node">
+							<div class="title"><h2>struct Time <a href="#Time">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Time</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	year        <span class="token builtin">int</span>
+	month       <span class="token builtin">int</span>
+	day         <span class="token builtin">int</span>
+	hour        <span class="token builtin">int</span>
+	minute      <span class="token builtin">int</span>
+	second      <span class="token builtin">int</span>
+	microsecond <span class="token builtin">int</span>
+	unix        <span class="token builtin">u64</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Time contains various time units for a point in time.</p>
+
+</section>
+						<section id="Time.-" class="doc-node">
+							<div class="title"><h2>fn (Time) - <a href="#Time.-">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>lhs Time<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token punctuation">(</span>rhs Time<span class="token punctuation">)</span> Duration</code></pre>
+<p>Time subtract using operator overloading.</p>
+
+</section>
+						<section id="Time.<" class="doc-node">
+							<div class="title"><h2>fn (Time) < <a href="#Time.<">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t1 Time<span class="token punctuation">)</span> <span class="token operator"><</span> <span class="token punctuation">(</span>t2 Time<span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>operator <code>&amp;lt;</code> returns true if provided time is less than time</p>
+
+</section>
+						<section id="Time.==" class="doc-node">
+							<div class="title"><h2>fn (Time) == <a href="#Time.==">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t1 Time<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token punctuation">(</span>t2 Time<span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>operator <code>==</code> returns true if provided time is equal to time</p>
+
+</section>
+						<section id="Time.add" class="doc-node">
+							<div class="title"><h2>fn (Time) add <a href="#Time.add">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">add</span><span class="token punctuation">(</span>d Duration<span class="token punctuation">)</span> Time</code></pre>
+<p>add returns a new time that duration is added</p>
+
+</section>
+						<section id="Time.add_days" class="doc-node">
+							<div class="title"><h2>fn (Time) add_days <a href="#Time.add_days">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">add_days</span><span class="token punctuation">(</span>days <span class="token builtin">int</span><span class="token punctuation">)</span> Time</code></pre>
+<p>add_days returns a new time struct with an added number of days.</p>
+
+</section>
+						<section id="Time.add_seconds" class="doc-node">
+							<div class="title"><h2>fn (Time) add_seconds <a href="#Time.add_seconds">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">add_seconds</span><span class="token punctuation">(</span>seconds <span class="token builtin">int</span><span class="token punctuation">)</span> Time</code></pre>
+<p>add_seconds returns a new time struct with an added number of seconds.</p>
+
+</section>
+						<section id="Time.clean" class="doc-node">
+							<div class="title"><h2>fn (Time) clean <a href="#Time.clean">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">clean</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>clean returns a date string in a following format:  - a date string in &quot;HH:MM&quot; format (24h) for current day  - a date string in &quot;MMM D HH:MM&quot; format (24h) for date of current year  - a date string formatted with format function for other dates</p>
+
+</section>
+						<section id="Time.clean12" class="doc-node">
+							<div class="title"><h2>fn (Time) clean12 <a href="#Time.clean12">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">clean12</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>clean12 returns a date string in a following format:  - a date string in &quot;HH:MM&quot; format (12h) for current day  - a date string in &quot;MMM D HH:MM&quot; format (12h) for date of current year  - a date string formatted with format function for other dates</p>
+
+</section>
+						<section id="Time.day_of_week" class="doc-node">
+							<div class="title"><h2>fn (Time) day_of_week <a href="#Time.day_of_week">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">day_of_week</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>day_of_week returns the current day as an integer.</p>
+
+</section>
+						<section id="Time.ddmmy" class="doc-node">
+							<div class="title"><h2>fn (Time) ddmmy <a href="#Time.ddmmy">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">ddmmy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>ddmmy returns a date string in &quot;DD.MM.YYYY&quot; format.</p>
+
+</section>
+						<section id="Time.format" class="doc-node">
+							<div class="title"><h2>fn (Time) format <a href="#Time.format">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>format returns a date string in &quot;YYYY-MM-DD HH:MM&quot; format (24h).</p>
+
+</section>
+						<section id="Time.format_ss" class="doc-node">
+							<div class="title"><h2>fn (Time) format_ss <a href="#Time.format_ss">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">format_ss</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>format_ss returns a date string in &quot;YYYY-MM-DD HH:MM:SS&quot; format (24h).</p>
+
+</section>
+						<section id="Time.format_ss_micro" class="doc-node">
+							<div class="title"><h2>fn (Time) format_ss_micro <a href="#Time.format_ss_micro">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">format_ss_micro</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>format_ss_micro returns a date string in &quot;YYYY-MM-DD HH:MM:SS.123456&quot; format (24h).</p>
+
+</section>
+						<section id="Time.format_ss_milli" class="doc-node">
+							<div class="title"><h2>fn (Time) format_ss_milli <a href="#Time.format_ss_milli">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">format_ss_milli</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>format_ss_milli returns a date string in &quot;YYYY-MM-DD HH:MM:SS.123&quot; format (24h).</p>
+
+</section>
+						<section id="Time.get_fmt_date_str" class="doc-node">
+							<div class="title"><h2>fn (Time) get_fmt_date_str <a href="#Time.get_fmt_date_str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">get_fmt_date_str</span><span class="token punctuation">(</span>fmt_dlmtr FormatDelimiter<span class="token punctuation">,</span> fmt_date FormatDate<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_fmt_time_str returns a date string with specified  FormatDelimiter and FormatDate type.</p>
+
+</section>
+						<section id="Time.get_fmt_str" class="doc-node">
+							<div class="title"><h2>fn (Time) get_fmt_str <a href="#Time.get_fmt_str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">get_fmt_str</span><span class="token punctuation">(</span>fmt_dlmtr FormatDelimiter<span class="token punctuation">,</span> fmt_time FormatTime<span class="token punctuation">,</span> fmt_date FormatDate<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_fmt_str returns a date string with specified FormatDelimiter,  FormatTime type, and FormatDate type.</p>
+
+</section>
+						<section id="Time.get_fmt_time_str" class="doc-node">
+							<div class="title"><h2>fn (Time) get_fmt_time_str <a href="#Time.get_fmt_time_str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">get_fmt_time_str</span><span class="token punctuation">(</span>fmt_time FormatTime<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_fmt_time_str returns a date string with specified FormatTime type.</p>
+
+</section>
+						<section id="Time.hhmm" class="doc-node">
+							<div class="title"><h2>fn (Time) hhmm <a href="#Time.hhmm">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">hhmm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>hhmm returns a date string in &quot;HH:MM&quot; format (24h).</p>
+
+</section>
+						<section id="Time.hhmm12" class="doc-node">
+							<div class="title"><h2>fn (Time) hhmm12 <a href="#Time.hhmm12">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">hhmm12</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>hhmm12 returns a date string in &quot;HH:MM&quot; format (12h).</p>
+
+</section>
+						<section id="Time.hhmmss" class="doc-node">
+							<div class="title"><h2>fn (Time) hhmmss <a href="#Time.hhmmss">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">hhmmss</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>hhmmss returns a date string in &quot;HH:MM:SS&quot; format (24h).</p>
+
+</section>
+						<section id="Time.local" class="doc-node">
+							<div class="title"><h2>fn (Time) local <a href="#Time.local">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">local</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Time</code></pre>
+<p>local - return the time <code>t</code>, converted to the currently active local timezone</p>
+
+</section>
+						<section id="Time.long_weekday_str" class="doc-node">
+							<div class="title"><h2>fn (Time) long_weekday_str <a href="#Time.long_weekday_str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">long_weekday_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>weekday_str returns the current day as a string.</p>
+
+</section>
+						<section id="Time.md" class="doc-node">
+							<div class="title"><h2>fn (Time) md <a href="#Time.md">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">md</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>md returns a date string in &quot;MMM D&quot; format.</p>
+
+</section>
+						<section id="Time.relative" class="doc-node">
+							<div class="title"><h2>fn (Time) relative <a href="#Time.relative">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">relative</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>relative returns a string representation of the difference between t  and the current time.</p>
+
+</section>
+						<section id="Time.relative_short" class="doc-node">
+							<div class="title"><h2>fn (Time) relative_short <a href="#Time.relative_short">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">relative_short</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>relative_short returns a string saying how long ago a time occured as follows:  0-30 seconds: <code>&quot;now&quot;</code>; 30-60 seconds: <code>&quot;1m&quot;</code>; anything else is rounded to the  nearest minute, hour or day; anything higher than 10000 days (about 27 years)  years returns an empty string.  Some Examples:  <code>0s -&amp;gt; 'now'</code>;  <code>20s -&amp;gt; 'now'</code>;  <code>47s -&amp;gt; '1m'</code>;  <code>456s -&amp;gt; '7m'</code>;  <code>1234s -&amp;gt; '20m'</code>;  <code>16834s -&amp;gt; '4h'</code>;  <code>1687440s -&amp;gt; '33d'</code>;  <code>15842354871s -&amp;gt; ''</code></p>
+
+</section>
+						<section id="Time.smonth" class="doc-node">
+							<div class="title"><h2>fn (Time) smonth <a href="#Time.smonth">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">smonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>smonth returns month name.</p>
+
+</section>
+						<section id="Time.str" class="doc-node">
+							<div class="title"><h2>fn (Time) str <a href="#Time.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>str returns time in the same format as <code>parse</code> expects (&quot;YYYY-MM-DD HH:MM:SS&quot;).</p>
+
+</section>
+						<section id="Time.unix_time" class="doc-node">
+							<div class="title"><h2>fn (Time) unix_time <a href="#Time.unix_time">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">unix_time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>unix_time returns Unix time.</p>
+
+</section>
+						<section id="Time.unix_time_milli" class="doc-node">
+							<div class="title"><h2>fn (Time) unix_time_milli <a href="#Time.unix_time_milli">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">unix_time_milli</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">u64</span></code></pre>
+<p>unix_time_milli returns Unix time with millisecond resolution.</p>
+
+</section>
+						<section id="Time.utc_string" class="doc-node">
+							<div class="title"><h2>fn (Time) utc_string <a href="#Time.utc_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">utc_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>This is just a TEMPORARY function for cookies and their expire dates</p>
+
+</section>
+						<section id="Time.weekday_str" class="doc-node">
+							<div class="title"><h2>fn (Time) weekday_str <a href="#Time.weekday_str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">weekday_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>weekday_str returns the current day as a string.</p>
+
+</section>
+						<section id="Time.ymmdd" class="doc-node">
+							<div class="title"><h2>fn (Time) ymmdd <a href="#Time.ymmdd">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t Time<span class="token punctuation">)</span> <span class="token function">ymmdd</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>ymmdd returns a date string in &quot;YYYY-MM-DD&quot; format.</p>
+
+</section>
+						<section id="StopWatch" class="doc-node">
+							<div class="title"><h2>struct StopWatch <a href="#StopWatch">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">StopWatch</span> <span class="token punctuation">{</span>
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	elapsed <span class="token builtin">u64</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	start <span class="token builtin">u64</span>
+	end   <span class="token builtin">u64</span>
+<span class="token punctuation">}</span></code></pre>
+<p>StopWatch is used to measure elapsed time.</p>
+
+</section>
+						<section id="StopWatch.start" class="doc-node">
+							<div class="title"><h2>fn (StopWatch) start <a href="#StopWatch.start">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> t StopWatch<span class="token punctuation">)</span> <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>start starts the stopwatch. If the timer was paused, restarts counting.</p>
+
+</section>
+						<section id="StopWatch.restart" class="doc-node">
+							<div class="title"><h2>fn (StopWatch) restart <a href="#StopWatch.restart">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> t StopWatch<span class="token punctuation">)</span> <span class="token function">restart</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>restart restarts the stopwatch. If the timer was paused, restarts counting.</p>
+
+</section>
+						<section id="StopWatch.stop" class="doc-node">
+							<div class="title"><h2>fn (StopWatch) stop <a href="#StopWatch.stop">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> t StopWatch<span class="token punctuation">)</span> <span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>stop stops the timer, by setting the end time to the current time.</p>
+
+</section>
+						<section id="StopWatch.pause" class="doc-node">
+							<div class="title"><h2>fn (StopWatch) pause <a href="#StopWatch.pause">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> t StopWatch<span class="token punctuation">)</span> <span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>pause resets the <code>start</code> time and adds the current elapsed time to <code>elapsed</code>.</p>
+
+</section>
+						<section id="StopWatch.elapsed" class="doc-node">
+							<div class="title"><h2>fn (StopWatch) elapsed <a href="#StopWatch.elapsed">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>t StopWatch<span class="token punctuation">)</span> <span class="token function">elapsed</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Duration</code></pre>
+<p>elapsed returns the Duration since the last start call</p>
+
+</section>
+						<section id="C.timeval" class="doc-node">
+							<div class="title"><h2>struct C.timeval <a href="#C.timeval">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">timeval</span> <span class="token punctuation">{</span>
+	tv_sec  <span class="token builtin">u64</span>
+	tv_usec <span class="token builtin">u64</span>
+<span class="token punctuation">}</span></code></pre>
+<p>C.timeval represents a C time value.</p>
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:27
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#Constants">Constants</a></li>
+<li class="open"><a href="#parse">fn parse</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#darwin_now">fn darwin_now</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#darwin_utc">fn darwin_utc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#day_of_week">fn day_of_week</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#days_in_month">fn days_in_month</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#utc">fn utc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#usleep">fn usleep</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#unix2">fn unix2</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#unix">fn unix</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#is_leap_year">fn is_leap_year</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#linux_now">fn linux_now</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#linux_utc">fn linux_utc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new_stopwatch">fn new_stopwatch</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new_time">fn new_time</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#now">fn now</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#offset">fn offset</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#wait">fn wait</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#parse_iso8601">fn parse_iso8601</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#parse_rfc2822">fn parse_rfc2822</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#sleep">fn sleep</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#sleep_ms">fn sleep_ms</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#solaris_now">fn solaris_now</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#solaris_utc">fn solaris_utc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ticks">fn ticks</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#sys_mono_now">fn sys_mono_now</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#SystemTime.unix_time">type SystemTime</a>        <ul>
+<li><a href="#SystemTime.unix_time">fn unix_time</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Duration">type Duration</a>        <ul>
+<li><a href="#Duration.microseconds">fn microseconds</a></li>
+<li><a href="#Duration.milliseconds">fn milliseconds</a></li>
+<li><a href="#Duration.minutes">fn minutes</a></li>
+<li><a href="#Duration.nanoseconds">fn nanoseconds</a></li>
+<li><a href="#Duration.seconds">fn seconds</a></li>
+<li><a href="#Duration.sys_milliseconds">fn sys_milliseconds</a></li>
+<li><a href="#Duration.hours">fn hours</a></li>
+</ul>
+</li>
+<li class="open"><a href="#FormatDate">enum FormatDate</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FormatDelimiter">enum FormatDelimiter</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FormatTime">enum FormatTime</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#StopWatchOptions">struct StopWatchOptions</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Time">struct Time</a>        <ul>
+<li><a href="#Time.-">fn -</a></li>
+<li><a href="#Time.<">fn <</a></li>
+<li><a href="#Time.==">fn ==</a></li>
+<li><a href="#Time.add">fn add</a></li>
+<li><a href="#Time.add_days">fn add_days</a></li>
+<li><a href="#Time.add_seconds">fn add_seconds</a></li>
+<li><a href="#Time.clean">fn clean</a></li>
+<li><a href="#Time.clean12">fn clean12</a></li>
+<li><a href="#Time.day_of_week">fn day_of_week</a></li>
+<li><a href="#Time.ddmmy">fn ddmmy</a></li>
+<li><a href="#Time.format">fn format</a></li>
+<li><a href="#Time.format_ss">fn format_ss</a></li>
+<li><a href="#Time.format_ss_micro">fn format_ss_micro</a></li>
+<li><a href="#Time.format_ss_milli">fn format_ss_milli</a></li>
+<li><a href="#Time.get_fmt_date_str">fn get_fmt_date_str</a></li>
+<li><a href="#Time.get_fmt_str">fn get_fmt_str</a></li>
+<li><a href="#Time.get_fmt_time_str">fn get_fmt_time_str</a></li>
+<li><a href="#Time.hhmm">fn hhmm</a></li>
+<li><a href="#Time.hhmm12">fn hhmm12</a></li>
+<li><a href="#Time.hhmmss">fn hhmmss</a></li>
+<li><a href="#Time.local">fn local</a></li>
+<li><a href="#Time.long_weekday_str">fn long_weekday_str</a></li>
+<li><a href="#Time.md">fn md</a></li>
+<li><a href="#Time.relative">fn relative</a></li>
+<li><a href="#Time.relative_short">fn relative_short</a></li>
+<li><a href="#Time.smonth">fn smonth</a></li>
+<li><a href="#Time.str">fn str</a></li>
+<li><a href="#Time.unix_time">fn unix_time</a></li>
+<li><a href="#Time.unix_time_milli">fn unix_time_milli</a></li>
+<li><a href="#Time.utc_string">fn utc_string</a></li>
+<li><a href="#Time.weekday_str">fn weekday_str</a></li>
+<li><a href="#Time.ymmdd">fn ymmdd</a></li>
+</ul>
+</li>
+<li class="open"><a href="#StopWatch">struct StopWatch</a>        <ul>
+<li><a href="#StopWatch.start">fn start</a></li>
+<li><a href="#StopWatch.restart">fn restart</a></li>
+<li><a href="#StopWatch.stop">fn stop</a></li>
+<li><a href="#StopWatch.pause">fn pause</a></li>
+<li><a href="#StopWatch.elapsed">fn elapsed</a></li>
+</ul>
+</li>
+<li class="open"><a href="#C.timeval">struct C.timeval</a>        <ul>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

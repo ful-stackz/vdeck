@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>v.doc | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li class="active"><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_v.doc" class="doc-node">
+							<div class="title"><h1> v.doc <a href="#readme_v.doc">#</a></h1></div>
+
+</section>
+
+						<section id="lookup_module_with_path" class="doc-node">
+							<div class="title"><h2>fn lookup_module_with_path <a href="#lookup_module_with_path">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">lookup_module_with_path</span><span class="token punctuation">(</span>mod <span class="token builtin">string</span><span class="token punctuation">,</span> base_path <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+<p>lookup_module_with_path looks up the path of a given module name.  Throws an error if the module was not found.</p>
+
+</section>
+						<section id="ast_comment_to_doc_comment" class="doc-node">
+							<div class="title"><h2>fn ast_comment_to_doc_comment <a href="#ast_comment_to_doc_comment">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">ast_comment_to_doc_comment</span><span class="token punctuation">(</span>ast_node ast<span class="token punctuation">.</span>Comment<span class="token punctuation">)</span> DocComment</code></pre>
+<p>ast_comment_to_doc_comment converts an <code>ast.Comment</code> node type to a <code>DocComment</code></p>
+
+</section>
+						<section id="ast_comments_to_doc_comments" class="doc-node">
+							<div class="title"><h2>fn ast_comments_to_doc_comments <a href="#ast_comments_to_doc_comments">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">ast_comments_to_doc_comments</span><span class="token punctuation">(</span>ast_nodes <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Comment<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>DocComment</code></pre>
+<p>ast_comments_to_doc_comments converts an array of <code>ast.Comment</code> nodes to  an array of <code>DocComment</code> nodes</p>
+
+</section>
+						<section id="platform_from_string" class="doc-node">
+							<div class="title"><h2>fn platform_from_string <a href="#platform_from_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">platform_from_string</span><span class="token punctuation">(</span>platform_str <span class="token builtin">string</span><span class="token punctuation">)</span> ?Platform</code></pre>
+<p>copy of pref.os_from_string</p>
+
+</section>
+						<section id="platform_from_filename" class="doc-node">
+							<div class="title"><h2>fn platform_from_filename <a href="#platform_from_filename">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">platform_from_filename</span><span class="token punctuation">(</span>filename <span class="token builtin">string</span><span class="token punctuation">)</span> Platform</code></pre>
+
+
+</section>
+						<section id="new_vdoc_preferences" class="doc-node">
+							<div class="title"><h2>fn new_vdoc_preferences <a href="#new_vdoc_preferences">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_vdoc_preferences</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&</span>pref<span class="token punctuation">.</span>Preferences</code></pre>
+<p>new_vdoc_preferences creates a new instance of pref.Preferences tailored for v.doc.</p>
+
+</section>
+						<section id="generate" class="doc-node">
+							<div class="title"><h2>fn generate <a href="#generate">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">generate</span><span class="token punctuation">(</span>input_path <span class="token builtin">string</span><span class="token punctuation">,</span> pub_only <span class="token builtin">bool</span><span class="token punctuation">,</span> with_comments <span class="token builtin">bool</span><span class="token punctuation">,</span> platform Platform<span class="token punctuation">,</span> filter_symbol_names ...<span class="token builtin">string</span><span class="token punctuation">)</span> ?Doc</code></pre>
+<p>generate documents a certain file directory and returns an  instance of <code>Doc</code> if it is successful. Otherwise, it will  throw an error.</p>
+
+</section>
+						<section id="generate_from_mod" class="doc-node">
+							<div class="title"><h2>fn generate_from_mod <a href="#generate_from_mod">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">generate_from_mod</span><span class="token punctuation">(</span>module_name <span class="token builtin">string</span><span class="token punctuation">,</span> pub_only <span class="token builtin">bool</span><span class="token punctuation">,</span> with_comments <span class="token builtin">bool</span><span class="token punctuation">)</span> ?Doc</code></pre>
+<p>generate_from_mod generates a documentation from a specific module.</p>
+
+</section>
+						<section id="generate_with_pos" class="doc-node">
+							<div class="title"><h2>fn generate_with_pos <a href="#generate_with_pos">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">generate_with_pos</span><span class="token punctuation">(</span>input_path <span class="token builtin">string</span><span class="token punctuation">,</span> filename <span class="token builtin">string</span><span class="token punctuation">,</span> pos <span class="token builtin">int</span><span class="token punctuation">)</span> ?Doc</code></pre>
+<p>generate_with_pos has the same function as the <code>generate</code> function but  accepts an offset-based position and enables the comments by default.</p>
+
+</section>
+						<section id="lookup_module" class="doc-node">
+							<div class="title"><h2>fn lookup_module <a href="#lookup_module">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">lookup_module</span><span class="token punctuation">(</span>mod <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+<p>lookup_module returns the result of the <code>lookup_module_with_path</code>  but with the current directory as the provided base lookup path.</p>
+
+</section>
+						<section id="merge_doc_comments" class="doc-node">
+							<div class="title"><h2>fn merge_doc_comments <a href="#merge_doc_comments">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">merge_doc_comments</span><span class="token punctuation">(</span>comments <span class="token punctuation">[</span><span class="token punctuation">]</span>DocComment<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>merge_doc_comments merges all the comments starting from  the last up to the first item of the array.</p>
+
+</section>
+						<section id="merge_comments" class="doc-node">
+							<div class="title"><h2>fn merge_comments <a href="#merge_comments">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">merge_comments</span><span class="token punctuation">(</span>comments <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Comment<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>merge_comments merges all the comment contents into a single text.</p>
+
+</section>
+						<section id="new" class="doc-node">
+							<div class="title"><h2>fn new <a href="#new">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new</span><span class="token punctuation">(</span>input_path <span class="token builtin">string</span><span class="token punctuation">)</span> Doc</code></pre>
+<p>new creates a new instance of a <code>Doc</code> struct.</p>
+
+</section>
+						<section id="[]DocNode.find" class="doc-node">
+							<div class="title"><h2>fn ([]DocNode) find <a href="#[]DocNode.find">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>nodes <span class="token punctuation">[</span><span class="token punctuation">]</span>DocNode<span class="token punctuation">)</span> <span class="token function">find</span><span class="token punctuation">(</span>symname <span class="token builtin">string</span><span class="token punctuation">)</span> ?DocNode</code></pre>
+
+
+</section>
+						<section id="[]DocNode.sort_by_name" class="doc-node">
+							<div class="title"><h2>fn ([]DocNode) sort_by_name <a href="#[]DocNode.sort_by_name">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> nodes <span class="token punctuation">[</span><span class="token punctuation">]</span>DocNode<span class="token punctuation">)</span> <span class="token function">sort_by_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>sort_by_name sorts the array based on the symbol names.</p>
+
+</section>
+						<section id="[]DocNode.sort_by_kind" class="doc-node">
+							<div class="title"><h2>fn ([]DocNode) sort_by_kind <a href="#[]DocNode.sort_by_kind">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> nodes <span class="token punctuation">[</span><span class="token punctuation">]</span>DocNode<span class="token punctuation">)</span> <span class="token function">sort_by_kind</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>sort_by_kind sorts the array based on the symbol kind.</p>
+
+</section>
+						<section id="map[string]DocNode.arr" class="doc-node">
+							<div class="title"><h2>fn (map[string]DocNode) arr <a href="#map[string]DocNode.arr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>cnts <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span>DocNode<span class="token punctuation">)</span> <span class="token function">arr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>DocNode</code></pre>
+<p>arr() converts the map into an array of <code>DocNode</code>.</p>
+
+</section>
+						<section id="Platform" class="doc-node">
+							<div class="title"><h2>enum Platform <a href="#Platform">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Platform</span> <span class="token punctuation">{</span>
+	auto
+	ios
+	macos
+	linux
+	windows
+	freebsd
+	openbsd
+	netbsd
+	dragonfly
+	js
+	android
+	solaris
+	serenity
+	vinix
+	haiku
+	raw
+	cross
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="SymbolKind" class="doc-node">
+							<div class="title"><h2>enum SymbolKind <a href="#SymbolKind">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">SymbolKind</span> <span class="token punctuation">{</span>
+	none_
+	const_group
+	constant
+	variable
+	function
+	method
+	interface_
+	typedef
+	enum_
+	enum_field
+	struct_
+	struct_field
+<span class="token punctuation">}</span></code></pre>
+<p>SymbolKind categorizes the symbols it documents.  The names are intentionally not in order as a guide when sorting the nodes.</p>
+
+</section>
+						<section id="SymbolKind.str" class="doc-node">
+							<div class="title"><h2>fn (SymbolKind) str <a href="#SymbolKind.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>sk SymbolKind<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="Doc" class="doc-node">
+							<div class="title"><h2>struct Doc <a href="#Doc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Doc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	prefs     <span class="token operator">&</span>pref<span class="token punctuation">.</span>Preferences <span class="token operator">=</span> <span class="token function">new_vdoc_preferences</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	base_path <span class="token builtin">string</span>
+	table     <span class="token operator">&</span>ast<span class="token punctuation">.</span>Table      <span class="token operator">=</span> ast<span class="token punctuation">.</span><span class="token function">new_table</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	checker   checker<span class="token punctuation">.</span>Checker <span class="token operator">=</span> checker<span class="token punctuation">.</span><span class="token symbol">Checker</span><span class="token punctuation">{</span>
+		table<span class="token punctuation">:</span> <span class="token number">0</span>
+		pref<span class="token punctuation">:</span> <span class="token number">0</span>
+	<span class="token punctuation">}</span>
+	fmt                 fmt<span class="token punctuation">.</span>Fmt
+	filename            <span class="token builtin">string</span>
+	pos                 <span class="token builtin">int</span>
+	pub_only            <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+	with_comments       <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+	with_pos            <span class="token builtin">bool</span>
+	with_head           <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+	is_vlib             <span class="token builtin">bool</span>
+	time_generated      time<span class="token punctuation">.</span>Time
+	head                DocNode
+	contents            <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span>DocNode
+	scoped_contents     <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span>DocNode
+	parent_mod_name     <span class="token builtin">string</span>
+	orig_mod_name       <span class="token builtin">string</span>
+	extract_vars        <span class="token builtin">bool</span>
+	filter_symbol_names <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	common_symbols      <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	platform            Platform
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Doc.expr_typ_to_string" class="doc-node">
+							<div class="title"><h2>fn (Doc) expr_typ_to_string <a href="#Doc.expr_typ_to_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> d Doc<span class="token punctuation">)</span> <span class="token function">expr_typ_to_string</span><span class="token punctuation">(</span>ex ast<span class="token punctuation">.</span>Expr<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>expr_typ_to_string has the same function as <code>Doc.typ_to_str</code>  but for <code>ast.Expr</code> nodes. The checker will check first the  node and it executes the <code>type_to_str</code> method.</p>
+
+</section>
+						<section id="Doc.file_ast" class="doc-node">
+							<div class="title"><h2>fn (Doc) file_ast <a href="#Doc.file_ast">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> d Doc<span class="token punctuation">)</span> <span class="token function">file_ast</span><span class="token punctuation">(</span>file_ast ast<span class="token punctuation">.</span>File<span class="token punctuation">)</span> <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span>DocNode</code></pre>
+<p>file_ast reads the contents of <code>ast.File</code> and returns a map of <code>DocNode</code>s.</p>
+
+</section>
+						<section id="Doc.file_ast_with_pos" class="doc-node">
+							<div class="title"><h2>fn (Doc) file_ast_with_pos <a href="#Doc.file_ast_with_pos">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> d Doc<span class="token punctuation">)</span> <span class="token function">file_ast_with_pos</span><span class="token punctuation">(</span>file_ast ast<span class="token punctuation">.</span>File<span class="token punctuation">,</span> pos <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span>DocNode</code></pre>
+<p>file_ast_with_pos has the same function as the <code>file_ast</code> but  instead returns a list of variables in a given offset-based position.</p>
+
+</section>
+						<section id="Doc.file_asts" class="doc-node">
+							<div class="title"><h2>fn (Doc) file_asts <a href="#Doc.file_asts">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> d Doc<span class="token punctuation">)</span> <span class="token function">file_asts</span><span class="token punctuation">(</span>file_asts <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>File<span class="token punctuation">)</span> ?</code></pre>
+<p>file_asts has the same function as the <code>file_ast</code> function but  accepts an array of <code>ast.File</code> and throws an error if necessary.</p>
+
+</section>
+						<section id="Doc.generate" class="doc-node">
+							<div class="title"><h2>fn (Doc) generate <a href="#Doc.generate">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> d Doc<span class="token punctuation">)</span> <span class="token function">generate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+<p>generate is a <code>Doc</code> method that will start documentation  process based on a file path provided.</p>
+
+</section>
+						<section id="Doc.stmt" class="doc-node">
+							<div class="title"><h2>fn (Doc) stmt <a href="#Doc.stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> d Doc<span class="token punctuation">)</span> <span class="token function">stmt</span><span class="token punctuation">(</span>stmt ast<span class="token punctuation">.</span>Stmt<span class="token punctuation">,</span> filename <span class="token builtin">string</span><span class="token punctuation">)</span> ?DocNode</code></pre>
+<p>stmt reads the data of an <code>ast.Stmt</code> node and returns a <code>DocNode</code>.  An option error is thrown if the symbol is not exposed to the public  (when <code>pub_only</code> is enabled) or the content's of the AST node is empty.</p>
+
+</section>
+						<section id="Doc.stmt_name" class="doc-node">
+							<div class="title"><h2>fn (Doc) stmt_name <a href="#Doc.stmt_name">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>d Doc<span class="token punctuation">)</span> <span class="token function">stmt_name</span><span class="token punctuation">(</span>stmt ast<span class="token punctuation">.</span>Stmt<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>stmt_name returns the name of a given <code>ast.Stmt</code> node.</p>
+
+</section>
+						<section id="Doc.stmt_pub" class="doc-node">
+							<div class="title"><h2>fn (Doc) stmt_pub <a href="#Doc.stmt_pub">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>d Doc<span class="token punctuation">)</span> <span class="token function">stmt_pub</span><span class="token punctuation">(</span>stmt ast<span class="token punctuation">.</span>Stmt<span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>stmt_pub returns a boolean if a given <code>ast.Stmt</code> node  is exposed to the public.</p>
+
+</section>
+						<section id="Doc.stmt_signature" class="doc-node">
+							<div class="title"><h2>fn (Doc) stmt_signature <a href="#Doc.stmt_signature">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> d Doc<span class="token punctuation">)</span> <span class="token function">stmt_signature</span><span class="token punctuation">(</span>stmt ast<span class="token punctuation">.</span>Stmt<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>stmt_signature returns the signature of a given <code>ast.Stmt</code> node.</p>
+
+</section>
+						<section id="Doc.type_to_str" class="doc-node">
+							<div class="title"><h2>fn (Doc) type_to_str <a href="#Doc.type_to_str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> d Doc<span class="token punctuation">)</span> <span class="token function">type_to_str</span><span class="token punctuation">(</span>typ ast<span class="token punctuation">.</span>Type<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>type_to_str is a wrapper function around <code>fmt.ast.type_to_str</code>.</p>
+
+</section>
+						<section id="DocComment" class="doc-node">
+							<div class="title"><h2>struct DocComment <a href="#DocComment">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">DocComment</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	text     <span class="token builtin">string</span>
+	is_multi <span class="token builtin">bool</span>
+	pos      token<span class="token punctuation">.</span>Position
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="DocComment.is_example" class="doc-node">
+							<div class="title"><h2>fn (DocComment) is_example <a href="#DocComment.is_example">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>dc DocComment<span class="token punctuation">)</span> <span class="token function">is_example</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_example returns true if the contents of this comment is a doc example.  The current convention is '// Example: &lt;content&gt;'</p>
+
+</section>
+						<section id="DocComment.example" class="doc-node">
+							<div class="title"><h2>fn (DocComment) example <a href="#DocComment.example">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>dc DocComment<span class="token punctuation">)</span> <span class="token function">example</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>example returns the content of the example body</p>
+
+</section>
+						<section id="DocNode" class="doc-node">
+							<div class="title"><h2>struct DocNode <a href="#DocNode">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">DocNode</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	name        <span class="token builtin">string</span>
+	content     <span class="token builtin">string</span>
+	comments    <span class="token punctuation">[</span><span class="token punctuation">]</span>DocComment
+	pos         token<span class="token punctuation">.</span>Position
+	file_path   <span class="token builtin">string</span>
+	kind        SymbolKind
+	tags        <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	parent_name <span class="token builtin">string</span>
+	return_type <span class="token builtin">string</span>
+	children    <span class="token punctuation">[</span><span class="token punctuation">]</span>DocNode
+	attrs       <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span> <span class="token punctuation">[</span>json<span class="token punctuation">:</span> attributes<span class="token punctuation">]</span>
+	from_scope  <span class="token builtin">bool</span>
+	is_pub      <span class="token builtin">bool</span>              <span class="token punctuation">[</span>json<span class="token punctuation">:</span> public<span class="token punctuation">]</span>
+	platform    Platform
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="DocNode.merge_comments" class="doc-node">
+							<div class="title"><h2>fn (DocNode) merge_comments <a href="#DocNode.merge_comments">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>dc DocNode<span class="token punctuation">)</span> <span class="token function">merge_comments</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>merge_comments returns a <code>string</code> with the combined contents of <code>DocNode.comments</code>.</p>
+
+</section>
+						<section id="DocNode.merge_comments_without_examples" class="doc-node">
+							<div class="title"><h2>fn (DocNode) merge_comments_without_examples <a href="#DocNode.merge_comments_without_examples">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>dc DocNode<span class="token punctuation">)</span> <span class="token function">merge_comments_without_examples</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>merge_comments_without_examples returns a <code>string</code> with the  combined contents of <code>DocNode.comments</code> - excluding any examples.</p>
+
+</section>
+						<section id="DocNode.examples" class="doc-node">
+							<div class="title"><h2>fn (DocNode) examples <a href="#DocNode.examples">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>dn DocNode<span class="token punctuation">)</span> <span class="token function">examples</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>examples returns a <code>[]string</code> containing examples parsed from <code>DocNode.comments</code>.</p>
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:27
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#lookup_module_with_path">fn lookup_module_with_path</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ast_comment_to_doc_comment">fn ast_comment_to_doc_comment</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ast_comments_to_doc_comments">fn ast_comments_to_doc_comments</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#platform_from_string">fn platform_from_string</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#platform_from_filename">fn platform_from_filename</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new_vdoc_preferences">fn new_vdoc_preferences</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#generate">fn generate</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#generate_from_mod">fn generate_from_mod</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#generate_with_pos">fn generate_with_pos</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#lookup_module">fn lookup_module</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#merge_doc_comments">fn merge_doc_comments</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#merge_comments">fn merge_comments</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new">fn new</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#[]DocNode.find">type []DocNode</a>        <ul>
+<li><a href="#[]DocNode.find">fn find</a></li>
+<li><a href="#[]DocNode.sort_by_name">fn sort_by_name</a></li>
+<li><a href="#[]DocNode.sort_by_kind">fn sort_by_kind</a></li>
+</ul>
+</li>
+<li class="open"><a href="#map[string]DocNode.arr">type map[string]DocNode</a>        <ul>
+<li><a href="#map[string]DocNode.arr">fn arr</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Platform">enum Platform</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#SymbolKind">enum SymbolKind</a>        <ul>
+<li><a href="#SymbolKind.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Doc">struct Doc</a>        <ul>
+<li><a href="#Doc.expr_typ_to_string">fn expr_typ_to_string</a></li>
+<li><a href="#Doc.file_ast">fn file_ast</a></li>
+<li><a href="#Doc.file_ast_with_pos">fn file_ast_with_pos</a></li>
+<li><a href="#Doc.file_asts">fn file_asts</a></li>
+<li><a href="#Doc.generate">fn generate</a></li>
+<li><a href="#Doc.stmt">fn stmt</a></li>
+<li><a href="#Doc.stmt_name">fn stmt_name</a></li>
+<li><a href="#Doc.stmt_pub">fn stmt_pub</a></li>
+<li><a href="#Doc.stmt_signature">fn stmt_signature</a></li>
+<li><a href="#Doc.type_to_str">fn type_to_str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#DocComment">struct DocComment</a>        <ul>
+<li><a href="#DocComment.is_example">fn is_example</a></li>
+<li><a href="#DocComment.example">fn example</a></li>
+</ul>
+</li>
+<li class="open"><a href="#DocNode">struct DocNode</a>        <ul>
+<li><a href="#DocNode.merge_comments">fn merge_comments</a></li>
+<li><a href="#DocNode.merge_comments_without_examples">fn merge_comments_without_examples</a></li>
+<li><a href="#DocNode.examples">fn examples</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

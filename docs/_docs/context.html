@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>context | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open active"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_context" class="doc-node">
+							<div class="title"><h1> context <a href="#readme_context">#</a></h1></div><h1>Context</h1>
+<p>This module defines the Context type, which carries deadlines, cancellation signals,
+and other request-scoped values across API boundaries and between processes.</p>
+<p>Incoming requests to a server should create a Context, and outgoing calls to servers
+should accept a Context. The chain of function calls between them must propagate the
+Context, optionally replacing it with a derived Context created using with_cancel,
+with_deadline, with_timeout, or with_value. When a Context is canceled, all Contexts
+derived from it are also canceled.</p>
+<p>The with_cancel, with_deadline, and with_timeout functions take a Context (the parent)
+and return a derived Context (the child). Calling the cancel function
+cancels the child and its children, removes the parent's reference to the child,
+and stops any associated timers.</p>
+<p>Programs that use Contexts should follow these rules to keep interfaces consistent
+across different modules.</p>
+<p>Do not store Contexts inside a struct type; instead, pass a Context explicitly
+to each function that needs it. The Context should be the first parameter,
+typically named ctx, just to make it more consistent.</p>
+<h2>Examples</h2>
+<p>In this section you can see some usage examples for this module</p>
+<h3>Context With Cancellation</h3>
+<pre><code class="language-v">import context
+
+// This example demonstrates the use of a cancelable context to prevent a
+// routine leak. By the end of the example function, the routine started
+// by gen will return without leaking.
+fn example_with_cancel() {
+    // gen generates integers in a separate routine and
+    // sends them to the returned channel.
+    // The callers of gen need to cancel the context once
+    // they are done consuming generated integers not to leak
+    // the internal routine started by gen.
+    gen := fn (ctx context.Context) chan int {
+        dst := chan int{}
+        go fn (ctx context.Context, dst chan int) {
+            mut v := 0
+            ch := ctx.done()
+            for {
+                select {
+                   _ := &lt;-ch {
+                       // returning not to leak the routine
+                       return
+                   }
+                   dst &lt;- v {
+                       v++
+                   }
+                }
+            }
+        }(ctx, dst)
+        return dst
+    }
+
+    ctx := context.with_cancel(context.background())
+    defer {
+        context.cancel(ctx)
+    }
+
+    ch := gen(ctx)
+    for i in 0 .. 5 {
+        v := &lt;-ch
+        assert i == v
+    }
+}
+</code></pre>
+<h3>Context With Deadline</h3>
+<pre><code class="language-v">import context
+import time
+
+const (
+    // a reasonable duration to block in an example
+    short_duration = 1 * time.millisecond
+)
+
+// This example passes a context with an arbitrary deadline to tell a blocking
+// function that it should abandon its work as soon as it gets to it.
+fn example_with_deadline() {
+    dur := time.now().add(short_duration)
+    ctx := context.with_deadline(context.background(), dur)
+
+    defer {
+        // Even though ctx will be expired, it is good practice to call its
+        // cancellation function in any case. Failure to do so may keep the
+        // context and its parent alive longer than necessary.
+        context.cancel(ctx)
+    }
+
+    ctx_ch := ctx.done()
+    select {
+        _ := &lt;-ctx_ch {}
+        &gt; 1 * time.second {
+            panic('This should not happen')
+        }
+    }
+}
+</code></pre>
+<h3>Context With Timeout</h3>
+<pre><code class="language-v">import context
+import time
+
+const (
+    // a reasonable duration to block in an example
+    short_duration = 1 * time.millisecond
+)
+
+// This example passes a context with a timeout to tell a blocking function that
+// it should abandon its work after the timeout elapses.
+fn example_with_timeout() {
+    // Pass a context with a timeout to tell a blocking function that it
+    // should abandon its work after the timeout elapses.
+    ctx := context.with_timeout(context.background(), short_duration)
+    defer {
+        context.cancel(ctx)
+    }
+
+    ctx_ch := ctx.done()
+    select {
+        _ := &lt;-ctx_ch {}
+        &gt; 1 * time.second {
+            panic('This should not happen')
+        }
+    }
+}
+</code></pre>
+<h3>Context With Value</h3>
+<pre><code class="language-v">import context
+
+type ValueContextKey = string
+
+// This example demonstrates how a value can be passed to the context
+// and also how to retrieve it if it exists.
+fn example_with_value() {
+    f := fn (ctx context.Context, key ValueContextKey) string {
+        if value := ctx.value(key) {
+            if !isnil(value) {
+                return *(&amp;string(value))
+            }
+        }
+        return 'key not found'
+    }
+
+    key := ValueContextKey('language')
+    value := 'VAL'
+    ctx := context.with_value(context.background(), key, &amp;value)
+
+    assert value == f(ctx, key)
+    assert 'key not found' == f(ctx, ValueContextKey('color'))
+}
+</code></pre>
+
+</section>
+
+						<section id="background" class="doc-node">
+							<div class="title"><h2>fn background <a href="#background">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">background</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Context</code></pre>
+<p>background returns an empty Context. It is never canceled, has no  values, and has no deadline. It is typically used by the main function,  initialization, and tests, and as the top-level Context for incoming  requests.</p>
+
+</section>
+						<section id="cancel" class="doc-node">
+							<div class="title"><h2>fn cancel <a href="#cancel">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">cancel</span><span class="token punctuation">(</span>ctx Context<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="with_timeout" class="doc-node">
+							<div class="title"><h2>fn with_timeout <a href="#with_timeout">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">with_timeout</span><span class="token punctuation">(</span>parent Context<span class="token punctuation">,</span> timeout time<span class="token punctuation">.</span>Duration<span class="token punctuation">)</span> Context</code></pre>
+<p>with_timeout returns with_deadline(parent, time.now().add(timeout)).   Canceling this context releases resources associated with it, so code should  call cancel as soon as the operations running in this Context complete</p>
+
+</section>
+						<section id="with_deadline" class="doc-node">
+							<div class="title"><h2>fn with_deadline <a href="#with_deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">with_deadline</span><span class="token punctuation">(</span>parent Context<span class="token punctuation">,</span> d time<span class="token punctuation">.</span>Time<span class="token punctuation">)</span> Context</code></pre>
+<p>with_deadline returns a copy of the parent context with the deadline adjusted  to be no later than d. If the parent's deadline is already earlier than d,  with_deadline(parent, d) is semantically equivalent to parent. The returned  context's Done channel is closed when the deadline expires, when the returned  cancel function is called, or when the parent context's Done channel is  closed, whichever happens first.   Canceling this context releases resources associated with it, so code should  call cancel as soon as the operations running in this Context complete.</p>
+
+</section>
+						<section id="with_cancel" class="doc-node">
+							<div class="title"><h2>fn with_cancel <a href="#with_cancel">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">with_cancel</span><span class="token punctuation">(</span>parent Context<span class="token punctuation">)</span> Context</code></pre>
+<p>with_cancel returns a copy of parent with a new done channel. The returned  context's done channel is closed when the returned cancel function is called  or when the parent context's done channel is closed, whichever happens first.   Canceling this context releases resources associated with it, so code should  call cancel as soon as the operations running in this Context complete.</p>
+
+</section>
+						<section id="todo" class="doc-node">
+							<div class="title"><h2>fn todo <a href="#todo">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">todo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Context</code></pre>
+<p>todo returns an empty Context. Code should use todo when  it's unclear which Context to use or it is not yet available (because the  surrounding function has not yet been extended to accept a Context  parameter).</p>
+
+</section>
+						<section id="with_value" class="doc-node">
+							<div class="title"><h2>fn with_value <a href="#with_value">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">with_value</span><span class="token punctuation">(</span>parent Context<span class="token punctuation">,</span> key <span class="token builtin">string</span><span class="token punctuation">,</span> value <span class="token builtin">voidptr</span><span class="token punctuation">)</span> Context</code></pre>
+<p>with_value returns a copy of parent in which the value associated with key is  val.   Use context Values only for request-scoped data that transits processes and  APIs, not for passing optional parameters to functions.   The provided key must be comparable and should not be of type  string or any other built-in type to avoid collisions between  packages using context. Users of with_value should define their own  types for keys</p>
+
+</section>
+						<section id="Canceler" class="doc-node">
+							<div class="title"><h2>interface Canceler <a href="#Canceler">#</a></h2></div><pre class="signature"><code><span class="token keyword">interface</span> <span class="token symbol">Canceler</span> <span class="token punctuation">{</span>
+	id <span class="token builtin">string</span>
+	<span class="token function">cancel</span><span class="token punctuation">(</span>remove_from_parent <span class="token builtin">bool</span><span class="token punctuation">,</span> err <span class="token builtin">IError</span><span class="token punctuation">)</span>
+	<span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">chan</span> <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Context" class="doc-node">
+							<div class="title"><h2>interface Context <a href="#Context">#</a></h2></div><pre class="signature"><code><span class="token keyword">interface</span> <span class="token symbol">Context</span> <span class="token punctuation">{</span>
+	<span class="token function">deadline</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?time<span class="token punctuation">.</span>Time
+	<span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">chan</span> <span class="token builtin">int</span>
+	<span class="token function">err</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">IError</span>
+	<span class="token function">value</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">voidptr</span>
+	<span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="EmptyContext" class="doc-node">
+							<div class="title"><h2>type EmptyContext <a href="#EmptyContext">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> EmptyContext <span class="token operator">=</span> <span class="token builtin">int</span></code></pre>
+<p>An EmptyContext is never canceled, has no values, and has no deadline. It is not  struct{}, since vars of this type must have distinct addresses.</p>
+
+</section>
+						<section id="EmptyContext.deadline" class="doc-node">
+							<div class="title"><h2>fn (EmptyContext) deadline <a href="#EmptyContext.deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx EmptyContext<span class="token punctuation">)</span> <span class="token function">deadline</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?time<span class="token punctuation">.</span>Time</code></pre>
+
+
+</section>
+						<section id="EmptyContext.done" class="doc-node">
+							<div class="title"><h2>fn (EmptyContext) done <a href="#EmptyContext.done">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx EmptyContext<span class="token punctuation">)</span> <span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">chan</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="EmptyContext.err" class="doc-node">
+							<div class="title"><h2>fn (EmptyContext) err <a href="#EmptyContext.err">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx EmptyContext<span class="token punctuation">)</span> <span class="token function">err</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">IError</span></code></pre>
+
+
+</section>
+						<section id="EmptyContext.value" class="doc-node">
+							<div class="title"><h2>fn (EmptyContext) value <a href="#EmptyContext.value">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx EmptyContext<span class="token punctuation">)</span> <span class="token function">value</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">voidptr</span></code></pre>
+
+
+</section>
+						<section id="EmptyContext.str" class="doc-node">
+							<div class="title"><h2>fn (EmptyContext) str <a href="#EmptyContext.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx EmptyContext<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="CancelContext" class="doc-node">
+							<div class="title"><h2>struct CancelContext <a href="#CancelContext">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">CancelContext</span> <span class="token punctuation">{</span>
+	id <span class="token builtin">string</span>
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	context  Context
+	mutex    <span class="token operator">&</span>sync<span class="token punctuation">.</span>Mutex
+	done     <span class="token builtin">chan</span> <span class="token builtin">int</span>
+	children <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span>Canceler
+	err      <span class="token builtin">IError</span>
+<span class="token punctuation">}</span></code></pre>
+<p>A CancelContext can be canceled. When canceled, it also cancels any children  that implement Canceler.</p>
+
+</section>
+						<section id="CancelContext.deadline" class="doc-node">
+							<div class="title"><h2>fn (CancelContext) deadline <a href="#CancelContext.deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx CancelContext<span class="token punctuation">)</span> <span class="token function">deadline</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?time<span class="token punctuation">.</span>Time</code></pre>
+
+
+</section>
+						<section id="CancelContext.done" class="doc-node">
+							<div class="title"><h2>fn (CancelContext) done <a href="#CancelContext.done">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx CancelContext<span class="token punctuation">)</span> <span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">chan</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="CancelContext.err" class="doc-node">
+							<div class="title"><h2>fn (CancelContext) err <a href="#CancelContext.err">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx CancelContext<span class="token punctuation">)</span> <span class="token function">err</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">IError</span></code></pre>
+
+
+</section>
+						<section id="CancelContext.value" class="doc-node">
+							<div class="title"><h2>fn (CancelContext) value <a href="#CancelContext.value">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx CancelContext<span class="token punctuation">)</span> <span class="token function">value</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">voidptr</span></code></pre>
+
+
+</section>
+						<section id="CancelContext.str" class="doc-node">
+							<div class="title"><h2>fn (CancelContext) str <a href="#CancelContext.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx CancelContext<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="TimerContext" class="doc-node">
+							<div class="title"><h2>struct TimerContext <a href="#TimerContext">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">TimerContext</span> <span class="token punctuation">{</span>
+	id <span class="token builtin">string</span>
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	cancel_ctx CancelContext
+	deadline   time<span class="token punctuation">.</span>Time
+<span class="token punctuation">}</span></code></pre>
+<p>A TimerContext carries a timer and a deadline. It embeds a CancelContext to  implement done and err. It implements cancel by stopping its timer then  delegating to CancelContext.cancel</p>
+
+</section>
+						<section id="TimerContext.deadline" class="doc-node">
+							<div class="title"><h2>fn (TimerContext) deadline <a href="#TimerContext.deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx TimerContext<span class="token punctuation">)</span> <span class="token function">deadline</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?time<span class="token punctuation">.</span>Time</code></pre>
+
+
+</section>
+						<section id="TimerContext.done" class="doc-node">
+							<div class="title"><h2>fn (TimerContext) done <a href="#TimerContext.done">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx TimerContext<span class="token punctuation">)</span> <span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">chan</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="TimerContext.err" class="doc-node">
+							<div class="title"><h2>fn (TimerContext) err <a href="#TimerContext.err">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx TimerContext<span class="token punctuation">)</span> <span class="token function">err</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">IError</span></code></pre>
+
+
+</section>
+						<section id="TimerContext.value" class="doc-node">
+							<div class="title"><h2>fn (TimerContext) value <a href="#TimerContext.value">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx TimerContext<span class="token punctuation">)</span> <span class="token function">value</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">voidptr</span></code></pre>
+
+
+</section>
+						<section id="TimerContext.cancel" class="doc-node">
+							<div class="title"><h2>fn (TimerContext) cancel <a href="#TimerContext.cancel">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx TimerContext<span class="token punctuation">)</span> <span class="token function">cancel</span><span class="token punctuation">(</span>remove_from_parent <span class="token builtin">bool</span><span class="token punctuation">,</span> err <span class="token builtin">IError</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TimerContext.str" class="doc-node">
+							<div class="title"><h2>fn (TimerContext) str <a href="#TimerContext.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx TimerContext<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="ValueContext" class="doc-node">
+							<div class="title"><h2>struct ValueContext <a href="#ValueContext">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">ValueContext</span> <span class="token punctuation">{</span>
+	key   <span class="token builtin">string</span>
+	value <span class="token builtin">voidptr</span>
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	context Context
+<span class="token punctuation">}</span></code></pre>
+<p>A ValueContext carries a key-value pair. It implements Value for that key and  delegates all other calls to the embedded Context.</p>
+
+</section>
+						<section id="ValueContext.deadline" class="doc-node">
+							<div class="title"><h2>fn (ValueContext) deadline <a href="#ValueContext.deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx ValueContext<span class="token punctuation">)</span> <span class="token function">deadline</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?time<span class="token punctuation">.</span>Time</code></pre>
+
+
+</section>
+						<section id="ValueContext.done" class="doc-node">
+							<div class="title"><h2>fn (ValueContext) done <a href="#ValueContext.done">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx ValueContext<span class="token punctuation">)</span> <span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">chan</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="ValueContext.err" class="doc-node">
+							<div class="title"><h2>fn (ValueContext) err <a href="#ValueContext.err">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx ValueContext<span class="token punctuation">)</span> <span class="token function">err</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">IError</span></code></pre>
+
+
+</section>
+						<section id="ValueContext.value" class="doc-node">
+							<div class="title"><h2>fn (ValueContext) value <a href="#ValueContext.value">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx ValueContext<span class="token punctuation">)</span> <span class="token function">value</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">voidptr</span></code></pre>
+
+
+</section>
+						<section id="ValueContext.str" class="doc-node">
+							<div class="title"><h2>fn (ValueContext) str <a href="#ValueContext.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx ValueContext<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:26
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#readme_context">README</a></li>
+<li class="open"><a href="#background">fn background</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#cancel">fn cancel</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#with_timeout">fn with_timeout</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#with_deadline">fn with_deadline</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#with_cancel">fn with_cancel</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#todo">fn todo</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#with_value">fn with_value</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Canceler">interface Canceler</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Context">interface Context</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#EmptyContext">type EmptyContext</a>        <ul>
+<li><a href="#EmptyContext.deadline">fn deadline</a></li>
+<li><a href="#EmptyContext.done">fn done</a></li>
+<li><a href="#EmptyContext.err">fn err</a></li>
+<li><a href="#EmptyContext.value">fn value</a></li>
+<li><a href="#EmptyContext.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#CancelContext">struct CancelContext</a>        <ul>
+<li><a href="#CancelContext.deadline">fn deadline</a></li>
+<li><a href="#CancelContext.done">fn done</a></li>
+<li><a href="#CancelContext.err">fn err</a></li>
+<li><a href="#CancelContext.value">fn value</a></li>
+<li><a href="#CancelContext.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#TimerContext">struct TimerContext</a>        <ul>
+<li><a href="#TimerContext.deadline">fn deadline</a></li>
+<li><a href="#TimerContext.done">fn done</a></li>
+<li><a href="#TimerContext.err">fn err</a></li>
+<li><a href="#TimerContext.value">fn value</a></li>
+<li><a href="#TimerContext.cancel">fn cancel</a></li>
+<li><a href="#TimerContext.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#ValueContext">struct ValueContext</a>        <ul>
+<li><a href="#ValueContext.deadline">fn deadline</a></li>
+<li><a href="#ValueContext.done">fn done</a></li>
+<li><a href="#ValueContext.err">fn err</a></li>
+<li><a href="#ValueContext.value">fn value</a></li>
+<li><a href="#ValueContext.str">fn str</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

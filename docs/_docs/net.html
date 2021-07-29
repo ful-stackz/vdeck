@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>net | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open active"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_net" class="doc-node">
+							<div class="title"><h1> net <a href="#readme_net">#</a></h1></div>
+
+</section>
+
+						<section id="Constants" class="doc-node const">
+							<div class="title"><h2>Constants <a href="#Constants">#</a></h2></div>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	err_new_socket_failed   <span class="token operator">=</span> <span class="token function">error_with_code</span><span class="token punctuation">(</span><span class="token string">'net: new_socket failed to create socket'</span><span class="token punctuation">,</span>
+		errors_base <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+	err_option_not_settable <span class="token operator">=</span> <span class="token function">error_with_code</span><span class="token punctuation">(</span><span class="token string">'net: set_option_xxx option not settable'</span><span class="token punctuation">,</span>
+		errors_base <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">)</span>
+	err_option_wrong_type   <span class="token operator">=</span> <span class="token function">error_with_code</span><span class="token punctuation">(</span><span class="token string">'net: set_option_xxx option wrong type'</span><span class="token punctuation">,</span>
+		errors_base <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span>
+	err_port_out_of_range   <span class="token operator">=</span> <span class="token function">error_with_code</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span> errors_base <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">)</span>
+	err_no_udp_remote       <span class="token operator">=</span> <span class="token function">error_with_code</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span> errors_base <span class="token operator">+</span> <span class="token number">6</span><span class="token punctuation">)</span>
+	err_connect_failed      <span class="token operator">=</span> <span class="token function">error_with_code</span><span class="token punctuation">(</span><span class="token string">'net: connect failed'</span><span class="token punctuation">,</span> errors_base <span class="token operator">+</span> <span class="token number">7</span><span class="token punctuation">)</span>
+	err_connect_timed_out   <span class="token operator">=</span> <span class="token function">error_with_code</span><span class="token punctuation">(</span><span class="token string">'net: connect timed out'</span><span class="token punctuation">,</span> errors_base <span class="token operator">+</span> <span class="token number">8</span><span class="token punctuation">)</span>
+	err_timed_out           <span class="token operator">=</span> <span class="token function">error_with_code</span><span class="token punctuation">(</span><span class="token string">'net: op timed out'</span><span class="token punctuation">,</span> errors_base <span class="token operator">+</span> <span class="token number">9</span><span class="token punctuation">)</span>
+	err_timed_out_code      <span class="token operator">=</span> errors_base <span class="token operator">+</span> <span class="token number">9</span>
+<span class="token punctuation">)</span></code></pre>
+<p>Well defined errors that are returned from socket functions</p>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> no_timeout <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">Duration</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> infinite_timeout <span class="token operator">=</span> time<span class="token punctuation">.</span>infinite</code></pre>
+
+
+</section>
+						<section id="wsa_error" class="doc-node">
+							<div class="title"><h2>fn wsa_error <a href="#wsa_error">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">wsa_error</span><span class="token punctuation">(</span>code <span class="token builtin">int</span><span class="token punctuation">)</span> WsaError</code></pre>
+<p>wsa_error casts an int to its WsaError value</p>
+
+</section>
+						<section id="wrap_error" class="doc-node">
+							<div class="title"><h2>fn wrap_error <a href="#wrap_error">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">wrap_error</span><span class="token punctuation">(</span>error_code <span class="token builtin">int</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="addr_from_socket_handle" class="doc-node">
+							<div class="title"><h2>fn addr_from_socket_handle <a href="#addr_from_socket_handle">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">addr_from_socket_handle</span><span class="token punctuation">(</span>handle <span class="token builtin">int</span><span class="token punctuation">)</span> Addr</code></pre>
+
+
+</section>
+						<section id="socket_error" class="doc-node">
+							<div class="title"><h2>fn socket_error <a href="#socket_error">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">socket_error</span><span class="token punctuation">(</span>potential_code <span class="token builtin">int</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="dial_tcp" class="doc-node">
+							<div class="title"><h2>fn dial_tcp <a href="#dial_tcp">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">dial_tcp</span><span class="token punctuation">(</span>address <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token operator">&</span>TcpConn</code></pre>
+
+
+</section>
+						<section id="dial_udp" class="doc-node">
+							<div class="title"><h2>fn dial_udp <a href="#dial_udp">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">dial_udp</span><span class="token punctuation">(</span>raddr <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token operator">&</span>UdpConn</code></pre>
+
+
+</section>
+						<section id="listen_tcp" class="doc-node">
+							<div class="title"><h2>fn listen_tcp <a href="#listen_tcp">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">listen_tcp</span><span class="token punctuation">(</span>family AddrFamily<span class="token punctuation">,</span> saddr <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token operator">&</span>TcpListener</code></pre>
+
+
+</section>
+						<section id="listen_udp" class="doc-node">
+							<div class="title"><h2>fn listen_udp <a href="#listen_udp">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">listen_udp</span><span class="token punctuation">(</span>laddr <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token operator">&</span>UdpConn</code></pre>
+
+
+</section>
+						<section id="resolve_addrs" class="doc-node">
+							<div class="title"><h2>fn resolve_addrs <a href="#resolve_addrs">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">resolve_addrs</span><span class="token punctuation">(</span>addr <span class="token builtin">string</span><span class="token punctuation">,</span> family AddrFamily<span class="token punctuation">,</span> @type SocketType<span class="token punctuation">)</span> ?<span class="token punctuation">[</span><span class="token punctuation">]</span>Addr</code></pre>
+
+
+</section>
+						<section id="resolve_addrs_fuzzy" class="doc-node">
+							<div class="title"><h2>fn resolve_addrs_fuzzy <a href="#resolve_addrs_fuzzy">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">resolve_addrs_fuzzy</span><span class="token punctuation">(</span>addr <span class="token builtin">string</span><span class="token punctuation">,</span> @type SocketType<span class="token punctuation">)</span> ?<span class="token punctuation">[</span><span class="token punctuation">]</span>Addr</code></pre>
+
+
+</section>
+						<section id="resolve_ipaddrs" class="doc-node">
+							<div class="title"><h2>fn resolve_ipaddrs <a href="#resolve_ipaddrs">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">resolve_ipaddrs</span><span class="token punctuation">(</span>addr <span class="token builtin">string</span><span class="token punctuation">,</span> family AddrFamily<span class="token punctuation">,</span> typ SocketType<span class="token punctuation">)</span> ?<span class="token punctuation">[</span><span class="token punctuation">]</span>Addr</code></pre>
+
+
+</section>
+						<section id="validate_port" class="doc-node">
+							<div class="title"><h2>fn validate_port <a href="#validate_port">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">validate_port</span><span class="token punctuation">(</span>port <span class="token builtin">int</span><span class="token punctuation">)</span> ?<span class="token builtin">u16</span></code></pre>
+<p>validate_port checks whether a port is valid  and returns the port or an error</p>
+
+</section>
+						<section id="split_address" class="doc-node">
+							<div class="title"><h2>fn split_address <a href="#split_address">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">split_address</span><span class="token punctuation">(</span>addr <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token builtin">u16</span><span class="token punctuation">)</span></code></pre>
+<p>split address splits an address into its host name and its port</p>
+
+</section>
+						<section id="UdpSocket.set_option_bool" class="doc-node">
+							<div class="title"><h2>fn (UdpSocket) set_option_bool <a href="#UdpSocket.set_option_bool">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s UdpSocket<span class="token punctuation">)</span> <span class="token function">set_option_bool</span><span class="token punctuation">(</span>opt SocketOption<span class="token punctuation">,</span> value <span class="token builtin">bool</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="UdpSocket.set_dualstack" class="doc-node">
+							<div class="title"><h2>fn (UdpSocket) set_dualstack <a href="#UdpSocket.set_dualstack">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s UdpSocket<span class="token punctuation">)</span> <span class="token function">set_dualstack</span><span class="token punctuation">(</span>on <span class="token builtin">bool</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="Addr.family" class="doc-node">
+							<div class="title"><h2>fn (Addr) family <a href="#Addr.family">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>a Addr<span class="token punctuation">)</span> <span class="token function">family</span><span class="token punctuation">(</span><span class="token punctuation">)</span> AddrFamily</code></pre>
+
+
+</section>
+						<section id="TcpSocket.set_option_bool" class="doc-node">
+							<div class="title"><h2>fn (TcpSocket) set_option_bool <a href="#TcpSocket.set_option_bool">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s TcpSocket<span class="token punctuation">)</span> <span class="token function">set_option_bool</span><span class="token punctuation">(</span>opt SocketOption<span class="token punctuation">,</span> value <span class="token builtin">bool</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="TcpSocket.set_dualstack" class="doc-node">
+							<div class="title"><h2>fn (TcpSocket) set_dualstack <a href="#TcpSocket.set_dualstack">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s TcpSocket<span class="token punctuation">)</span> <span class="token function">set_dualstack</span><span class="token punctuation">(</span>on <span class="token builtin">bool</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="TcpSocket.set_option_int" class="doc-node">
+							<div class="title"><h2>fn (TcpSocket) set_option_int <a href="#TcpSocket.set_option_int">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s TcpSocket<span class="token punctuation">)</span> <span class="token function">set_option_int</span><span class="token punctuation">(</span>opt SocketOption<span class="token punctuation">,</span> value <span class="token builtin">int</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="TcpSocket.address" class="doc-node">
+							<div class="title"><h2>fn (TcpSocket) address <a href="#TcpSocket.address">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>TcpSocket<span class="token punctuation">)</span> <span class="token function">address</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?Addr</code></pre>
+<p>address gets the address of a socket</p>
+
+</section>
+						<section id="AddrFamily" class="doc-node">
+							<div class="title"><h2>enum AddrFamily <a href="#AddrFamily">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">AddrFamily</span> <span class="token punctuation">{</span>
+	unix <span class="token operator">=</span> C<span class="token punctuation">.</span>AF_UNIX
+	ip <span class="token operator">=</span> C<span class="token punctuation">.</span>AF_INET
+	ip6 <span class="token operator">=</span> C<span class="token punctuation">.</span>AF_INET6
+	unspec <span class="token operator">=</span> C<span class="token punctuation">.</span>AF_UNSPEC
+<span class="token punctuation">}</span></code></pre>
+<p>AddrFamily are the available address families</p>
+
+</section>
+						<section id="SocketOption" class="doc-node">
+							<div class="title"><h2>enum SocketOption <a href="#SocketOption">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">SocketOption</span> <span class="token punctuation">{</span>
+	broadcast <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_BROADCAST
+	debug <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_DEBUG
+	dont_route <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_DONTROUTE
+	error <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_ERROR
+	keep_alive <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_KEEPALIVE
+	linger <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_LINGER
+	oob_inline <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_OOBINLINE
+	reuse_addr <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_REUSEADDR
+	recieve_buf_size <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_RCVBUF
+	recieve_low_size <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_RCVLOWAT
+	recieve_timeout <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_RCVTIMEO
+	send_buf_size <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_SNDBUF
+	send_low_size <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_SNDLOWAT
+	send_timeout <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_SNDTIMEO
+	socket_type <span class="token operator">=</span> C<span class="token punctuation">.</span>SO_TYPE
+	ipv6_only <span class="token operator">=</span> C<span class="token punctuation">.</span>IPV6_V6ONLY
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="SocketType" class="doc-node">
+							<div class="title"><h2>enum SocketType <a href="#SocketType">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">SocketType</span> <span class="token punctuation">{</span>
+	udp <span class="token operator">=</span> C<span class="token punctuation">.</span>SOCK_DGRAM
+	tcp <span class="token operator">=</span> C<span class="token punctuation">.</span>SOCK_STREAM
+	seqpacket <span class="token operator">=</span> C<span class="token punctuation">.</span>SOCK_SEQPACKET
+<span class="token punctuation">}</span></code></pre>
+<p>SocketType are the available sockets</p>
+
+</section>
+						<section id="WsaError" class="doc-node">
+							<div class="title"><h2>enum WsaError <a href="#WsaError">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">WsaError</span> <span class="token punctuation">{</span>
+	wsaeintr <span class="token operator">=</span> <span class="token number">10004</span>
+	wsaebadf <span class="token operator">=</span> <span class="token number">10009</span>
+	wsaeacces <span class="token operator">=</span> <span class="token number">10013</span>
+	wsaefault <span class="token operator">=</span> <span class="token number">10014</span>
+	wsaeinval <span class="token operator">=</span> <span class="token number">10022</span>
+	wsaemfile <span class="token operator">=</span> <span class="token number">10024</span>
+	wsaewouldblock <span class="token operator">=</span> <span class="token number">10035</span>
+	wsaeinprogress <span class="token operator">=</span> <span class="token number">10036</span>
+	wsaealready <span class="token operator">=</span> <span class="token number">10037</span>
+	wsaenotsock <span class="token operator">=</span> <span class="token number">10038</span>
+	wsaedestaddrreq <span class="token operator">=</span> <span class="token number">10039</span>
+	wsaemsgsize <span class="token operator">=</span> <span class="token number">10040</span>
+	wsaeprototype <span class="token operator">=</span> <span class="token number">10041</span>
+	wsaenoprotoopt <span class="token operator">=</span> <span class="token number">10042</span>
+	wsaeprotonosupport <span class="token operator">=</span> <span class="token number">10043</span>
+	wsaesocktnosupport <span class="token operator">=</span> <span class="token number">10044</span>
+	wsaeopnotsupp <span class="token operator">=</span> <span class="token number">10045</span>
+	wsaepfnosupport <span class="token operator">=</span> <span class="token number">10046</span>
+	wsaeafnosupport <span class="token operator">=</span> <span class="token number">10047</span>
+	wsaeaddrinuse <span class="token operator">=</span> <span class="token number">10048</span>
+	wsaeaddrnotavail <span class="token operator">=</span> <span class="token number">10049</span>
+	wsaenetdown <span class="token operator">=</span> <span class="token number">10050</span>
+	wsaenetunreach <span class="token operator">=</span> <span class="token number">10051</span>
+	wsaenetreset <span class="token operator">=</span> <span class="token number">10052</span>
+	wsaeconnaborted <span class="token operator">=</span> <span class="token number">10053</span>
+	wsaeconnreset <span class="token operator">=</span> <span class="token number">10054</span>
+	wsaenobufs <span class="token operator">=</span> <span class="token number">10055</span>
+	wsaeisconn <span class="token operator">=</span> <span class="token number">10056</span>
+	wsaenotconn <span class="token operator">=</span> <span class="token number">10057</span>
+	wsaeshutdown <span class="token operator">=</span> <span class="token number">10058</span>
+	wsaetoomanyrefs <span class="token operator">=</span> <span class="token number">10059</span>
+	wsaetimedout <span class="token operator">=</span> <span class="token number">10060</span>
+	wsaeconnrefused <span class="token operator">=</span> <span class="token number">10061</span>
+	wsaeloop <span class="token operator">=</span> <span class="token number">10062</span>
+	wsaenametoolong <span class="token operator">=</span> <span class="token number">10063</span>
+	wsaehostdown <span class="token operator">=</span> <span class="token number">10064</span>
+	wsaehostunreach <span class="token operator">=</span> <span class="token number">10065</span>
+	wsaenotempty <span class="token operator">=</span> <span class="token number">10066</span>
+	wsaeproclim <span class="token operator">=</span> <span class="token number">10067</span>
+	wsaeusers <span class="token operator">=</span> <span class="token number">10068</span>
+	wsaedquot <span class="token operator">=</span> <span class="token number">10069</span>
+	wsaestale <span class="token operator">=</span> <span class="token number">10070</span>
+	wsaeremote <span class="token operator">=</span> <span class="token number">10071</span>
+	wsasysnotready <span class="token operator">=</span> <span class="token number">10091</span>
+	wsavernotsupported <span class="token operator">=</span> <span class="token number">10092</span>
+	wsanotinitialised <span class="token operator">=</span> <span class="token number">10093</span>
+	wsaediscon <span class="token operator">=</span> <span class="token number">10101</span>
+	wsaenomore <span class="token operator">=</span> <span class="token number">10102</span>
+	wsaecancelled <span class="token operator">=</span> <span class="token number">10103</span>
+	wsaeinvalidproctable <span class="token operator">=</span> <span class="token number">10104</span>
+	wsaeinvalidprovider <span class="token operator">=</span> <span class="token number">10105</span>
+	wsaeproviderfailedinit <span class="token operator">=</span> <span class="token number">10106</span>
+	wsasyscallfailure <span class="token operator">=</span> <span class="token number">10107</span>
+	wsaservice_not_found <span class="token operator">=</span> <span class="token number">10108</span>
+	wsatype_not_found <span class="token operator">=</span> <span class="token number">10109</span>
+	wsa_e_no_more <span class="token operator">=</span> <span class="token number">10110</span>
+	wsa_e_cancelled <span class="token operator">=</span> <span class="token number">10111</span>
+	wsaerefused <span class="token operator">=</span> <span class="token number">10112</span>
+	wsahost_not_found <span class="token operator">=</span> <span class="token number">11001</span>
+	wsatry_again <span class="token operator">=</span> <span class="token number">11002</span>
+	wsano_recovery <span class="token operator">=</span> <span class="token number">11003</span>
+	wsano_data <span class="token operator">=</span> <span class="token number">11004</span>
+	wsa_qos_receivers <span class="token operator">=</span> <span class="token number">11005</span>
+	wsa_qos_senders <span class="token operator">=</span> <span class="token number">11006</span>
+	wsa_qos_no_senders <span class="token operator">=</span> <span class="token number">11007</span>
+	wsa_qos_no_receivers <span class="token operator">=</span> <span class="token number">11008</span>
+	wsa_qos_request_confirmed <span class="token operator">=</span> <span class="token number">11009</span>
+	wsa_qos_admission_failure <span class="token operator">=</span> <span class="token number">11010</span>
+	wsa_qos_policy_failure <span class="token operator">=</span> <span class="token number">11011</span>
+	wsa_qos_bad_style <span class="token operator">=</span> <span class="token number">11012</span>
+	wsa_qos_bad_object <span class="token operator">=</span> <span class="token number">11013</span>
+	wsa_qos_traffic_ctrl_error <span class="token operator">=</span> <span class="token number">11014</span>
+	wsa_qos_generic_error <span class="token operator">=</span> <span class="token number">11015</span>
+	wsa_qos_eservicetype <span class="token operator">=</span> <span class="token number">11016</span>
+	wsa_qos_eflowspec <span class="token operator">=</span> <span class="token number">11017</span>
+	wsa_qos_eprovspecbuf <span class="token operator">=</span> <span class="token number">11018</span>
+	wsa_qos_efilterstyle <span class="token operator">=</span> <span class="token number">11019</span>
+	wsa_qos_efiltertype <span class="token operator">=</span> <span class="token number">11020</span>
+	wsa_qos_efiltercount <span class="token operator">=</span> <span class="token number">11021</span>
+	wsa_qos_eobjlength <span class="token operator">=</span> <span class="token number">11022</span>
+	wsa_qos_eflowcount <span class="token operator">=</span> <span class="token number">11023</span>
+	wsa_qos_eunkownpsobj <span class="token operator">=</span> <span class="token number">11024</span>
+	wsa_qos_epolicyobj <span class="token operator">=</span> <span class="token number">11025</span>
+	wsa_qos_eflowdesc <span class="token operator">=</span> <span class="token number">11026</span>
+	wsa_qos_epsflowspec <span class="token operator">=</span> <span class="token number">11027</span>
+	wsa_qos_epsfilterspec <span class="token operator">=</span> <span class="token number">11028</span>
+	wsa_qos_esdmodeobj <span class="token operator">=</span> <span class="token number">11029</span>
+	wsa_qos_eshaperateobj <span class="token operator">=</span> <span class="token number">11030</span>
+	wsa_qos_reserved_petype <span class="token operator">=</span> <span class="token number">11031</span>
+	wsa_secure_host_not_found <span class="token operator">=</span> <span class="token number">11032</span>
+	wsa_ipsec_name_policy_error <span class="token operator">=</span> <span class="token number">11033</span>
+<span class="token punctuation">}</span></code></pre>
+<p>WsaError is all of the socket errors that WSA provides from WSAGetLastError</p>
+
+</section>
+						<section id="C.fd_set" class="doc-node">
+							<div class="title"><h2>struct C.fd_set <a href="#C.fd_set">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">fd_set</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="UdpConn" class="doc-node">
+							<div class="title"><h2>struct UdpConn <a href="#UdpConn">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">UdpConn</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	sock UdpSocket
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	write_deadline time<span class="token punctuation">.</span>Time
+	read_deadline  time<span class="token punctuation">.</span>Time
+	read_timeout   time<span class="token punctuation">.</span>Duration
+	write_timeout  time<span class="token punctuation">.</span>Duration
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="UdpConn.write_ptr" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) write_ptr <a href="#UdpConn.write_ptr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">write_ptr</span><span class="token punctuation">(</span>b <span class="token operator">&</span><span class="token builtin">byte</span><span class="token punctuation">,</span> len <span class="token builtin">int</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>pub fn dial_udp(laddr string, raddr string) ?&amp;UdpConn {  	local := resolve_addr(laddr, .inet, .udp) ?  	sbase := new_udp_socket() ?  	sock := UdpSocket{  		handle: sbase.handle  		l: local  		r: resolve_wrapper(raddr)  	}  }</p>
+
+</section>
+						<section id="UdpConn.write" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) write <a href="#UdpConn.write">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">write</span><span class="token punctuation">(</span>buf <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="UdpConn.write_str" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) write_str <a href="#UdpConn.write_str">#</a></h2></div><div class="attributes"><div class="attribute attribute-deprecated">deprecated</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">write_str</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="UdpConn.write_string" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) write_string <a href="#UdpConn.write_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">write_string</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="UdpConn.write_to_ptr" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) write_to_ptr <a href="#UdpConn.write_to_ptr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">write_to_ptr</span><span class="token punctuation">(</span>addr Addr<span class="token punctuation">,</span> b <span class="token operator">&</span><span class="token builtin">byte</span><span class="token punctuation">,</span> len <span class="token builtin">int</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="UdpConn.write_to" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) write_to <a href="#UdpConn.write_to">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">write_to</span><span class="token punctuation">(</span>addr Addr<span class="token punctuation">,</span> buf <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>write_to blocks and writes the buf to the remote addr specified</p>
+
+</section>
+						<section id="UdpConn.write_to_string" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) write_to_string <a href="#UdpConn.write_to_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">write_to_string</span><span class="token punctuation">(</span>addr Addr<span class="token punctuation">,</span> s <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>write_to_string blocks and writes the buf to the remote addr specified</p>
+
+</section>
+						<section id="UdpConn.read" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) read <a href="#UdpConn.read">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token keyword">mut</span> buf <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> ?<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> Addr<span class="token punctuation">)</span></code></pre>
+<p>read reads from the socket into buf up to buf.len returning the number of bytes read</p>
+
+</section>
+						<section id="UdpConn.read_deadline" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) read_deadline <a href="#UdpConn.read_deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>UdpConn<span class="token punctuation">)</span> <span class="token function">read_deadline</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?time<span class="token punctuation">.</span>Time</code></pre>
+
+
+</section>
+						<section id="UdpConn.set_read_deadline" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) set_read_deadline <a href="#UdpConn.set_read_deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">set_read_deadline</span><span class="token punctuation">(</span>deadline time<span class="token punctuation">.</span>Time<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="UdpConn.write_deadline" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) write_deadline <a href="#UdpConn.write_deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>UdpConn<span class="token punctuation">)</span> <span class="token function">write_deadline</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?time<span class="token punctuation">.</span>Time</code></pre>
+
+
+</section>
+						<section id="UdpConn.set_write_deadline" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) set_write_deadline <a href="#UdpConn.set_write_deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">set_write_deadline</span><span class="token punctuation">(</span>deadline time<span class="token punctuation">.</span>Time<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="UdpConn.read_timeout" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) read_timeout <a href="#UdpConn.read_timeout">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>UdpConn<span class="token punctuation">)</span> <span class="token function">read_timeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> time<span class="token punctuation">.</span>Duration</code></pre>
+
+
+</section>
+						<section id="UdpConn.set_read_timeout" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) set_read_timeout <a href="#UdpConn.set_read_timeout">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">set_read_timeout</span><span class="token punctuation">(</span>t time<span class="token punctuation">.</span>Duration<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="UdpConn.write_timeout" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) write_timeout <a href="#UdpConn.write_timeout">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>UdpConn<span class="token punctuation">)</span> <span class="token function">write_timeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> time<span class="token punctuation">.</span>Duration</code></pre>
+
+
+</section>
+						<section id="UdpConn.set_write_timeout" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) set_write_timeout <a href="#UdpConn.set_write_timeout">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">set_write_timeout</span><span class="token punctuation">(</span>t time<span class="token punctuation">.</span>Duration<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="UdpConn.wait_for_read" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) wait_for_read <a href="#UdpConn.wait_for_read">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">wait_for_read</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="UdpConn.wait_for_write" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) wait_for_write <a href="#UdpConn.wait_for_write">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">wait_for_write</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="UdpConn.str" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) str <a href="#UdpConn.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>UdpConn<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="UdpConn.close" class="doc-node">
+							<div class="title"><h2>fn (UdpConn) close <a href="#UdpConn.close">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c UdpConn<span class="token punctuation">)</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="TcpConn" class="doc-node">
+							<div class="title"><h2>struct TcpConn <a href="#TcpConn">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">TcpConn</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	sock TcpSocket
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	write_deadline time<span class="token punctuation">.</span>Time
+	read_deadline  time<span class="token punctuation">.</span>Time
+	read_timeout   time<span class="token punctuation">.</span>Duration
+	write_timeout  time<span class="token punctuation">.</span>Duration
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="TcpConn.addr" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) addr <a href="#TcpConn.addr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>TcpConn<span class="token punctuation">)</span> <span class="token function">addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?Addr</code></pre>
+
+
+</section>
+						<section id="TcpConn.close" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) close <a href="#TcpConn.close">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="TcpConn.peer_addr" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) peer_addr <a href="#TcpConn.peer_addr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>TcpConn<span class="token punctuation">)</span> <span class="token function">peer_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?Addr</code></pre>
+
+
+</section>
+						<section id="TcpConn.peer_ip" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) peer_ip <a href="#TcpConn.peer_ip">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>TcpConn<span class="token punctuation">)</span> <span class="token function">peer_ip</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="TcpConn.read" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) read <a href="#TcpConn.read">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token keyword">mut</span> buf <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="TcpConn.read_deadline" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) read_deadline <a href="#TcpConn.read_deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">read_deadline</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?time<span class="token punctuation">.</span>Time</code></pre>
+
+
+</section>
+						<section id="TcpConn.read_line" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) read_line <a href="#TcpConn.read_line">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> con TcpConn<span class="token punctuation">)</span> <span class="token function">read_line</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>read_line is a <em>simple</em>, <em>non customizable</em>, blocking line reader.  It will <em>always</em> return a line, ending with CRLF, or just '', on EOF.  NB: if you want more control over the buffer, please use a buffered IO  reader instead: <code>io.new_buffered_reader({reader: io.make_reader(con)})</code></p>
+
+</section>
+						<section id="TcpConn.read_ptr" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) read_ptr <a href="#TcpConn.read_ptr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">read_ptr</span><span class="token punctuation">(</span>buf_ptr <span class="token operator">&</span><span class="token builtin">byte</span><span class="token punctuation">,</span> len <span class="token builtin">int</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="TcpConn.read_timeout" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) read_timeout <a href="#TcpConn.read_timeout">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>TcpConn<span class="token punctuation">)</span> <span class="token function">read_timeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> time<span class="token punctuation">.</span>Duration</code></pre>
+
+
+</section>
+						<section id="TcpConn.set_read_deadline" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) set_read_deadline <a href="#TcpConn.set_read_deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">set_read_deadline</span><span class="token punctuation">(</span>deadline time<span class="token punctuation">.</span>Time<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TcpConn.set_read_timeout" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) set_read_timeout <a href="#TcpConn.set_read_timeout">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">set_read_timeout</span><span class="token punctuation">(</span>t time<span class="token punctuation">.</span>Duration<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TcpConn.set_write_deadline" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) set_write_deadline <a href="#TcpConn.set_write_deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">set_write_deadline</span><span class="token punctuation">(</span>deadline time<span class="token punctuation">.</span>Time<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TcpConn.set_write_timeout" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) set_write_timeout <a href="#TcpConn.set_write_timeout">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">set_write_timeout</span><span class="token punctuation">(</span>t time<span class="token punctuation">.</span>Duration<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TcpConn.str" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) str <a href="#TcpConn.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c TcpConn<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="TcpConn.wait_for_read" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) wait_for_read <a href="#TcpConn.wait_for_read">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">wait_for_read</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="TcpConn.wait_for_write" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) wait_for_write <a href="#TcpConn.wait_for_write">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">wait_for_write</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="TcpConn.write" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) write <a href="#TcpConn.write">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">write</span><span class="token punctuation">(</span>bytes <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>write blocks and attempts to write all data</p>
+
+</section>
+						<section id="TcpConn.write_deadline" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) write_deadline <a href="#TcpConn.write_deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">write_deadline</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?time<span class="token punctuation">.</span>Time</code></pre>
+
+
+</section>
+						<section id="TcpConn.write_ptr" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) write_ptr <a href="#TcpConn.write_ptr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">write_ptr</span><span class="token punctuation">(</span>b <span class="token operator">&</span><span class="token builtin">byte</span><span class="token punctuation">,</span> len <span class="token builtin">int</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>write_ptr blocks and attempts to write all data</p>
+
+</section>
+						<section id="TcpConn.write_str" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) write_str <a href="#TcpConn.write_str">#</a></h2></div><div class="attributes"><div class="attribute attribute-deprecated">deprecated</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">write_str</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>write_str blocks and attempts to write all data</p>
+
+</section>
+						<section id="TcpConn.write_string" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) write_string <a href="#TcpConn.write_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpConn<span class="token punctuation">)</span> <span class="token function">write_string</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>write_string blocks and attempts to write all data</p>
+
+</section>
+						<section id="TcpConn.write_timeout" class="doc-node">
+							<div class="title"><h2>fn (TcpConn) write_timeout <a href="#TcpConn.write_timeout">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>TcpConn<span class="token punctuation">)</span> <span class="token function">write_timeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> time<span class="token punctuation">.</span>Duration</code></pre>
+
+
+</section>
+						<section id="TcpListener" class="doc-node">
+							<div class="title"><h2>struct TcpListener <a href="#TcpListener">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">TcpListener</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	sock TcpSocket
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	accept_timeout  time<span class="token punctuation">.</span>Duration
+	accept_deadline time<span class="token punctuation">.</span>Time
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="TcpListener.accept" class="doc-node">
+							<div class="title"><h2>fn (TcpListener) accept <a href="#TcpListener.accept">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> l TcpListener<span class="token punctuation">)</span> <span class="token function">accept</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?<span class="token operator">&</span>TcpConn</code></pre>
+
+
+</section>
+						<section id="TcpListener.accept_deadline" class="doc-node">
+							<div class="title"><h2>fn (TcpListener) accept_deadline <a href="#TcpListener.accept_deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>TcpListener<span class="token punctuation">)</span> <span class="token function">accept_deadline</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?time<span class="token punctuation">.</span>Time</code></pre>
+
+
+</section>
+						<section id="TcpListener.set_accept_deadline" class="doc-node">
+							<div class="title"><h2>fn (TcpListener) set_accept_deadline <a href="#TcpListener.set_accept_deadline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpListener<span class="token punctuation">)</span> <span class="token function">set_accept_deadline</span><span class="token punctuation">(</span>deadline time<span class="token punctuation">.</span>Time<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TcpListener.accept_timeout" class="doc-node">
+							<div class="title"><h2>fn (TcpListener) accept_timeout <a href="#TcpListener.accept_timeout">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>TcpListener<span class="token punctuation">)</span> <span class="token function">accept_timeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> time<span class="token punctuation">.</span>Duration</code></pre>
+
+
+</section>
+						<section id="TcpListener.set_accept_timeout" class="doc-node">
+							<div class="title"><h2>fn (TcpListener) set_accept_timeout <a href="#TcpListener.set_accept_timeout">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpListener<span class="token punctuation">)</span> <span class="token function">set_accept_timeout</span><span class="token punctuation">(</span>t time<span class="token punctuation">.</span>Duration<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TcpListener.wait_for_accept" class="doc-node">
+							<div class="title"><h2>fn (TcpListener) wait_for_accept <a href="#TcpListener.wait_for_accept">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpListener<span class="token punctuation">)</span> <span class="token function">wait_for_accept</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="TcpListener.close" class="doc-node">
+							<div class="title"><h2>fn (TcpListener) close <a href="#TcpListener.close">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c TcpListener<span class="token punctuation">)</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="TcpListener.addr" class="doc-node">
+							<div class="title"><h2>fn (TcpListener) addr <a href="#TcpListener.addr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>TcpListener<span class="token punctuation">)</span> <span class="token function">addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?Addr</code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:26
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#Constants">Constants</a></li>
+<li class="open"><a href="#wsa_error">fn wsa_error</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#wrap_error">fn wrap_error</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#addr_from_socket_handle">fn addr_from_socket_handle</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#socket_error">fn socket_error</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#dial_tcp">fn dial_tcp</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#dial_udp">fn dial_udp</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#listen_tcp">fn listen_tcp</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#listen_udp">fn listen_udp</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#resolve_addrs">fn resolve_addrs</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#resolve_addrs_fuzzy">fn resolve_addrs_fuzzy</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#resolve_ipaddrs">fn resolve_ipaddrs</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#validate_port">fn validate_port</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#split_address">fn split_address</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#UdpSocket.set_option_bool">type UdpSocket</a>        <ul>
+<li><a href="#UdpSocket.set_option_bool">fn set_option_bool</a></li>
+<li><a href="#UdpSocket.set_dualstack">fn set_dualstack</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Addr.family">type Addr</a>        <ul>
+<li><a href="#Addr.family">fn family</a></li>
+</ul>
+</li>
+<li class="open"><a href="#TcpSocket.set_option_bool">type TcpSocket</a>        <ul>
+<li><a href="#TcpSocket.set_option_bool">fn set_option_bool</a></li>
+<li><a href="#TcpSocket.set_dualstack">fn set_dualstack</a></li>
+<li><a href="#TcpSocket.set_option_int">fn set_option_int</a></li>
+<li><a href="#TcpSocket.address">fn address</a></li>
+</ul>
+</li>
+<li class="open"><a href="#AddrFamily">enum AddrFamily</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#SocketOption">enum SocketOption</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#SocketType">enum SocketType</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#WsaError">enum WsaError</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.fd_set">struct C.fd_set</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#UdpConn">struct UdpConn</a>        <ul>
+<li><a href="#UdpConn.write_ptr">fn write_ptr</a></li>
+<li><a href="#UdpConn.write">fn write</a></li>
+<li><a href="#UdpConn.write_str">fn write_str</a></li>
+<li><a href="#UdpConn.write_string">fn write_string</a></li>
+<li><a href="#UdpConn.write_to_ptr">fn write_to_ptr</a></li>
+<li><a href="#UdpConn.write_to">fn write_to</a></li>
+<li><a href="#UdpConn.write_to_string">fn write_to_string</a></li>
+<li><a href="#UdpConn.read">fn read</a></li>
+<li><a href="#UdpConn.read_deadline">fn read_deadline</a></li>
+<li><a href="#UdpConn.set_read_deadline">fn set_read_deadline</a></li>
+<li><a href="#UdpConn.write_deadline">fn write_deadline</a></li>
+<li><a href="#UdpConn.set_write_deadline">fn set_write_deadline</a></li>
+<li><a href="#UdpConn.read_timeout">fn read_timeout</a></li>
+<li><a href="#UdpConn.set_read_timeout">fn set_read_timeout</a></li>
+<li><a href="#UdpConn.write_timeout">fn write_timeout</a></li>
+<li><a href="#UdpConn.set_write_timeout">fn set_write_timeout</a></li>
+<li><a href="#UdpConn.wait_for_read">fn wait_for_read</a></li>
+<li><a href="#UdpConn.wait_for_write">fn wait_for_write</a></li>
+<li><a href="#UdpConn.str">fn str</a></li>
+<li><a href="#UdpConn.close">fn close</a></li>
+</ul>
+</li>
+<li class="open"><a href="#TcpConn">struct TcpConn</a>        <ul>
+<li><a href="#TcpConn.addr">fn addr</a></li>
+<li><a href="#TcpConn.close">fn close</a></li>
+<li><a href="#TcpConn.peer_addr">fn peer_addr</a></li>
+<li><a href="#TcpConn.peer_ip">fn peer_ip</a></li>
+<li><a href="#TcpConn.read">fn read</a></li>
+<li><a href="#TcpConn.read_deadline">fn read_deadline</a></li>
+<li><a href="#TcpConn.read_line">fn read_line</a></li>
+<li><a href="#TcpConn.read_ptr">fn read_ptr</a></li>
+<li><a href="#TcpConn.read_timeout">fn read_timeout</a></li>
+<li><a href="#TcpConn.set_read_deadline">fn set_read_deadline</a></li>
+<li><a href="#TcpConn.set_read_timeout">fn set_read_timeout</a></li>
+<li><a href="#TcpConn.set_write_deadline">fn set_write_deadline</a></li>
+<li><a href="#TcpConn.set_write_timeout">fn set_write_timeout</a></li>
+<li><a href="#TcpConn.str">fn str</a></li>
+<li><a href="#TcpConn.wait_for_read">fn wait_for_read</a></li>
+<li><a href="#TcpConn.wait_for_write">fn wait_for_write</a></li>
+<li><a href="#TcpConn.write">fn write</a></li>
+<li><a href="#TcpConn.write_deadline">fn write_deadline</a></li>
+<li><a href="#TcpConn.write_ptr">fn write_ptr</a></li>
+<li><a href="#TcpConn.write_str">fn write_str</a></li>
+<li><a href="#TcpConn.write_string">fn write_string</a></li>
+<li><a href="#TcpConn.write_timeout">fn write_timeout</a></li>
+</ul>
+</li>
+<li class="open"><a href="#TcpListener">struct TcpListener</a>        <ul>
+<li><a href="#TcpListener.accept">fn accept</a></li>
+<li><a href="#TcpListener.accept_deadline">fn accept_deadline</a></li>
+<li><a href="#TcpListener.set_accept_deadline">fn set_accept_deadline</a></li>
+<li><a href="#TcpListener.accept_timeout">fn accept_timeout</a></li>
+<li><a href="#TcpListener.set_accept_timeout">fn set_accept_timeout</a></li>
+<li><a href="#TcpListener.wait_for_accept">fn wait_for_accept</a></li>
+<li><a href="#TcpListener.close">fn close</a></li>
+<li><a href="#TcpListener.addr">fn addr</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

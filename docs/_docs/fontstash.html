@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>fontstash | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open active"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_fontstash" class="doc-node">
+							<div class="title"><h1> fontstash <a href="#readme_fontstash">#</a></h1></div>
+
+</section>
+
+						<section id="Constants" class="doc-node const">
+							<div class="title"><h2>Constants <a href="#Constants">#</a></h2></div>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	used_import <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token punctuation">)</span></code></pre>
+<p>#flag -lfreetype</p>
+
+</section>
+						<section id="delete_internal" class="doc-node">
+							<div class="title"><h2>fn delete_internal <a href="#delete_internal">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">delete_internal</span><span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="create_internal" class="doc-node">
+							<div class="title"><h2>fn create_internal <a href="#create_internal">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">create_internal</span><span class="token punctuation">(</span>params <span class="token operator">&</span>C<span class="token punctuation">.</span>FONSparams<span class="token punctuation">)</span> <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext</code></pre>
+<p>Contructor and destructor.</p>
+
+</section>
+						<section id="FonsAlign" class="doc-node">
+							<div class="title"><h2>enum FonsAlign <a href="#FonsAlign">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">FonsAlign</span> <span class="token punctuation">{</span>
+	left <span class="token operator">=</span> <span class="token number">1</span>
+	center <span class="token operator">=</span> <span class="token number">2</span>
+	right <span class="token operator">=</span> <span class="token number">4</span>
+	top <span class="token operator">=</span> <span class="token number">8</span>
+	middle <span class="token operator">=</span> <span class="token number">16</span>
+	bottom <span class="token operator">=</span> <span class="token number">32</span>
+	baseline <span class="token operator">=</span> <span class="token number">64</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="FonsErrorCode" class="doc-node">
+							<div class="title"><h2>enum FonsErrorCode <a href="#FonsErrorCode">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">FonsErrorCode</span> <span class="token punctuation">{</span>
+	atlas_full <span class="token operator">=</span> <span class="token number">1</span>
+	scratch_full <span class="token operator">=</span> <span class="token number">2</span>
+	states_overflow <span class="token operator">=</span> <span class="token number">3</span>
+	states_underflow <span class="token operator">=</span> <span class="token number">4</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="FonsFlags" class="doc-node">
+							<div class="title"><h2>enum FonsFlags <a href="#FonsFlags">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">FonsFlags</span> <span class="token punctuation">{</span>
+	top_left <span class="token operator">=</span> <span class="token number">1</span>
+	bottom_left <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.FONSquad" class="doc-node">
+							<div class="title"><h2>struct C.FONSquad <a href="#C.FONSquad">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">FONSquad</span> <span class="token punctuation">{</span>
+	x0 <span class="token builtin">f32</span>
+	y0 <span class="token builtin">f32</span>
+	s0 <span class="token builtin">f32</span>
+	t0 <span class="token builtin">f32</span>
+	x1 <span class="token builtin">f32</span>
+	y1 <span class="token builtin">f32</span>
+	s1 <span class="token builtin">f32</span>
+	t1 <span class="token builtin">f32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.FONSparams" class="doc-node">
+							<div class="title"><h2>struct C.FONSparams <a href="#C.FONSparams">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">FONSparams</span> <span class="token punctuation">{</span>
+	width   <span class="token builtin">int</span>
+	height  <span class="token builtin">int</span>
+	flags   <span class="token builtin">char</span>
+	userPtr <span class="token builtin">voidptr</span>
+
+	renderCreate <span class="token keyword">fn</span> <span class="token punctuation">(</span>uptr <span class="token builtin">voidptr</span><span class="token punctuation">,</span> width <span class="token builtin">int</span><span class="token punctuation">,</span> height <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span>
+
+	renderResize <span class="token keyword">fn</span> <span class="token punctuation">(</span>uptr <span class="token builtin">voidptr</span><span class="token punctuation">,</span> width <span class="token builtin">int</span><span class="token punctuation">,</span> height <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span>
+
+	renderUpdate <span class="token keyword">fn</span> <span class="token punctuation">(</span>uptr <span class="token builtin">voidptr</span><span class="token punctuation">,</span> rect <span class="token operator">&</span><span class="token builtin">int</span><span class="token punctuation">,</span> data <span class="token operator">&</span><span class="token builtin">byte</span><span class="token punctuation">)</span>
+
+	renderDraw <span class="token keyword">fn</span> <span class="token punctuation">(</span>uptr <span class="token builtin">voidptr</span><span class="token punctuation">,</span> verts <span class="token operator">&</span><span class="token builtin">f32</span><span class="token punctuation">,</span> tcoords <span class="token operator">&</span><span class="token builtin">f32</span><span class="token punctuation">,</span> colors <span class="token operator">&</span><span class="token builtin">u32</span><span class="token punctuation">,</span> nverts <span class="token builtin">int</span><span class="token punctuation">)</span>
+
+	renderDelete <span class="token keyword">fn</span> <span class="token punctuation">(</span>uptr <span class="token builtin">voidptr</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.FONSfont" class="doc-node">
+							<div class="title"><h2>struct C.FONSfont <a href="#C.FONSfont">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">FONSfont</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext" class="doc-node">
+							<div class="title"><h2>struct C.FONScontext <a href="#C.FONScontext">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">FONScontext</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.add_fallback_font" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) add_fallback_font <a href="#C.FONScontext.add_fallback_font">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">add_fallback_font</span><span class="token punctuation">(</span>base <span class="token builtin">int</span><span class="token punctuation">,</span> fallback <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.add_font_mem" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) add_font_mem <a href="#C.FONScontext.add_font_mem">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">add_font_mem</span><span class="token punctuation">(</span>name <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">,</span> data <span class="token operator">&</span><span class="token builtin">byte</span><span class="token punctuation">,</span> data_size <span class="token builtin">int</span><span class="token punctuation">,</span> free_data <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.clear_state" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) clear_state <a href="#C.FONScontext.clear_state">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">clear_state</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.draw_debug" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) draw_debug <a href="#C.FONScontext.draw_debug">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">draw_debug</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">)</span></code></pre>
+<p>Draws the stash texture for debugging</p>
+
+</section>
+						<section id="C.FONScontext.draw_text" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) draw_text <a href="#C.FONScontext.draw_text">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">draw_text</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> str <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">,</span> end <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">)</span> <span class="token builtin">f32</span></code></pre>
+<p>Draw text</p>
+
+</section>
+						<section id="C.FONScontext.expand_atlas" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) expand_atlas <a href="#C.FONScontext.expand_atlas">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">expand_atlas</span><span class="token punctuation">(</span>width <span class="token builtin">int</span><span class="token punctuation">,</span> height <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Expands the atlas size.</p>
+
+</section>
+						<section id="C.FONScontext.get_atlas_size" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) get_atlas_size <a href="#C.FONScontext.get_atlas_size">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">get_atlas_size</span><span class="token punctuation">(</span>width <span class="token operator">&</span><span class="token builtin">int</span><span class="token punctuation">,</span> height <span class="token operator">&</span><span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>Returns current atlas size.</p>
+
+</section>
+						<section id="C.FONScontext.get_font_by_name" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) get_font_by_name <a href="#C.FONScontext.get_font_by_name">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">get_font_by_name</span><span class="token punctuation">(</span>name <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Add fonts</p>
+
+</section>
+						<section id="C.FONScontext.get_texture_data" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) get_texture_data <a href="#C.FONScontext.get_texture_data">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">get_texture_data</span><span class="token punctuation">(</span>width <span class="token operator">&</span><span class="token builtin">int</span><span class="token punctuation">,</span> height <span class="token operator">&</span><span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">&</span><span class="token builtin">byte</span></code></pre>
+<p>Pull texture changes</p>
+
+</section>
+						<section id="C.FONScontext.line_bounds" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) line_bounds <a href="#C.FONScontext.line_bounds">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">line_bounds</span><span class="token punctuation">(</span>y <span class="token builtin">f32</span><span class="token punctuation">,</span> miny <span class="token operator">&</span><span class="token builtin">f32</span><span class="token punctuation">,</span> maxy <span class="token operator">&</span><span class="token builtin">f32</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.pop_state" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) pop_state <a href="#C.FONScontext.pop_state">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">pop_state</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.push_state" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) push_state <a href="#C.FONScontext.push_state">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">push_state</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>State handling</p>
+
+</section>
+						<section id="C.FONScontext.reset_atlas" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) reset_atlas <a href="#C.FONScontext.reset_atlas">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">reset_atlas</span><span class="token punctuation">(</span>width <span class="token builtin">int</span><span class="token punctuation">,</span> height <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Resets the whole stash.</p>
+
+</section>
+						<section id="C.FONScontext.set_align" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) set_align <a href="#C.FONScontext.set_align">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">set_align</span><span class="token punctuation">(</span>align <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.set_blur" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) set_blur <a href="#C.FONScontext.set_blur">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">set_blur</span><span class="token punctuation">(</span>blur <span class="token builtin">f32</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.set_color" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) set_color <a href="#C.FONScontext.set_color">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">set_color</span><span class="token punctuation">(</span>color <span class="token builtin">u32</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.set_error_callback" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) set_error_callback <a href="#C.FONScontext.set_error_callback">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">set_error_callback</span><span class="token punctuation">(</span>callback <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token builtin">voidptr</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">,</span> uptr <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.set_font" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) set_font <a href="#C.FONScontext.set_font">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">set_font</span><span class="token punctuation">(</span>font <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.set_size" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) set_size <a href="#C.FONScontext.set_size">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">set_size</span><span class="token punctuation">(</span>size <span class="token builtin">f32</span><span class="token punctuation">)</span></code></pre>
+<p>State setting</p>
+
+</section>
+						<section id="C.FONScontext.set_spacing" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) set_spacing <a href="#C.FONScontext.set_spacing">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">set_spacing</span><span class="token punctuation">(</span>spacing <span class="token builtin">f32</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.text_bounds" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) text_bounds <a href="#C.FONScontext.text_bounds">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">text_bounds</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> str <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">,</span> end <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">,</span> bounds <span class="token operator">&</span><span class="token builtin">f32</span><span class="token punctuation">)</span> <span class="token builtin">f32</span></code></pre>
+<p>Measure text</p>
+
+</section>
+						<section id="C.FONScontext.text_iter_init" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) text_iter_init <a href="#C.FONScontext.text_iter_init">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">text_iter_init</span><span class="token punctuation">(</span>iter <span class="token operator">&</span>C<span class="token punctuation">.</span>FONStextIter<span class="token punctuation">,</span> x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> str <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">,</span> end <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Text iterator</p>
+
+</section>
+						<section id="C.FONScontext.text_iter_next" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) text_iter_next <a href="#C.FONScontext.text_iter_next">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">text_iter_next</span><span class="token punctuation">(</span>iter <span class="token operator">&</span>C<span class="token punctuation">.</span>FONStextIter<span class="token punctuation">,</span> quad <span class="token operator">&</span>C<span class="token punctuation">.</span>FONSquad<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.validate_texture" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) validate_texture <a href="#C.FONScontext.validate_texture">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">validate_texture</span><span class="token punctuation">(</span>dirty <span class="token operator">&</span><span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="C.FONScontext.vert_metrics" class="doc-node">
+							<div class="title"><h2>fn (C.FONScontext) vert_metrics <a href="#C.FONScontext.vert_metrics">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s <span class="token operator">&</span>C<span class="token punctuation">.</span>FONScontext<span class="token punctuation">)</span> <span class="token function">vert_metrics</span><span class="token punctuation">(</span>ascender <span class="token operator">&</span><span class="token builtin">f32</span><span class="token punctuation">,</span> descender <span class="token operator">&</span><span class="token builtin">f32</span><span class="token punctuation">,</span> lineh <span class="token operator">&</span><span class="token builtin">f32</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.FONStextIter" class="doc-node">
+							<div class="title"><h2>struct C.FONStextIter <a href="#C.FONStextIter">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">FONStextIter</span> <span class="token punctuation">{</span>
+	x              <span class="token builtin">f32</span>
+	y              <span class="token builtin">f32</span>
+	nextx          <span class="token builtin">f32</span>
+	nexty          <span class="token builtin">f32</span>
+	scale          <span class="token builtin">f32</span>
+	spacing        <span class="token builtin">f32</span>
+	codepoint      <span class="token builtin">u32</span>
+	isize          <span class="token builtin">i16</span>
+	iblur          <span class="token builtin">i16</span>
+	font           <span class="token operator">&</span>C<span class="token punctuation">.</span>FONSfont
+	prevGlyphIndex <span class="token builtin">int</span>
+	str            <span class="token operator">&</span><span class="token builtin">byte</span>
+	next           <span class="token operator">&</span><span class="token builtin">byte</span>
+	end            <span class="token operator">&</span><span class="token builtin">byte</span>
+	utf8state      <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:26
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#Constants">Constants</a></li>
+<li class="open"><a href="#delete_internal">fn delete_internal</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#create_internal">fn create_internal</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FonsAlign">enum FonsAlign</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FonsErrorCode">enum FonsErrorCode</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FonsFlags">enum FonsFlags</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.FONSquad">struct C.FONSquad</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.FONSparams">struct C.FONSparams</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.FONSfont">struct C.FONSfont</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.FONScontext">struct C.FONScontext</a>        <ul>
+<li><a href="#C.FONScontext.add_fallback_font">fn add_fallback_font</a></li>
+<li><a href="#C.FONScontext.add_font_mem">fn add_font_mem</a></li>
+<li><a href="#C.FONScontext.clear_state">fn clear_state</a></li>
+<li><a href="#C.FONScontext.draw_debug">fn draw_debug</a></li>
+<li><a href="#C.FONScontext.draw_text">fn draw_text</a></li>
+<li><a href="#C.FONScontext.expand_atlas">fn expand_atlas</a></li>
+<li><a href="#C.FONScontext.get_atlas_size">fn get_atlas_size</a></li>
+<li><a href="#C.FONScontext.get_font_by_name">fn get_font_by_name</a></li>
+<li><a href="#C.FONScontext.get_texture_data">fn get_texture_data</a></li>
+<li><a href="#C.FONScontext.line_bounds">fn line_bounds</a></li>
+<li><a href="#C.FONScontext.pop_state">fn pop_state</a></li>
+<li><a href="#C.FONScontext.push_state">fn push_state</a></li>
+<li><a href="#C.FONScontext.reset_atlas">fn reset_atlas</a></li>
+<li><a href="#C.FONScontext.set_align">fn set_align</a></li>
+<li><a href="#C.FONScontext.set_blur">fn set_blur</a></li>
+<li><a href="#C.FONScontext.set_color">fn set_color</a></li>
+<li><a href="#C.FONScontext.set_error_callback">fn set_error_callback</a></li>
+<li><a href="#C.FONScontext.set_font">fn set_font</a></li>
+<li><a href="#C.FONScontext.set_size">fn set_size</a></li>
+<li><a href="#C.FONScontext.set_spacing">fn set_spacing</a></li>
+<li><a href="#C.FONScontext.text_bounds">fn text_bounds</a></li>
+<li><a href="#C.FONScontext.text_iter_init">fn text_iter_init</a></li>
+<li><a href="#C.FONScontext.text_iter_next">fn text_iter_next</a></li>
+<li><a href="#C.FONScontext.validate_texture">fn validate_texture</a></li>
+<li><a href="#C.FONScontext.vert_metrics">fn vert_metrics</a></li>
+</ul>
+</li>
+<li class="open"><a href="#C.FONStextIter">struct C.FONStextIter</a>        <ul>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

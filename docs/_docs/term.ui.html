@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>term.ui | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li class="active"><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_term.ui" class="doc-node">
+							<div class="title"><h1> term.ui <a href="#readme_term.ui">#</a></h1></div><h2><code>term.ui</code></h2>
+<p>A V module for designing terminal UI apps</p>
+<h4>Quickstart</h4>
+<pre><code class="language-v">import term.ui as tui
+
+struct App {
+mut:
+    tui &amp;tui.Context = 0
+}
+
+fn event(e &amp;tui.Event, x voidptr) {
+    mut app := &amp;App(x)
+    println(e)
+    if e.typ == .key_down &amp;&amp; e.code == .escape {
+        exit(0)
+    }
+}
+
+fn frame(x voidptr) {
+    mut app := &amp;App(x)
+
+    app.tui.clear()
+    app.tui.set_bg_color(r: 63, g: 81, b: 181)
+    app.tui.draw_rect(20, 6, 41, 10)
+    app.tui.draw_text(24, 8, 'Hello from V!')
+    app.tui.set_cursor_position(0, 0)
+
+    app.tui.reset()
+    app.tui.flush()
+}
+
+mut app := &amp;App{}
+app.tui = tui.init(
+    user_data: app
+    event_fn: event
+    frame_fn: frame
+    hide_cursor: true
+)
+app.tui.run() ?
+</code></pre>
+<p>See the <code>/examples/term.ui/</code> folder for more usage examples.</p>
+<h4>Configuration</h4>
+<ul>
+<li><code>user_data voidptr</code> - a pointer to any <code>user_data</code>, it will be passed as the last argument to
+each callback. Used for accessing your app context from the different callbacks.</li>
+<li><code>init_fn fn(voidptr)</code> - a callback that will be called after initialization
+and before the first event / frame. Useful for initializing any user data.</li>
+<li><code>frame_fn fn(voidptr)</code> - a callback that will be fired on each frame,
+at a rate of <code>frame_rate</code> frames per second.
+<code>event_fn fn(&amp;Event, voidptr)</code> - a callback that will be fired for every event received.</li>
+<li><code>cleanup_fn fn(voidptr)</code> - a callback that will be fired once, before the application exits.</li>
+<li><code>fail_fn  fn(string)</code> - a callback that will be fired
+if a fatal error occurs during app initialization.</li>
+<li><code>buffer_size int = 256</code> - the internal size of the read buffer.
+Increasing it may help in case you're missing events, but you probably shouldn't lower
+this value unless you make sure you're still receiving all events. In general,
+higher frame rates work better with lower buffer sizes, and vice versa.</li>
+<li><code>frame_rate int = 30</code> - the number of times per second that the <code>frame</code> callback will be fired.
+30fps is a nice balance between smoothness and performance,
+but you can increase or lower it as you wish.</li>
+<li><code>hide_cursor bool</code> - whether to hide the mouse cursor. Useful if you want to use your own.</li>
+<li><code>capture_events bool</code> - sets the terminal into raw mode, which makes it intercept some
+escape codes such as <code>ctrl + c</code> and <code>ctrl + z</code>.
+Useful if you want to use those key combinations in your app.</li>
+<li><code>window_title string</code> - sets the title of the terminal window.
+This may be changed later, by calling the <code>set_window_title()</code> method.</li>
+<li><code>reset []int = [1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 14, 15, 19]</code> - a list of reset signals,
+to setup handlers to cleanup the terminal state when they're received.
+You should not need to change this, unless you know what you're doing.</li>
+</ul>
+<p>All of these fields may be omitted, in which case, the default value will be used.
+In the case of the various callbacks, they will not be fired if a handler has not been specified.</p>
+<h4>FAQ</h4>
+<p>Q: My terminal (doesn't receive events / doesn't print anything / prints gibberish characters),
+what's up with that?
+A: Please check if your terminal. The module has been tested with <code>xterm</code>-based terminals on Linux
+(like <code>gnome-terminal</code> and <code>konsole</code>), and <code>Terminal.app</code> and <code>iterm2</code> on macOS.
+If your terminal does not work, open an issue with the output of <code>echo $TERM</code>.</p>
+<p>Q: There are screen tearing issues when doing large prints
+A: This is an issue with how terminals render frames,
+as they may decide to do so in the middle of receiving a frame,
+and cannot be fully fixed unless your console implements the <a href="https://gitlab.com/gnachman/iterm2/-/wikis/synchronized-updates-spec">synchronized updates spec</a>.
+It can be reduced <em>drastically</em>, though, by using the rendering methods built in to the module,
+and by only painting frames when your app's content has actually changed.</p>
+<p>Q: Why does the module only emit <code>keydown</code> events, and not <code>keyup</code> like <code>sokol</code>/<code>gg</code>?
+A: It's because of the way terminals emit events. Every key event is received as a keypress,
+and there isn't a way of telling terminals to send keyboard events differently,
+nor a reliable way of converting these into <code>keydown</code> / <code>keyup</code> events.</p>
+
+</section>
+
+						<section id="init" class="doc-node">
+							<div class="title"><h2>fn init <a href="#init">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">init</span><span class="token punctuation">(</span>cfg Config<span class="token punctuation">)</span> <span class="token operator">&</span>Context</code></pre>
+
+
+</section>
+						<section id="KeyCode" class="doc-node">
+							<div class="title"><h2>enum KeyCode <a href="#KeyCode">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">KeyCode</span> <span class="token punctuation">{</span>
+	null <span class="token operator">=</span> <span class="token number">0</span>
+	tab <span class="token operator">=</span> <span class="token number">9</span>
+	enter <span class="token operator">=</span> <span class="token number">10</span>
+	escape <span class="token operator">=</span> <span class="token number">27</span>
+	space <span class="token operator">=</span> <span class="token number">32</span>
+	backspace <span class="token operator">=</span> <span class="token number">127</span>
+	exclamation <span class="token operator">=</span> <span class="token number">33</span>
+	double_quote <span class="token operator">=</span> <span class="token number">34</span>
+	hashtag <span class="token operator">=</span> <span class="token number">35</span>
+	dollar <span class="token operator">=</span> <span class="token number">36</span>
+	percent <span class="token operator">=</span> <span class="token number">37</span>
+	ampersand <span class="token operator">=</span> <span class="token number">38</span>
+	single_quote <span class="token operator">=</span> <span class="token number">39</span>
+	left_paren <span class="token operator">=</span> <span class="token number">40</span>
+	right_paren <span class="token operator">=</span> <span class="token number">41</span>
+	asterisk <span class="token operator">=</span> <span class="token number">42</span>
+	plus <span class="token operator">=</span> <span class="token number">43</span>
+	comma <span class="token operator">=</span> <span class="token number">44</span>
+	minus <span class="token operator">=</span> <span class="token number">45</span>
+	period <span class="token operator">=</span> <span class="token number">46</span>
+	slash <span class="token operator">=</span> <span class="token number">47</span>
+	_0 <span class="token operator">=</span> <span class="token number">48</span>
+	_1 <span class="token operator">=</span> <span class="token number">49</span>
+	_2 <span class="token operator">=</span> <span class="token number">50</span>
+	_3 <span class="token operator">=</span> <span class="token number">51</span>
+	_4 <span class="token operator">=</span> <span class="token number">52</span>
+	_5 <span class="token operator">=</span> <span class="token number">53</span>
+	_6 <span class="token operator">=</span> <span class="token number">54</span>
+	_7 <span class="token operator">=</span> <span class="token number">55</span>
+	_8 <span class="token operator">=</span> <span class="token number">56</span>
+	_9 <span class="token operator">=</span> <span class="token number">57</span>
+	colon <span class="token operator">=</span> <span class="token number">58</span>
+	semicolon <span class="token operator">=</span> <span class="token number">59</span>
+	less_than <span class="token operator">=</span> <span class="token number">60</span>
+	equal <span class="token operator">=</span> <span class="token number">61</span>
+	greater_than <span class="token operator">=</span> <span class="token number">62</span>
+	question_mark <span class="token operator">=</span> <span class="token number">63</span>
+	at <span class="token operator">=</span> <span class="token number">64</span>
+	a <span class="token operator">=</span> <span class="token number">97</span>
+	b <span class="token operator">=</span> <span class="token number">98</span>
+	c <span class="token operator">=</span> <span class="token number">99</span>
+	d <span class="token operator">=</span> <span class="token number">100</span>
+	e <span class="token operator">=</span> <span class="token number">101</span>
+	f <span class="token operator">=</span> <span class="token number">102</span>
+	g <span class="token operator">=</span> <span class="token number">103</span>
+	h <span class="token operator">=</span> <span class="token number">104</span>
+	i <span class="token operator">=</span> <span class="token number">105</span>
+	j <span class="token operator">=</span> <span class="token number">106</span>
+	k <span class="token operator">=</span> <span class="token number">107</span>
+	l <span class="token operator">=</span> <span class="token number">108</span>
+	m <span class="token operator">=</span> <span class="token number">109</span>
+	n <span class="token operator">=</span> <span class="token number">110</span>
+	o <span class="token operator">=</span> <span class="token number">111</span>
+	p <span class="token operator">=</span> <span class="token number">112</span>
+	q <span class="token operator">=</span> <span class="token number">113</span>
+	r <span class="token operator">=</span> <span class="token number">114</span>
+	s <span class="token operator">=</span> <span class="token number">115</span>
+	t <span class="token operator">=</span> <span class="token number">116</span>
+	u <span class="token operator">=</span> <span class="token number">117</span>
+	v <span class="token operator">=</span> <span class="token number">118</span>
+	w <span class="token operator">=</span> <span class="token number">119</span>
+	x <span class="token operator">=</span> <span class="token number">120</span>
+	y <span class="token operator">=</span> <span class="token number">121</span>
+	z <span class="token operator">=</span> <span class="token number">122</span>
+	left_square_bracket <span class="token operator">=</span> <span class="token number">91</span>
+	backslash <span class="token operator">=</span> <span class="token number">92</span>
+	right_square_bracket <span class="token operator">=</span> <span class="token number">93</span>
+	caret <span class="token operator">=</span> <span class="token number">94</span>
+	underscore <span class="token operator">=</span> <span class="token number">95</span>
+	backtick <span class="token operator">=</span> <span class="token number">96</span>
+	left_curly_bracket <span class="token operator">=</span> <span class="token number">123</span>
+	vertical_bar <span class="token operator">=</span> <span class="token number">124</span>
+	right_curly_bracket <span class="token operator">=</span> <span class="token number">125</span>
+	tilde <span class="token operator">=</span> <span class="token number">126</span>
+	insert <span class="token operator">=</span> <span class="token number">260</span>
+	delete <span class="token operator">=</span> <span class="token number">261</span>
+	up <span class="token operator">=</span> <span class="token number">262</span>
+	down <span class="token operator">=</span> <span class="token number">263</span>
+	right <span class="token operator">=</span> <span class="token number">264</span>
+	left <span class="token operator">=</span> <span class="token number">265</span>
+	page_up <span class="token operator">=</span> <span class="token number">266</span>
+	page_down <span class="token operator">=</span> <span class="token number">267</span>
+	home <span class="token operator">=</span> <span class="token number">268</span>
+	end <span class="token operator">=</span> <span class="token number">269</span>
+	f1 <span class="token operator">=</span> <span class="token number">290</span>
+	f2 <span class="token operator">=</span> <span class="token number">291</span>
+	f3 <span class="token operator">=</span> <span class="token number">292</span>
+	f4 <span class="token operator">=</span> <span class="token number">293</span>
+	f5 <span class="token operator">=</span> <span class="token number">294</span>
+	f6 <span class="token operator">=</span> <span class="token number">295</span>
+	f7 <span class="token operator">=</span> <span class="token number">296</span>
+	f8 <span class="token operator">=</span> <span class="token number">297</span>
+	f9 <span class="token operator">=</span> <span class="token number">298</span>
+	f10 <span class="token operator">=</span> <span class="token number">299</span>
+	f11 <span class="token operator">=</span> <span class="token number">300</span>
+	f12 <span class="token operator">=</span> <span class="token number">301</span>
+	f13 <span class="token operator">=</span> <span class="token number">302</span>
+	f14 <span class="token operator">=</span> <span class="token number">303</span>
+	f15 <span class="token operator">=</span> <span class="token number">304</span>
+	f16 <span class="token operator">=</span> <span class="token number">305</span>
+	f17 <span class="token operator">=</span> <span class="token number">306</span>
+	f18 <span class="token operator">=</span> <span class="token number">307</span>
+	f19 <span class="token operator">=</span> <span class="token number">308</span>
+	f20 <span class="token operator">=</span> <span class="token number">309</span>
+	f21 <span class="token operator">=</span> <span class="token number">310</span>
+	f22 <span class="token operator">=</span> <span class="token number">311</span>
+	f23 <span class="token operator">=</span> <span class="token number">312</span>
+	f24 <span class="token operator">=</span> <span class="token number">313</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Direction" class="doc-node">
+							<div class="title"><h2>enum Direction <a href="#Direction">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Direction</span> <span class="token punctuation">{</span>
+	unknown
+	up
+	down
+	left
+	right
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Modifiers" class="doc-node">
+							<div class="title"><h2>enum Modifiers <a href="#Modifiers">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Modifiers</span> <span class="token punctuation">{</span>
+	ctrl
+	shift
+	alt
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="EventType" class="doc-node">
+							<div class="title"><h2>enum EventType <a href="#EventType">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">EventType</span> <span class="token punctuation">{</span>
+	unknown
+	mouse_down
+	mouse_up
+	mouse_move
+	mouse_drag
+	mouse_scroll
+	key_down
+	resized
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="MouseButton" class="doc-node">
+							<div class="title"><h2>enum MouseButton <a href="#MouseButton">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">MouseButton</span> <span class="token punctuation">{</span>
+	unknown
+	left
+	middle
+	right
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Context" class="doc-node">
+							<div class="title"><h2>struct Context <a href="#Context">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Context</span> <span class="token punctuation">{</span>
+	ExtraContext
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	cfg Config
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	print_buf  <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>
+	paused     <span class="token builtin">bool</span>
+	enable_su  <span class="token builtin">bool</span>
+	enable_rgb <span class="token builtin">bool</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	frame_count   <span class="token builtin">u64</span>
+	window_width  <span class="token builtin">int</span>
+	window_height <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Context.bold" class="doc-node">
+							<div class="title"><h2>fn (Context) bold <a href="#Context.bold">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">bold</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>bold sets the character state to bold.</p>
+
+</section>
+						<section id="Context.clear" class="doc-node">
+							<div class="title"><h2>fn (Context) clear <a href="#Context.clear">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.draw_dashed_line" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_dashed_line <a href="#Context.draw_dashed_line">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">draw_dashed_line</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">,</span> x2 <span class="token builtin">int</span><span class="token punctuation">,</span> y2 <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>draw_dashed_line draws a dashed line segment, starting at point <code>x</code>,<code>y</code>, and ending at point <code>x2</code>,<code>y2</code>.</p>
+
+</section>
+						<section id="Context.draw_empty_dashed_rect" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_empty_dashed_rect <a href="#Context.draw_empty_dashed_rect">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">draw_empty_dashed_rect</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">,</span> x2 <span class="token builtin">int</span><span class="token punctuation">,</span> y2 <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>draw_empty_dashed_rect draws a rectangle with dashed lines, starting at top left <code>x</code>,<code>y</code>, and ending at bottom right <code>x2</code>,<code>y2</code>.</p>
+
+</section>
+						<section id="Context.draw_empty_rect" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_empty_rect <a href="#Context.draw_empty_rect">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">draw_empty_rect</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">,</span> x2 <span class="token builtin">int</span><span class="token punctuation">,</span> y2 <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>draw_empty_rect draws a rectangle with no fill, starting at top left <code>x</code>,<code>y</code>, and ending at bottom right <code>x2</code>,<code>y2</code>.</p>
+
+</section>
+						<section id="Context.draw_line" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_line <a href="#Context.draw_line">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">draw_line</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">,</span> x2 <span class="token builtin">int</span><span class="token punctuation">,</span> y2 <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>draw_line draws a line segment, starting at point <code>x</code>,<code>y</code>, and ending at point <code>x2</code>,<code>y2</code>.</p>
+
+</section>
+						<section id="Context.draw_point" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_point <a href="#Context.draw_point">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">draw_point</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>draw_point draws a point at position <code>x</code>,<code>y</code>.</p>
+
+</section>
+						<section id="Context.draw_rect" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_rect <a href="#Context.draw_rect">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">draw_rect</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">,</span> x2 <span class="token builtin">int</span><span class="token punctuation">,</span> y2 <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>draw_rect draws a rectangle, starting at top left <code>x</code>,<code>y</code>, and ending at bottom right <code>x2</code>,<code>y2</code>.</p>
+
+</section>
+						<section id="Context.draw_text" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_text <a href="#Context.draw_text">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">draw_text</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">,</span> s <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>draw_text draws the string <code>s</code>, starting from position <code>x</code>,<code>y</code>.</p>
+
+</section>
+						<section id="Context.flush" class="doc-node">
+							<div class="title"><h2>fn (Context) flush <a href="#Context.flush">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>flush displays the accumulated print buffer to the screen.</p>
+
+</section>
+						<section id="Context.hide_cursor" class="doc-node">
+							<div class="title"><h2>fn (Context) hide_cursor <a href="#Context.hide_cursor">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">hide_cursor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>hide_cursor will make the cursor invisible</p>
+
+</section>
+						<section id="Context.horizontal_separator" class="doc-node">
+							<div class="title"><h2>fn (Context) horizontal_separator <a href="#Context.horizontal_separator">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">horizontal_separator</span><span class="token punctuation">(</span>y <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>horizontal_separator draws a horizontal separator, spanning the width of the screen.</p>
+
+</section>
+						<section id="Context.reset" class="doc-node">
+							<div class="title"><h2>fn (Context) reset <a href="#Context.reset">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>reset restores the state of all colors and text formats back to their default values.</p>
+
+</section>
+						<section id="Context.reset_bg_color" class="doc-node">
+							<div class="title"><h2>fn (Context) reset_bg_color <a href="#Context.reset_bg_color">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">reset_bg_color</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>reset_bg_color sets the current background color back to it's default value.</p>
+
+</section>
+						<section id="Context.reset_color" class="doc-node">
+							<div class="title"><h2>fn (Context) reset_color <a href="#Context.reset_color">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">reset_color</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>reset_color sets the current foreground color back to it's default value.</p>
+
+</section>
+						<section id="Context.run" class="doc-node">
+							<div class="title"><h2>fn (Context) run <a href="#Context.run">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="Context.set_bg_color" class="doc-node">
+							<div class="title"><h2>fn (Context) set_bg_color <a href="#Context.set_bg_color">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">set_bg_color</span><span class="token punctuation">(</span>c Color<span class="token punctuation">)</span></code></pre>
+<p>set_color sets the current background color used by any succeeding <code>draw_*</code> calls.</p>
+
+</section>
+						<section id="Context.set_color" class="doc-node">
+							<div class="title"><h2>fn (Context) set_color <a href="#Context.set_color">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">set_color</span><span class="token punctuation">(</span>c Color<span class="token punctuation">)</span></code></pre>
+<p>set_color sets the current foreground color used by any succeeding <code>draw_*</code> calls.</p>
+
+</section>
+						<section id="Context.set_cursor_position" class="doc-node">
+							<div class="title"><h2>fn (Context) set_cursor_position <a href="#Context.set_cursor_position">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">set_cursor_position</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>set_cursor_position positions the cusor at the given coordinates <code>x</code>,<code>y</code>.</p>
+
+</section>
+						<section id="Context.set_window_title" class="doc-node">
+							<div class="title"><h2>fn (Context) set_window_title <a href="#Context.set_window_title">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">set_window_title</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>set_window_title sets the string <code>s</code> as the window title.</p>
+
+</section>
+						<section id="Context.show_cursor" class="doc-node">
+							<div class="title"><h2>fn (Context) show_cursor <a href="#Context.show_cursor">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">show_cursor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>show_cursor will make the cursor appear if it is not already visible</p>
+
+</section>
+						<section id="Context.write" class="doc-node">
+							<div class="title"><h2>fn (Context) write <a href="#Context.write">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">write</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>write puts the string <code>s</code> into the print buffer.</p>
+
+</section>
+						<section id="Config" class="doc-node">
+							<div class="title"><h2>struct Config <a href="#Config">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Config</span> <span class="token punctuation">{</span>
+	user_data  <span class="token builtin">voidptr</span>
+	init_fn    <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token builtin">voidptr</span><span class="token punctuation">)</span>
+	frame_fn   <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token builtin">voidptr</span><span class="token punctuation">)</span>
+	cleanup_fn <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token builtin">voidptr</span><span class="token punctuation">)</span>
+	event_fn   <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token operator">&</span>Event<span class="token punctuation">,</span> <span class="token builtin">voidptr</span><span class="token punctuation">)</span>
+	fail_fn    <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span>
+
+	buffer_size <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">256</span>
+	frame_rate  <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">30</span>
+	use_x11     <span class="token builtin">bool</span>
+
+	window_title         <span class="token builtin">string</span>
+	hide_cursor          <span class="token builtin">bool</span>
+	capture_events       <span class="token builtin">bool</span>
+	use_alternate_buffer <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+	skip_init_checks     <span class="token builtin">bool</span>
+
+	reset <span class="token punctuation">[</span><span class="token punctuation">]</span>os<span class="token punctuation">.</span>Signal <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">.</span>hup<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token punctuation">.</span>quit<span class="token punctuation">,</span> <span class="token punctuation">.</span>ill<span class="token punctuation">,</span> <span class="token punctuation">.</span>abrt<span class="token punctuation">,</span> <span class="token punctuation">.</span>bus<span class="token punctuation">,</span> <span class="token punctuation">.</span>fpe<span class="token punctuation">,</span> <span class="token punctuation">.</span>kill<span class="token punctuation">,</span> <span class="token punctuation">.</span>segv<span class="token punctuation">,</span> <span class="token punctuation">.</span>pipe<span class="token punctuation">,</span> <span class="token punctuation">.</span>alrm<span class="token punctuation">,</span> <span class="token punctuation">.</span>term<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span>stop<span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Color" class="doc-node">
+							<div class="title"><h2>struct Color <a href="#Color">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Color</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	r <span class="token builtin">byte</span>
+	g <span class="token builtin">byte</span>
+	b <span class="token builtin">byte</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Color.hex" class="doc-node">
+							<div class="title"><h2>fn (Color) hex <a href="#Color.hex">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c Color<span class="token punctuation">)</span> <span class="token function">hex</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="Event" class="doc-node">
+							<div class="title"><h2>struct Event <a href="#Event">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Event</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	typ EventType
+
+	x         <span class="token builtin">int</span>
+	y         <span class="token builtin">int</span>
+	button    MouseButton
+	direction Direction
+
+	code      KeyCode
+	modifiers Modifiers
+	ascii     <span class="token builtin">byte</span>
+	utf8      <span class="token builtin">string</span>
+
+	width  <span class="token builtin">int</span>
+	height <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:27
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#readme_term.ui">README</a></li>
+<li class="open"><a href="#init">fn init</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#KeyCode">enum KeyCode</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Direction">enum Direction</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Modifiers">enum Modifiers</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#EventType">enum EventType</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#MouseButton">enum MouseButton</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Context">struct Context</a>        <ul>
+<li><a href="#Context.bold">fn bold</a></li>
+<li><a href="#Context.clear">fn clear</a></li>
+<li><a href="#Context.draw_dashed_line">fn draw_dashed_line</a></li>
+<li><a href="#Context.draw_empty_dashed_rect">fn draw_empty_dashed_rect</a></li>
+<li><a href="#Context.draw_empty_rect">fn draw_empty_rect</a></li>
+<li><a href="#Context.draw_line">fn draw_line</a></li>
+<li><a href="#Context.draw_point">fn draw_point</a></li>
+<li><a href="#Context.draw_rect">fn draw_rect</a></li>
+<li><a href="#Context.draw_text">fn draw_text</a></li>
+<li><a href="#Context.flush">fn flush</a></li>
+<li><a href="#Context.hide_cursor">fn hide_cursor</a></li>
+<li><a href="#Context.horizontal_separator">fn horizontal_separator</a></li>
+<li><a href="#Context.reset">fn reset</a></li>
+<li><a href="#Context.reset_bg_color">fn reset_bg_color</a></li>
+<li><a href="#Context.reset_color">fn reset_color</a></li>
+<li><a href="#Context.run">fn run</a></li>
+<li><a href="#Context.set_bg_color">fn set_bg_color</a></li>
+<li><a href="#Context.set_color">fn set_color</a></li>
+<li><a href="#Context.set_cursor_position">fn set_cursor_position</a></li>
+<li><a href="#Context.set_window_title">fn set_window_title</a></li>
+<li><a href="#Context.show_cursor">fn show_cursor</a></li>
+<li><a href="#Context.write">fn write</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Config">struct Config</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Color">struct Color</a>        <ul>
+<li><a href="#Color.hex">fn hex</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Event">struct Event</a>        <ul>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

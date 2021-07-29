@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>mysql | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open active"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_mysql" class="doc-node">
+							<div class="title"><h1> mysql <a href="#readme_mysql">#</a></h1></div><p>For Linux, you need to install <code>MySQL development</code> package and <code>pkg-config</code>.
+For Windows, install <a href="https://dev.mysql.com/downloads/installer/">the installer</a> ,
+then copy the <code>include</code> and <code>lib</code> folders to <code>&lt;V install directory&gt;\thirdparty\mysql</code>.</p>
+<h2>Basic Usage</h2>
+<pre><code class="language-v">import mysql
+
+// Create connection
+mut connection := mysql.Connection{
+    username: 'root'
+    dbname: 'mysql'
+}
+// Connect to server
+connection.connect() ?
+// Change the default database
+connection.select_db('db_users') ?
+// Do a query
+get_users_query_result := connection.query('SELECT * FROM users') ?
+// Get the result as maps
+for user in get_users_query_result.maps() {
+    // Access the name of user
+    println(user['name'])
+}
+// Free the query result
+get_users_query_result.free()
+// Close the connection if needed
+connection.close()
+</code></pre>
+
+</section>
+
+						<section id="Constants" class="doc-node const">
+							<div class="title"><h2>Constants <a href="#Constants">#</a></h2></div>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	refresh_grant   <span class="token operator">=</span> <span class="token builtin">u32</span><span class="token punctuation">(</span>C<span class="token punctuation">.</span>REFRESH_GRANT<span class="token punctuation">)</span>
+	refresh_log     <span class="token operator">=</span> <span class="token builtin">u32</span><span class="token punctuation">(</span>C<span class="token punctuation">.</span>REFRESH_LOG<span class="token punctuation">)</span>
+	refresh_tables  <span class="token operator">=</span> <span class="token builtin">u32</span><span class="token punctuation">(</span>C<span class="token punctuation">.</span>REFRESH_TABLES<span class="token punctuation">)</span>
+	refresh_hosts   <span class="token operator">=</span> <span class="token builtin">u32</span><span class="token punctuation">(</span>C<span class="token punctuation">.</span>REFRESH_HOSTS<span class="token punctuation">)</span>
+	refresh_status  <span class="token operator">=</span> <span class="token builtin">u32</span><span class="token punctuation">(</span>C<span class="token punctuation">.</span>REFRESH_STATUS<span class="token punctuation">)</span>
+	refresh_threads <span class="token operator">=</span> <span class="token builtin">u32</span><span class="token punctuation">(</span>C<span class="token punctuation">.</span>REFRESH_THREADS<span class="token punctuation">)</span>
+	refresh_slave   <span class="token operator">=</span> <span class="token builtin">u32</span><span class="token punctuation">(</span>C<span class="token punctuation">.</span>REFRESH_SLAVE<span class="token punctuation">)</span>
+	refresh_master  <span class="token operator">=</span> <span class="token builtin">u32</span><span class="token punctuation">(</span>C<span class="token punctuation">.</span>REFRESH_MASTER<span class="token punctuation">)</span>
+<span class="token punctuation">)</span></code></pre>
+<p>MYSQL REFRESH FLAGS</p>
+
+</section>
+						<section id="get_client_version" class="doc-node">
+							<div class="title"><h2>fn get_client_version <a href="#get_client_version">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_client_version</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">u64</span></code></pre>
+<p>get_client_version - returns the client version information as an integer.</p>
+
+</section>
+						<section id="debug" class="doc-node">
+							<div class="title"><h2>fn debug <a href="#debug">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">debug</span><span class="token punctuation">(</span>debug <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>debug - does a <code>DBUG_PUSH</code> with the given string.  <code>debug()</code> uses the Fred Fish debug library.  To use this function, you must compile the client library to support debugging.  See <a href="https://dev.mysql.com/doc/c-api/8.0/en/mysql-debug.html">https://dev.mysql.com/doc/c-api/8.0/en/mysql-debug.html</a></p>
+
+</section>
+						<section id="get_client_info" class="doc-node">
+							<div class="title"><h2>fn get_client_info <a href="#get_client_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_client_info</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_client_info - returns client version information as a string.</p>
+
+</section>
+						<section id="ConnectionFlag" class="doc-node">
+							<div class="title"><h2>enum ConnectionFlag <a href="#ConnectionFlag">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">ConnectionFlag</span> <span class="token punctuation">{</span>
+	client_compress <span class="token operator">=</span> C<span class="token punctuation">.</span>CLIENT_COMPRESS
+	client_found_rows <span class="token operator">=</span> C<span class="token punctuation">.</span>CLIENT_FOUND_ROWS
+	client_ignore_sigpipe <span class="token operator">=</span> C<span class="token punctuation">.</span>CLIENT_IGNORE_SIGPIPE
+	client_ignore_space <span class="token operator">=</span> C<span class="token punctuation">.</span>CLIENT_IGNORE_SPACE
+	client_interactive <span class="token operator">=</span> C<span class="token punctuation">.</span>CLIENT_INTERACTIVE
+	client_local_files <span class="token operator">=</span> C<span class="token punctuation">.</span>CLIENT_LOCAL_FILES
+	client_multi_results <span class="token operator">=</span> C<span class="token punctuation">.</span>CLIENT_MULTI_RESULTS
+	client_multi_statements <span class="token operator">=</span> C<span class="token punctuation">.</span>CLIENT_MULTI_STATEMENTS
+	client_no_schema <span class="token operator">=</span> C<span class="token punctuation">.</span>CLIENT_NO_SCHEMA
+	client_odbc <span class="token operator">=</span> C<span class="token punctuation">.</span>CLIENT_ODBC
+	client_ssl <span class="token operator">=</span> C<span class="token punctuation">.</span>CLIENT_SSL
+	client_remember_options <span class="token operator">=</span> C<span class="token punctuation">.</span>CLIENT_REMEMBER_OPTIONS
+<span class="token punctuation">}</span></code></pre>
+<p>Values for the capabilities flag bitmask used by the MySQL protocol.  See more on <a href="https://dev.mysql.com/doc/dev/mysql-server/latest/group__group__cs__capabilities__flags.html#details">https://dev.mysql.com/doc/dev/mysql-server/latest/group__group__cs__capabilities__flags.html#details</a></p>
+
+</section>
+						<section id="FieldType" class="doc-node">
+							<div class="title"><h2>enum FieldType <a href="#FieldType">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">FieldType</span> <span class="token punctuation">{</span>
+	type_decimal
+	type_tiny
+	type_short
+	type_long
+	type_float
+	type_double
+	type_null
+	type_timestamp
+	type_longlong
+	type_int24
+	type_date
+	type_time
+	type_datetime
+	type_year
+	type_newdate
+	type_varchar
+	type_bit
+	type_timestamp2
+	type_datetime2
+	type_time2
+	type_json <span class="token operator">=</span> <span class="token number">245</span>
+	type_newdecimal
+	type_enum
+	type_set
+	type_tiny_blob
+	type_medium_blob
+	type_long_blob
+	type_blob
+	type_var_string
+	type_string
+	type_geometry
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="FieldType.str" class="doc-node">
+							<div class="title"><h2>fn (FieldType) str <a href="#FieldType.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>f FieldType<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="Connection" class="doc-node">
+							<div class="title"><h2>struct Connection <a href="#Connection">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Connection</span> <span class="token punctuation">{</span>
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	conn <span class="token operator">&</span>C<span class="token punctuation">.</span>MYSQL <span class="token operator">=</span> C<span class="token punctuation">.</span><span class="token function">mysql_init</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	host     <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'127.0.0.1'</span>
+	port     <span class="token builtin">u32</span>    <span class="token operator">=</span> <span class="token number">3306</span>
+	username <span class="token builtin">string</span>
+	password <span class="token builtin">string</span>
+	dbname   <span class="token builtin">string</span>
+	flag     ConnectionFlag
+<span class="token punctuation">}</span></code></pre>
+<p>TODO: Documentation</p>
+
+</section>
+						<section id="Connection.connect" class="doc-node">
+							<div class="title"><h2>fn (Connection) connect <a href="#Connection.connect">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> conn Connection<span class="token punctuation">)</span> <span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+<p>connect - create a new connection to the MySQL server.</p>
+
+</section>
+						<section id="Connection.query" class="doc-node">
+							<div class="title"><h2>fn (Connection) query <a href="#Connection.query">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> conn Connection<span class="token punctuation">)</span> <span class="token function">query</span><span class="token punctuation">(</span>q <span class="token builtin">string</span><span class="token punctuation">)</span> ?Result</code></pre>
+<p>query - make an SQL query and receive the results.  <code>query()</code> cannot be used for statements that contain binary data;  Use <code>real_query()</code> instead.</p>
+
+</section>
+						<section id="Connection.real_query" class="doc-node">
+							<div class="title"><h2>fn (Connection) real_query <a href="#Connection.real_query">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> conn Connection<span class="token punctuation">)</span> <span class="token function">real_query</span><span class="token punctuation">(</span>q <span class="token builtin">string</span><span class="token punctuation">)</span> ?Result</code></pre>
+<p>real_query - make an SQL query and receive the results.  <code>real_query()</code> can be used for statements containing binary data.  (Binary data may contain the <code>\0</code> character, which <code>query()</code>  interprets as the end of the statement string). In addition,  <code>real_query()</code> is faster than <code>query()</code>.</p>
+
+</section>
+						<section id="Connection.select_db" class="doc-node">
+							<div class="title"><h2>fn (Connection) select_db <a href="#Connection.select_db">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> conn Connection<span class="token punctuation">)</span> <span class="token function">select_db</span><span class="token punctuation">(</span>dbname <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+<p>select_db - change the default database for database queries.</p>
+
+</section>
+						<section id="Connection.change_user" class="doc-node">
+							<div class="title"><h2>fn (Connection) change_user <a href="#Connection.change_user">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> conn Connection<span class="token punctuation">)</span> <span class="token function">change_user</span><span class="token punctuation">(</span>username <span class="token builtin">string</span><span class="token punctuation">,</span> password <span class="token builtin">string</span><span class="token punctuation">,</span> dbname <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+<p>change_user - change the mysql user for the connection.  Passing an empty string for the <code>dbname</code> parameter, resultsg in only changing  the user and not changing the default database for the connection.</p>
+
+</section>
+						<section id="Connection.affected_rows" class="doc-node">
+							<div class="title"><h2>fn (Connection) affected_rows <a href="#Connection.affected_rows">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>conn <span class="token operator">&</span>Connection<span class="token punctuation">)</span> <span class="token function">affected_rows</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">u64</span></code></pre>
+<p>affected_rows - return the number of rows changed/deleted/inserted  by the last <code>UPDATE</code>, <code>DELETE</code>, or <code>INSERT</code> query.</p>
+
+</section>
+						<section id="Connection.autocommit" class="doc-node">
+							<div class="title"><h2>fn (Connection) autocommit <a href="#Connection.autocommit">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> conn Connection<span class="token punctuation">)</span> <span class="token function">autocommit</span><span class="token punctuation">(</span>mode <span class="token builtin">bool</span><span class="token punctuation">)</span></code></pre>
+<p>autocommit - turns on/off the auto-committing mode for the connection.  When it is on, then each query is commited right away.</p>
+
+</section>
+						<section id="Connection.tables" class="doc-node">
+							<div class="title"><h2>fn (Connection) tables <a href="#Connection.tables">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>conn <span class="token operator">&</span>Connection<span class="token punctuation">)</span> <span class="token function">tables</span><span class="token punctuation">(</span>wildcard <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>tables - returns a list of the names of the tables in the current database,  that match the simple regular expression specified by the <code>wildcard</code> parameter.  The <code>wildcard</code> parameter may contain the wildcard characters <code>%</code> or <code>_</code>.  If an empty string is passed, it will return all tables.  Calling <code>tables()</code> is similar to executing query <code>SHOW TABLES [LIKE wildcard]</code>.</p>
+
+</section>
+						<section id="Connection.escape_string" class="doc-node">
+							<div class="title"><h2>fn (Connection) escape_string <a href="#Connection.escape_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>conn <span class="token operator">&</span>Connection<span class="token punctuation">)</span> <span class="token function">escape_string</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>escape_string - creates a legal SQL string for use in an SQL statement.  The <code>s</code> argument is encoded to produce an escaped SQL string,  taking into account the current character set of the connection.</p>
+
+</section>
+						<section id="Connection.set_option" class="doc-node">
+							<div class="title"><h2>fn (Connection) set_option <a href="#Connection.set_option">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> conn Connection<span class="token punctuation">)</span> <span class="token function">set_option</span><span class="token punctuation">(</span>option_type <span class="token builtin">int</span><span class="token punctuation">,</span> val <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+<p>set_option - sets extra connect options that affect the behavior of  a connection. This function may be called multiple times to set several  options. To retrieve the current values for an option, use <code>get_option()</code>.</p>
+
+</section>
+						<section id="Connection.get_option" class="doc-node">
+							<div class="title"><h2>fn (Connection) get_option <a href="#Connection.get_option">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>conn <span class="token operator">&</span>Connection<span class="token punctuation">)</span> <span class="token function">get_option</span><span class="token punctuation">(</span>option_type <span class="token builtin">int</span><span class="token punctuation">)</span> ?<span class="token builtin">voidptr</span></code></pre>
+<p>get_option - return the value of an option, settable by <code>set_option</code>.  <a href="https://dev.mysql.com/doc/c-api/5.7/en/mysql-get-option.html">https://dev.mysql.com/doc/c-api/5.7/en/mysql-get-option.html</a></p>
+
+</section>
+						<section id="Connection.refresh" class="doc-node">
+							<div class="title"><h2>fn (Connection) refresh <a href="#Connection.refresh">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> conn Connection<span class="token punctuation">)</span> <span class="token function">refresh</span><span class="token punctuation">(</span>options <span class="token builtin">u32</span><span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+<p>refresh - flush the tables or caches, or resets replication server  information. The connected user must have the <code>RELOAD</code> privilege.</p>
+
+</section>
+						<section id="Connection.reset" class="doc-node">
+							<div class="title"><h2>fn (Connection) reset <a href="#Connection.reset">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> conn Connection<span class="token punctuation">)</span> <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+<p>reset - resets the connection, and clear the session state.</p>
+
+</section>
+						<section id="Connection.ping" class="doc-node">
+							<div class="title"><h2>fn (Connection) ping <a href="#Connection.ping">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> conn Connection<span class="token punctuation">)</span> <span class="token function">ping</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+<p>ping - pings a server connection, or tries to reconnect if the connection  has gone down.</p>
+
+</section>
+						<section id="Connection.close" class="doc-node">
+							<div class="title"><h2>fn (Connection) close <a href="#Connection.close">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> conn Connection<span class="token punctuation">)</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>close - closes the connection.</p>
+
+</section>
+						<section id="Connection.info" class="doc-node">
+							<div class="title"><h2>fn (Connection) info <a href="#Connection.info">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>conn <span class="token operator">&</span>Connection<span class="token punctuation">)</span> <span class="token function">info</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>info - returns information about the most recently executed query.  See more on <a href="https://dev.mysql.com/doc/c-api/8.0/en/mysql-info.html">https://dev.mysql.com/doc/c-api/8.0/en/mysql-info.html</a></p>
+
+</section>
+						<section id="Connection.get_host_info" class="doc-node">
+							<div class="title"><h2>fn (Connection) get_host_info <a href="#Connection.get_host_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>conn <span class="token operator">&</span>Connection<span class="token punctuation">)</span> <span class="token function">get_host_info</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_host_info - returns a string describing the type of connection in use,  including the server host name.</p>
+
+</section>
+						<section id="Connection.get_server_info" class="doc-node">
+							<div class="title"><h2>fn (Connection) get_server_info <a href="#Connection.get_server_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>conn <span class="token operator">&</span>Connection<span class="token punctuation">)</span> <span class="token function">get_server_info</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_server_info - returns a string representing the MySQL server version.  For example, <code>8.0.24</code>.</p>
+
+</section>
+						<section id="Connection.get_server_version" class="doc-node">
+							<div class="title"><h2>fn (Connection) get_server_version <a href="#Connection.get_server_version">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>conn <span class="token operator">&</span>Connection<span class="token punctuation">)</span> <span class="token function">get_server_version</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">u64</span></code></pre>
+<p>get_server_version - returns an integer, representing the MySQL server  version. The value has the format <code>XYYZZ</code> where <code>X</code> is the major version,  <code>YY</code> is the release level (or minor version), and <code>ZZ</code> is the sub-version  within the release level. For example, <code>8.0.24</code> is returned as <code>80024</code>.</p>
+
+</section>
+						<section id="Connection.dump_debug_info" class="doc-node">
+							<div class="title"><h2>fn (Connection) dump_debug_info <a href="#Connection.dump_debug_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> conn Connection<span class="token punctuation">)</span> <span class="token function">dump_debug_info</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+<p>dump_debug_info - instructs the server to write debugging information  to the error log. The connected user must have the <code>SUPER</code> privilege.</p>
+
+</section>
+						<section id="Field" class="doc-node">
+							<div class="title"><h2>struct Field <a href="#Field">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Field</span> <span class="token punctuation">{</span>
+	name             <span class="token builtin">string</span>
+	org_name         <span class="token builtin">string</span>
+	table            <span class="token builtin">string</span>
+	org_table        <span class="token builtin">string</span>
+	db               <span class="token builtin">string</span>
+	catalog          <span class="token builtin">string</span>
+	def              <span class="token builtin">string</span>
+	length           <span class="token builtin">int</span>
+	max_length       <span class="token builtin">int</span>
+	name_length      <span class="token builtin">u32</span>
+	org_name_length  <span class="token builtin">u32</span>
+	table_length     <span class="token builtin">u32</span>
+	org_table_length <span class="token builtin">u32</span>
+	db_length        <span class="token builtin">u32</span>
+	catalog_length   <span class="token builtin">u32</span>
+	def_length       <span class="token builtin">u32</span>
+	flags            <span class="token builtin">u32</span>
+	decimals         <span class="token builtin">u32</span>
+	charsetnr        <span class="token builtin">u32</span>
+	type_            FieldType
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Field.str" class="doc-node">
+							<div class="title"><h2>fn (Field) str <a href="#Field.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>f Field<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>str - serializes the field</p>
+
+</section>
+						<section id="Result" class="doc-node">
+							<div class="title"><h2>struct Result <a href="#Result">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Result</span> <span class="token punctuation">{</span>
+	result <span class="token operator">&</span>C<span class="token punctuation">.</span>MYSQL_RES
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Result.fetch_row" class="doc-node">
+							<div class="title"><h2>fn (Result) fetch_row <a href="#Result.fetch_row">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>r Result<span class="token punctuation">)</span> <span class="token function">fetch_row</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&</span><span class="token operator">&</span><span class="token builtin">byte</span></code></pre>
+<p>fetch_row - fetches the next row from a result.</p>
+
+</section>
+						<section id="Result.n_rows" class="doc-node">
+							<div class="title"><h2>fn (Result) n_rows <a href="#Result.n_rows">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>r Result<span class="token punctuation">)</span> <span class="token function">n_rows</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">u64</span></code></pre>
+<p>n_rows - returns the number of rows from a result.</p>
+
+</section>
+						<section id="Result.n_fields" class="doc-node">
+							<div class="title"><h2>fn (Result) n_fields <a href="#Result.n_fields">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>r Result<span class="token punctuation">)</span> <span class="token function">n_fields</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>n_fields - returns the number of columns from a result.</p>
+
+</section>
+						<section id="Result.rows" class="doc-node">
+							<div class="title"><h2>fn (Result) rows <a href="#Result.rows">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>r Result<span class="token punctuation">)</span> <span class="token function">rows</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>Row</code></pre>
+<p>rows - returns array of rows, each containing an array of values,  one for each column.</p>
+
+</section>
+						<section id="Result.maps" class="doc-node">
+							<div class="title"><h2>fn (Result) maps <a href="#Result.maps">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>r Result<span class="token punctuation">)</span> <span class="token function">maps</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>maps - returns an array of maps, each containing a set of  field name: field value pairs.</p>
+
+</section>
+						<section id="Result.fields" class="doc-node">
+							<div class="title"><h2>fn (Result) fields <a href="#Result.fields">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>r Result<span class="token punctuation">)</span> <span class="token function">fields</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>Field</code></pre>
+<p>fields - returns an array of fields/columns.  The definitions apply primarily for columns of results,  such as those produced by <code>SELECT</code> statements.</p>
+
+</section>
+						<section id="Result.free" class="doc-node">
+							<div class="title"><h2>fn (Result) free <a href="#Result.free">#</a></h2></div><div class="attributes"><div class="attribute">unsafe</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>r <span class="token operator">&</span>Result<span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>free - frees the memory used by a result</p>
+
+</section>
+						<section id="Row" class="doc-node">
+							<div class="title"><h2>struct Row <a href="#Row">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Row</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	vals <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:26
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#readme_mysql">README</a></li>
+<li class="open"><a href="#Constants">Constants</a></li>
+<li class="open"><a href="#get_client_version">fn get_client_version</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#debug">fn debug</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_client_info">fn get_client_info</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ConnectionFlag">enum ConnectionFlag</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FieldType">enum FieldType</a>        <ul>
+<li><a href="#FieldType.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Connection">struct Connection</a>        <ul>
+<li><a href="#Connection.connect">fn connect</a></li>
+<li><a href="#Connection.query">fn query</a></li>
+<li><a href="#Connection.real_query">fn real_query</a></li>
+<li><a href="#Connection.select_db">fn select_db</a></li>
+<li><a href="#Connection.change_user">fn change_user</a></li>
+<li><a href="#Connection.affected_rows">fn affected_rows</a></li>
+<li><a href="#Connection.autocommit">fn autocommit</a></li>
+<li><a href="#Connection.tables">fn tables</a></li>
+<li><a href="#Connection.escape_string">fn escape_string</a></li>
+<li><a href="#Connection.set_option">fn set_option</a></li>
+<li><a href="#Connection.get_option">fn get_option</a></li>
+<li><a href="#Connection.refresh">fn refresh</a></li>
+<li><a href="#Connection.reset">fn reset</a></li>
+<li><a href="#Connection.ping">fn ping</a></li>
+<li><a href="#Connection.close">fn close</a></li>
+<li><a href="#Connection.info">fn info</a></li>
+<li><a href="#Connection.get_host_info">fn get_host_info</a></li>
+<li><a href="#Connection.get_server_info">fn get_server_info</a></li>
+<li><a href="#Connection.get_server_version">fn get_server_version</a></li>
+<li><a href="#Connection.dump_debug_info">fn dump_debug_info</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Field">struct Field</a>        <ul>
+<li><a href="#Field.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Result">struct Result</a>        <ul>
+<li><a href="#Result.fetch_row">fn fetch_row</a></li>
+<li><a href="#Result.n_rows">fn n_rows</a></li>
+<li><a href="#Result.n_fields">fn n_fields</a></li>
+<li><a href="#Result.rows">fn rows</a></li>
+<li><a href="#Result.maps">fn maps</a></li>
+<li><a href="#Result.fields">fn fields</a></li>
+<li><a href="#Result.free">fn free</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Row">struct Row</a>        <ul>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

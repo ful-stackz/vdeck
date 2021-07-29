@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>os | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open active"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_os" class="doc-node">
+							<div class="title"><h1> os <a href="#readme_os">#</a></h1></div>
+
+</section>
+
+						<section id="Constants" class="doc-node const">
+							<div class="title"><h2>Constants <a href="#Constants">#</a></h2></div>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	hwnd_broadcast   <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0xFFFF</span><span class="token punctuation">)</span>
+	wm_settingchange <span class="token operator">=</span> <span class="token number">0x001A</span>
+	smto_abortifhung <span class="token operator">=</span> <span class="token number">0x0002</span>
+<span class="token punctuation">)</span></code></pre>
+<p>Windows Messages</p>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	path_separator <span class="token operator">=</span> <span class="token string">'\\'</span>
+	path_delimiter <span class="token operator">=</span> <span class="token string">';'</span>
+<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	args          <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+	max_path_len  <span class="token operator">=</span> <span class="token number">4096</span>
+	wd_at_startup <span class="token operator">=</span> <span class="token function">getwd</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	hkey_local_machine     <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0x80000002</span><span class="token punctuation">)</span>
+	hkey_current_user      <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0x80000001</span><span class="token punctuation">)</span>
+	key_query_value        <span class="token operator">=</span> <span class="token number">0x0001</span>
+	key_set_value          <span class="token operator">=</span> <span class="token number">0x0002</span>
+	key_enumerate_sub_keys <span class="token operator">=</span> <span class="token number">0x0008</span>
+	key_wow64_32key        <span class="token operator">=</span> <span class="token number">0x0200</span>
+<span class="token punctuation">)</span></code></pre>
+<p>Windows Registry Constants</p>
+
+</section>
+						<section id="args_after" class="doc-node">
+							<div class="title"><h2>fn args_after <a href="#args_after">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">args_after</span><span class="token punctuation">(</span>cut_word <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>args_after returns all os.args, located <em>after</em> a specified <code>cut_word</code>.  When <code>cut_word</code> is NOT found, os.args is returned unmodified.</p>
+
+</section>
+						<section id="args_before" class="doc-node">
+							<div class="title"><h2>fn args_before <a href="#args_before">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">args_before</span><span class="token punctuation">(</span>cut_word <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>args_after returns all os.args, located <em>before</em> a specified <code>cut_word</code>.  When <code>cut_word</code> is NOT found, os.args is returned unmodified.</p>
+
+</section>
+						<section id="base" class="doc-node">
+							<div class="title"><h2>fn base <a href="#base">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">base</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>base returns the last element of path.  Trailing path separators are removed before extracting the last element.  If the path is empty, base returns &quot;.&quot;. If the path consists entirely of separators, base returns a  single separator.</p>
+
+</section>
+						<section id="cache_dir" class="doc-node">
+							<div class="title"><h2>fn cache_dir <a href="#cache_dir">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">cache_dir</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>cache_dir returns the path to a <em>writable</em> user specific folder, suitable for writing non-essential data.</p>
+
+</section>
+						<section id="chdir" class="doc-node">
+							<div class="title"><h2>fn chdir <a href="#chdir">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">chdir</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>chdir changes the current working directory to the new directory in <code>path</code>.</p>
+
+</section>
+						<section id="chmod" class="doc-node">
+							<div class="title"><h2>fn chmod <a href="#chmod">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">chmod</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> mode <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>chmod change file access attributes of <code>path</code> to <code>mode</code>.  Octals like <code>0o600</code> can be used.</p>
+
+</section>
+						<section id="chown" class="doc-node">
+							<div class="title"><h2>fn chown <a href="#chown">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">chown</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> owner <span class="token builtin">int</span><span class="token punctuation">,</span> group <span class="token builtin">int</span><span class="token punctuation">)</span> ?</code></pre>
+<p>chown changes the owner and group attributes of <code>path</code> to <code>owner</code> and <code>group</code>.</p>
+
+</section>
+						<section id="add_vectored_exception_handler" class="doc-node">
+							<div class="title"><h2>fn add_vectored_exception_handler <a href="#add_vectored_exception_handler">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">add_vectored_exception_handler</span><span class="token punctuation">(</span>first <span class="token builtin">bool</span><span class="token punctuation">,</span> handler VectoredExceptionHandler<span class="token punctuation">)</span></code></pre>
+<p>This is defined in builtin because we use vectored exception handling  for our unhandled exception handler on windows  As a result this definition is commented out to prevent  duplicate definitions from displeasing the compiler  fn C.AddVectoredExceptionHandler(u32, VectoredExceptionHandler)</p>
+
+</section>
+						<section id="write_file" class="doc-node">
+							<div class="title"><h2>fn write_file <a href="#write_file">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">write_file</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> text <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>write_file writes <code>text</code> data to a file in <code>path</code>.</p>
+
+</section>
+						<section id="cp" class="doc-node">
+							<div class="title"><h2>fn cp <a href="#cp">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">cp</span><span class="token punctuation">(</span>src <span class="token builtin">string</span><span class="token punctuation">,</span> dst <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>cp copies files or folders from <code>src</code> to <code>dst</code>.</p>
+
+</section>
+						<section id="cp_all" class="doc-node">
+							<div class="title"><h2>fn cp_all <a href="#cp_all">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">cp_all</span><span class="token punctuation">(</span>src <span class="token builtin">string</span><span class="token punctuation">,</span> dst <span class="token builtin">string</span><span class="token punctuation">,</span> overwrite <span class="token builtin">bool</span><span class="token punctuation">)</span> ?</code></pre>
+<p>cp_all will recursively copy <code>src</code> to <code>dst</code>,  optionally overwriting files or dirs in <code>dst</code>.</p>
+
+</section>
+						<section id="create" class="doc-node">
+							<div class="title"><h2>fn create <a href="#create">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">create</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> ?File</code></pre>
+<p>create creates or opens a file at a specified location and returns a write-only <code>File</code> object.</p>
+
+</section>
+						<section id="debugger_present" class="doc-node">
+							<div class="title"><h2>fn debugger_present <a href="#debugger_present">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">debugger_present</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>this is defined in builtin_windows.c.v in builtin  fn C.IsDebuggerPresent() bool</p>
+
+</section>
+						<section id="dir" class="doc-node">
+							<div class="title"><h2>fn dir <a href="#dir">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">dir</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>dir returns all but the last element of path, typically the path's directory.  After dropping the final element, trailing slashes are removed.  If the path is empty, dir returns &quot;.&quot;. If the path consists entirely of separators,  dir returns a single separator.  The returned path does not end in a separator unless it is the root directory.</p>
+
+</section>
+						<section id="environ" class="doc-node">
+							<div class="title"><h2>fn environ <a href="#environ">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">environ</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="walk_ext" class="doc-node">
+							<div class="title"><h2>fn walk_ext <a href="#walk_ext">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">walk_ext</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> ext <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>walk_ext returns a recursive list of all files in <code>path</code> ending with <code>ext</code>.</p>
+
+</section>
+						<section id="walk" class="doc-node">
+							<div class="title"><h2>fn walk <a href="#walk">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">walk</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> f <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>walk recursively traverses the given directory <code>path</code>.  When a file is encountred it will call the callback function with current file as argument.</p>
+
+</section>
+						<section id="wait" class="doc-node">
+							<div class="title"><h2>fn wait <a href="#wait">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>wait blocks the calling process until one of its child processes exits or a signal is received.  After child process terminates, parent continues its execution after wait system call instruction.</p>
+
+</section>
+						<section id="vmodules_paths" class="doc-node">
+							<div class="title"><h2>fn vmodules_paths <a href="#vmodules_paths">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">vmodules_paths</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>vmodules_paths returns a list of paths, where v looks up for modules.  You can customize it through setting the environment variable VMODULES</p>
+
+</section>
+						<section id="executable" class="doc-node">
+							<div class="title"><h2>fn executable <a href="#executable">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">executable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>executable returns the path name of the executable that started the current  process.</p>
+
+</section>
+						<section id="execute" class="doc-node">
+							<div class="title"><h2>fn execute <a href="#execute">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">execute</span><span class="token punctuation">(</span>cmd <span class="token builtin">string</span><span class="token punctuation">)</span> Result</code></pre>
+<p>execute starts the specified command, waits for it to complete, and returns its output.</p>
+
+</section>
+						<section id="execute_or_exit" class="doc-node">
+							<div class="title"><h2>fn execute_or_exit <a href="#execute_or_exit">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">execute_or_exit</span><span class="token punctuation">(</span>cmd <span class="token builtin">string</span><span class="token punctuation">)</span> Result</code></pre>
+
+
+</section>
+						<section id="execute_or_panic" class="doc-node">
+							<div class="title"><h2>fn execute_or_panic <a href="#execute_or_panic">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">execute_or_panic</span><span class="token punctuation">(</span>cmd <span class="token builtin">string</span><span class="token punctuation">)</span> Result</code></pre>
+
+
+</section>
+						<section id="execve" class="doc-node">
+							<div class="title"><h2>fn execve <a href="#execve">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">execve</span><span class="token punctuation">(</span>cmdpath <span class="token builtin">string</span><span class="token punctuation">,</span> args <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> envs <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>execve - loads and executes a new child process, <em>in place</em> of the current process.  The child process executable is located in <code>cmdpath</code>.  The arguments, that will be passed to it are in <code>args</code>.  You can pass environment variables to through <code>envs</code>.  NB: this function will NOT return when successfull, since  the child process will take control over execution.</p>
+
+</section>
+						<section id="execvp" class="doc-node">
+							<div class="title"><h2>fn execvp <a href="#execvp">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">execvp</span><span class="token punctuation">(</span>cmdpath <span class="token builtin">string</span><span class="token punctuation">,</span> args <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>execvp - loads and executes a new child process, <em>in place</em> of the current process.  The child process executable is located in <code>cmdpath</code>.  The arguments, that will be passed to it are in <code>args</code>.  NB: this function will NOT return when successfull, since  the child process will take control over execution.</p>
+
+</section>
+						<section id="exists" class="doc-node">
+							<div class="title"><h2>fn exists <a href="#exists">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">exists</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>exists returns true if <code>path</code> (file or directory) exists.</p>
+
+</section>
+						<section id="exists_in_system_path" class="doc-node">
+							<div class="title"><h2>fn exists_in_system_path <a href="#exists_in_system_path">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">exists_in_system_path</span><span class="token punctuation">(</span>prog <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>exists_in_system_path returns <code>true</code> if <code>prog</code> exists in the system's PATH</p>
+
+</section>
+						<section id="fd_close" class="doc-node">
+							<div class="title"><h2>fn fd_close <a href="#fd_close">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">fd_close</span><span class="token punctuation">(</span>fd <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>file descriptor based operations:  close filedescriptor</p>
+
+</section>
+						<section id="fd_read" class="doc-node">
+							<div class="title"><h2>fn fd_read <a href="#fd_read">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">fd_read</span><span class="token punctuation">(</span>fd <span class="token builtin">int</span><span class="token punctuation">,</span> maxbytes <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>read from filedescriptor, don't block  return [bytestring,nrbytes]</p>
+
+</section>
+						<section id="fd_slurp" class="doc-node">
+							<div class="title"><h2>fn fd_slurp <a href="#fd_slurp">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">fd_slurp</span><span class="token punctuation">(</span>fd <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>read from filedescriptor, block until data</p>
+
+</section>
+						<section id="fd_write" class="doc-node">
+							<div class="title"><h2>fn fd_write <a href="#fd_write">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">fd_write</span><span class="token punctuation">(</span>fd <span class="token builtin">int</span><span class="token punctuation">,</span> s <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="vmodules_dir" class="doc-node">
+							<div class="title"><h2>fn vmodules_dir <a href="#vmodules_dir">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">vmodules_dir</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>vmodules_dir returns the path to a folder, where v stores its global modules.</p>
+
+</section>
+						<section id="file_ext" class="doc-node">
+							<div class="title"><h2>fn file_ext <a href="#file_ext">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">file_ext</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>file_ext will return the part after the last occurence of <code>.</code> in <code>path</code>.  The <code>.</code> is included.</p>
+
+</section>
+						<section id="file_last_mod_unix" class="doc-node">
+							<div class="title"><h2>fn file_last_mod_unix <a href="#file_last_mod_unix">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">file_last_mod_unix</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>file_last_mod_unix returns the &quot;last modified&quot; time stamp of file in <code>path</code>.</p>
+
+</section>
+						<section id="file_name" class="doc-node">
+							<div class="title"><h2>fn file_name <a href="#file_name">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">file_name</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>file_name will return all characters found after the last occurence of <code>path_separator</code>.  file extension is included.</p>
+
+</section>
+						<section id="file_size" class="doc-node">
+							<div class="title"><h2>fn file_size <a href="#file_size">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">file_size</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">u64</span></code></pre>
+<p>file_size returns the size of the file located in <code>path</code>.  If an error occurs it returns 0.  Note that use of this on symbolic links on Windows returns always 0.</p>
+
+</section>
+						<section id="fileno" class="doc-node">
+							<div class="title"><h2>fn fileno <a href="#fileno">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">fileno</span><span class="token punctuation">(</span>cfile <span class="token builtin">voidptr</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>fileno returns the file descriptor of an opened C file.</p>
+
+</section>
+						<section id="find_abs_path_of_executable" class="doc-node">
+							<div class="title"><h2>fn find_abs_path_of_executable <a href="#find_abs_path_of_executable">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">find_abs_path_of_executable</span><span class="token punctuation">(</span>exepath <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+<p>find_exe_path walks the environment PATH, just like most shell do, it returns  the absolute path of the executable if found</p>
+
+</section>
+						<section id="flush" class="doc-node">
+							<div class="title"><h2>fn flush <a href="#flush">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>flush will flush the stdout buffer.</p>
+
+</section>
+						<section id="fork" class="doc-node">
+							<div class="title"><h2>fn fork <a href="#fork">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>fork will fork the current system process and return the pid of the fork.</p>
+
+</section>
+						<section id="get_error_msg" class="doc-node">
+							<div class="title"><h2>fn get_error_msg <a href="#get_error_msg">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_error_msg</span><span class="token punctuation">(</span>code <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_error_msg return error code representation in string.</p>
+
+</section>
+						<section id="get_file_handle" class="doc-node">
+							<div class="title"><h2>fn get_file_handle <a href="#get_file_handle">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_file_handle</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> HANDLE</code></pre>
+<p>Ref - <a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/get-osfhandle?view=vs-2019">https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/get-osfhandle?view=vs-2019</a>  get_file_handle retrieves the operating-system file handle that is associated with the specified file descriptor.</p>
+
+</section>
+						<section id="get_line" class="doc-node">
+							<div class="title"><h2>fn get_line <a href="#get_line">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_line</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_line returns a one-line string from stdin</p>
+
+</section>
+						<section id="get_lines" class="doc-node">
+							<div class="title"><h2>fn get_lines <a href="#get_lines">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_lines</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>get_lines returns an array of strings read from from stdin.  reading is stopped when an empty line is read.</p>
+
+</section>
+						<section id="get_lines_joined" class="doc-node">
+							<div class="title"><h2>fn get_lines_joined <a href="#get_lines_joined">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_lines_joined</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_lines_joined returns a string of the values read from from stdin.  reading is stopped when an empty line is read.</p>
+
+</section>
+						<section id="get_module_filename" class="doc-node">
+							<div class="title"><h2>fn get_module_filename <a href="#get_module_filename">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_module_filename</span><span class="token punctuation">(</span>handle HANDLE<span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+<p>Ref - <a href="https://docs.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamea">https://docs.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamea</a>  get_module_filename retrieves the fully qualified path for the file that contains the specified module.  The module must have been loaded by the current process.</p>
+
+</section>
+						<section id="get_raw_line" class="doc-node">
+							<div class="title"><h2>fn get_raw_line <a href="#get_raw_line">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_raw_line</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_raw_line returns a one-line string from stdin along with '\n' if there is any.</p>
+
+</section>
+						<section id="get_raw_lines_joined" class="doc-node">
+							<div class="title"><h2>fn get_raw_lines_joined <a href="#get_raw_lines_joined">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_raw_lines_joined</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_raw_lines_joined reads <em>all</em> input lines from stdin.  It returns them as one large string. NB: unlike os.get_lines_joined,  empty lines (that contain only <code>\r\n</code> or <code>\n</code>), will be present in  the output.  Reading is stopped, only on EOF of stdin.</p>
+
+</section>
+						<section id="get_raw_stdin" class="doc-node">
+							<div class="title"><h2>fn get_raw_stdin <a href="#get_raw_stdin">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_raw_stdin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span></code></pre>
+<p>get_raw_stdin will get the raw input from stdin.</p>
+
+</section>
+						<section id="getegid" class="doc-node">
+							<div class="title"><h2>fn getegid <a href="#getegid">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">getegid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="getenv" class="doc-node">
+							<div class="title"><h2>fn getenv <a href="#getenv">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">getenv</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="geteuid" class="doc-node">
+							<div class="title"><h2>fn geteuid <a href="#geteuid">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">geteuid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="getgid" class="doc-node">
+							<div class="title"><h2>fn getgid <a href="#getgid">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">getgid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="getpid" class="doc-node">
+							<div class="title"><h2>fn getpid <a href="#getpid">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">getpid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="getppid" class="doc-node">
+							<div class="title"><h2>fn getppid <a href="#getppid">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">getppid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="getuid" class="doc-node">
+							<div class="title"><h2>fn getuid <a href="#getuid">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">getuid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="getwd" class="doc-node">
+							<div class="title"><h2>fn getwd <a href="#getwd">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">getwd</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>getwd returns the absolute path of the current directory.</p>
+
+</section>
+						<section id="glob" class="doc-node">
+							<div class="title"><h2>fn glob <a href="#glob">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">glob</span><span class="token punctuation">(</span>patterns ...<span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="vfopen" class="doc-node">
+							<div class="title"><h2>fn vfopen <a href="#vfopen">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">vfopen</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> mode <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token operator">&</span>C<span class="token punctuation">.</span>FILE</code></pre>
+<p>vfopen returns an opened C file, given its path and open mode.  NB: os.vfopen is useful for compatibility with C libraries, that expect <code>FILE *</code>.  If you write pure V code, os.create or os.open are more convenient.</p>
+
+</section>
+						<section id="utime" class="doc-node">
+							<div class="title"><h2>fn utime <a href="#utime">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">utime</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> actime <span class="token builtin">int</span><span class="token punctuation">,</span> modtime <span class="token builtin">int</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="home_dir" class="doc-node">
+							<div class="title"><h2>fn home_dir <a href="#home_dir">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">home_dir</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>home_dir returns path to the user's home directory.</p>
+
+</section>
+						<section id="hostname" class="doc-node">
+							<div class="title"><h2>fn hostname <a href="#hostname">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">hostname</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="inode" class="doc-node">
+							<div class="title"><h2>fn inode <a href="#inode">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">inode</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> FileMode</code></pre>
+<p>inode returns the mode of the file/inode containing inode type and permission information  it supports windows for regular files but it doesn't matter if you use owner, group or others when checking permissions on windows</p>
+
+</section>
+						<section id="input" class="doc-node">
+							<div class="title"><h2>fn input <a href="#input">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">input</span><span class="token punctuation">(</span>prompt <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>input returns a one-line string from stdin, after printing a prompt.  In the event of error (end of input), it returns '&lt;EOF&gt;'.</p>
+
+</section>
+						<section id="input_opt" class="doc-node">
+							<div class="title"><h2>fn input_opt <a href="#input_opt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">input_opt</span><span class="token punctuation">(</span>prompt <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+<p>input_opt returns a one-line string from stdin, after printing a prompt.  In the event of error (end of input), it returns <code>none</code>.</p>
+
+</section>
+						<section id="is_abs_path" class="doc-node">
+							<div class="title"><h2>fn is_abs_path <a href="#is_abs_path">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">is_abs_path</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_abs_path returns <code>true</code> if <code>path</code> is absolute.</p>
+
+</section>
+						<section id="is_atty" class="doc-node">
+							<div class="title"><h2>fn is_atty <a href="#is_atty">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">is_atty</span><span class="token punctuation">(</span>fd <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>is_atty returns 1 if the <code>fd</code> file descriptor is open and refers to a terminal</p>
+
+</section>
+						<section id="is_dir" class="doc-node">
+							<div class="title"><h2>fn is_dir <a href="#is_dir">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">is_dir</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_dir returns a <code>bool</code> indicating whether the given <code>path</code> is a directory.</p>
+
+</section>
+						<section id="is_dir_empty" class="doc-node">
+							<div class="title"><h2>fn is_dir_empty <a href="#is_dir_empty">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">is_dir_empty</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_dir_empty will return a <code>bool</code> whether or not <code>path</code> is empty.</p>
+
+</section>
+						<section id="is_executable" class="doc-node">
+							<div class="title"><h2>fn is_executable <a href="#is_executable">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">is_executable</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_executable returns <code>true</code> if <code>path</code> is executable.</p>
+
+</section>
+						<section id="is_file" class="doc-node">
+							<div class="title"><h2>fn is_file <a href="#is_file">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">is_file</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_file returns a <code>bool</code> indicating whether the given <code>path</code> is a file.</p>
+
+</section>
+						<section id="is_link" class="doc-node">
+							<div class="title"><h2>fn is_link <a href="#is_link">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">is_link</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_link returns a boolean indicating whether <code>path</code> is a link.</p>
+
+</section>
+						<section id="is_readable" class="doc-node">
+							<div class="title"><h2>fn is_readable <a href="#is_readable">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">is_readable</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_readable returns <code>true</code> if <code>path</code> is readable.</p>
+
+</section>
+						<section id="is_writable" class="doc-node">
+							<div class="title"><h2>fn is_writable <a href="#is_writable">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">is_writable</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_writable returns <code>true</code> if <code>path</code> is writable.</p>
+
+</section>
+						<section id="is_writable_folder" class="doc-node">
+							<div class="title"><h2>fn is_writable_folder <a href="#is_writable_folder">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">is_writable_folder</span><span class="token punctuation">(</span>folder <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+<p><code>is_writable_folder</code> - <code>folder</code> exists and is writable to the process</p>
+
+</section>
+						<section id="join_path" class="doc-node">
+							<div class="title"><h2>fn join_path <a href="#join_path">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">join_path</span><span class="token punctuation">(</span>base <span class="token builtin">string</span><span class="token punctuation">,</span> dirs ...<span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>join_path returns a path as string from input string parameter(s).</p>
+
+</section>
+						<section id="link" class="doc-node">
+							<div class="title"><h2>fn link <a href="#link">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">link</span><span class="token punctuation">(</span>origin <span class="token builtin">string</span><span class="token punctuation">,</span> target <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="log" class="doc-node">
+							<div class="title"><h2>fn log <a href="#log">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">log</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>log will print &quot;os.log: &quot;+<code>s</code> ...</p>
+
+</section>
+						<section id="loginname" class="doc-node">
+							<div class="title"><h2>fn loginname <a href="#loginname">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">loginname</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="ls" class="doc-node">
+							<div class="title"><h2>fn ls <a href="#ls">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">ls</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="mkdir" class="doc-node">
+							<div class="title"><h2>fn mkdir <a href="#mkdir">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">mkdir</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+<p>mkdir creates a new directory with the specified path.</p>
+
+</section>
+						<section id="mkdir_all" class="doc-node">
+							<div class="title"><h2>fn mkdir_all <a href="#mkdir_all">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">mkdir_all</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>mkdir_all will create a valid full path of all directories given in <code>path</code>.</p>
+
+</section>
+						<section id="mv" class="doc-node">
+							<div class="title"><h2>fn mv <a href="#mv">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">mv</span><span class="token punctuation">(</span>src <span class="token builtin">string</span><span class="token punctuation">,</span> dst <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>mv moves files or folders from <code>src</code> to <code>dst</code>.</p>
+
+</section>
+						<section id="mv_by_cp" class="doc-node">
+							<div class="title"><h2>fn mv_by_cp <a href="#mv_by_cp">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">mv_by_cp</span><span class="token punctuation">(</span>source <span class="token builtin">string</span><span class="token punctuation">,</span> target <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>mv_by_cp first copies the source file, and if it is copied successfully, deletes the source file.  may be used when you are not sure that the source and target are on the same mount/partition.</p>
+
+</section>
+						<section id="new_process" class="doc-node">
+							<div class="title"><h2>fn new_process <a href="#new_process">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_process</span><span class="token punctuation">(</span>filename <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">&</span>Process</code></pre>
+<p>new_process - create a new process descriptor  NB: new does NOT start the new process.  That is done because you may want to customize it first,  by calling different set_ methods on it.  In order to start it, call p.run() or p.wait()</p>
+
+</section>
+						<section id="on_segfault" class="doc-node">
+							<div class="title"><h2>fn on_segfault <a href="#on_segfault">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">on_segfault</span><span class="token punctuation">(</span>f <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="open" class="doc-node">
+							<div class="title"><h2>fn open <a href="#open">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">open</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> ?File</code></pre>
+<p>open tries to open a file for reading and returns back a read-only <code>File</code> object.</p>
+
+</section>
+						<section id="open_append" class="doc-node">
+							<div class="title"><h2>fn open_append <a href="#open_append">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">open_append</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> ?File</code></pre>
+<p>open_append opens <code>path</code> file for appending.</p>
+
+</section>
+						<section id="open_file" class="doc-node">
+							<div class="title"><h2>fn open_file <a href="#open_file">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">open_file</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> mode <span class="token builtin">string</span><span class="token punctuation">,</span> options ...<span class="token builtin">int</span><span class="token punctuation">)</span> ?File</code></pre>
+
+
+</section>
+						<section id="posix_get_error_msg" class="doc-node">
+							<div class="title"><h2>fn posix_get_error_msg <a href="#posix_get_error_msg">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">posix_get_error_msg</span><span class="token punctuation">(</span>code <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>posix_get_error_msg return error code representation in string.</p>
+
+</section>
+						<section id="posix_set_permission_bit" class="doc-node">
+							<div class="title"><h2>fn posix_set_permission_bit <a href="#posix_set_permission_bit">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">posix_set_permission_bit</span><span class="token punctuation">(</span>path_s <span class="token builtin">string</span><span class="token punctuation">,</span> mode <span class="token builtin">u32</span><span class="token punctuation">,</span> enable <span class="token builtin">bool</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="user_os" class="doc-node">
+							<div class="title"><h2>fn user_os <a href="#user_os">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">user_os</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>user_os returns current user operating system name.</p>
+
+</section>
+						<section id="unsetenv" class="doc-node">
+							<div class="title"><h2>fn unsetenv <a href="#unsetenv">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">unsetenv</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>os.unsetenv clears an environment variable with <code>name</code>.</p>
+
+</section>
+						<section id="read_bytes" class="doc-node">
+							<div class="title"><h2>fn read_bytes <a href="#read_bytes">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">read_bytes</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span></code></pre>
+<p>read_bytes returns all bytes read from file in <code>path</code>.</p>
+
+</section>
+						<section id="read_file" class="doc-node">
+							<div class="title"><h2>fn read_file <a href="#read_file">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">read_file</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+<p>read_file reads the file in <code>path</code> and returns the contents.</p>
+
+</section>
+						<section id="read_file_array" class="doc-node">
+							<div class="title"><h2>fn read_file_array <a href="#read_file_array">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> read_file_array<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">T</span></code></pre>
+<p>read_file_array reads an array of <code>T</code> values from file <code>path</code>.</p>
+
+</section>
+						<section id="read_lines" class="doc-node">
+							<div class="title"><h2>fn read_lines <a href="#read_lines">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">read_lines</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>read_lines reads the file in <code>path</code> into an array of lines.</p>
+
+</section>
+						<section id="real_path" class="doc-node">
+							<div class="title"><h2>fn real_path <a href="#real_path">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">real_path</span><span class="token punctuation">(</span>fpath <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>real_path returns the full absolute path for fpath, with all relative ../../, symlinks and so on resolved.  See <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/realpath.html">http://pubs.opengroup.org/onlinepubs/9699919799/functions/realpath.html</a>  Also <a href="https://insanecoding.blogspot.com/2007/11/pathmax-simply-isnt.html">https://insanecoding.blogspot.com/2007/11/pathmax-simply-isnt.html</a>  and <a href="https://insanecoding.blogspot.com/2007/11/implementing-realpath-in-c.html">https://insanecoding.blogspot.com/2007/11/implementing-realpath-in-c.html</a>  NB: this particular rabbit hole is <em>deep</em> ...</p>
+
+</section>
+						<section id="resource_abs_path" class="doc-node">
+							<div class="title"><h2>fn resource_abs_path <a href="#resource_abs_path">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">resource_abs_path</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>resource_abs_path returns an absolute path, for the given <code>path</code>.  (the path is expected to be relative to the executable program)  See <a href="https://discordapp.com/channels/592103645835821068/592294828432424960/630806741373943808">https://discordapp.com/channels/592103645835821068/592294828432424960/630806741373943808</a>  It gives a convenient way to access program resources like images, fonts, sounds and so on,  <em>no matter</em> how the program was started, and what is the current working directory.</p>
+
+</section>
+						<section id="uname" class="doc-node">
+							<div class="title"><h2>fn uname <a href="#uname">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">uname</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Uname</code></pre>
+
+
+</section>
+						<section id="rm" class="doc-node">
+							<div class="title"><h2>fn rm <a href="#rm">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">rm</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>rm removes file in <code>path</code>.</p>
+
+</section>
+						<section id="rmdir" class="doc-node">
+							<div class="title"><h2>fn rmdir <a href="#rmdir">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">rmdir</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>rmdir removes a specified directory.</p>
+
+</section>
+						<section id="rmdir_all" class="doc-node">
+							<div class="title"><h2>fn rmdir_all <a href="#rmdir_all">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">rmdir_all</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>rmdir_all recursively removes the specified directory.</p>
+
+</section>
+						<section id="setenv" class="doc-node">
+							<div class="title"><h2>fn setenv <a href="#setenv">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">setenv</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> value <span class="token builtin">string</span><span class="token punctuation">,</span> overwrite <span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>os.setenv sets the value of an environment variable with <code>name</code> to <code>value</code>.</p>
+
+</section>
+						<section id="sigint_to_signal_name" class="doc-node">
+							<div class="title"><h2>fn sigint_to_signal_name <a href="#sigint_to_signal_name">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">sigint_to_signal_name</span><span class="token punctuation">(</span>si <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>sigint_to_signal_name will translate <code>si</code> signal integer code to it's string code representation.</p>
+
+</section>
+						<section id="truncate" class="doc-node">
+							<div class="title"><h2>fn truncate <a href="#truncate">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">truncate</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> len <span class="token builtin">u64</span><span class="token punctuation">)</span> ?</code></pre>
+<p>***************************** OS ops ************************   truncate changes the size of the file located in <code>path</code> to <code>len</code>.  Note that changing symbolic links on Windows only works as admin.</p>
+
+</section>
+						<section id="signal_opt" class="doc-node">
+							<div class="title"><h2>fn signal_opt <a href="#signal_opt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">signal_opt</span><span class="token punctuation">(</span>signum Signal<span class="token punctuation">,</span> handler SignalHandler<span class="token punctuation">)</span> ?SignalHandler</code></pre>
+
+
+</section>
+						<section id="stderr" class="doc-node">
+							<div class="title"><h2>fn stderr <a href="#stderr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">stderr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> File</code></pre>
+<p>stderr - return an os.File for stderr</p>
+
+</section>
+						<section id="stdin" class="doc-node">
+							<div class="title"><h2>fn stdin <a href="#stdin">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">stdin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> File</code></pre>
+<p>stdin - return an os.File for stdin, so that you can use .get_line on it too.</p>
+
+</section>
+						<section id="stdout" class="doc-node">
+							<div class="title"><h2>fn stdout <a href="#stdout">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">stdout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> File</code></pre>
+<p>stdout - return an os.File for stdout</p>
+
+</section>
+						<section id="symlink" class="doc-node">
+							<div class="title"><h2>fn symlink <a href="#symlink">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">symlink</span><span class="token punctuation">(</span>origin <span class="token builtin">string</span><span class="token punctuation">,</span> target <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="system" class="doc-node">
+							<div class="title"><h2>fn system <a href="#system">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">system</span><span class="token punctuation">(</span>cmd <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>system works like <code>exec</code>, but only returns a return code.</p>
+
+</section>
+						<section id="temp_dir" class="doc-node">
+							<div class="title"><h2>fn temp_dir <a href="#temp_dir">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">temp_dir</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>temp_dir returns the path to a folder, that is suitable for storing temporary files.</p>
+
+</section>
+						<section id="write_file_array" class="doc-node">
+							<div class="title"><h2>fn write_file_array <a href="#write_file_array">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">write_file_array</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">,</span> buffer <span class="token builtin">array</span><span class="token punctuation">)</span> ?</code></pre>
+<p>write_file_array writes the data in <code>buffer</code> to a file in <code>path</code>.</p>
+
+</section>
+						<section id="HANDLE" class="doc-node">
+							<div class="title"><h2>type HANDLE <a href="#HANDLE">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> HANDLE <span class="token operator">=</span> <span class="token builtin">voidptr</span></code></pre>
+<p>Ref - <a href="https://docs.microsoft.com/en-us/windows/desktop/winprog/windows-data-types">https://docs.microsoft.com/en-us/windows/desktop/winprog/windows-data-types</a>  A handle to an object.</p>
+
+</section>
+						<section id="VectoredExceptionHandler" class="doc-node">
+							<div class="title"><h2>type VectoredExceptionHandler <a href="#VectoredExceptionHandler">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> VectoredExceptionHandler <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token operator">&</span>ExceptionPointers<span class="token punctuation">)</span> <span class="token builtin">u32</span></code></pre>
+
+
+</section>
+						<section id="HMODULE" class="doc-node">
+							<div class="title"><h2>type HMODULE <a href="#HMODULE">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> HMODULE <span class="token operator">=</span> <span class="token builtin">voidptr</span></code></pre>
+
+
+</section>
+						<section id="ProcessState" class="doc-node">
+							<div class="title"><h2>enum ProcessState <a href="#ProcessState">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">ProcessState</span> <span class="token punctuation">{</span>
+	not_started
+	running
+	stopped
+	exited
+	aborted
+	closed
+<span class="token punctuation">}</span></code></pre>
+<p>ProcessState.not_started - the process has not yet started  ProcessState.running - the process is currently running  ProcessState.stopped - the process was running, but was stopped temporarily  ProcessState.exited - the process has finished/exited  ProcessState.aborted - the process was terminated by a signal  ProcessState.closed - the process resources like opened file descriptors were freed/discarded, final state.</p>
+
+</section>
+						<section id="Signal" class="doc-node">
+							<div class="title"><h2>enum Signal <a href="#Signal">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Signal</span> <span class="token punctuation">{</span>
+	hup <span class="token operator">=</span> <span class="token number">1</span>
+	<span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">2</span>
+	quit <span class="token operator">=</span> <span class="token number">3</span>
+	ill <span class="token operator">=</span> <span class="token number">4</span>
+	trap <span class="token operator">=</span> <span class="token number">5</span>
+	abrt <span class="token operator">=</span> <span class="token number">6</span>
+	bus <span class="token operator">=</span> <span class="token number">7</span>
+	fpe <span class="token operator">=</span> <span class="token number">8</span>
+	kill <span class="token operator">=</span> <span class="token number">9</span>
+	usr1 <span class="token operator">=</span> <span class="token number">10</span>
+	segv <span class="token operator">=</span> <span class="token number">11</span>
+	usr2 <span class="token operator">=</span> <span class="token number">12</span>
+	pipe <span class="token operator">=</span> <span class="token number">13</span>
+	alrm <span class="token operator">=</span> <span class="token number">14</span>
+	term <span class="token operator">=</span> <span class="token number">15</span>
+	stkflt <span class="token operator">=</span> <span class="token number">16</span>
+	chld <span class="token operator">=</span> <span class="token number">17</span>
+	cont <span class="token operator">=</span> <span class="token number">18</span>
+	stop <span class="token operator">=</span> <span class="token number">19</span>
+	tstp <span class="token operator">=</span> <span class="token number">20</span>
+	ttin <span class="token operator">=</span> <span class="token number">21</span>
+	ttou <span class="token operator">=</span> <span class="token number">22</span>
+	urg <span class="token operator">=</span> <span class="token number">23</span>
+	xcpu <span class="token operator">=</span> <span class="token number">24</span>
+	xfsz <span class="token operator">=</span> <span class="token number">25</span>
+	vtalrm <span class="token operator">=</span> <span class="token number">26</span>
+	prof <span class="token operator">=</span> <span class="token number">27</span>
+	winch <span class="token operator">=</span> <span class="token number">28</span>
+	poll <span class="token operator">=</span> <span class="token number">29</span>
+	pwr <span class="token operator">=</span> <span class="token number">30</span>
+	sys <span class="token operator">=</span> <span class="token number">31</span>
+<span class="token punctuation">}</span></code></pre>
+<p>os.Signal - enumerate possible POSIX signals and  their integer codes.  NB: the integer codes are given here explicitly,  to make it easier to lookup, without needing to  consult man pages / signal.h .</p>
+
+</section>
+						<section id="Process" class="doc-node">
+							<div class="title"><h2>struct Process <a href="#Process">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Process</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	filename <span class="token builtin">string</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	pid  <span class="token builtin">int</span>
+	code <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+
+	status ProcessState <span class="token operator">=</span> <span class="token punctuation">.</span>not_started
+
+	err           <span class="token builtin">string</span>
+	args          <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	env_is_custom <span class="token builtin">bool</span>
+	env           <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	use_stdio_ctl <span class="token builtin">bool</span>
+	use_pgroup    <span class="token builtin">bool</span>
+	stdio_fd      <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token builtin">int</span>
+	wdata         <span class="token builtin">voidptr</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Process.set_args" class="doc-node">
+							<div class="title"><h2>fn (Process) set_args <a href="#Process.set_args">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">set_args</span><span class="token punctuation">(</span>pargs <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>set_args - set the arguments for the new process</p>
+
+</section>
+						<section id="Process.set_environment" class="doc-node">
+							<div class="title"><h2>fn (Process) set_environment <a href="#Process.set_environment">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">set_environment</span><span class="token punctuation">(</span>envs <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>set_environment - set a custom environment variable mapping for the new process</p>
+
+</section>
+						<section id="Process.run" class="doc-node">
+							<div class="title"><h2>fn (Process) run <a href="#Process.run">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>run - starts the new process</p>
+
+</section>
+						<section id="Process.signal_kill" class="doc-node">
+							<div class="title"><h2>fn (Process) signal_kill <a href="#Process.signal_kill">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">signal_kill</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>signal_kill - kills the process, after that it is no longer running</p>
+
+</section>
+						<section id="Process.signal_pgkill" class="doc-node">
+							<div class="title"><h2>fn (Process) signal_pgkill <a href="#Process.signal_pgkill">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">signal_pgkill</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>signal_pgkill - kills the whole process group</p>
+
+</section>
+						<section id="Process.signal_stop" class="doc-node">
+							<div class="title"><h2>fn (Process) signal_stop <a href="#Process.signal_stop">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">signal_stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>signal_stop - stops the process, you can resume it with p.signal_continue()</p>
+
+</section>
+						<section id="Process.signal_continue" class="doc-node">
+							<div class="title"><h2>fn (Process) signal_continue <a href="#Process.signal_continue">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">signal_continue</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>signal_continue - tell a stopped process to continue/resume its work</p>
+
+</section>
+						<section id="Process.wait" class="doc-node">
+							<div class="title"><h2>fn (Process) wait <a href="#Process.wait">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>wait - wait for a process to finish.  NB: You have to call p.wait(), otherwise a finished process  would get to a zombie state, and its resources will not get  released fully, until its parent process exits.  NB: This call will block the calling process until the child  process is finished.</p>
+
+</section>
+						<section id="Process.close" class="doc-node">
+							<div class="title"><h2>fn (Process) close <a href="#Process.close">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>close - free the OS resources associated with the process.  Can be called multiple times, but will free the resources just once.  This sets the process state to .closed, which is final.</p>
+
+</section>
+						<section id="Process.free" class="doc-node">
+							<div class="title"><h2>fn (Process) free <a href="#Process.free">#</a></h2></div><div class="attributes"><div class="attribute">unsafe</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Process.is_alive" class="doc-node">
+							<div class="title"><h2>fn (Process) is_alive <a href="#Process.is_alive">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">is_alive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_alive - query whether the process p.pid is still alive</p>
+
+</section>
+						<section id="Process.set_redirect_stdio" class="doc-node">
+							<div class="title"><h2>fn (Process) set_redirect_stdio <a href="#Process.set_redirect_stdio">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">set_redirect_stdio</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Process.stdin_write" class="doc-node">
+							<div class="title"><h2>fn (Process) stdin_write <a href="#Process.stdin_write">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">stdin_write</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Process.stdout_slurp" class="doc-node">
+							<div class="title"><h2>fn (Process) stdout_slurp <a href="#Process.stdout_slurp">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">stdout_slurp</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>will read from stdout pipe, will only return when EOF (end of file) or data  means this will block unless there is data</p>
+
+</section>
+						<section id="Process.stderr_slurp" class="doc-node">
+							<div class="title"><h2>fn (Process) stderr_slurp <a href="#Process.stderr_slurp">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">stderr_slurp</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>read from stderr pipe, wait for data or EOF</p>
+
+</section>
+						<section id="Process.stdout_read" class="doc-node">
+							<div class="title"><h2>fn (Process) stdout_read <a href="#Process.stdout_read">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">stdout_read</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>read from stdout, return if data or not</p>
+
+</section>
+						<section id="Process.stderr_read" class="doc-node">
+							<div class="title"><h2>fn (Process) stderr_read <a href="#Process.stderr_read">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Process<span class="token punctuation">)</span> <span class="token function">stderr_read</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="Result" class="doc-node">
+							<div class="title"><h2>struct Result <a href="#Result">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Result</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	exit_code <span class="token builtin">int</span>
+	output    <span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Result.free" class="doc-node">
+							<div class="title"><h2>fn (Result) free <a href="#Result.free">#</a></h2></div><div class="attributes"><div class="attribute">unsafe</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> result Result<span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Uname" class="doc-node">
+							<div class="title"><h2>struct Uname <a href="#Uname">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Uname</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	sysname  <span class="token builtin">string</span>
+	nodename <span class="token builtin">string</span>
+	release  <span class="token builtin">string</span>
+	version  <span class="token builtin">string</span>
+	machine  <span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="ExceptionRecord" class="doc-node">
+							<div class="title"><h2>struct ExceptionRecord <a href="#ExceptionRecord">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">ExceptionRecord</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	code        <span class="token builtin">u32</span>
+	flags       <span class="token builtin">u32</span>
+	record      <span class="token operator">&</span>ExceptionRecord
+	address     <span class="token builtin">voidptr</span>
+	param_count <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="ExceptionPointers" class="doc-node">
+							<div class="title"><h2>struct ExceptionPointers <a href="#ExceptionPointers">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">ExceptionPointers</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	exception_record <span class="token operator">&</span>ExceptionRecord
+	context_record   <span class="token operator">&</span>ContextRecord
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="ErrSizeOfTypeIs0" class="doc-node">
+							<div class="title"><h2>struct ErrSizeOfTypeIs0 <a href="#ErrSizeOfTypeIs0">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">ErrSizeOfTypeIs0</span> <span class="token punctuation">{</span>
+	msg  <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'os: size of type is 0'</span>
+	code <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="ErrFileNotOpened" class="doc-node">
+							<div class="title"><h2>struct ErrFileNotOpened <a href="#ErrFileNotOpened">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">ErrFileNotOpened</span> <span class="token punctuation">{</span>
+	msg  <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'os: file not opened'</span>
+	code <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="WProcess" class="doc-node">
+							<div class="title"><h2>struct WProcess <a href="#WProcess">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">WProcess</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	proc_info    ProcessInformation
+	command_line <span class="token punctuation">[</span><span class="token number">65536</span><span class="token punctuation">]</span><span class="token builtin">byte</span>
+	child_stdin  <span class="token operator">&</span><span class="token builtin">u32</span>
+
+	child_stdout_read  <span class="token operator">&</span><span class="token builtin">u32</span>
+	child_stdout_write <span class="token operator">&</span><span class="token builtin">u32</span>
+
+	child_stderr_read  <span class="token operator">&</span><span class="token builtin">u32</span>
+	child_stderr_write <span class="token operator">&</span><span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="ContextRecord" class="doc-node">
+							<div class="title"><h2>struct ContextRecord <a href="#ContextRecord">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">ContextRecord</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="File" class="doc-node">
+							<div class="title"><h2>struct File <a href="#File">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">File</span> <span class="token punctuation">{</span>
+	cfile <span class="token builtin">voidptr</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	fd <span class="token builtin">int</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	is_opened <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="File.close" class="doc-node">
+							<div class="title"><h2>fn (File) close <a href="#File.close">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="File.flush" class="doc-node">
+							<div class="title"><h2>fn (File) flush <a href="#File.flush">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> <span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>**************************** Utility  ops ***********************  flush writes any buffered unwritten data left in the file stream.</p>
+
+</section>
+						<section id="File.read" class="doc-node">
+							<div class="title"><h2>fn (File) read <a href="#File.read">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>f <span class="token operator">&</span>File<span class="token punctuation">)</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token keyword">mut</span> buf <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>read implements the Reader interface.</p>
+
+</section>
+						<section id="File.read_bytes" class="doc-node">
+							<div class="title"><h2>fn (File) read_bytes <a href="#File.read_bytes">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>f <span class="token operator">&</span>File<span class="token punctuation">)</span> <span class="token function">read_bytes</span><span class="token punctuation">(</span>size <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span></code></pre>
+<p>read_bytes reads bytes from the beginning of the file.  Utility method, same as .read_bytes_at(size, 0).</p>
+
+</section>
+						<section id="File.read_bytes_at" class="doc-node">
+							<div class="title"><h2>fn (File) read_bytes_at <a href="#File.read_bytes_at">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>f <span class="token operator">&</span>File<span class="token punctuation">)</span> <span class="token function">read_bytes_at</span><span class="token punctuation">(</span>size <span class="token builtin">int</span><span class="token punctuation">,</span> pos <span class="token builtin">u64</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span></code></pre>
+<p>read_bytes_at reads <code>size</code> bytes at the given position in the file.</p>
+
+</section>
+						<section id="File.read_bytes_into" class="doc-node">
+							<div class="title"><h2>fn (File) read_bytes_into <a href="#File.read_bytes_into">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>f <span class="token operator">&</span>File<span class="token punctuation">)</span> <span class="token function">read_bytes_into</span><span class="token punctuation">(</span>pos <span class="token builtin">u64</span><span class="token punctuation">,</span> <span class="token keyword">mut</span> buf <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>read_bytes_into fills <code>buf</code> with bytes at the given position in the file.  <code>buf</code> <em>must</em> have length greater than zero.  Returns the number of read bytes, or an error.</p>
+
+</section>
+						<section id="File.read_bytes_into_newline" class="doc-node">
+							<div class="title"><h2>fn (File) read_bytes_into_newline <a href="#File.read_bytes_into_newline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>f <span class="token operator">&</span>File<span class="token punctuation">)</span> <span class="token function">read_bytes_into_newline</span><span class="token punctuation">(</span><span class="token keyword">mut</span> buf <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>read_bytes_into_newline reads from the beginning of the file into the provided buffer.  Each consecutive call on the same file continues reading where it previously ended.  A read call is either stopped, if the buffer is full, a newline was read or EOF.</p>
+
+</section>
+						<section id="File.read_from" class="doc-node">
+							<div class="title"><h2>fn (File) read_from <a href="#File.read_from">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>f <span class="token operator">&</span>File<span class="token punctuation">)</span> <span class="token function">read_from</span><span class="token punctuation">(</span>pos <span class="token builtin">u64</span><span class="token punctuation">,</span> <span class="token keyword">mut</span> buf <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>read_from implements the RandomReader interface.</p>
+
+</section>
+						<section id="File.read_raw" class="doc-node">
+							<div class="title"><h2>fn (File) read_raw <a href="#File.read_raw">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> read_raw<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?<span class="token builtin">T</span></code></pre>
+<p>read_raw reads and returns a single instance of type <code>T</code></p>
+
+</section>
+						<section id="File.read_raw_at" class="doc-node">
+							<div class="title"><h2>fn (File) read_raw_at <a href="#File.read_raw_at">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> read_raw_at<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span>pos <span class="token builtin">u64</span><span class="token punctuation">)</span> ?<span class="token builtin">T</span></code></pre>
+<p>read_raw_at reads and returns a single instance of type <code>T</code> starting at file byte offset <code>pos</code></p>
+
+</section>
+						<section id="File.read_struct" class="doc-node">
+							<div class="title"><h2>fn (File) read_struct <a href="#File.read_struct">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> read_struct<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token keyword">mut</span> t <span class="token builtin">T</span><span class="token punctuation">)</span> ?</code></pre>
+<p>read_struct reads a single struct of type <code>T</code></p>
+
+</section>
+						<section id="File.read_struct_at" class="doc-node">
+							<div class="title"><h2>fn (File) read_struct_at <a href="#File.read_struct_at">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> read_struct_at<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token keyword">mut</span> t <span class="token builtin">T</span><span class="token punctuation">,</span> pos <span class="token builtin">u64</span><span class="token punctuation">)</span> ?</code></pre>
+<p>read_struct_at reads a single struct of type <code>T</code> at position specified in file</p>
+
+</section>
+						<section id="File.write" class="doc-node">
+							<div class="title"><h2>fn (File) write <a href="#File.write">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> <span class="token function">write</span><span class="token punctuation">(</span>buf <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>**************************** Write ops  ***************************  write implements the Writer interface.  It returns how many bytes were actually written.</p>
+
+</section>
+						<section id="File.write_full_buffer" class="doc-node">
+							<div class="title"><h2>fn (File) write_full_buffer <a href="#File.write_full_buffer">#</a></h2></div><div class="attributes"><div class="attribute">unsafe</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> <span class="token function">write_full_buffer</span><span class="token punctuation">(</span>buffer <span class="token builtin">voidptr</span><span class="token punctuation">,</span> buffer_len <span class="token builtin">size_t</span><span class="token punctuation">)</span> ?</code></pre>
+<p>write_full_buffer writes a whole buffer of data to the file, starting from the  address in <code>buffer</code>, no matter how many tries/partial writes it would take.</p>
+
+</section>
+						<section id="File.write_ptr" class="doc-node">
+							<div class="title"><h2>fn (File) write_ptr <a href="#File.write_ptr">#</a></h2></div><div class="attributes"><div class="attribute">unsafe</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> <span class="token function">write_ptr</span><span class="token punctuation">(</span>data <span class="token builtin">voidptr</span><span class="token punctuation">,</span> size <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>write_ptr writes <code>size</code> bytes to the file, starting from the address in <code>data</code>.  NB: write_ptr is unsafe and should be used carefully, since if you pass invalid  pointers to it, it will cause your programs to segfault.</p>
+
+</section>
+						<section id="File.write_ptr_at" class="doc-node">
+							<div class="title"><h2>fn (File) write_ptr_at <a href="#File.write_ptr_at">#</a></h2></div><div class="attributes"><div class="attribute">unsafe</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> <span class="token function">write_ptr_at</span><span class="token punctuation">(</span>data <span class="token builtin">voidptr</span><span class="token punctuation">,</span> size <span class="token builtin">int</span><span class="token punctuation">,</span> pos <span class="token builtin">u64</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>write_ptr_at writes <code>size</code> bytes to the file, starting from the address in <code>data</code>,  at byte offset <code>pos</code>, counting from the start of the file (pos 0).  NB: write_ptr_at is unsafe and should be used carefully, since if you pass invalid  pointers to it, it will cause your programs to segfault.</p>
+
+</section>
+						<section id="File.write_raw" class="doc-node">
+							<div class="title"><h2>fn (File) write_raw <a href="#File.write_raw">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> write_raw<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span>t <span class="token operator">&</span><span class="token builtin">T</span><span class="token punctuation">)</span> ?</code></pre>
+<p>TODO <code>write_raw[_at]</code> implementations are copy-pasted from <code>write_struct[_at]</code>  write_raw writes a single instance of type <code>T</code></p>
+
+</section>
+						<section id="File.write_raw_at" class="doc-node">
+							<div class="title"><h2>fn (File) write_raw_at <a href="#File.write_raw_at">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> write_raw_at<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span>t <span class="token operator">&</span><span class="token builtin">T</span><span class="token punctuation">,</span> pos <span class="token builtin">u64</span><span class="token punctuation">)</span> ?</code></pre>
+<p>write_raw_at writes a single instance of type <code>T</code> starting at file byte offset <code>pos</code></p>
+
+</section>
+						<section id="File.write_string" class="doc-node">
+							<div class="title"><h2>fn (File) write_string <a href="#File.write_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> <span class="token function">write_string</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>write_string writes the string <code>s</code> into the file  It returns how many bytes were actually written.</p>
+
+</section>
+						<section id="File.write_struct" class="doc-node">
+							<div class="title"><h2>fn (File) write_struct <a href="#File.write_struct">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> write_struct<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span>t <span class="token operator">&</span><span class="token builtin">T</span><span class="token punctuation">)</span> ?</code></pre>
+<p>write_struct writes a single struct of type <code>T</code></p>
+
+</section>
+						<section id="File.write_struct_at" class="doc-node">
+							<div class="title"><h2>fn (File) write_struct_at <a href="#File.write_struct_at">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> write_struct_at<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span>t <span class="token operator">&</span><span class="token builtin">T</span><span class="token punctuation">,</span> pos <span class="token builtin">u64</span><span class="token punctuation">)</span> ?</code></pre>
+<p>write_struct_at writes a single struct of type <code>T</code> at position specified in file</p>
+
+</section>
+						<section id="File.write_to" class="doc-node">
+							<div class="title"><h2>fn (File) write_to <a href="#File.write_to">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> <span class="token function">write_to</span><span class="token punctuation">(</span>pos <span class="token builtin">u64</span><span class="token punctuation">,</span> buf <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>write_to implements the RandomWriter interface.  It returns how many bytes were actually written.  It resets the seek position to the end of the file.</p>
+
+</section>
+						<section id="File.writeln" class="doc-node">
+							<div class="title"><h2>fn (File) writeln <a href="#File.writeln">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f File<span class="token punctuation">)</span> <span class="token function">writeln</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>writeln writes the string <code>s</code> into the file, and appends a \n character.  It returns how many bytes were written, including the \n character.</p>
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:27
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#Constants">Constants</a></li>
+<li class="open"><a href="#args_after">fn args_after</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#args_before">fn args_before</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#base">fn base</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#cache_dir">fn cache_dir</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#chdir">fn chdir</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#chmod">fn chmod</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#chown">fn chown</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#add_vectored_exception_handler">fn add_vectored_exception_handler</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#write_file">fn write_file</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#cp">fn cp</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#cp_all">fn cp_all</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#create">fn create</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#debugger_present">fn debugger_present</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#dir">fn dir</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#environ">fn environ</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#walk_ext">fn walk_ext</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#walk">fn walk</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#wait">fn wait</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#vmodules_paths">fn vmodules_paths</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#executable">fn executable</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#execute">fn execute</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#execute_or_exit">fn execute_or_exit</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#execute_or_panic">fn execute_or_panic</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#execve">fn execve</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#execvp">fn execvp</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#exists">fn exists</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#exists_in_system_path">fn exists_in_system_path</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#fd_close">fn fd_close</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#fd_read">fn fd_read</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#fd_slurp">fn fd_slurp</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#fd_write">fn fd_write</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#vmodules_dir">fn vmodules_dir</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#file_ext">fn file_ext</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#file_last_mod_unix">fn file_last_mod_unix</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#file_name">fn file_name</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#file_size">fn file_size</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#fileno">fn fileno</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#find_abs_path_of_executable">fn find_abs_path_of_executable</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#flush">fn flush</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#fork">fn fork</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_error_msg">fn get_error_msg</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_file_handle">fn get_file_handle</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_line">fn get_line</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_lines">fn get_lines</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_lines_joined">fn get_lines_joined</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_module_filename">fn get_module_filename</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_raw_line">fn get_raw_line</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_raw_lines_joined">fn get_raw_lines_joined</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_raw_stdin">fn get_raw_stdin</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#getegid">fn getegid</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#getenv">fn getenv</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#geteuid">fn geteuid</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#getgid">fn getgid</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#getpid">fn getpid</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#getppid">fn getppid</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#getuid">fn getuid</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#getwd">fn getwd</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#glob">fn glob</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#vfopen">fn vfopen</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#utime">fn utime</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#home_dir">fn home_dir</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#hostname">fn hostname</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#inode">fn inode</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#input">fn input</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#input_opt">fn input_opt</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#is_abs_path">fn is_abs_path</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#is_atty">fn is_atty</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#is_dir">fn is_dir</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#is_dir_empty">fn is_dir_empty</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#is_executable">fn is_executable</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#is_file">fn is_file</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#is_link">fn is_link</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#is_readable">fn is_readable</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#is_writable">fn is_writable</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#is_writable_folder">fn is_writable_folder</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#join_path">fn join_path</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#link">fn link</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#log">fn log</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#loginname">fn loginname</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ls">fn ls</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mkdir">fn mkdir</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mkdir_all">fn mkdir_all</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mv">fn mv</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mv_by_cp">fn mv_by_cp</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new_process">fn new_process</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#on_segfault">fn on_segfault</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#open">fn open</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#open_append">fn open_append</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#open_file">fn open_file</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#posix_get_error_msg">fn posix_get_error_msg</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#posix_set_permission_bit">fn posix_set_permission_bit</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#user_os">fn user_os</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#unsetenv">fn unsetenv</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#read_bytes">fn read_bytes</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#read_file">fn read_file</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#read_file_array">fn read_file_array</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#read_lines">fn read_lines</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#real_path">fn real_path</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#resource_abs_path">fn resource_abs_path</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#uname">fn uname</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#rm">fn rm</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#rmdir">fn rmdir</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#rmdir_all">fn rmdir_all</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#setenv">fn setenv</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#sigint_to_signal_name">fn sigint_to_signal_name</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#truncate">fn truncate</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#signal_opt">fn signal_opt</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#stderr">fn stderr</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#stdin">fn stdin</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#stdout">fn stdout</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#symlink">fn symlink</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#system">fn system</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#temp_dir">fn temp_dir</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#write_file_array">fn write_file_array</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#HANDLE">type HANDLE</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#VectoredExceptionHandler">type VectoredExceptionHandler</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#HMODULE">type HMODULE</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ProcessState">enum ProcessState</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Signal">enum Signal</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Process">struct Process</a>        <ul>
+<li><a href="#Process.set_args">fn set_args</a></li>
+<li><a href="#Process.set_environment">fn set_environment</a></li>
+<li><a href="#Process.run">fn run</a></li>
+<li><a href="#Process.signal_kill">fn signal_kill</a></li>
+<li><a href="#Process.signal_pgkill">fn signal_pgkill</a></li>
+<li><a href="#Process.signal_stop">fn signal_stop</a></li>
+<li><a href="#Process.signal_continue">fn signal_continue</a></li>
+<li><a href="#Process.wait">fn wait</a></li>
+<li><a href="#Process.close">fn close</a></li>
+<li><a href="#Process.free">fn free</a></li>
+<li><a href="#Process.is_alive">fn is_alive</a></li>
+<li><a href="#Process.set_redirect_stdio">fn set_redirect_stdio</a></li>
+<li><a href="#Process.stdin_write">fn stdin_write</a></li>
+<li><a href="#Process.stdout_slurp">fn stdout_slurp</a></li>
+<li><a href="#Process.stderr_slurp">fn stderr_slurp</a></li>
+<li><a href="#Process.stdout_read">fn stdout_read</a></li>
+<li><a href="#Process.stderr_read">fn stderr_read</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Result">struct Result</a>        <ul>
+<li><a href="#Result.free">fn free</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Uname">struct Uname</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ExceptionRecord">struct ExceptionRecord</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ExceptionPointers">struct ExceptionPointers</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ErrSizeOfTypeIs0">struct ErrSizeOfTypeIs0</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ErrFileNotOpened">struct ErrFileNotOpened</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#WProcess">struct WProcess</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ContextRecord">struct ContextRecord</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#File">struct File</a>        <ul>
+<li><a href="#File.close">fn close</a></li>
+<li><a href="#File.flush">fn flush</a></li>
+<li><a href="#File.read">fn read</a></li>
+<li><a href="#File.read_bytes">fn read_bytes</a></li>
+<li><a href="#File.read_bytes_at">fn read_bytes_at</a></li>
+<li><a href="#File.read_bytes_into">fn read_bytes_into</a></li>
+<li><a href="#File.read_bytes_into_newline">fn read_bytes_into_newline</a></li>
+<li><a href="#File.read_from">fn read_from</a></li>
+<li><a href="#File.read_raw">fn read_raw</a></li>
+<li><a href="#File.read_raw_at">fn read_raw_at</a></li>
+<li><a href="#File.read_struct">fn read_struct</a></li>
+<li><a href="#File.read_struct_at">fn read_struct_at</a></li>
+<li><a href="#File.write">fn write</a></li>
+<li><a href="#File.write_full_buffer">fn write_full_buffer</a></li>
+<li><a href="#File.write_ptr">fn write_ptr</a></li>
+<li><a href="#File.write_ptr_at">fn write_ptr_at</a></li>
+<li><a href="#File.write_raw">fn write_raw</a></li>
+<li><a href="#File.write_raw_at">fn write_raw_at</a></li>
+<li><a href="#File.write_string">fn write_string</a></li>
+<li><a href="#File.write_struct">fn write_struct</a></li>
+<li><a href="#File.write_struct_at">fn write_struct_at</a></li>
+<li><a href="#File.write_to">fn write_to</a></li>
+<li><a href="#File.writeln">fn writeln</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

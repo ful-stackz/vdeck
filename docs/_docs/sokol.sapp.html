@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>sokol.sapp | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li class="active"><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_sokol.sapp" class="doc-node">
+							<div class="title"><h1> sokol.sapp <a href="#readme_sokol.sapp">#</a></h1></div>
+
+</section>
+
+						<section id="Constants" class="doc-node const">
+							<div class="title"><h2>Constants <a href="#Constants">#</a></h2></div>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	used_import <span class="token operator">=</span> gfx<span class="token punctuation">.</span>used_import
+<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="userdata" class="doc-node">
+							<div class="title"><h2>fn userdata <a href="#userdata">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">userdata</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>return the userdata pointer optionally provided in sapp_desc</p>
+
+</section>
+						<section id="show_mouse" class="doc-node">
+							<div class="title"><h2>fn show_mouse <a href="#show_mouse">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">show_mouse</span><span class="token punctuation">(</span>visible <span class="token builtin">bool</span><span class="token punctuation">)</span></code></pre>
+<p>show or hide the mouse cursor</p>
+
+</section>
+						<section id="cancel_quit" class="doc-node">
+							<div class="title"><h2>fn cancel_quit <a href="#cancel_quit">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">cancel_quit</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>cancel a pending quit (when SAPP_EVENTTYPE_QUIT_REQUESTED has been received)</p>
+
+</section>
+						<section id="width" class="doc-node">
+							<div class="title"><h2>fn width <a href="#width">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">width</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>returns the current framebuffer width in pixels</p>
+
+</section>
+						<section id="android_get_native_activity" class="doc-node">
+							<div class="title"><h2>fn android_get_native_activity <a href="#android_get_native_activity">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">android_get_native_activity</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>Android: get native activity handle</p>
+
+</section>
+						<section id="consume_event" class="doc-node">
+							<div class="title"><h2>fn consume_event <a href="#consume_event">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">consume_event</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>call from inside event callback to consume the current event (don't forward to platform)</p>
+
+</section>
+						<section id="create_desc" class="doc-node">
+							<div class="title"><h2>fn create_desc <a href="#create_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">create_desc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_desc</code></pre>
+
+
+</section>
+						<section id="d3d11_get_depth_stencil_view" class="doc-node">
+							<div class="title"><h2>fn d3d11_get_depth_stencil_view <a href="#d3d11_get_depth_stencil_view">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">d3d11_get_depth_stencil_view</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>D3D11: get pointer to ID3D11DepthStencilView</p>
+
+</section>
+						<section id="d3d11_get_device" class="doc-node">
+							<div class="title"><h2>fn d3d11_get_device <a href="#d3d11_get_device">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">d3d11_get_device</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>D3D11: get pointer to ID3D11Device object</p>
+
+</section>
+						<section id="d3d11_get_device_context" class="doc-node">
+							<div class="title"><h2>fn d3d11_get_device_context <a href="#d3d11_get_device_context">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">d3d11_get_device_context</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>D3D11: get pointer to ID3D11DeviceContext object</p>
+
+</section>
+						<section id="d3d11_get_render_target_view" class="doc-node">
+							<div class="title"><h2>fn d3d11_get_render_target_view <a href="#d3d11_get_render_target_view">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">d3d11_get_render_target_view</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>D3D11: get pointer to ID3D11RenderTargetView object</p>
+
+</section>
+						<section id="dpi_scale" class="doc-node">
+							<div class="title"><h2>fn dpi_scale <a href="#dpi_scale">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">dpi_scale</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">f32</span></code></pre>
+<p>returns the dpi scaling factor (window pixels to framebuffer pixels)</p>
+
+</section>
+						<section id="show_keyboard" class="doc-node">
+							<div class="title"><h2>fn show_keyboard <a href="#show_keyboard">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">show_keyboard</span><span class="token punctuation">(</span>visible <span class="token builtin">bool</span><span class="token punctuation">)</span></code></pre>
+<p>show or hide the mobile device onscreen keyboard</p>
+
+</section>
+						<section id="set_clipboard_string" class="doc-node">
+							<div class="title"><h2>fn set_clipboard_string <a href="#set_clipboard_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">set_clipboard_string</span><span class="token punctuation">(</span>str <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">)</span></code></pre>
+<p>write string into clipboard</p>
+
+</section>
+						<section id="frame_count" class="doc-node">
+							<div class="title"><h2>fn frame_count <a href="#frame_count">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">frame_count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">u64</span></code></pre>
+<p>get the current frame counter (for comparison with sapp_event.frame_count)</p>
+
+</section>
+						<section id="get_clipboard_string" class="doc-node">
+							<div class="title"><h2>fn get_clipboard_string <a href="#get_clipboard_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_clipboard_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&</span><span class="token builtin">char</span></code></pre>
+<p>read string from clipboard (usually during SAPP_EVENTTYPE_CLIPBOARD_PASTED)</p>
+
+</section>
+						<section id="gles2" class="doc-node">
+							<div class="title"><h2>fn gles2 <a href="#gles2">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">gles2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>GL: return true when GLES2 fallback is active (to detect fallback from GLES3)</p>
+
+</section>
+						<section id="height" class="doc-node">
+							<div class="title"><h2>fn height <a href="#height">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">height</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>returns the current framebuffer height in pixels</p>
+
+</section>
+						<section id="high_dpi" class="doc-node">
+							<div class="title"><h2>fn high_dpi <a href="#high_dpi">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">high_dpi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>returns true when high_dpi was requested and actually running in a high-dpi scenario</p>
+
+</section>
+						<section id="html5_ask_leave_site" class="doc-node">
+							<div class="title"><h2>fn html5_ask_leave_site <a href="#html5_ask_leave_site">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">html5_ask_leave_site</span><span class="token punctuation">(</span>ask <span class="token builtin">bool</span><span class="token punctuation">)</span></code></pre>
+<p>HTML5: enable or disable the hardwired &quot;Leave Site?&quot; dialog box</p>
+
+</section>
+						<section id="ios_get_window" class="doc-node">
+							<div class="title"><h2>fn ios_get_window <a href="#ios_get_window">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">ios_get_window</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>iOS: get ARC-bridged pointer to iOS UIWindow</p>
+
+</section>
+						<section id="isvalid" class="doc-node">
+							<div class="title"><h2>fn isvalid <a href="#isvalid">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">isvalid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>returns true after sokol-app has been initialized</p>
+
+</section>
+						<section id="keyboard_shown" class="doc-node">
+							<div class="title"><h2>fn keyboard_shown <a href="#keyboard_shown">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">keyboard_shown</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>return true if the mobile device onscreen keyboard is currently shown</p>
+
+</section>
+						<section id="run" class="doc-node">
+							<div class="title"><h2>fn run <a href="#run">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">run</span><span class="token punctuation">(</span>desc <span class="token operator">&</span>C<span class="token punctuation">.</span>sapp_desc<span class="token punctuation">)</span></code></pre>
+<p>special run-function for SOKOL_NO_ENTRY (in standard mode this is an empty stub)</p>
+
+</section>
+						<section id="lock_mouse" class="doc-node">
+							<div class="title"><h2>fn lock_mouse <a href="#lock_mouse">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">lock_mouse</span><span class="token punctuation">(</span>locked <span class="token builtin">bool</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="macos_get_window" class="doc-node">
+							<div class="title"><h2>fn macos_get_window <a href="#macos_get_window">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">macos_get_window</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>macOS: get ARC-bridged pointer to macOS NSWindow</p>
+
+</section>
+						<section id="metal_get_device" class="doc-node">
+							<div class="title"><h2>fn metal_get_device <a href="#metal_get_device">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">metal_get_device</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>Metal: get ARC-bridged pointer to Metal device object</p>
+
+</section>
+						<section id="metal_get_drawable" class="doc-node">
+							<div class="title"><h2>fn metal_get_drawable <a href="#metal_get_drawable">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">metal_get_drawable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>Metal: get ARC-bridged pointer to current drawable</p>
+
+</section>
+						<section id="metal_get_renderpass_descriptor" class="doc-node">
+							<div class="title"><h2>fn metal_get_renderpass_descriptor <a href="#metal_get_renderpass_descriptor">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">metal_get_renderpass_descriptor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>Metal: get ARC-bridged pointer to this frame's renderpass descriptor</p>
+
+</section>
+						<section id="request_quit" class="doc-node">
+							<div class="title"><h2>fn request_quit <a href="#request_quit">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">request_quit</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>initiate a &quot;soft quit&quot; (sends SAPP_EVENTTYPE_QUIT_REQUESTED)</p>
+
+</section>
+						<section id="mouse_locked" class="doc-node">
+							<div class="title"><h2>fn mouse_locked <a href="#mouse_locked">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">mouse_locked</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="mouse_shown" class="doc-node">
+							<div class="title"><h2>fn mouse_shown <a href="#mouse_shown">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">mouse_shown</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>show or hide the mouse cursor</p>
+
+</section>
+						<section id="quit" class="doc-node">
+							<div class="title"><h2>fn quit <a href="#quit">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">quit</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>intiate a &quot;hard quit&quot; (quit application without sending SAPP_EVENTTYPE_QUIT_REQUSTED)</p>
+
+</section>
+						<section id="query_desc" class="doc-node">
+							<div class="title"><h2>fn query_desc <a href="#query_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_desc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> C<span class="token punctuation">.</span>sapp_desc</code></pre>
+<p>return a copy of the sapp_desc structure</p>
+
+</section>
+						<section id="win32_get_hwnd" class="doc-node">
+							<div class="title"><h2>fn win32_get_hwnd <a href="#win32_get_hwnd">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">win32_get_hwnd</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>Win32: get the HWND window handle</p>
+
+</section>
+						<section id="Modifier" class="doc-node">
+							<div class="title"><h2>enum Modifier <a href="#Modifier">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Modifier</span> <span class="token punctuation">{</span>
+	shift <span class="token operator">=</span> <span class="token number">1</span>
+	ctrl <span class="token operator">=</span> <span class="token number">2</span>
+	alt <span class="token operator">=</span> <span class="token number">4</span>
+	super <span class="token operator">=</span> <span class="token number">8</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="KeyCode" class="doc-node">
+							<div class="title"><h2>enum KeyCode <a href="#KeyCode">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">KeyCode</span> <span class="token punctuation">{</span>
+	invalid <span class="token operator">=</span> <span class="token number">0</span>
+	space <span class="token operator">=</span> <span class="token number">32</span>
+	apostrophe <span class="token operator">=</span> <span class="token number">39</span>
+	comma <span class="token operator">=</span> <span class="token number">44</span>
+	minus <span class="token operator">=</span> <span class="token number">45</span>
+	period <span class="token operator">=</span> <span class="token number">46</span>
+	slash <span class="token operator">=</span> <span class="token number">47</span>
+	_0 <span class="token operator">=</span> <span class="token number">48</span>
+	_1 <span class="token operator">=</span> <span class="token number">49</span>
+	_2 <span class="token operator">=</span> <span class="token number">50</span>
+	_3 <span class="token operator">=</span> <span class="token number">51</span>
+	_4 <span class="token operator">=</span> <span class="token number">52</span>
+	_5 <span class="token operator">=</span> <span class="token number">53</span>
+	_6 <span class="token operator">=</span> <span class="token number">54</span>
+	_7 <span class="token operator">=</span> <span class="token number">55</span>
+	_8 <span class="token operator">=</span> <span class="token number">56</span>
+	_9 <span class="token operator">=</span> <span class="token number">57</span>
+	semicolon <span class="token operator">=</span> <span class="token number">59</span>
+	equal <span class="token operator">=</span> <span class="token number">61</span>
+	a <span class="token operator">=</span> <span class="token number">65</span>
+	b <span class="token operator">=</span> <span class="token number">66</span>
+	c <span class="token operator">=</span> <span class="token number">67</span>
+	d <span class="token operator">=</span> <span class="token number">68</span>
+	e <span class="token operator">=</span> <span class="token number">69</span>
+	f <span class="token operator">=</span> <span class="token number">70</span>
+	g <span class="token operator">=</span> <span class="token number">71</span>
+	h <span class="token operator">=</span> <span class="token number">72</span>
+	i <span class="token operator">=</span> <span class="token number">73</span>
+	j <span class="token operator">=</span> <span class="token number">74</span>
+	k <span class="token operator">=</span> <span class="token number">75</span>
+	l <span class="token operator">=</span> <span class="token number">76</span>
+	m <span class="token operator">=</span> <span class="token number">77</span>
+	n <span class="token operator">=</span> <span class="token number">78</span>
+	o <span class="token operator">=</span> <span class="token number">79</span>
+	p <span class="token operator">=</span> <span class="token number">80</span>
+	q <span class="token operator">=</span> <span class="token number">81</span>
+	r <span class="token operator">=</span> <span class="token number">82</span>
+	s <span class="token operator">=</span> <span class="token number">83</span>
+	t <span class="token operator">=</span> <span class="token number">84</span>
+	u <span class="token operator">=</span> <span class="token number">85</span>
+	v <span class="token operator">=</span> <span class="token number">86</span>
+	w <span class="token operator">=</span> <span class="token number">87</span>
+	x <span class="token operator">=</span> <span class="token number">88</span>
+	y <span class="token operator">=</span> <span class="token number">89</span>
+	z <span class="token operator">=</span> <span class="token number">90</span>
+	left_bracket <span class="token operator">=</span> <span class="token number">91</span>
+	backslash <span class="token operator">=</span> <span class="token number">92</span>
+	right_bracket <span class="token operator">=</span> <span class="token number">93</span>
+	grave_accent <span class="token operator">=</span> <span class="token number">96</span>
+	world_1 <span class="token operator">=</span> <span class="token number">161</span>
+	world_2 <span class="token operator">=</span> <span class="token number">162</span>
+	escape <span class="token operator">=</span> <span class="token number">256</span>
+	enter <span class="token operator">=</span> <span class="token number">257</span>
+	tab <span class="token operator">=</span> <span class="token number">258</span>
+	backspace <span class="token operator">=</span> <span class="token number">259</span>
+	insert <span class="token operator">=</span> <span class="token number">260</span>
+	delete <span class="token operator">=</span> <span class="token number">261</span>
+	right <span class="token operator">=</span> <span class="token number">262</span>
+	left <span class="token operator">=</span> <span class="token number">263</span>
+	down <span class="token operator">=</span> <span class="token number">264</span>
+	up <span class="token operator">=</span> <span class="token number">265</span>
+	page_up <span class="token operator">=</span> <span class="token number">266</span>
+	page_down <span class="token operator">=</span> <span class="token number">267</span>
+	home <span class="token operator">=</span> <span class="token number">268</span>
+	end <span class="token operator">=</span> <span class="token number">269</span>
+	caps_lock <span class="token operator">=</span> <span class="token number">280</span>
+	scroll_lock <span class="token operator">=</span> <span class="token number">281</span>
+	num_lock <span class="token operator">=</span> <span class="token number">282</span>
+	print_screen <span class="token operator">=</span> <span class="token number">283</span>
+	pause <span class="token operator">=</span> <span class="token number">284</span>
+	f1 <span class="token operator">=</span> <span class="token number">290</span>
+	f2 <span class="token operator">=</span> <span class="token number">291</span>
+	f3 <span class="token operator">=</span> <span class="token number">292</span>
+	f4 <span class="token operator">=</span> <span class="token number">293</span>
+	f5 <span class="token operator">=</span> <span class="token number">294</span>
+	f6 <span class="token operator">=</span> <span class="token number">295</span>
+	f7 <span class="token operator">=</span> <span class="token number">296</span>
+	f8 <span class="token operator">=</span> <span class="token number">297</span>
+	f9 <span class="token operator">=</span> <span class="token number">298</span>
+	f10 <span class="token operator">=</span> <span class="token number">299</span>
+	f11 <span class="token operator">=</span> <span class="token number">300</span>
+	f12 <span class="token operator">=</span> <span class="token number">301</span>
+	f13 <span class="token operator">=</span> <span class="token number">302</span>
+	f14 <span class="token operator">=</span> <span class="token number">303</span>
+	f15 <span class="token operator">=</span> <span class="token number">304</span>
+	f16 <span class="token operator">=</span> <span class="token number">305</span>
+	f17 <span class="token operator">=</span> <span class="token number">306</span>
+	f18 <span class="token operator">=</span> <span class="token number">307</span>
+	f19 <span class="token operator">=</span> <span class="token number">308</span>
+	f20 <span class="token operator">=</span> <span class="token number">309</span>
+	f21 <span class="token operator">=</span> <span class="token number">310</span>
+	f22 <span class="token operator">=</span> <span class="token number">311</span>
+	f23 <span class="token operator">=</span> <span class="token number">312</span>
+	f24 <span class="token operator">=</span> <span class="token number">313</span>
+	f25 <span class="token operator">=</span> <span class="token number">314</span>
+	kp_0 <span class="token operator">=</span> <span class="token number">320</span>
+	kp_1 <span class="token operator">=</span> <span class="token number">321</span>
+	kp_2 <span class="token operator">=</span> <span class="token number">322</span>
+	kp_3 <span class="token operator">=</span> <span class="token number">323</span>
+	kp_4 <span class="token operator">=</span> <span class="token number">324</span>
+	kp_5 <span class="token operator">=</span> <span class="token number">325</span>
+	kp_6 <span class="token operator">=</span> <span class="token number">326</span>
+	kp_7 <span class="token operator">=</span> <span class="token number">327</span>
+	kp_8 <span class="token operator">=</span> <span class="token number">328</span>
+	kp_9 <span class="token operator">=</span> <span class="token number">329</span>
+	kp_decimal <span class="token operator">=</span> <span class="token number">330</span>
+	kp_divide <span class="token operator">=</span> <span class="token number">331</span>
+	kp_multiply <span class="token operator">=</span> <span class="token number">332</span>
+	kp_subtract <span class="token operator">=</span> <span class="token number">333</span>
+	kp_add <span class="token operator">=</span> <span class="token number">334</span>
+	kp_enter <span class="token operator">=</span> <span class="token number">335</span>
+	kp_equal <span class="token operator">=</span> <span class="token number">336</span>
+	left_shift <span class="token operator">=</span> <span class="token number">340</span>
+	left_control <span class="token operator">=</span> <span class="token number">341</span>
+	left_alt <span class="token operator">=</span> <span class="token number">342</span>
+	left_super <span class="token operator">=</span> <span class="token number">343</span>
+	right_shift <span class="token operator">=</span> <span class="token number">344</span>
+	right_control <span class="token operator">=</span> <span class="token number">345</span>
+	right_alt <span class="token operator">=</span> <span class="token number">346</span>
+	right_super <span class="token operator">=</span> <span class="token number">347</span>
+	menu <span class="token operator">=</span> <span class="token number">348</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="EventType" class="doc-node">
+							<div class="title"><h2>enum EventType <a href="#EventType">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">EventType</span> <span class="token punctuation">{</span>
+	invalid
+	key_down
+	key_up
+	<span class="token builtin">char</span>
+	mouse_down
+	mouse_up
+	mouse_scroll
+	mouse_move
+	mouse_enter
+	mouse_leave
+	touches_began
+	touches_moved
+	touches_ended
+	touches_cancelled
+	resized
+	iconified
+	restored
+	suspended
+	resumed
+	update_cursor
+	quit_requested
+	clipboard_pasted
+	num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="MouseButton" class="doc-node">
+							<div class="title"><h2>enum MouseButton <a href="#MouseButton">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">MouseButton</span> <span class="token punctuation">{</span>
+	invalid <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+	left <span class="token operator">=</span> <span class="token number">0</span>
+	right <span class="token operator">=</span> <span class="token number">1</span>
+	middle <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sapp_event" class="doc-node">
+							<div class="title"><h2>struct C.sapp_event <a href="#C.sapp_event">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sapp_event</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	frame_count        <span class="token builtin">u64</span>
+	@type              EventType
+	key_code           KeyCode
+	char_code          <span class="token builtin">u32</span>
+	key_repeat         <span class="token builtin">bool</span>
+	modifiers          <span class="token builtin">u32</span>
+	mouse_button       MouseButton
+	mouse_x            <span class="token builtin">f32</span>
+	mouse_y            <span class="token builtin">f32</span>
+	mouse_dx           <span class="token builtin">f32</span>
+	mouse_dy           <span class="token builtin">f32</span>
+	scroll_x           <span class="token builtin">f32</span>
+	scroll_y           <span class="token builtin">f32</span>
+	num_touches        <span class="token builtin">int</span>
+	touches            <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sapp_touchpoint
+	window_width       <span class="token builtin">int</span>
+	window_height      <span class="token builtin">int</span>
+	framebuffer_width  <span class="token builtin">int</span>
+	framebuffer_height <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sapp_event.str" class="doc-node">
+							<div class="title"><h2>fn (C.sapp_event) str <a href="#C.sapp_event.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>e <span class="token operator">&</span>C<span class="token punctuation">.</span>sapp_event<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="C.sapp_desc" class="doc-node">
+							<div class="title"><h2>struct C.sapp_desc <a href="#C.sapp_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sapp_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	init_cb    <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+	frame_cb   <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+	cleanup_cb <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+	event_cb   <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token operator">&</span>C<span class="token punctuation">.</span>sapp_event<span class="token punctuation">)</span>
+	fail_cb    <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token operator">&</span><span class="token builtin">byte</span><span class="token punctuation">)</span>
+
+	user_data           <span class="token builtin">voidptr</span>
+	init_userdata_cb    <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token builtin">voidptr</span><span class="token punctuation">)</span>
+	frame_userdata_cb   <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token builtin">voidptr</span><span class="token punctuation">)</span>
+	cleanup_userdata_cb <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token builtin">voidptr</span><span class="token punctuation">)</span>
+	event_userdata_cb   <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token operator">&</span>C<span class="token punctuation">.</span>sapp_event<span class="token punctuation">,</span> <span class="token builtin">voidptr</span><span class="token punctuation">)</span>
+	fail_userdata_cb    <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">,</span> <span class="token builtin">voidptr</span><span class="token punctuation">)</span>
+
+	width                        <span class="token builtin">int</span>
+	height                       <span class="token builtin">int</span>
+	sample_count                 <span class="token builtin">int</span>
+	swap_interval                <span class="token builtin">int</span>
+	high_dpi                     <span class="token builtin">bool</span>
+	fullscreen                   <span class="token builtin">bool</span>
+	alpha                        <span class="token builtin">bool</span>
+	window_title                 <span class="token operator">&</span><span class="token builtin">char</span>
+	user_cursor                  <span class="token builtin">bool</span>
+	enable_clipboard             <span class="token builtin">bool</span>
+	clipboard_size               <span class="token builtin">int</span>
+	enable_dragndrop             <span class="token builtin">bool</span>
+	max_dropped_files            <span class="token builtin">int</span>
+	max_dropped_file_path_length <span class="token builtin">int</span>
+
+	gl_force_gles2                <span class="token builtin">bool</span>
+	win32_console_utf8            <span class="token builtin">bool</span>
+	win32_console_create          <span class="token builtin">bool</span>
+	win32_console_attach          <span class="token builtin">bool</span>
+	html5_canvas_name             <span class="token operator">&</span><span class="token builtin">char</span>
+	html5_canvas_resize           <span class="token builtin">bool</span>
+	html5_preserve_drawing_buffer <span class="token builtin">bool</span>
+	html5_premultiplied_alpha     <span class="token builtin">bool</span>
+	html5_ask_leave_site          <span class="token builtin">bool</span>
+	ios_keyboard_resizes_canvas   <span class="token builtin">bool</span>
+
+	__v_native_render <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Event" class="doc-node">
+							<div class="title"><h2>struct Event <a href="#Event">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Event</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	frame_count        <span class="token builtin">u64</span>
+	typ                EventType
+	key_code           KeyCode
+	char_code          <span class="token builtin">u32</span>
+	key_repeat         <span class="token builtin">bool</span>
+	modifiers          <span class="token builtin">u32</span>
+	mouse_button       MouseButton
+	mouse_x            <span class="token builtin">f32</span>
+	mouse_y            <span class="token builtin">f32</span>
+	mouse_dx           <span class="token builtin">f32</span>
+	mouse_dy           <span class="token builtin">f32</span>
+	scroll_x           <span class="token builtin">f32</span>
+	scroll_y           <span class="token builtin">f32</span>
+	num_touches        <span class="token builtin">int</span>
+	touches            <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sapp_touchpoint
+	window_width       <span class="token builtin">int</span>
+	window_height      <span class="token builtin">int</span>
+	framebuffer_width  <span class="token builtin">int</span>
+	framebuffer_height <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sapp_touchpoint" class="doc-node">
+							<div class="title"><h2>struct C.sapp_touchpoint <a href="#C.sapp_touchpoint">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sapp_touchpoint</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	identifier <span class="token builtin">u64</span>
+	pos_x      <span class="token builtin">f32</span>
+	pos_y      <span class="token builtin">f32</span>
+	changed    <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:27
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#Constants">Constants</a></li>
+<li class="open"><a href="#userdata">fn userdata</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#show_mouse">fn show_mouse</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#cancel_quit">fn cancel_quit</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#width">fn width</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#android_get_native_activity">fn android_get_native_activity</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#consume_event">fn consume_event</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#create_desc">fn create_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#d3d11_get_depth_stencil_view">fn d3d11_get_depth_stencil_view</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#d3d11_get_device">fn d3d11_get_device</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#d3d11_get_device_context">fn d3d11_get_device_context</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#d3d11_get_render_target_view">fn d3d11_get_render_target_view</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#dpi_scale">fn dpi_scale</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#show_keyboard">fn show_keyboard</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#set_clipboard_string">fn set_clipboard_string</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#frame_count">fn frame_count</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_clipboard_string">fn get_clipboard_string</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#gles2">fn gles2</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#height">fn height</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#high_dpi">fn high_dpi</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#html5_ask_leave_site">fn html5_ask_leave_site</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ios_get_window">fn ios_get_window</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#isvalid">fn isvalid</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#keyboard_shown">fn keyboard_shown</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#run">fn run</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#lock_mouse">fn lock_mouse</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#macos_get_window">fn macos_get_window</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#metal_get_device">fn metal_get_device</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#metal_get_drawable">fn metal_get_drawable</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#metal_get_renderpass_descriptor">fn metal_get_renderpass_descriptor</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#request_quit">fn request_quit</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mouse_locked">fn mouse_locked</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mouse_shown">fn mouse_shown</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#quit">fn quit</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_desc">fn query_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#win32_get_hwnd">fn win32_get_hwnd</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Modifier">enum Modifier</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#KeyCode">enum KeyCode</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#EventType">enum EventType</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#MouseButton">enum MouseButton</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sapp_event">struct C.sapp_event</a>        <ul>
+<li><a href="#C.sapp_event.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#C.sapp_desc">struct C.sapp_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Event">struct Event</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sapp_touchpoint">struct C.sapp_touchpoint</a>        <ul>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

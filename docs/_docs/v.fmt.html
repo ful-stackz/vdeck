@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>v.fmt | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li class="active"><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_v.fmt" class="doc-node">
+							<div class="title"><h1> v.fmt <a href="#readme_v.fmt">#</a></h1></div>
+
+</section>
+
+						<section id="fmt" class="doc-node">
+							<div class="title"><h2>fn fmt <a href="#fmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">fmt</span><span class="token punctuation">(</span>file ast<span class="token punctuation">.</span>File<span class="token punctuation">,</span> table <span class="token operator">&</span>ast<span class="token punctuation">.</span>Table<span class="token punctuation">,</span> pref <span class="token operator">&</span>pref<span class="token punctuation">.</span>Preferences<span class="token punctuation">,</span> is_debug <span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="CommentsLevel" class="doc-node">
+							<div class="title"><h2>enum CommentsLevel <a href="#CommentsLevel">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">CommentsLevel</span> <span class="token punctuation">{</span>
+	keep
+	indent
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="CommentsOptions" class="doc-node">
+							<div class="title"><h2>struct CommentsOptions <a href="#CommentsOptions">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">CommentsOptions</span> <span class="token punctuation">{</span>
+	has_nl    <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+	inline    <span class="token builtin">bool</span>
+	level     CommentsLevel
+	iembed    <span class="token builtin">bool</span>
+	prev_line <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token punctuation">}</span></code></pre>
+<p>CommentsOptions defines the way comments are going to be written  - has_nl: adds an newline at the end of a list of comments  - inline: line comments will be on the same line as the last statement  - level:  either .keep (don't indent), or .indent (increment indentation)  - iembed: a /* ... */ block comment used inside expressions; // comments the whole line  - prev_line: the line number of the previous token to save linebreaks</p>
+
+</section>
+						<section id="Fmt" class="doc-node">
+							<div class="title"><h2>struct Fmt <a href="#Fmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Fmt</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	file               ast<span class="token punctuation">.</span>File
+	table              <span class="token operator">&</span>ast<span class="token punctuation">.</span>Table
+	pref               <span class="token operator">&</span>pref<span class="token punctuation">.</span>Preferences
+	is_debug           <span class="token builtin">bool</span>
+	out                strings<span class="token punctuation">.</span>Builder
+	out_imports        strings<span class="token punctuation">.</span>Builder
+	indent             <span class="token builtin">int</span>
+	empty_line         <span class="token builtin">bool</span>
+	line_len           <span class="token builtin">int</span>
+	buffering          <span class="token builtin">bool</span>
+	par_level          <span class="token builtin">int</span>
+	array_init_break   <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">bool</span>
+	array_init_depth   <span class="token builtin">int</span>
+	single_line_if     <span class="token builtin">bool</span>
+	cur_mod            <span class="token builtin">string</span>
+	did_imports        <span class="token builtin">bool</span>
+	is_assign          <span class="token builtin">bool</span>
+	is_struct_init     <span class="token builtin">bool</span>
+	auto_imports       <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	import_pos         <span class="token builtin">int</span>
+	used_imports       <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	import_syms_used   <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">bool</span>
+	mod2alias          <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	use_short_fn_args  <span class="token builtin">bool</span>
+	single_line_fields <span class="token builtin">bool</span>
+	it_name            <span class="token builtin">string</span>
+	inside_lambda      <span class="token builtin">bool</span>
+	inside_const       <span class="token builtin">bool</span>
+	is_mbranch_expr    <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Fmt.alias_type_decl" class="doc-node">
+							<div class="title"><h2>fn (Fmt) alias_type_decl <a href="#Fmt.alias_type_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">alias_type_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>AliasTypeDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.array_decompose" class="doc-node">
+							<div class="title"><h2>fn (Fmt) array_decompose <a href="#Fmt.array_decompose">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">array_decompose</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>ArrayDecompose<span class="token punctuation">)</span></code></pre>
+<p>=== Specific Expr methods ===//</p>
+
+</section>
+						<section id="Fmt.array_init" class="doc-node">
+							<div class="title"><h2>fn (Fmt) array_init <a href="#Fmt.array_init">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">array_init</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>ArrayInit<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.as_cast" class="doc-node">
+							<div class="title"><h2>fn (Fmt) as_cast <a href="#Fmt.as_cast">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">as_cast</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>AsCast<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.assert_stmt" class="doc-node">
+							<div class="title"><h2>fn (Fmt) assert_stmt <a href="#Fmt.assert_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">assert_stmt</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>AssertStmt<span class="token punctuation">)</span></code></pre>
+<p>=== Specific Stmt methods ===//</p>
+
+</section>
+						<section id="Fmt.assign_stmt" class="doc-node">
+							<div class="title"><h2>fn (Fmt) assign_stmt <a href="#Fmt.assign_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">assign_stmt</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>AssignStmt<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.assoc" class="doc-node">
+							<div class="title"><h2>fn (Fmt) assoc <a href="#Fmt.assoc">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">assoc</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>Assoc<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.at_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) at_expr <a href="#Fmt.at_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">at_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>AtExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.attrs" class="doc-node">
+							<div class="title"><h2>fn (Fmt) attrs <a href="#Fmt.attrs">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">attrs</span><span class="token punctuation">(</span>attrs <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Attr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.block" class="doc-node">
+							<div class="title"><h2>fn (Fmt) block <a href="#Fmt.block">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">block</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>Block<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.branch_stmt" class="doc-node">
+							<div class="title"><h2>fn (Fmt) branch_stmt <a href="#Fmt.branch_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">branch_stmt</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>BranchStmt<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.call_args" class="doc-node">
+							<div class="title"><h2>fn (Fmt) call_args <a href="#Fmt.call_args">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">call_args</span><span class="token punctuation">(</span>args <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>CallArg<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.call_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) call_expr <a href="#Fmt.call_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">call_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>CallExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.cast_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) cast_expr <a href="#Fmt.cast_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">cast_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>CastExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.chan_init" class="doc-node">
+							<div class="title"><h2>fn (Fmt) chan_init <a href="#Fmt.chan_init">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">chan_init</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>ChanInit<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.comment" class="doc-node">
+							<div class="title"><h2>fn (Fmt) comment <a href="#Fmt.comment">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">comment</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>Comment<span class="token punctuation">,</span> options CommentsOptions<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.comments" class="doc-node">
+							<div class="title"><h2>fn (Fmt) comments <a href="#Fmt.comments">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">comments</span><span class="token punctuation">(</span>comments <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Comment<span class="token punctuation">,</span> options CommentsOptions<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.comments_after_last_field" class="doc-node">
+							<div class="title"><h2>fn (Fmt) comments_after_last_field <a href="#Fmt.comments_after_last_field">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">comments_after_last_field</span><span class="token punctuation">(</span>comments <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Comment<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.comments_before_field" class="doc-node">
+							<div class="title"><h2>fn (Fmt) comments_before_field <a href="#Fmt.comments_before_field">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">comments_before_field</span><span class="token punctuation">(</span>comments <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Comment<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.comp_for" class="doc-node">
+							<div class="title"><h2>fn (Fmt) comp_for <a href="#Fmt.comp_for">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">comp_for</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>CompFor<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.comptime_call" class="doc-node">
+							<div class="title"><h2>fn (Fmt) comptime_call <a href="#Fmt.comptime_call">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">comptime_call</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>ComptimeCall<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.comptime_selector" class="doc-node">
+							<div class="title"><h2>fn (Fmt) comptime_selector <a href="#Fmt.comptime_selector">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">comptime_selector</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>ComptimeSelector<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.concat_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) concat_expr <a href="#Fmt.concat_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">concat_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>ConcatExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.const_decl" class="doc-node">
+							<div class="title"><h2>fn (Fmt) const_decl <a href="#Fmt.const_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">const_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>ConstDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.defer_stmt" class="doc-node">
+							<div class="title"><h2>fn (Fmt) defer_stmt <a href="#Fmt.defer_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">defer_stmt</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>DeferStmt<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.dump_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) dump_expr <a href="#Fmt.dump_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">dump_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>DumpExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.enum_decl" class="doc-node">
+							<div class="title"><h2>fn (Fmt) enum_decl <a href="#Fmt.enum_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">enum_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>EnumDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.enum_val" class="doc-node">
+							<div class="title"><h2>fn (Fmt) enum_val <a href="#Fmt.enum_val">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">enum_val</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>EnumVal<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) expr <a href="#Fmt.expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>Expr<span class="token punctuation">)</span></code></pre>
+<p>=== General Expr-related methods and helpers ===//</p>
+
+</section>
+						<section id="Fmt.expr_stmt" class="doc-node">
+							<div class="title"><h2>fn (Fmt) expr_stmt <a href="#Fmt.expr_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">expr_stmt</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>ExprStmt<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.fn_decl" class="doc-node">
+							<div class="title"><h2>fn (Fmt) fn_decl <a href="#Fmt.fn_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">fn_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>FnDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.fn_type_decl" class="doc-node">
+							<div class="title"><h2>fn (Fmt) fn_type_decl <a href="#Fmt.fn_type_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">fn_type_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>FnTypeDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.for_c_stmt" class="doc-node">
+							<div class="title"><h2>fn (Fmt) for_c_stmt <a href="#Fmt.for_c_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">for_c_stmt</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>ForCStmt<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.for_in_stmt" class="doc-node">
+							<div class="title"><h2>fn (Fmt) for_in_stmt <a href="#Fmt.for_in_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">for_in_stmt</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>ForInStmt<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.for_stmt" class="doc-node">
+							<div class="title"><h2>fn (Fmt) for_stmt <a href="#Fmt.for_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">for_stmt</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>ForStmt<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.global_decl" class="doc-node">
+							<div class="title"><h2>fn (Fmt) global_decl <a href="#Fmt.global_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">global_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>GlobalDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.go_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) go_expr <a href="#Fmt.go_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">go_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>GoExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.goto_label" class="doc-node">
+							<div class="title"><h2>fn (Fmt) goto_label <a href="#Fmt.goto_label">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">goto_label</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>GotoLabel<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.goto_stmt" class="doc-node">
+							<div class="title"><h2>fn (Fmt) goto_stmt <a href="#Fmt.goto_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">goto_stmt</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>GotoStmt<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.hash_stmt" class="doc-node">
+							<div class="title"><h2>fn (Fmt) hash_stmt <a href="#Fmt.hash_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">hash_stmt</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>HashStmt<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.ident" class="doc-node">
+							<div class="title"><h2>fn (Fmt) ident <a href="#Fmt.ident">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">ident</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>Ident<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.if_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) if_expr <a href="#Fmt.if_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">if_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>IfExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.if_guard_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) if_guard_expr <a href="#Fmt.if_guard_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">if_guard_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>IfGuardExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.imp_stmt_str" class="doc-node">
+							<div class="title"><h2>fn (Fmt) imp_stmt_str <a href="#Fmt.imp_stmt_str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>f Fmt<span class="token punctuation">)</span> <span class="token function">imp_stmt_str</span><span class="token punctuation">(</span>imp ast<span class="token punctuation">.</span>Import<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="Fmt.import_comments" class="doc-node">
+							<div class="title"><h2>fn (Fmt) import_comments <a href="#Fmt.import_comments">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">import_comments</span><span class="token punctuation">(</span>comments <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Comment<span class="token punctuation">,</span> options CommentsOptions<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.imports" class="doc-node">
+							<div class="title"><h2>fn (Fmt) imports <a href="#Fmt.imports">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">imports</span><span class="token punctuation">(</span>imports <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Import<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.index_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) index_expr <a href="#Fmt.index_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">index_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>IndexExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.infix_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) infix_expr <a href="#Fmt.infix_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">infix_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>InfixExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.interface_decl" class="doc-node">
+							<div class="title"><h2>fn (Fmt) interface_decl <a href="#Fmt.interface_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">interface_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>InterfaceDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.is_ref_type" class="doc-node">
+							<div class="title"><h2>fn (Fmt) is_ref_type <a href="#Fmt.is_ref_type">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">is_ref_type</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>IsRefType<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.likely" class="doc-node">
+							<div class="title"><h2>fn (Fmt) likely <a href="#Fmt.likely">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">likely</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>Likely<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.lock_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) lock_expr <a href="#Fmt.lock_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">lock_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>LockExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.map_init" class="doc-node">
+							<div class="title"><h2>fn (Fmt) map_init <a href="#Fmt.map_init">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">map_init</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>MapInit<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.mark_import_as_used" class="doc-node">
+							<div class="title"><h2>fn (Fmt) mark_import_as_used <a href="#Fmt.mark_import_as_used">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">mark_import_as_used</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p><code>name</code> is a function (<code>foo.bar()</code>) or type (<code>foo.Bar{}</code>)</p>
+
+</section>
+						<section id="Fmt.mark_types_import_as_used" class="doc-node">
+							<div class="title"><h2>fn (Fmt) mark_types_import_as_used <a href="#Fmt.mark_types_import_as_used">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">mark_types_import_as_used</span><span class="token punctuation">(</span>typ ast<span class="token punctuation">.</span>Type<span class="token punctuation">)</span></code></pre>
+<p>=== Import-related methods ===//</p>
+
+</section>
+						<section id="Fmt.match_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) match_expr <a href="#Fmt.match_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">match_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>MatchExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.mod" class="doc-node">
+							<div class="title"><h2>fn (Fmt) mod <a href="#Fmt.mod">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">mod</span><span class="token punctuation">(</span>mod ast<span class="token punctuation">.</span>Module<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.no_cur_mod" class="doc-node">
+							<div class="title"><h2>fn (Fmt) no_cur_mod <a href="#Fmt.no_cur_mod">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">no_cur_mod</span><span class="token punctuation">(</span>typename <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="Fmt.node_str" class="doc-node">
+							<div class="title"><h2>fn (Fmt) node_str <a href="#Fmt.node_str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">node_str</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>Node<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="Fmt.offset_of" class="doc-node">
+							<div class="title"><h2>fn (Fmt) offset_of <a href="#Fmt.offset_of">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">offset_of</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>OffsetOf<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.or_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) or_expr <a href="#Fmt.or_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">or_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>OrExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.par_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) par_expr <a href="#Fmt.par_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">par_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>ParExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.postfix_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) postfix_expr <a href="#Fmt.postfix_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">postfix_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>PostfixExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.prefix_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) prefix_expr <a href="#Fmt.prefix_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">prefix_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>PrefixExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.prefix_expr_cast_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) prefix_expr_cast_expr <a href="#Fmt.prefix_expr_cast_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">prefix_expr_cast_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>Expr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.process_file_imports" class="doc-node">
+							<div class="title"><h2>fn (Fmt) process_file_imports <a href="#Fmt.process_file_imports">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">process_file_imports</span><span class="token punctuation">(</span>file <span class="token operator">&</span>ast<span class="token punctuation">.</span>File<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.range_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) range_expr <a href="#Fmt.range_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">range_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>RangeExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.remove_new_line" class="doc-node">
+							<div class="title"><h2>fn (Fmt) remove_new_line <a href="#Fmt.remove_new_line">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">remove_new_line</span><span class="token punctuation">(</span>cfg RemoveNewLineConfig<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.return_stmt" class="doc-node">
+							<div class="title"><h2>fn (Fmt) return_stmt <a href="#Fmt.return_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">return_stmt</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>Return<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.select_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) select_expr <a href="#Fmt.select_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">select_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>SelectExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.selector_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) selector_expr <a href="#Fmt.selector_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">selector_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>SelectorExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.set_current_module_name" class="doc-node">
+							<div class="title"><h2>fn (Fmt) set_current_module_name <a href="#Fmt.set_current_module_name">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">set_current_module_name</span><span class="token punctuation">(</span>cmodname <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>=== Module handling helper methods ===//</p>
+
+</section>
+						<section id="Fmt.short_module" class="doc-node">
+							<div class="title"><h2>fn (Fmt) short_module <a href="#Fmt.short_module">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">short_module</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>foo.bar.fn() =&gt; bar.fn()</p>
+
+</section>
+						<section id="Fmt.single_line_attrs" class="doc-node">
+							<div class="title"><h2>fn (Fmt) single_line_attrs <a href="#Fmt.single_line_attrs">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">single_line_attrs</span><span class="token punctuation">(</span>attrs <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Attr<span class="token punctuation">,</span> options AttrsOptions<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.size_of" class="doc-node">
+							<div class="title"><h2>fn (Fmt) size_of <a href="#Fmt.size_of">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">size_of</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>SizeOf<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.sql_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) sql_expr <a href="#Fmt.sql_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">sql_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>SqlExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.sql_stmt" class="doc-node">
+							<div class="title"><h2>fn (Fmt) sql_stmt <a href="#Fmt.sql_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">sql_stmt</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>SqlStmt<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.sql_stmt_line" class="doc-node">
+							<div class="title"><h2>fn (Fmt) sql_stmt_line <a href="#Fmt.sql_stmt_line">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">sql_stmt_line</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>SqlStmtLine<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.stmt" class="doc-node">
+							<div class="title"><h2>fn (Fmt) stmt <a href="#Fmt.stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">stmt</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>Stmt<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.stmts" class="doc-node">
+							<div class="title"><h2>fn (Fmt) stmts <a href="#Fmt.stmts">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">stmts</span><span class="token punctuation">(</span>stmts <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Stmt<span class="token punctuation">)</span></code></pre>
+<p>=== General Stmt-related methods and helpers ===//</p>
+
+</section>
+						<section id="Fmt.string_inter_literal" class="doc-node">
+							<div class="title"><h2>fn (Fmt) string_inter_literal <a href="#Fmt.string_inter_literal">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">string_inter_literal</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>StringInterLiteral<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.string_literal" class="doc-node">
+							<div class="title"><h2>fn (Fmt) string_literal <a href="#Fmt.string_literal">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">string_literal</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>StringLiteral<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.struct_decl" class="doc-node">
+							<div class="title"><h2>fn (Fmt) struct_decl <a href="#Fmt.struct_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">struct_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>StructDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.struct_init" class="doc-node">
+							<div class="title"><h2>fn (Fmt) struct_init <a href="#Fmt.struct_init">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">struct_init</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>StructInit<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.sum_type_decl" class="doc-node">
+							<div class="title"><h2>fn (Fmt) sum_type_decl <a href="#Fmt.sum_type_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">sum_type_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>SumTypeDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.type_decl" class="doc-node">
+							<div class="title"><h2>fn (Fmt) type_decl <a href="#Fmt.type_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">type_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>TypeDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.type_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) type_expr <a href="#Fmt.type_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">type_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>TypeNode<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.type_of" class="doc-node">
+							<div class="title"><h2>fn (Fmt) type_of <a href="#Fmt.type_of">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">type_of</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>TypeOf<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.unsafe_expr" class="doc-node">
+							<div class="title"><h2>fn (Fmt) unsafe_expr <a href="#Fmt.unsafe_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">unsafe_expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>UnsafeExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.wrap_infix" class="doc-node">
+							<div class="title"><h2>fn (Fmt) wrap_infix <a href="#Fmt.wrap_infix">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">wrap_infix</span><span class="token punctuation">(</span>start_pos <span class="token builtin">int</span><span class="token punctuation">,</span> start_len <span class="token builtin">int</span><span class="token punctuation">,</span> is_cond <span class="token builtin">bool</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Fmt.wrap_long_line" class="doc-node">
+							<div class="title"><h2>fn (Fmt) wrap_long_line <a href="#Fmt.wrap_long_line">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">wrap_long_line</span><span class="token punctuation">(</span>penalty_idx <span class="token builtin">int</span><span class="token punctuation">,</span> add_indent <span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="Fmt.write" class="doc-node">
+							<div class="title"><h2>fn (Fmt) write <a href="#Fmt.write">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">write</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>=== Basic buffer write operations ===//</p>
+
+</section>
+						<section id="Fmt.writeln" class="doc-node">
+							<div class="title"><h2>fn (Fmt) writeln <a href="#Fmt.writeln">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> f Fmt<span class="token punctuation">)</span> <span class="token function">writeln</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="RemoveNewLineConfig" class="doc-node">
+							<div class="title"><h2>struct RemoveNewLineConfig <a href="#RemoveNewLineConfig">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">RemoveNewLineConfig</span> <span class="token punctuation">{</span>
+	imports_buffer <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="AttrsOptions" class="doc-node">
+							<div class="title"><h2>struct AttrsOptions <a href="#AttrsOptions">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">AttrsOptions</span> <span class="token punctuation">{</span>
+	inline <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:28
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#fmt">fn fmt</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#CommentsLevel">enum CommentsLevel</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#CommentsOptions">struct CommentsOptions</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Fmt">struct Fmt</a>        <ul>
+<li><a href="#Fmt.alias_type_decl">fn alias_type_decl</a></li>
+<li><a href="#Fmt.array_decompose">fn array_decompose</a></li>
+<li><a href="#Fmt.array_init">fn array_init</a></li>
+<li><a href="#Fmt.as_cast">fn as_cast</a></li>
+<li><a href="#Fmt.assert_stmt">fn assert_stmt</a></li>
+<li><a href="#Fmt.assign_stmt">fn assign_stmt</a></li>
+<li><a href="#Fmt.assoc">fn assoc</a></li>
+<li><a href="#Fmt.at_expr">fn at_expr</a></li>
+<li><a href="#Fmt.attrs">fn attrs</a></li>
+<li><a href="#Fmt.block">fn block</a></li>
+<li><a href="#Fmt.branch_stmt">fn branch_stmt</a></li>
+<li><a href="#Fmt.call_args">fn call_args</a></li>
+<li><a href="#Fmt.call_expr">fn call_expr</a></li>
+<li><a href="#Fmt.cast_expr">fn cast_expr</a></li>
+<li><a href="#Fmt.chan_init">fn chan_init</a></li>
+<li><a href="#Fmt.comment">fn comment</a></li>
+<li><a href="#Fmt.comments">fn comments</a></li>
+<li><a href="#Fmt.comments_after_last_field">fn comments_after_last_field</a></li>
+<li><a href="#Fmt.comments_before_field">fn comments_before_field</a></li>
+<li><a href="#Fmt.comp_for">fn comp_for</a></li>
+<li><a href="#Fmt.comptime_call">fn comptime_call</a></li>
+<li><a href="#Fmt.comptime_selector">fn comptime_selector</a></li>
+<li><a href="#Fmt.concat_expr">fn concat_expr</a></li>
+<li><a href="#Fmt.const_decl">fn const_decl</a></li>
+<li><a href="#Fmt.defer_stmt">fn defer_stmt</a></li>
+<li><a href="#Fmt.dump_expr">fn dump_expr</a></li>
+<li><a href="#Fmt.enum_decl">fn enum_decl</a></li>
+<li><a href="#Fmt.enum_val">fn enum_val</a></li>
+<li><a href="#Fmt.expr">fn expr</a></li>
+<li><a href="#Fmt.expr_stmt">fn expr_stmt</a></li>
+<li><a href="#Fmt.fn_decl">fn fn_decl</a></li>
+<li><a href="#Fmt.fn_type_decl">fn fn_type_decl</a></li>
+<li><a href="#Fmt.for_c_stmt">fn for_c_stmt</a></li>
+<li><a href="#Fmt.for_in_stmt">fn for_in_stmt</a></li>
+<li><a href="#Fmt.for_stmt">fn for_stmt</a></li>
+<li><a href="#Fmt.global_decl">fn global_decl</a></li>
+<li><a href="#Fmt.go_expr">fn go_expr</a></li>
+<li><a href="#Fmt.goto_label">fn goto_label</a></li>
+<li><a href="#Fmt.goto_stmt">fn goto_stmt</a></li>
+<li><a href="#Fmt.hash_stmt">fn hash_stmt</a></li>
+<li><a href="#Fmt.ident">fn ident</a></li>
+<li><a href="#Fmt.if_expr">fn if_expr</a></li>
+<li><a href="#Fmt.if_guard_expr">fn if_guard_expr</a></li>
+<li><a href="#Fmt.imp_stmt_str">fn imp_stmt_str</a></li>
+<li><a href="#Fmt.import_comments">fn import_comments</a></li>
+<li><a href="#Fmt.imports">fn imports</a></li>
+<li><a href="#Fmt.index_expr">fn index_expr</a></li>
+<li><a href="#Fmt.infix_expr">fn infix_expr</a></li>
+<li><a href="#Fmt.interface_decl">fn interface_decl</a></li>
+<li><a href="#Fmt.is_ref_type">fn is_ref_type</a></li>
+<li><a href="#Fmt.likely">fn likely</a></li>
+<li><a href="#Fmt.lock_expr">fn lock_expr</a></li>
+<li><a href="#Fmt.map_init">fn map_init</a></li>
+<li><a href="#Fmt.mark_import_as_used">fn mark_import_as_used</a></li>
+<li><a href="#Fmt.mark_types_import_as_used">fn mark_types_import_as_used</a></li>
+<li><a href="#Fmt.match_expr">fn match_expr</a></li>
+<li><a href="#Fmt.mod">fn mod</a></li>
+<li><a href="#Fmt.no_cur_mod">fn no_cur_mod</a></li>
+<li><a href="#Fmt.node_str">fn node_str</a></li>
+<li><a href="#Fmt.offset_of">fn offset_of</a></li>
+<li><a href="#Fmt.or_expr">fn or_expr</a></li>
+<li><a href="#Fmt.par_expr">fn par_expr</a></li>
+<li><a href="#Fmt.postfix_expr">fn postfix_expr</a></li>
+<li><a href="#Fmt.prefix_expr">fn prefix_expr</a></li>
+<li><a href="#Fmt.prefix_expr_cast_expr">fn prefix_expr_cast_expr</a></li>
+<li><a href="#Fmt.process_file_imports">fn process_file_imports</a></li>
+<li><a href="#Fmt.range_expr">fn range_expr</a></li>
+<li><a href="#Fmt.remove_new_line">fn remove_new_line</a></li>
+<li><a href="#Fmt.return_stmt">fn return_stmt</a></li>
+<li><a href="#Fmt.select_expr">fn select_expr</a></li>
+<li><a href="#Fmt.selector_expr">fn selector_expr</a></li>
+<li><a href="#Fmt.set_current_module_name">fn set_current_module_name</a></li>
+<li><a href="#Fmt.short_module">fn short_module</a></li>
+<li><a href="#Fmt.single_line_attrs">fn single_line_attrs</a></li>
+<li><a href="#Fmt.size_of">fn size_of</a></li>
+<li><a href="#Fmt.sql_expr">fn sql_expr</a></li>
+<li><a href="#Fmt.sql_stmt">fn sql_stmt</a></li>
+<li><a href="#Fmt.sql_stmt_line">fn sql_stmt_line</a></li>
+<li><a href="#Fmt.stmt">fn stmt</a></li>
+<li><a href="#Fmt.stmts">fn stmts</a></li>
+<li><a href="#Fmt.string_inter_literal">fn string_inter_literal</a></li>
+<li><a href="#Fmt.string_literal">fn string_literal</a></li>
+<li><a href="#Fmt.struct_decl">fn struct_decl</a></li>
+<li><a href="#Fmt.struct_init">fn struct_init</a></li>
+<li><a href="#Fmt.sum_type_decl">fn sum_type_decl</a></li>
+<li><a href="#Fmt.type_decl">fn type_decl</a></li>
+<li><a href="#Fmt.type_expr">fn type_expr</a></li>
+<li><a href="#Fmt.type_of">fn type_of</a></li>
+<li><a href="#Fmt.unsafe_expr">fn unsafe_expr</a></li>
+<li><a href="#Fmt.wrap_infix">fn wrap_infix</a></li>
+<li><a href="#Fmt.wrap_long_line">fn wrap_long_line</a></li>
+<li><a href="#Fmt.write">fn write</a></li>
+<li><a href="#Fmt.writeln">fn writeln</a></li>
+</ul>
+</li>
+<li class="open"><a href="#RemoveNewLineConfig">struct RemoveNewLineConfig</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#AttrsOptions">struct AttrsOptions</a>        <ul>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

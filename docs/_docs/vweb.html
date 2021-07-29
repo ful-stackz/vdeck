@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>vweb | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open active"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_vweb" class="doc-node">
+							<div class="title"><h1> vweb <a href="#readme_vweb">#</a></h1></div><h1>vweb - the V Web Server</h1>
+<p>A simple yet powerful web server with built-in routing, parameter handling,
+templating, and other features.</p>
+<h2>Alpha level software</h2>
+<p>Some features may not be complete, and there may still be bugs.  However, it is
+still a very useful tool.  The <a href="https://gitly.org/">gitly</a> site is based on vweb.</p>
+<h2>Features</h2>
+<ul>
+<li><strong>Very fast</strong> performance of C on the web.</li>
+<li><strong>Small binary</strong> hello world website is &lt;100 KB.</li>
+<li><strong>Easy to deploy</strong> just one binary file that also includes all templates.
+No need to install any dependencies.</li>
+<li><strong>Templates are precompiled</strong> all errors are visible at compilation time,
+not at runtime.</li>
+</ul>
+<p>There is no formal documentation yet - here is a simple
+<a href="https://github.com/vlang/v/tree/master/examples/vweb/vweb_example.v">example</a></p>
+<p>There's also the V forum, <a href="https://github.com/vlang/vorum">vorum</a></p>
+<p><code>vorum.v</code> contains all GET and POST actions.</p>
+<pre><code class="language-v">pub fn (app mut App) index() {
+    posts := app.find_all_posts()
+    $vweb.html()
+}
+
+// TODO ['/post/:id/:title']
+// TODO `fn (app App) post(id int)`
+pub fn (app App) post() {
+    id := app.get_post_id()
+    post := app.retrieve_post(id) or {
+        app.redirect('/')
+        return
+    }
+    comments := app.find_comments(id)
+    show_form := true
+    $vweb.html()
+}
+</code></pre>
+<p><code>index.html</code> is an example of the V template language:</p>
+<pre><code class="language-html">@for post in posts
+    &lt;div class=post&gt;
+        &lt;a class=topic href=&quot;@post.url&quot;&gt;@post.title&lt;/a&gt;
+        &lt;img class=comment-img&gt;
+        &lt;span class=nr-comments&gt;@post.nr_comments&lt;/span&gt;
+        &lt;span class=time&gt;@post.time&lt;/span&gt;
+    &lt;/div&gt;
+@end
+</code></pre>
+<p><code>$vweb.html()</code> compiles an HTML template into V during compilation,
+and embeds the resulting code into the current action.</p>
+<p>That means that the template automatically has access to that action's entire environment.</p>
+<h2>Deploying vweb apps</h2>
+<p>Everything, including HTML templates, is in one binary file. That's all you need to deploy.</p>
+<h2>Getting Started</h2>
+<p>To start with vweb, you have to import the module <code>vweb</code>.  After the import,
+define a struct to hold vweb.Context (and any other variables your program will
+need).</p>
+<p>The web server can be started by calling <code>vweb.run(&amp;App{}, port)</code>.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-v">import vweb
+
+struct App {
+    vweb.Context
+}
+
+fn main() {
+    vweb.run(&amp;App{}, 8080)
+}
+</code></pre>
+<h3>Defining endpoints</h3>
+<p>To add endpoints to your web server, you have to extend the <code>App</code> struct.
+For routing you can either use auto-mapping of function names or specify the path as an attribute.
+The function expects a response of the type <code>vweb.Result</code>.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-v">// This endpoint can be accessed via http://localhost:port/hello
+fn (mut app App) hello() vweb.Result {
+    return app.text('Hello')
+}
+
+// This endpoint can be accessed via http://localhost:port/foo
+[&quot;/foo&quot;]
+fn (mut app App) world() vweb.Result {
+    return app.text('World')
+}
+</code></pre>
+<p>To create an HTTP POST endpoint, you simply add a <code>[post]</code> attribute before the function definition.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-v">[post]
+fn (mut app App) world() vweb.Result {
+    return app.text('World')
+}
+</code></pre>
+<p>To pass a parameter to an endpoint, you simply define it inside
+an attribute, e. g. <code>['/hello/:user]</code>.
+After it is defined in the attribute, you have to add it as a function parameter.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-v">['/hello/:user']
+fn (mut app App) hello_user(user string) vweb.Result {
+    return app.text('Hello $user')
+}
+</code></pre>
+<p>You have access to the raw request data such as headers
+or the request body by accessing <code>app</code> (which is <code>vweb.Context</code>).
+If you want to read the request body, you can do that by calling <code>app.req.data</code>.
+To read the request headers, you just call <code>app.req.header</code> and access the
+header you want, e.g. <code>app.req.header.get(.content_type)</code>. See <code>struct Header</code>
+for all available methods (<code>v doc net.http Header</code>).</p>
+
+</section>
+
+						<section id="Constants" class="doc-node const">
+							<div class="title"><h2>Constants <a href="#Constants">#</a></h2></div>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	methods_with_form <span class="token operator">=</span> <span class="token punctuation">[</span>http<span class="token punctuation">.</span>Method<span class="token punctuation">.</span>post<span class="token punctuation">,</span> <span class="token punctuation">.</span>put<span class="token punctuation">,</span> <span class="token punctuation">.</span>patch<span class="token punctuation">]</span>
+	headers_close     <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">new_custom_header_from_map</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">{</span>
+		<span class="token string">'Server'</span><span class="token punctuation">:</span>          <span class="token string">'VWeb'</span>
+		http<span class="token punctuation">.</span>CommonHeader<span class="token punctuation">.</span>connection<span class="token punctuation">.</span><span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token string">'close'</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token punctuation">{</span> <span class="token function">panic</span><span class="token punctuation">(</span><span class="token string">'should never fail'</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+
+	http_400          <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token symbol">Response</span><span class="token punctuation">{</span>
+		version<span class="token punctuation">:</span> <span class="token punctuation">.</span>v1_1
+		status_code<span class="token punctuation">:</span> <span class="token number">400</span>
+		text<span class="token punctuation">:</span> <span class="token string">'400 Bad Request'</span>
+		header<span class="token punctuation">:</span> http<span class="token punctuation">.</span><span class="token function">new_header_from_map</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">{</span>
+			http<span class="token punctuation">.</span>CommonHeader<span class="token punctuation">.</span>content_type<span class="token punctuation">:</span>   <span class="token string">'text/plain'</span>
+			http<span class="token punctuation">.</span>CommonHeader<span class="token punctuation">.</span>content_length<span class="token punctuation">:</span> <span class="token string">'15'</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>headers_close<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	http_404 <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token symbol">Response</span><span class="token punctuation">{</span>
+		version<span class="token punctuation">:</span> <span class="token punctuation">.</span>v1_1
+		status_code<span class="token punctuation">:</span> <span class="token number">404</span>
+		text<span class="token punctuation">:</span> <span class="token string">'404 Not Found'</span>
+		header<span class="token punctuation">:</span> http<span class="token punctuation">.</span><span class="token function">new_header_from_map</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">{</span>
+			http<span class="token punctuation">.</span>CommonHeader<span class="token punctuation">.</span>content_type<span class="token punctuation">:</span>   <span class="token string">'text/plain'</span>
+			http<span class="token punctuation">.</span>CommonHeader<span class="token punctuation">.</span>content_length<span class="token punctuation">:</span> <span class="token string">'13'</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>headers_close<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	http_500 <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token symbol">Response</span><span class="token punctuation">{</span>
+		version<span class="token punctuation">:</span> <span class="token punctuation">.</span>v1_1
+		status_code<span class="token punctuation">:</span> <span class="token number">500</span>
+		text<span class="token punctuation">:</span> <span class="token string">'500 Internal Server Error'</span>
+		header<span class="token punctuation">:</span> http<span class="token punctuation">.</span><span class="token function">new_header_from_map</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">{</span>
+			http<span class="token punctuation">.</span>CommonHeader<span class="token punctuation">.</span>content_type<span class="token punctuation">:</span>   <span class="token string">'text/plain'</span>
+			http<span class="token punctuation">.</span>CommonHeader<span class="token punctuation">.</span>content_length<span class="token punctuation">:</span> <span class="token string">'25'</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>headers_close<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	mime_types <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">{</span>
+		<span class="token string">'.css'</span><span class="token punctuation">:</span>  <span class="token string">'text/css; charset=utf-8'</span>
+		<span class="token string">'.gif'</span><span class="token punctuation">:</span>  <span class="token string">'image/gif'</span>
+		<span class="token string">'.htm'</span><span class="token punctuation">:</span>  <span class="token string">'text/html; charset=utf-8'</span>
+		<span class="token string">'.html'</span><span class="token punctuation">:</span> <span class="token string">'text/html; charset=utf-8'</span>
+		<span class="token string">'.jpg'</span><span class="token punctuation">:</span>  <span class="token string">'image/jpeg'</span>
+		<span class="token string">'.js'</span><span class="token punctuation">:</span>   <span class="token string">'application/javascript'</span>
+		<span class="token string">'.json'</span><span class="token punctuation">:</span> <span class="token string">'application/json'</span>
+		<span class="token string">'.md'</span><span class="token punctuation">:</span>   <span class="token string">'text/markdown; charset=utf-8'</span>
+		<span class="token string">'.pdf'</span><span class="token punctuation">:</span>  <span class="token string">'application/pdf'</span>
+		<span class="token string">'.png'</span><span class="token punctuation">:</span>  <span class="token string">'image/png'</span>
+		<span class="token string">'.svg'</span><span class="token punctuation">:</span>  <span class="token string">'image/svg+xml'</span>
+		<span class="token string">'.txt'</span><span class="token punctuation">:</span>  <span class="token string">'text/plain; charset=utf-8'</span>
+		<span class="token string">'.wasm'</span><span class="token punctuation">:</span> <span class="token string">'application/wasm'</span>
+		<span class="token string">'.xml'</span><span class="token punctuation">:</span>  <span class="token string">'text/xml; charset=utf-8'</span>
+		<span class="token string">'.ico'</span><span class="token punctuation">:</span>  <span class="token string">'img/x-icon'</span>
+	<span class="token punctuation">}</span>
+	max_http_post_size <span class="token operator">=</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span>
+	default_port       <span class="token operator">=</span> <span class="token number">8080</span>
+<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="not_found" class="doc-node">
+							<div class="title"><h2>fn not_found <a href="#not_found">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">not_found</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Result</code></pre>
+<p>Returns an empty result</p>
+
+</section>
+						<section id="run" class="doc-node">
+							<div class="title"><h2>fn run <a href="#run">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> run<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span>global_app <span class="token operator">&</span><span class="token builtin">T</span><span class="token punctuation">,</span> port <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>run_app</p>
+
+</section>
+						<section id="RawHtml" class="doc-node">
+							<div class="title"><h2>type RawHtml <a href="#RawHtml">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> RawHtml <span class="token operator">=</span> <span class="token builtin">string</span></code></pre>
+<p>A type which don't get filtered inside templates</p>
+
+</section>
+						<section id="Result" class="doc-node">
+							<div class="title"><h2>struct Result <a href="#Result">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Result</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Cookie" class="doc-node">
+							<div class="title"><h2>struct Cookie <a href="#Cookie">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Cookie</span> <span class="token punctuation">{</span>
+	name      <span class="token builtin">string</span>
+	value     <span class="token builtin">string</span>
+	expires   time<span class="token punctuation">.</span>Time
+	secure    <span class="token builtin">bool</span>
+	http_only <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Context" class="doc-node">
+							<div class="title"><h2>struct Context <a href="#Context">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Context</span> <span class="token punctuation">{</span>
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	content_type <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'text/plain'</span>
+	status       <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'200 OK'</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	req http<span class="token punctuation">.</span>Request
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	conn              <span class="token operator">&</span>net<span class="token punctuation">.</span>TcpConn
+	static_files      <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	static_mime_types <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	form              <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	query             <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	files             <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span>FileData
+	header            http<span class="token punctuation">.</span>Header
+	done              <span class="token builtin">bool</span>
+	page_gen_start    <span class="token builtin">i64</span>
+	form_error        <span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Context.init_server" class="doc-node">
+							<div class="title"><h2>fn (Context) init_server <a href="#Context.init_server">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx Context<span class="token punctuation">)</span> <span class="token function">init_server</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>declaring init_server in your App struct is optional</p>
+
+</section>
+						<section id="Context.before_request" class="doc-node">
+							<div class="title"><h2>fn (Context) before_request <a href="#Context.before_request">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx Context<span class="token punctuation">)</span> <span class="token function">before_request</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>declaring before_request in your App struct is optional</p>
+
+</section>
+						<section id="Context.send_response_to_client" class="doc-node">
+							<div class="title"><h2>fn (Context) send_response_to_client <a href="#Context.send_response_to_client">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">send_response_to_client</span><span class="token punctuation">(</span>mimetype <span class="token builtin">string</span><span class="token punctuation">,</span> res <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>vweb intern function</p>
+
+</section>
+						<section id="Context.html" class="doc-node">
+							<div class="title"><h2>fn (Context) html <a href="#Context.html">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">html</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> Result</code></pre>
+<p>Response HTTP_OK with s as payload with content-type <code>text/html</code></p>
+
+</section>
+						<section id="Context.text" class="doc-node">
+							<div class="title"><h2>fn (Context) text <a href="#Context.text">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">text</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> Result</code></pre>
+<p>Response HTTP_OK with s as payload with content-type <code>text/plain</code></p>
+
+</section>
+						<section id="Context.json" class="doc-node">
+							<div class="title"><h2>fn (Context) json <a href="#Context.json">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">json</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> Result</code></pre>
+<p>Response HTTP_OK with s as payload with content-type <code>application/json</code></p>
+
+</section>
+						<section id="Context.ok" class="doc-node">
+							<div class="title"><h2>fn (Context) ok <a href="#Context.ok">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">ok</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> Result</code></pre>
+<p>Response HTTP_OK with s as payload</p>
+
+</section>
+						<section id="Context.server_error" class="doc-node">
+							<div class="title"><h2>fn (Context) server_error <a href="#Context.server_error">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">server_error</span><span class="token punctuation">(</span>ecode <span class="token builtin">int</span><span class="token punctuation">)</span> Result</code></pre>
+<p>Response a server error</p>
+
+</section>
+						<section id="Context.redirect" class="doc-node">
+							<div class="title"><h2>fn (Context) redirect <a href="#Context.redirect">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">redirect</span><span class="token punctuation">(</span>url <span class="token builtin">string</span><span class="token punctuation">)</span> Result</code></pre>
+<p>Redirect to an url</p>
+
+</section>
+						<section id="Context.not_found" class="doc-node">
+							<div class="title"><h2>fn (Context) not_found <a href="#Context.not_found">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">not_found</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Result</code></pre>
+<p>Send an not_found response</p>
+
+</section>
+						<section id="Context.set_cookie" class="doc-node">
+							<div class="title"><h2>fn (Context) set_cookie <a href="#Context.set_cookie">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">set_cookie</span><span class="token punctuation">(</span>cookie Cookie<span class="token punctuation">)</span></code></pre>
+<p>Sets a cookie</p>
+
+</section>
+						<section id="Context.set_cookie_old" class="doc-node">
+							<div class="title"><h2>fn (Context) set_cookie_old <a href="#Context.set_cookie_old">#</a></h2></div><div class="attributes"><div class="attribute attribute-deprecated">deprecated</div></div>
+<pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">set_cookie_old</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">,</span> val <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>Old function</p>
+
+</section>
+						<section id="Context.set_content_type" class="doc-node">
+							<div class="title"><h2>fn (Context) set_content_type <a href="#Context.set_content_type">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">set_content_type</span><span class="token punctuation">(</span>typ <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>Sets the response content type</p>
+
+</section>
+						<section id="Context.set_cookie_with_expire_date" class="doc-node">
+							<div class="title"><h2>fn (Context) set_cookie_with_expire_date <a href="#Context.set_cookie_with_expire_date">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">set_cookie_with_expire_date</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">,</span> val <span class="token builtin">string</span><span class="token punctuation">,</span> expire_date time<span class="token punctuation">.</span>Time<span class="token punctuation">)</span></code></pre>
+<p>Sets a cookie with a <code>expire_data</code></p>
+
+</section>
+						<section id="Context.get_cookie" class="doc-node">
+							<div class="title"><h2>fn (Context) get_cookie <a href="#Context.get_cookie">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">get_cookie</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+<p>Gets a cookie by a key</p>
+
+</section>
+						<section id="Context.set_status" class="doc-node">
+							<div class="title"><h2>fn (Context) set_status <a href="#Context.set_status">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">set_status</span><span class="token punctuation">(</span>code <span class="token builtin">int</span><span class="token punctuation">,</span> desc <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>Sets the response status</p>
+
+</section>
+						<section id="Context.add_header" class="doc-node">
+							<div class="title"><h2>fn (Context) add_header <a href="#Context.add_header">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">add_header</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">,</span> val <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>Adds an header to the response with key and val</p>
+
+</section>
+						<section id="Context.get_header" class="doc-node">
+							<div class="title"><h2>fn (Context) get_header <a href="#Context.get_header">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">get_header</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>Returns the header data from the key</p>
+
+</section>
+						<section id="Context.handle_static" class="doc-node">
+							<div class="title"><h2>fn (Context) handle_static <a href="#Context.handle_static">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">handle_static</span><span class="token punctuation">(</span>directory_path <span class="token builtin">string</span><span class="token punctuation">,</span> root <span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>Handles a directory static  If <code>root</code> is set the mount path for the dir will be in '/'</p>
+
+</section>
+						<section id="Context.mount_static_folder_at" class="doc-node">
+							<div class="title"><h2>fn (Context) mount_static_folder_at <a href="#Context.mount_static_folder_at">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">mount_static_folder_at</span><span class="token punctuation">(</span>directory_path <span class="token builtin">string</span><span class="token punctuation">,</span> mount_path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>mount_static_folder_at - makes all static files in <code>directory_path</code> and inside it, available at http://server/mount_path  For example: suppose you have called .mount_static_folder_at('/var/share/myassets', '/assets'),  and you have a file /var/share/myassets/main.css .  =&gt; That file will be available at URL: http://server/assets/main.css .</p>
+
+</section>
+						<section id="Context.serve_static" class="doc-node">
+							<div class="title"><h2>fn (Context) serve_static <a href="#Context.serve_static">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">serve_static</span><span class="token punctuation">(</span>url <span class="token builtin">string</span><span class="token punctuation">,</span> file_path <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>Serves a file static  <code>url</code> is the access path on the site, <code>file_path</code> is the real path to the file, <code>mime_type</code> is the file type</p>
+
+</section>
+						<section id="Context.ip" class="doc-node">
+							<div class="title"><h2>fn (Context) ip <a href="#Context.ip">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">ip</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>Returns the ip address from the current user</p>
+
+</section>
+						<section id="Context.error" class="doc-node">
+							<div class="title"><h2>fn (Context) error <a href="#Context.error">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">error</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>Set s to the form error</p>
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:28
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#readme_vweb">README</a></li>
+<li class="open"><a href="#Constants">Constants</a></li>
+<li class="open"><a href="#not_found">fn not_found</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#run">fn run</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#RawHtml">type RawHtml</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Result">struct Result</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Cookie">struct Cookie</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Context">struct Context</a>        <ul>
+<li><a href="#Context.init_server">fn init_server</a></li>
+<li><a href="#Context.before_request">fn before_request</a></li>
+<li><a href="#Context.send_response_to_client">fn send_response_to_client</a></li>
+<li><a href="#Context.html">fn html</a></li>
+<li><a href="#Context.text">fn text</a></li>
+<li><a href="#Context.json">fn json</a></li>
+<li><a href="#Context.ok">fn ok</a></li>
+<li><a href="#Context.server_error">fn server_error</a></li>
+<li><a href="#Context.redirect">fn redirect</a></li>
+<li><a href="#Context.not_found">fn not_found</a></li>
+<li><a href="#Context.set_cookie">fn set_cookie</a></li>
+<li><a href="#Context.set_cookie_old">fn set_cookie_old</a></li>
+<li><a href="#Context.set_content_type">fn set_content_type</a></li>
+<li><a href="#Context.set_cookie_with_expire_date">fn set_cookie_with_expire_date</a></li>
+<li><a href="#Context.get_cookie">fn get_cookie</a></li>
+<li><a href="#Context.set_status">fn set_status</a></li>
+<li><a href="#Context.add_header">fn add_header</a></li>
+<li><a href="#Context.get_header">fn get_header</a></li>
+<li><a href="#Context.handle_static">fn handle_static</a></li>
+<li><a href="#Context.mount_static_folder_at">fn mount_static_folder_at</a></li>
+<li><a href="#Context.serve_static">fn serve_static</a></li>
+<li><a href="#Context.ip">fn ip</a></li>
+<li><a href="#Context.error">fn error</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

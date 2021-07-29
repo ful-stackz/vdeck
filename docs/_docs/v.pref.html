@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>v.pref | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li class="active"><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_v.pref" class="doc-node">
+							<div class="title"><h1> v.pref <a href="#readme_v.pref">#</a></h1></div>
+
+</section>
+
+						<section id="Constants" class="doc-node const">
+							<div class="title"><h2>Constants <a href="#Constants">#</a></h2></div>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	default_module_path <span class="token operator">=</span> os<span class="token punctuation">.</span><span class="token function">vmodules_dir</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="arch_from_string" class="doc-node">
+							<div class="title"><h2>fn arch_from_string <a href="#arch_from_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">arch_from_string</span><span class="token punctuation">(</span>arch_str <span class="token builtin">string</span><span class="token punctuation">)</span> ?Arch</code></pre>
+
+
+</section>
+						<section id="parse_args" class="doc-node">
+							<div class="title"><h2>fn parse_args <a href="#parse_args">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse_args</span><span class="token punctuation">(</span>known_external_commands <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> args <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">&</span>Preferences<span class="token punctuation">,</span> <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="os_from_string" class="doc-node">
+							<div class="title"><h2>fn os_from_string <a href="#os_from_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">os_from_string</span><span class="token punctuation">(</span>os_str <span class="token builtin">string</span><span class="token punctuation">)</span> ?OS</code></pre>
+<p>Helper function to convert string names to OS enum</p>
+
+</section>
+						<section id="backend_from_string" class="doc-node">
+							<div class="title"><h2>fn backend_from_string <a href="#backend_from_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">backend_from_string</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> ?Backend</code></pre>
+
+
+</section>
+						<section id="new_preferences" class="doc-node">
+							<div class="title"><h2>fn new_preferences <a href="#new_preferences">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_preferences</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&</span>Preferences</code></pre>
+
+
+</section>
+						<section id="cc_from_string" class="doc-node">
+							<div class="title"><h2>fn cc_from_string <a href="#cc_from_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">cc_from_string</span><span class="token punctuation">(</span>cc_str <span class="token builtin">string</span><span class="token punctuation">)</span> CompilerType</code></pre>
+<p>Helper function to convert string names to CC enum</p>
+
+</section>
+						<section id="get_host_os" class="doc-node">
+							<div class="title"><h2>fn get_host_os <a href="#get_host_os">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_host_os</span><span class="token punctuation">(</span><span class="token punctuation">)</span> OS</code></pre>
+
+
+</section>
+						<section id="get_host_arch" class="doc-node">
+							<div class="title"><h2>fn get_host_arch <a href="#get_host_arch">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_host_arch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Arch</code></pre>
+
+
+</section>
+						<section id="default_tcc_compiler" class="doc-node">
+							<div class="title"><h2>fn default_tcc_compiler <a href="#default_tcc_compiler">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">default_tcc_compiler</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="default_c_compiler" class="doc-node">
+							<div class="title"><h2>fn default_c_compiler <a href="#default_c_compiler">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">default_c_compiler</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="vexe_path" class="doc-node">
+							<div class="title"><h2>fn vexe_path <a href="#vexe_path">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">vexe_path</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="GarbageCollectionMode" class="doc-node">
+							<div class="title"><h2>enum GarbageCollectionMode <a href="#GarbageCollectionMode">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">GarbageCollectionMode</span> <span class="token punctuation">{</span>
+	no_gc
+	boehm_full
+	boehm_incr
+	boehm_full_opt
+	boehm_incr_opt
+	boehm_leak
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="CompilerType" class="doc-node">
+							<div class="title"><h2>enum CompilerType <a href="#CompilerType">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">CompilerType</span> <span class="token punctuation">{</span>
+	gcc
+	tinyc
+	clang
+	mingw
+	msvc
+	cplusplus
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="ColorOutput" class="doc-node">
+							<div class="title"><h2>enum ColorOutput <a href="#ColorOutput">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">ColorOutput</span> <span class="token punctuation">{</span>
+	auto
+	always
+	never
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="BuildMode" class="doc-node">
+							<div class="title"><h2>enum BuildMode <a href="#BuildMode">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">BuildMode</span> <span class="token punctuation">{</span>
+	default_mode
+	build_module
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="OS" class="doc-node">
+							<div class="title"><h2>enum OS <a href="#OS">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">OS</span> <span class="token punctuation">{</span>
+	_auto
+	ios
+	macos
+	linux
+	windows
+	freebsd
+	openbsd
+	netbsd
+	dragonfly
+	js_node
+	js_browser
+	js_freestanding
+	android
+	solaris
+	serenity
+	vinix
+	haiku
+	raw
+	all
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="OS.str" class="doc-node">
+							<div class="title"><h2>fn (OS) str <a href="#OS.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>o OS<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="Backend" class="doc-node">
+							<div class="title"><h2>enum Backend <a href="#Backend">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Backend</span> <span class="token punctuation">{</span>
+	c
+	js_node
+	js_browser
+	js_freestanding
+	native
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Backend.is_js" class="doc-node">
+							<div class="title"><h2>fn (Backend) is_js <a href="#Backend.is_js">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>b Backend<span class="token punctuation">)</span> <span class="token function">is_js</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="OutputMode" class="doc-node">
+							<div class="title"><h2>enum OutputMode <a href="#OutputMode">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">OutputMode</span> <span class="token punctuation">{</span>
+	stdout
+	silent
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="AssertFailureMode" class="doc-node">
+							<div class="title"><h2>enum AssertFailureMode <a href="#AssertFailureMode">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">AssertFailureMode</span> <span class="token punctuation">{</span>
+	default
+	aborts
+	backtraces
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Arch" class="doc-node">
+							<div class="title"><h2>enum Arch <a href="#Arch">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Arch</span> <span class="token punctuation">{</span>
+	_auto
+	amd64
+	arm64
+	arm32
+	rv64
+	rv32
+	i386
+	_max
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Preferences" class="doc-node">
+							<div class="title"><h2>struct Preferences <a href="#Preferences">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Preferences</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	os          OS
+	backend     Backend
+	build_mode  BuildMode
+	arch        Arch
+	output_mode OutputMode <span class="token operator">=</span> <span class="token punctuation">.</span>stdout
+
+	is_verbose <span class="token builtin">bool</span>
+
+	is_test                <span class="token builtin">bool</span>
+	is_script              <span class="token builtin">bool</span>
+	is_vsh                 <span class="token builtin">bool</span>
+	is_livemain            <span class="token builtin">bool</span>
+	is_liveshared          <span class="token builtin">bool</span>
+	is_shared              <span class="token builtin">bool</span>
+	is_prof                <span class="token builtin">bool</span>
+	profile_file           <span class="token builtin">string</span>
+	profile_no_inline      <span class="token builtin">bool</span>
+	translated             <span class="token builtin">bool</span>
+	is_prod                <span class="token builtin">bool</span>
+	obfuscate              <span class="token builtin">bool</span>
+	is_repl                <span class="token builtin">bool</span>
+	is_run                 <span class="token builtin">bool</span>
+	sanitize               <span class="token builtin">bool</span>
+	is_debug               <span class="token builtin">bool</span>
+	sourcemap              <span class="token builtin">bool</span>
+	sourcemap_inline       <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+	sourcemap_src_included <span class="token builtin">bool</span>
+	is_vlines              <span class="token builtin">bool</span>
+	show_cc                <span class="token builtin">bool</span>
+	show_c_output          <span class="token builtin">bool</span>
+
+	dump_c_flags <span class="token builtin">string</span>
+
+	use_cache         <span class="token builtin">bool</span>
+	retry_compilation <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+	is_stats          <span class="token builtin">bool</span>
+
+	cflags <span class="token builtin">string</span>
+
+	m64                <span class="token builtin">bool</span>
+	ccompiler          <span class="token builtin">string</span>
+	ccompiler_type     CompilerType
+	third_party_option <span class="token builtin">string</span>
+	building_v         <span class="token builtin">bool</span>
+	autofree           <span class="token builtin">bool</span>
+
+	compress <span class="token builtin">bool</span>
+
+	enable_globals   <span class="token builtin">bool</span>
+	is_fmt           <span class="token builtin">bool</span>
+	is_vet           <span class="token builtin">bool</span>
+	is_bare          <span class="token builtin">bool</span>
+	no_preludes      <span class="token builtin">bool</span>
+	custom_prelude   <span class="token builtin">string</span>
+	lookup_path      <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	bare_builtin_dir <span class="token builtin">string</span>
+	output_cross_c   <span class="token builtin">bool</span>
+	prealloc         <span class="token builtin">bool</span>
+	vroot            <span class="token builtin">string</span>
+	out_name_c       <span class="token builtin">string</span>
+	out_name         <span class="token builtin">string</span>
+	path             <span class="token builtin">string</span>
+
+	compile_defines     <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	compile_defines_all <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	run_args            <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	printfn_list        <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	print_v_files       <span class="token builtin">bool</span>
+	skip_running        <span class="token builtin">bool</span>
+	skip_warnings       <span class="token builtin">bool</span>
+	warn_impure_v       <span class="token builtin">bool</span>
+	warns_are_errors    <span class="token builtin">bool</span>
+	fatal_errors        <span class="token builtin">bool</span>
+	reuse_tmpc          <span class="token builtin">bool</span>
+	use_color           ColorOutput
+	is_parallel         <span class="token builtin">bool</span>
+	error_limit         <span class="token builtin">int</span>
+	is_vweb             <span class="token builtin">bool</span>
+	only_check_syntax   <span class="token builtin">bool</span>
+	experimental        <span class="token builtin">bool</span>
+	skip_unused         <span class="token builtin">bool</span>
+	show_timings        <span class="token builtin">bool</span>
+	is_ios_simulator    <span class="token builtin">bool</span>
+	is_apk              <span class="token builtin">bool</span>
+	cleanup_files       <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	build_options       <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	cache_manager       vcache<span class="token punctuation">.</span>CacheManager
+	is_help             <span class="token builtin">bool</span>
+	gc_mode             GarbageCollectionMode <span class="token operator">=</span> <span class="token punctuation">.</span>no_gc
+	is_cstrict          <span class="token builtin">bool</span>
+	assert_failure_mode AssertFailureMode
+
+	checker_match_exhaustive_cutoff_limit <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">12</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Preferences.should_compile_asm" class="doc-node">
+							<div class="title"><h2>fn (Preferences) should_compile_asm <a href="#Preferences.should_compile_asm">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>prefs <span class="token operator">&</span>Preferences<span class="token punctuation">)</span> <span class="token function">should_compile_asm</span><span class="token punctuation">(</span>path <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="Preferences.should_compile_c" class="doc-node">
+							<div class="title"><h2>fn (Preferences) should_compile_c <a href="#Preferences.should_compile_c">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>prefs <span class="token operator">&</span>Preferences<span class="token punctuation">)</span> <span class="token function">should_compile_c</span><span class="token punctuation">(</span>file <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="Preferences.should_compile_filtered_files" class="doc-node">
+							<div class="title"><h2>fn (Preferences) should_compile_filtered_files <a href="#Preferences.should_compile_filtered_files">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>prefs <span class="token operator">&</span>Preferences<span class="token punctuation">)</span> <span class="token function">should_compile_filtered_files</span><span class="token punctuation">(</span>dir <span class="token builtin">string</span><span class="token punctuation">,</span> files_ <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="Preferences.should_compile_js" class="doc-node">
+							<div class="title"><h2>fn (Preferences) should_compile_js <a href="#Preferences.should_compile_js">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>prefs <span class="token operator">&</span>Preferences<span class="token punctuation">)</span> <span class="token function">should_compile_js</span><span class="token punctuation">(</span>file <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="Preferences.should_compile_native" class="doc-node">
+							<div class="title"><h2>fn (Preferences) should_compile_native <a href="#Preferences.should_compile_native">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>prefs <span class="token operator">&</span>Preferences<span class="token punctuation">)</span> <span class="token function">should_compile_native</span><span class="token punctuation">(</span>file <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="Preferences.vrun_elog" class="doc-node">
+							<div class="title"><h2>fn (Preferences) vrun_elog <a href="#Preferences.vrun_elog">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>pref <span class="token operator">&</span>Preferences<span class="token punctuation">)</span> <span class="token function">vrun_elog</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Preferences.fill_with_defaults" class="doc-node">
+							<div class="title"><h2>fn (Preferences) fill_with_defaults <a href="#Preferences.fill_with_defaults">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> p Preferences<span class="token punctuation">)</span> <span class="token function">fill_with_defaults</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:28
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#Constants">Constants</a></li>
+<li class="open"><a href="#arch_from_string">fn arch_from_string</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#parse_args">fn parse_args</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#os_from_string">fn os_from_string</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#backend_from_string">fn backend_from_string</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new_preferences">fn new_preferences</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#cc_from_string">fn cc_from_string</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_host_os">fn get_host_os</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_host_arch">fn get_host_arch</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#default_tcc_compiler">fn default_tcc_compiler</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#default_c_compiler">fn default_c_compiler</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#vexe_path">fn vexe_path</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#GarbageCollectionMode">enum GarbageCollectionMode</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#CompilerType">enum CompilerType</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ColorOutput">enum ColorOutput</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#BuildMode">enum BuildMode</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#OS">enum OS</a>        <ul>
+<li><a href="#OS.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Backend">enum Backend</a>        <ul>
+<li><a href="#Backend.is_js">fn is_js</a></li>
+</ul>
+</li>
+<li class="open"><a href="#OutputMode">enum OutputMode</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#AssertFailureMode">enum AssertFailureMode</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Arch">enum Arch</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Preferences">struct Preferences</a>        <ul>
+<li><a href="#Preferences.should_compile_asm">fn should_compile_asm</a></li>
+<li><a href="#Preferences.should_compile_c">fn should_compile_c</a></li>
+<li><a href="#Preferences.should_compile_filtered_files">fn should_compile_filtered_files</a></li>
+<li><a href="#Preferences.should_compile_js">fn should_compile_js</a></li>
+<li><a href="#Preferences.should_compile_native">fn should_compile_native</a></li>
+<li><a href="#Preferences.vrun_elog">fn vrun_elog</a></li>
+<li><a href="#Preferences.fill_with_defaults">fn fill_with_defaults</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

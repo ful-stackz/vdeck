@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>regex | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open active"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_regex" class="doc-node">
+							<div class="title"><h1> regex <a href="#readme_regex">#</a></h1></div><h1>V RegEx (Regular expression) 1.0 alpha</h1>
+<h2>Introduction</h2>
+<p>Here are the assumptions made during the writing of the implementation, that
+are valid for all the <code>regex</code> module features:</p>
+<ol>
+<li><p>The matching stops at the end of the string, <em>not</em> at newline characters.</p>
+</li>
+<li><p>The basic atomic elements of this regex engine are the tokens.
+In a query string a simple character is a token.</p>
+</li>
+</ol>
+<h2>Differences with PCRE:</h2>
+<p>NB: We must point out that the <strong>V-Regex module is not PCRE compliant</strong> and thus
+some behaviour will be different. This difference is due to the V philosophy,
+to have one way and keep it simple.</p>
+<p>The main differences can be summarized in the following points:</p>
+<ul>
+<li><p>The basic element <strong>is the token not the sequence of symbols</strong>, and the most
+simple token, is a single character.</p>
+</li>
+<li><p><code>|</code> <strong>the OR operator acts on tokens,</strong> for example <code>abc|ebc</code> is not
+<code>abc</code> OR <code>ebc</code>. Instead it is evaluated like <code>ab</code>, followed by <code>c OR e</code>,
+followed by <code>bc</code>, because the <strong>token is the base element</strong>,
+not the sequence of symbols.</p>
+</li>
+<li><p>The <strong>match operation stops at the end of the string</strong>. It does <em>NOT</em> stop
+at new line characters.</p>
+</li>
+</ul>
+<h2>Tokens</h2>
+<p>The tokens are the atomic units, used by this regex engine.
+They can be one of the following:</p>
+<h3>Simple char</h3>
+<p>This token is a simple single character like <code>a</code> or <code>b</code> etc.</p>
+<h3>Match positional delimiters</h3>
+<p><code>^</code> Matches the start of the string.</p>
+<p><code>$</code> Matches the end of the string.</p>
+<h3>Char class (cc)</h3>
+<p>The character classes match all the chars specified inside. Use square
+brackets <code>[ ]</code> to enclose them.</p>
+<p>The sequence of the chars in the character class, is evaluated with an OR op.</p>
+<p>For example, the cc <code>[abc]</code>, matches any character, that is <code>a</code> or <code>b</code> or <code>c</code>,
+but it doesn't match <code>C</code> or <code>z</code>.</p>
+<p>Inside a cc, it is possible to specify a &quot;range&quot; of characters, for example
+<code>[ad-h]</code> is equivalent to writing <code>[adefgh]</code>.</p>
+<p>A cc can have different ranges at the same time, for example <code>[a-zA-z0-9]</code>
+matches all the latin lowercase, uppercase and numeric characters.</p>
+<p>It is possible to negate the meaning of a cc, using the caret char at the
+start of the cc like this: <code>[^abc]</code> . That matches every char that is NOT
+<code>a</code> or <code>b</code> or <code>c</code>.</p>
+<p>A cc can contain meta-chars like: <code>[a-z\d]</code>, that match all the lowercase
+latin chars <code>a-z</code> and all the digits <code>\d</code>.</p>
+<p>It is possible to mix all the properties of the char class together.</p>
+<p>NB: In order to match the <code>-</code> (minus) char, it must be preceded by
+a backslash in the cc, for example <code>[\-_\d\a]</code> will match:
+<code>-</code> minus,
+<code>_</code> underscore,
+<code>\d</code> numeric chars,
+<code>\a</code> lower case chars.</p>
+<h3>Meta-chars</h3>
+<p>A meta-char is specified by a backslash, before a character.
+For example <code>\w</code> is the meta-char <code>w</code>.</p>
+<p>A meta-char can match different types of characters.</p>
+<ul>
+<li><code>\w</code> matches an alphanumeric char <code>[a-zA-Z0-9_]</code></li>
+<li><code>\W</code> matches a non alphanumeric char</li>
+<li><code>\d</code> matches a digit <code>[0-9]</code></li>
+<li><code>\D</code> matches a non digit</li>
+<li><code>\s</code> matches a space char, one of <code>[' ','\t','\n','\r','\v','\f']</code></li>
+<li><code>\S</code> matches a non space char</li>
+<li><code>\a</code> matches only a lowercase char <code>[a-z]</code></li>
+<li><code>\A</code> matches only an uppercase char <code>[A-Z]</code></li>
+</ul>
+<h3>Quantifier</h3>
+<p>Each token can have a quantifier, that specifies how many times the character
+must be matched.</p>
+<h4><strong>Short quantifiers</strong></h4>
+<ul>
+<li><code>?</code> matches 0 or 1 time, <code>a?b</code> matches both <code>ab</code> or <code>b</code></li>
+<li><code>+</code> matches <em>at least</em> 1 time, for example, <code>a+</code> matches both <code>aaa</code> or <code>a</code></li>
+<li><code>*</code> matches 0 or more times, for example, <code>a*b</code> matches <code>aaab</code>, <code>ab</code> or <code>b</code></li>
+</ul>
+<h4><strong>Long quantifiers</strong></h4>
+<ul>
+<li><code>{x}</code> matches exactly x times, <code>a{2}</code> matches <code>aa</code>, but not <code>aaa</code> or <code>a</code></li>
+<li><code>{min,}</code> matches at least min times, <code>a{2,}</code> matches <code>aaa</code> or <code>aa</code>, not <code>a</code></li>
+<li><code>{,max}</code> matches at least 0 times and at maximum max times,
+for example, <code>a{,2}</code> matches <code>a</code> and <code>aa</code>, but doesn't match <code>aaa</code></li>
+<li><code>{min,max}</code> matches from min times, to max times, for example
+<code>a{2,3}</code> matches <code>aa</code> and <code>aaa</code>, but doesn't match <code>a</code> or <code>aaaa</code></li>
+</ul>
+<p>A long quantifier, may have a <code>greedy off</code> flag, that is the <code>?</code>
+character after the brackets. <code>{2,4}?</code> means to match the minimum
+number of possible tokens, in this case 2.</p>
+<h3>Dot char</h3>
+<p>The dot is a particular meta-char, that matches &quot;any char&quot;.</p>
+<p>It is simpler to explain it with an example:</p>
+<p>Suppose you have <code>abccc ddeef</code> as a source string, that you want to parse
+with a regex. The following table show the query strings and the result of
+parsing source string.</p>
+<p>+--------------+-------------+
+| query string |   result    |
+|--------------|-------------|
+| <code>.*c</code>        | <code>abc</code>       |
+| <code>.*dd</code>	   | <code>abcc dd</code>   |
+| <code>ab.*e</code>      | <code>abccc dde</code> |
+| <code>ab.{3} .*e</code> | <code>abccc dde</code> |
++--------------+-------------+</p>
+<p>The dot matches any character, until the next token match is satisfied.</p>
+<h3>OR token</h3>
+<p>The token <code>|</code>, means a logic OR operation between two consecutive tokens,
+i.e. <code>a|b</code> matches a character that is <code>a</code> or <code>b</code>.</p>
+<p>The OR token can work in a &quot;chained way&quot;: <code>a|(b)|cd </code> means test first <code>a</code>,
+if the char is not <code>a</code>, then test the group <code>(b)</code>, and if the group doesn't
+match too, finally test the token <code>c</code>.</p>
+<p>NB: ** unlike in PCRE, the OR operation works at token level!**
+It doesn't work at concatenation level!</p>
+<p>That also means, that a query string like <code>abc|bde</code> is not equal to
+<code>(abc)|(bde)</code>, but instead to <code>ab(c|b)de. The OR operation works only for </code>c|b`, not at char concatenation level.</p>
+<h3>Groups</h3>
+<p>Groups are a method to create complex patterns with repetitions of blocks
+of tokens. The groups are delimited by round brackets <code>( )</code>. Groups can be
+nested. Like all other tokens, groups can have a quantifier too.</p>
+<p><code>c(pa)+z</code> match <code>cpapaz</code> or <code>cpaz</code> or <code>cpapapaz</code> .</p>
+<p><code>(c(pa)+z ?)+</code> matches <code>cpaz cpapaz cpapapaz</code> or <code>cpapaz</code></p>
+<p>Lets analyze this last case, first we have the group <code>#0</code>, that is the most
+outer round brackets <code>(...)+</code>. This group has a quantifier <code>+</code>, that say to
+match its content <em>at least one time</em>.</p>
+<p>Then we have a simple char token <code>c</code>, and a second group <code>#1</code>: <code>(pa)+</code>.
+This group also tries to match the sequence <code>pa</code>, <em>at least one time</em>,
+as specified by the <code>+</code> quantifier.</p>
+<p>Then, we have another simple token <code>z</code> and another simple token <code> ?</code>,
+i.e. the space char (ascii code 32) followed by the <code>?</code> quantifier,
+which means that the preceding space should be matched 0 or 1 time.</p>
+<p>This explains why the <code>(c(pa)+z ?)+</code> query string,
+can match <code>cpaz cpapaz cpapapaz</code> .</p>
+<p>In this implementation the groups are &quot;capture groups&quot;. This means that the
+last temporal result for each group, can be retrieved from the <code>RE</code> struct.</p>
+<p>The &quot;capture groups&quot; are stored as indexes in the field <code>groups</code>,
+that is an <code>[]int</code> inside the <code>RE</code> struct.</p>
+<p><strong>example:</strong></p>
+<pre><code class="language-v">text := 'cpaz cpapaz cpapapaz'
+query := r'(c(pa)+z ?)+'
+mut re := regex.regex_opt(query) or { panic(err) }
+println(re.get_query())
+// #0(c#1(pa)+z ?)+
+// #0 and #1 are the ids of the groups, are shown if re.debug is 1 or 2
+start, end := re.match_string(text)
+// [start=0, end=20]  match =&gt; [cpaz cpapaz cpapapaz]
+mut gi := 0
+for gi &lt; re.groups.len {
+    if re.groups[gi] &gt;= 0 {
+        println('${gi / 2} :[${text[re.groups[gi]..re.groups[gi + 1]]}]')
+    }
+    gi += 2
+}
+// groups captured
+// 0 :[cpapapaz]
+// 1 :[pa]
+</code></pre>
+<p><strong>note:</strong> <em>to show the <code>group id number</code> in the result of the <code>get_query()</code></em>
+<em>the flag <code>debug</code> of the RE object must be <code>1</code> or <code>2</code></em></p>
+<p>In order to simplify the use of the captured groups, it possible to use the
+utility function: <code>get_group_list</code>.</p>
+<p>This function return a list of groups using this support struct:</p>
+<pre><code class="language-v">pub struct Re_group {
+pub:
+    start int = -1
+    end   int = -1
+}
+</code></pre>
+<p>Here an example of use:</p>
+<pre><code class="language-v">/*
+This simple function converts an HTML RGB value with 3 or 6 hex digits to
+an u32 value, this function is not optimized and it is only for didatical
+purpose. Example: #A0B0CC #A9F
+*/
+fn convert_html_rgb(in_col string) u32 {
+    mut n_digit := if in_col.len == 4 { 1 } else { 2 }
+    mut col_mul := if in_col.len == 4 { 4 } else { 0 }
+    // this is the regex query, it use the V string interpolation to customize the regex query
+    // NOTE: if you want use escaped code you must use the r&quot;&quot; (raw) strings,
+    // *** please remember that the V interpoaltion doesn't work on raw strings. ***
+    query := '#([a-fA-F0-9]{$n_digit})([a-fA-F0-9]{$n_digit})([a-fA-F0-9]{$n_digit})'
+    mut re := regex.regex_opt(query) or { panic(err) }
+    start, end := re.match_string(in_col)
+    println('start: $start, end: $end')
+    mut res := u32(0)
+    if start &gt;= 0 {
+        group_list := re.get_group_list() // this is the utility function
+        r := ('0x' + in_col[group_list[0].start..group_list[0].end]).int() &lt;&lt; col_mul
+        g := ('0x' + in_col[group_list[1].start..group_list[1].end]).int() &lt;&lt; col_mul
+        b := ('0x' + in_col[group_list[2].start..group_list[2].end]).int() &lt;&lt; col_mul
+        println('r: $r g: $g b: $b')
+        res = u32(r) &lt;&lt; 16 | u32(g) &lt;&lt; 8 | u32(b)
+    }
+    return res
+}
+</code></pre>
+<p>Others utility functions are <code>get_group_by_id</code> and <code>get_group_bounds_by_id</code>
+that get  directly the string of a group using its <code>id</code>:</p>
+<pre><code class="language-v">txt := &quot;my used string....&quot;
+for g_index := 0; g_index &lt; re.group_count ; g_index++ {
+    println(&quot;#${g_index} [${re.get_group_by_id(txt, g_index)}] \
+        bounds: ${re.get_group_bounds_by_id(g_index)}&quot;) 
+}
+</code></pre>
+<p>More helper functions are listed in the <strong>Groups query functions</strong> section.</p>
+<h3>Groups Continuous saving</h3>
+<p>In particular situations, it is useful to have a continuous group saving.
+This is possible by initializing the <code>group_csave</code> field in the <code>RE</code> struct.</p>
+<p>This feature allows you to collect data in a continuous/streaming way.</p>
+<p>In the example, we can pass a text, followed by an integer list,
+that we wish to collect. To achieve this task, we can use the continuous
+group saving, by enabling the right flag: <code>re.group_csave_flag = true</code>.</p>
+<p>The <code>.group_csave</code> array will be filled then, following this logic:</p>
+<p><code>re.group_csave[0]</code> - number of total saved records
+<code>re.group_csave[1+n*3]</code> - id of the saved group
+<code>re.group_csave[1+n*3]</code> - start index in the source string of the saved group
+<code>re.group_csave[1+n*3]</code> - end index in the source string of the saved group</p>
+<p>The regex will save groups, until it finishes, or finds that the array has no
+more space. If the space ends, no error is raised, and further records will
+not be saved.</p>
+<pre><code class="language-v">import regex
+fn main(){
+    txt   := &quot;http://www.ciao.mondo/hello/pippo12_/pera.html&quot;
+    query := r&quot;(?P&lt;format&gt;https?)|(?P&lt;format&gt;ftps?)://(?P&lt;token&gt;[\w_]+.)+&quot;
+
+    mut re := regex.regex_opt(query) or { panic(err) }
+    //println(re.get_code())   // uncomment to see the print of the regex execution code
+    re.debug=2  // enable maximum log
+    println(&quot;String: ${txt}&quot;)
+    println(&quot;Query : ${re.get_query()}&quot;)
+    re.debug=0  // disable log
+    re.group_csave_flag = true
+    start, end := re.match_string(txt)
+    if start &gt;= 0 {
+        println(&quot;Match ($start, $end) =&gt; [${txt[start..end]}]&quot;)
+    } else {
+        println(&quot;No Match&quot;)
+    }
+
+    if re.group_csave_flag == true &amp;&amp; start &gt;= 0 &amp;&amp; re.group_csave.len &gt; 0{
+        println(&quot;cg: $re.group_csave&quot;)
+        mut cs_i := 1
+        for cs_i &lt; re.group_csave[0]*3 {
+            g_id := re.group_csave[cs_i]
+            st   := re.group_csave[cs_i+1]
+            en   := re.group_csave[cs_i+2]
+            println(&quot;cg[$g_id] $st $en:[${txt[st..en]}]&quot;)
+            cs_i += 3
+        }
+    }
+}
+</code></pre>
+<p>The output will be:</p>
+<pre><code>String: http://www.ciao.mondo/hello/pippo12_/pera.html
+Query : #0(?P&lt;format&gt;https?)|{8,14}#0(?P&lt;format&gt;ftps?)://#1(?P&lt;token&gt;[\w_]+.)+
+Match (0, 46) =&gt; [http://www.ciao.mondo/hello/pippo12_/pera.html]
+cg: [8, 0, 0, 4, 1, 7, 11, 1, 11, 16, 1, 16, 22, 1, 22, 28, 1, 28, 37, 1, 37, 42, 1, 42, 46]
+cg[0] 0 4:[http]
+cg[1] 7 11:[www.]
+cg[1] 11 16:[ciao.]
+cg[1] 16 22:[mondo/]
+cg[1] 22 28:[hello/]
+cg[1] 28 37:[pippo12_/]
+cg[1] 37 42:[pera.]
+cg[1] 42 46:[html]
+</code></pre>
+<h3>Named capturing groups</h3>
+<p>This regex module supports partially the question mark <code>?</code> PCRE syntax for groups.</p>
+<p><code>(?:abcd)</code> <strong>non capturing group</strong>:  the content of the group will not be saved.</p>
+<p><code>(?P&lt;mygroup&gt;abcdef)</code> <strong>named group:</strong> the group content is saved and labeled
+as <code>mygroup</code>.</p>
+<p>The label of the groups is saved in the <code>group_map</code> of the <code>RE</code> struct,
+that is a map from <code>string</code> to <code>int</code>, where the value is the index in
+<code>group_csave</code> list of indexes.</p>
+<p>Here is an example for how to use them:</p>
+<pre><code class="language-v">import regex
+fn main(){
+    txt   := &quot;http://www.ciao.mondo/hello/pippo12_/pera.html&quot;
+    query := r&quot;(?P&lt;format&gt;https?)|(?P&lt;format&gt;ftps?)://(?P&lt;token&gt;[\w_]+.)+&quot;
+
+    mut re := regex.regex_opt(query) or { panic(err) }
+    //println(re.get_code())   // uncomment to see the print of the regex execution code
+    re.debug=2  // enable maximum log
+    println(&quot;String: ${txt}&quot;)
+    println(&quot;Query : ${re.get_query()}&quot;)
+    re.debug=0  // disable log
+    start, end := re.match_string(txt)
+    if start &gt;= 0 {
+        println(&quot;Match ($start, $end) =&gt; [${txt[start..end]}]&quot;)
+    } else {
+        println(&quot;No Match&quot;)
+    }
+
+    for name in re.group_map.keys() {
+        println(&quot;group:'$name' \t=&gt; [${re.get_group_by_name(txt, name)}] \
+        bounds: ${re.get_group_bounds_by_name(name)}&quot;)
+    }
+}
+</code></pre>
+<p>Output:</p>
+<pre><code>String: http://www.ciao.mondo/hello/pippo12_/pera.html
+Query : #0(?P&lt;format&gt;https?)|{8,14}#0(?P&lt;format&gt;ftps?)://#1(?P&lt;token&gt;[\w_]+.)+
+Match (0, 46) =&gt; [http://www.ciao.mondo/hello/pippo12_/pera.html]
+group:'format' 	=&gt; [http] bounds: (0, 4)
+group:'token' 	=&gt; [html] bounds: (42, 46)
+</code></pre>
+<p>In order to simplify the use of the named groups, it is possible to
+use a name map in the <code>re</code> struct, using the function <code>re.get_group_by_name</code>.</p>
+<p>Here is a more complex example of using them:</p>
+<pre><code class="language-v">// This function demostrate the use of the named groups
+fn convert_html_rgb_n(in_col string) u32 {
+    mut n_digit := if in_col.len == 4 { 1 } else { 2 }
+    mut col_mul := if in_col.len == 4 { 4 } else { 0 }
+    query := '#(?P&lt;red&gt;[a-fA-F0-9]{$n_digit})' + '(?P&lt;green&gt;[a-fA-F0-9]{$n_digit})' +
+        '(?P&lt;blue&gt;[a-fA-F0-9]{$n_digit})'
+    mut re := regex.regex_opt(query) or { panic(err) }
+    start, end := re.match_string(in_col)
+    println('start: $start, end: $end')
+    mut res := u32(0)
+    if start &gt;= 0 {
+        red_s, red_e := re.get_group_by_name('red')
+        r := ('0x' + in_col[red_s..red_e]).int() &lt;&lt; col_mul
+        green_s, green_e := re.get_group_by_name('green')
+        g := ('0x' + in_col[green_s..green_e]).int() &lt;&lt; col_mul
+        blue_s, blue_e := re.get_group_by_name('blue')
+        b := ('0x' + in_col[blue_s..blue_e]).int() &lt;&lt; col_mul
+        println('r: $r g: $g b: $b')
+        res = u32(r) &lt;&lt; 16 | u32(g) &lt;&lt; 8 | u32(b)
+    }
+    return res
+}
+</code></pre>
+<p>Other utilities are <code>get_group_by_name</code> and <code>get_group_bounds_by_name</code>,
+that return the string of a group using its <code>name</code>:</p>
+<pre><code class="language-v">txt := &quot;my used string....&quot;
+for name in re.group_map.keys() {
+    println(&quot;group:'$name' \t=&gt; [${re.get_group_by_name(txt, name)}] \
+    bounds: ${re.get_group_bounds_by_name(name)}&quot;)
+}
+</code></pre>
+<h3>Groups query functions</h3>
+<p>These functions are helpers to query the captured groups</p>
+<pre><code class="language-v">// get_group_bounds_by_name get a group boundaries by its name
+pub fn (re RE) get_group_bounds_by_name(group_name string) (int, int) 
+
+// get_group_by_name get a group string by its name
+pub fn (re RE) get_group_by_name(group_name string) string
+
+// get_group_by_id get a group boundaries by its id
+pub fn (re RE) get_group_bounds_by_id(group_id int) (int,int)
+
+// get_group_by_id get a group string by its id
+pub fn (re RE) get_group_by_id(in_txt string, group_id int) string
+
+struct Re_group {
+pub:
+    start int = -1
+    end   int = -1
+}
+
+// get_group_list return a list of Re_group for the found groups
+pub fn (re RE) get_group_list() []Re_group
+</code></pre>
+<h2>Flags</h2>
+<p>It is possible to set some flags in the regex parser, that change
+the behavior of the parser itself.</p>
+<pre><code class="language-v">// example of flag settings
+mut re := regex.new()
+re.flag = regex.F_BIN
+</code></pre>
+<ul>
+<li><p><code>F_BIN</code>: parse a string as bytes, utf-8 management disabled.</p>
+</li>
+<li><p><code>F_EFM</code>: exit on the first char matches in the query, used by the
+find function.</p>
+</li>
+<li><p><code>F_MS</code>:  matches only if the index of the start match is 0,
+same as <code>^</code> at the start of the query string.</p>
+</li>
+<li><p><code>F_ME</code>:  matches only if the end index of the match is the last char
+of the input string, same as <code>$</code> end of query string.</p>
+</li>
+<li><p><code>F_NL</code>:  stop the matching if found a new line char <code>\n</code> or <code>\r</code></p>
+</li>
+</ul>
+<h2>Functions</h2>
+<h3>Initializer</h3>
+<p>These functions are helper that create the <code>RE</code> struct,
+a <code>RE</code> struct can be created manually if you needed.</p>
+<h4><strong>Simplified initializer</strong></h4>
+<pre><code class="language-v">// regex create a regex object from the query string and compile it
+pub fn regex_opt(in_query string) ?RE
+</code></pre>
+<h4><strong>Base initializer</strong></h4>
+<pre><code class="language-v">// new_regex create a REgex of small size, usually sufficient for ordinary use
+pub fn new() RE
+
+</code></pre>
+<h4><strong>Custom initialization</strong></h4>
+<p>For some particular needs, it is possible to initialize a fully customized regex:</p>
+<pre><code class="language-v">pattern = r&quot;ab(.*)(ac)&quot;
+// init custom regex
+mut re := regex.RE{}
+// max program length, can not be longer then the pattern
+re.prog = []Token    {len: pattern.len + 1}
+// can not be more char class the the length of the pattern
+re.cc   = []CharClass{len: pattern.len}
+
+re.group_csave_flag = false          // true enable continuos group saving if needed
+re.group_max_nested = 128            // set max 128 group nested possible
+re.group_max        = pattern.len&gt;&gt;1 // we can't have more groups than the half of the pattern legth
+re.group_stack = []int{len: re.group_max, init: -1}
+re.group_data  = []int{len: re.group_max, init: -1}
+</code></pre>
+<h3>Compiling</h3>
+<p>After an initializer is used, the regex expression must be compiled with:</p>
+<pre><code class="language-v">// compile compiles the REgex returning an error if the compilation fails
+pub fn (re mut RE) compile_opt(in_txt string) ?
+</code></pre>
+<h3>Matching Functions</h3>
+<p>These are the matching functions</p>
+<pre><code class="language-v">// match_string try to match the input string, return start and end index if found else start is -1
+pub fn (re mut RE) match_string(in_txt string) (int,int)
+
+</code></pre>
+<h2>Find and Replace</h2>
+<p>There are the following find  and replace functions:</p>
+<h4>Find functions</h4>
+<pre><code class="language-v">// find try to find the first match in the input string
+// return start and end index if found else start is -1
+pub fn (re mut RE) find(in_txt string) (int,int)
+
+// find_all find all the &quot;non overlapping&quot; occurrences of the matching pattern
+// return a list of start end indexes like: [3,4,6,8] 
+// the matches are [3,4] and [6,8]
+pub fn (re mut RE) find_all(in_txt string) []int
+
+// find_all find all the &quot;non overlapping&quot; occurrences of the matching pattern
+// return a list of strings
+// the result is like [&quot;first match&quot;,&quot;secon match&quot;]
+pub fn (mut re RE) find_all_str(in_txt string) []string
+</code></pre>
+<h4>Replace functions</h4>
+<pre><code class="language-v">// replace return a string where the matches are replaced with the repl_str string, 
+// this function support groups in the replace string
+pub fn (re mut RE) replace(in_txt string, repl string) string
+</code></pre>
+<p>replace string can include groups references:</p>
+<pre><code class="language-v">txt   := &quot;Today it is a good day.&quot;
+query := r'(a\w)[ ,.]'
+mut re := regex.regex_opt(query)?
+res := re.replace(txt, r&quot;__[\0]__&quot;)
+</code></pre>
+<p>in this example we used the group <code>0</code> in the replace string: <code>\0</code>, the result will be:</p>
+<pre><code>Today it is a good day. =&gt; Tod__[ay]__it is a good d__[ay]__
+</code></pre>
+<p><strong>Note:</strong> in the replace strings can be used only groups from <code>0</code> to <code>9</code>.</p>
+<p>If the usage of <code>groups</code> in the replace process, is not needed, it is possible
+to use a quick function:</p>
+<pre><code class="language-v">// replace_simple return a string where the matches are replaced with the replace string
+pub fn (mut re RE) replace_simple(in_txt string, repl string) string
+</code></pre>
+<h4>Custom replace function</h4>
+<p>For complex find and replace operations, you can use <code>replace_by_fn</code> .
+The <code>replace_by_fn</code>, uses a custom replace callback function, thus
+allowing customizations. The custom callback function is called for
+every non overlapped find.</p>
+<p>The custom callback function must be of the type:</p>
+<pre><code class="language-v">// type of function used for custom replace
+// in_txt  source text
+// start   index of the start of the match in in_txt
+// end     index of the end   of the match in in_txt
+// --- the match is in in_txt[start..end] ---
+fn (re RE, in_txt string, start int, end int) string 
+</code></pre>
+<p>The following example will clarify its usage:</p>
+<pre><code class="language-v">import regex
+// customized replace functions
+// it will be called on each non overlapped find
+fn my_repl(re regex.RE, in_txt string, start int, end int) string {
+    g0 := re.get_group_by_id(in_txt, 0)
+    g1 := re.get_group_by_id(in_txt, 1)
+    g2 := re.get_group_by_id(in_txt, 2)
+    return &quot;*$g0*$g1*$g2*&quot;    
+}
+
+fn main(){
+    txt   := &quot;today [John] is gone to his house with (Jack) and [Marie].&quot;
+    query := r&quot;(.)(\A\w+)(.)&quot;
+
+    mut re := regex.regex_opt(query) or { panic(err) }
+   
+    result := re.replace_by_fn(txt, my_repl)
+    println(result)
+}
+</code></pre>
+<p>Output:</p>
+<pre><code>today *[*John*]* is gone to his house with *(*Jack*)* and *[*Marie*]*.
+</code></pre>
+<h2>Debugging</h2>
+<p>This module has few small utilities to you write regex patterns.</p>
+<h3><strong>Syntax errors highlight</strong></h3>
+<p>The next example code shows how to visualize regex pattern syntax errors
+in the compilation phase:</p>
+<pre><code class="language-v">query := r'ciao da ab[ab-]'
+// there is an error, a range not closed!!
+mut re := new()
+re.compile_opt(query) or { println(err) }
+// output!!
+// query: ciao da ab[ab-]
+// err  : ----------^
+// ERROR: ERR_SYNTAX_ERROR
+</code></pre>
+<h3><strong>Compiled code</strong></h3>
+<p>It is possible to view the compiled code calling the function <code>get_query()</code>.
+The result will be something like this:</p>
+<pre><code>========================================
+v RegEx compiler v 1.0 alpha output:
+PC:  0 ist: 92000000 (        GROUP_START #:0 {  1,  1}
+PC:  1 ist: 98000000 .        DOT_CHAR nx chk: 4 {  1,  1}
+PC:  2 ist: 94000000 )        GROUP_END   #:0 {  1,  1}
+PC:  3 ist: 92000000 (        GROUP_START #:1 {  1,  1}
+PC:  4 ist: 90000000 [\A]     BSLS {  1,  1}
+PC:  5 ist: 90000000 [\w]     BSLS {  1,MAX}
+PC:  6 ist: 94000000 )        GROUP_END   #:1 {  1,  1}
+PC:  7 ist: 92000000 (        GROUP_START #:2 {  1,  1}
+PC:  8 ist: 98000000 .        DOT_CHAR nx chk: -1 last! {  1,  1}
+PC:  9 ist: 94000000 )        GROUP_END   #:2 {  1,  1}
+PC: 10 ist: 88000000 PROG_END {  0,  0}
+========================================
+
+</code></pre>
+<p><code>PC</code>:<code>int</code> is the program counter or step of execution, each single step is a token.</p>
+<p><code>ist</code>:<code>hex</code> is the token instruction id.</p>
+<p><code>[a]</code> is the char used by the token.</p>
+<p><code>query_ch</code> is the type of token.</p>
+<p><code>{m,n}</code> is the quantifier, the greedy off flag  <code>?</code>  will be showed if present in the token</p>
+<h3><strong>Log debug</strong></h3>
+<p>The log debugger allow to print the status of the regex parser when the
+parser is running. It is possible to have two different levels of
+debug information: 1 is normal, while 2 is verbose.</p>
+<p>Here is an example:</p>
+<p><em>normal</em> - list only the token instruction with their values</p>
+<pre><code class="language-ignore">// re.flag = 1 // log level normal
+flags: 00000000
+#   2 s:     ist_load PC:   i,ch,len:[  0,'a',1] f.m:[ -1, -1] query_ch: [a]{1,1}:0 (#-1)
+#   5 s:     ist_load PC:   i,ch,len:[  1,'b',1] f.m:[  0,  0] query_ch: [b]{2,3}:0? (#-1)
+#   7 s:     ist_load PC:   i,ch,len:[  2,'b',1] f.m:[  0,  1] query_ch: [b]{2,3}:1? (#-1)
+#  10 PROG_END
+</code></pre>
+<p><em>verbose</em> - list all the instructions and states of the parser</p>
+<pre><code class="language-ignore">flags: 00000000
+#   0 s:        start PC: NA
+#   1 s:     ist_next PC: NA
+#   2 s:     ist_load PC:   i,ch,len:[  0,'a',1] f.m:[ -1, -1] query_ch: [a]{1,1}:0 (#-1)
+#   3 s:  ist_quant_p PC:   i,ch,len:[  1,'b',1] f.m:[  0,  0] query_ch: [a]{1,1}:1 (#-1)
+#   4 s:     ist_next PC: NA
+#   5 s:     ist_load PC:   i,ch,len:[  1,'b',1] f.m:[  0,  0] query_ch: [b]{2,3}:0? (#-1)
+#   6 s:  ist_quant_p PC:   i,ch,len:[  2,'b',1] f.m:[  0,  1] query_ch: [b]{2,3}:1? (#-1)
+#   7 s:     ist_load PC:   i,ch,len:[  2,'b',1] f.m:[  0,  1] query_ch: [b]{2,3}:1? (#-1)
+#   8 s:  ist_quant_p PC:   i,ch,len:[  3,'b',1] f.m:[  0,  2] query_ch: [b]{2,3}:2? (#-1)
+#   9 s:     ist_next PC: NA
+#  10 PROG_END
+#  11 PROG_END
+</code></pre>
+<p>the columns have the following meaning:</p>
+<p><code>#   2</code> number of actual steps from the start of parsing</p>
+<p><code>s:     ist_next</code> state of the present step</p>
+<p><code>PC:   1</code> program counter of the step</p>
+<p><code>=&gt;7fffffff </code> hex code of the instruction</p>
+<p><code>i,ch,len:[  0,'a',1]</code> <code>i</code> index in the source string, <code>ch</code> the char parsed,
+<code>len</code> the length in byte of the char parsed</p>
+<p><code>f.m:[  0,  1]</code> <code>f</code> index of the first match in the source string, <code>m</code> index that is actual matching</p>
+<p><code>query_ch: [b]</code> token in use and its char</p>
+<p><code>{2,3}:1?</code> quantifier <code>{min,max}</code>, <code>:1</code> is the actual counter of repetition,
+<code>?</code> is the greedy off flag if present.</p>
+<h3><strong>Custom Logger output</strong></h3>
+<p>The debug functions output uses the <code>stdout</code> as default,
+it is possible to provide an alternative output, by setting a custom
+output function:</p>
+<pre><code class="language-v">// custom print function, the input will be the regex debug string
+fn custom_print(txt string) {
+    println('my log: $txt')
+}
+
+mut re := new()
+re.log_func = custom_print
+// every debug output from now will call this function
+</code></pre>
+<h2>Example code</h2>
+<p>Here an example that perform some basically match of strings</p>
+<pre><code class="language-v">import regex
+
+fn main(){
+    txt   := &quot;http://www.ciao.mondo/hello/pippo12_/pera.html&quot;
+    query := r&quot;(?P&lt;format&gt;https?)|(?P&lt;format&gt;ftps?)://(?P&lt;token&gt;[\w_]+.)+&quot;
+
+    mut re := regex.regex_opt(query) or { panic(err) }
+   
+    start, end := re.match_string(txt)
+    if start &gt;= 0 {
+        println(&quot;Match ($start, $end) =&gt; [${txt[start..end]}]&quot;)
+        for g_index := 0; g_index &lt; re.group_count ; g_index++ {
+            println(&quot;#${g_index} [${re.get_group_by_id(txt, g_index)}] \
+            bounds: ${re.get_group_bounds_by_id(g_index)}&quot;)  
+        }
+        for name in re.group_map.keys() {
+            println(&quot;group:'$name' \t=&gt; [${re.get_group_by_name(txt, name)}] \
+            bounds: ${re.get_group_bounds_by_name(name)}&quot;)
+        }
+    } else {
+        println(&quot;No Match&quot;)
+    }
+}
+</code></pre>
+<p>Here an example of total customization of the regex environment creation:</p>
+<pre><code class="language-v">import regex
+
+fn main(){
+    txt   := &quot;today John is gone to his house with Jack and Marie.&quot;
+    query := r&quot;(?:(?P&lt;word&gt;\A\w+)|(?:\a\w+)[\s.]?)+&quot;
+
+    // init regex
+    mut re := regex.RE{}
+    // max program length, can not be longer then the query
+    re.prog = []regex.Token    {len: query.len + 1} 
+    // can not be more char class the the length of the query
+    re.cc   = []regex.CharClass{len: query.len}     
+    re.prog = []regex.Token    {len: query.len+1}
+    // enable continuos group saving
+    re.group_csave_flag = true         
+    // set max 128 group nested
+    re.group_max_nested = 128          
+    // we can't have more groups than the half of the query legth 
+    re.group_max        = query.len&gt;&gt;1 
+    
+    // compile the query
+    re.compile_opt(query) or { panic(err) }
+
+    start, end := re.match_string(txt)
+    if start &gt;= 0 {
+        println(&quot;Match ($start, $end) =&gt; [${txt[start..end]}]&quot;)
+    } else {
+        println(&quot;No Match&quot;)
+    }
+
+    // show results for continuos group saving
+    if re.group_csave_flag == true &amp;&amp; start &gt;= 0 &amp;&amp; re.group_csave.len &gt; 0{
+        println(&quot;cg: $re.group_csave&quot;)
+        mut cs_i := 1
+        for cs_i &lt; re.group_csave[0]*3 {
+            g_id := re.group_csave[cs_i]
+            st   := re.group_csave[cs_i+1]
+            en   := re.group_csave[cs_i+2]
+            println(&quot;cg[$g_id] $st $en:[${txt[st..en]}]&quot;)
+            cs_i += 3
+        }
+    }
+
+    // show results for captured groups
+    if start &gt;= 0 {
+        println(&quot;Match ($start, $end) =&gt; [${txt[start..end]}]&quot;)
+        for g_index := 0; g_index &lt; re.group_count ; g_index++ {
+            println(&quot;#${g_index} [${re.get_group_by_id(txt, g_index)}] \
+            bounds: ${re.get_group_bounds_by_id(g_index)}&quot;)  
+        }
+        for name in re.group_map.keys() {
+            println(&quot;group:'$name' \t=&gt; [${re.get_group_by_name(txt, name)}] \
+            bounds: ${re.get_group_bounds_by_name(name)}&quot;)
+        }
+    } else {
+        println(&quot;No Match&quot;)
+    }
+}
+</code></pre>
+<p>More examples are available in the test code for the <code>regex</code> module,
+see <code>vlib/regex/regex_test.v</code>.</p>
+
+</section>
+
+						<section id="Constants" class="doc-node const">
+							<div class="title"><h2>Constants <a href="#Constants">#</a></h2></div>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	v_regex_version        <span class="token operator">=</span> <span class="token string">'1.0 alpha'</span>
+
+	max_code_len           <span class="token operator">=</span> <span class="token number">256</span>
+	max_quantifier         <span class="token operator">=</span> <span class="token number">1073741824</span>
+
+	spaces                 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token char">` `</span><span class="token punctuation">,</span> <span class="token char">`\t`</span><span class="token punctuation">,</span> <span class="token char">`\n`</span><span class="token punctuation">,</span> <span class="token char">`\r`</span><span class="token punctuation">,</span> <span class="token char">`\v`</span><span class="token punctuation">,</span> <span class="token char">`\f`</span><span class="token punctuation">]</span>
+
+	new_line_list          <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token char">`\n`</span><span class="token punctuation">,</span> <span class="token char">`\r`</span><span class="token punctuation">]</span>
+
+	no_match_found         <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+
+	compile_ok             <span class="token operator">=</span> <span class="token number">0</span>
+	err_char_unknown       <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">2</span>
+	err_undefined          <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">3</span>
+	err_internal_error     <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">4</span>
+	err_cc_alloc_overflow  <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">5</span>
+	err_syntax_error       <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">6</span>
+	err_groups_overflow    <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">7</span>
+	err_groups_max_nested  <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">8</span>
+	err_group_not_balanced <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">9</span>
+	err_group_qm_notation  <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">10</span>
+<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	f_nl  <span class="token operator">=</span> <span class="token number">0x00000001</span>
+	f_ms  <span class="token operator">=</span> <span class="token number">0x00000002</span>
+	f_me  <span class="token operator">=</span> <span class="token number">0x00000004</span>
+
+	f_efm <span class="token operator">=</span> <span class="token number">0x00000100</span>
+	f_bin <span class="token operator">=</span> <span class="token number">0x00000200</span>
+
+	f_src <span class="token operator">=</span> <span class="token number">0x00020000</span>
+<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="regex_base" class="doc-node">
+							<div class="title"><h2>fn regex_base <a href="#regex_base">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">regex_base</span><span class="token punctuation">(</span>pattern <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>RE<span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>regex create a regex object from the query string, retunr RE object and errors as re_err, err_pos</p>
+
+</section>
+						<section id="new" class="doc-node">
+							<div class="title"><h2>fn new <a href="#new">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span> RE</code></pre>
+<p>new_regex create a RE of small size, usually sufficient for ordinary use</p>
+
+</section>
+						<section id="regex_opt" class="doc-node">
+							<div class="title"><h2>fn regex_opt <a href="#regex_opt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">regex_opt</span><span class="token punctuation">(</span>pattern <span class="token builtin">string</span><span class="token punctuation">)</span> ?RE</code></pre>
+<p>regex_opt create new RE object from RE pattern string</p>
+
+</section>
+						<section id="FnReplace" class="doc-node">
+							<div class="title"><h2>type FnReplace <a href="#FnReplace">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> FnReplace <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>re RE<span class="token punctuation">,</span> in_txt <span class="token builtin">string</span><span class="token punctuation">,</span> start <span class="token builtin">int</span><span class="token punctuation">,</span> end <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>type of function used for custom replace  in_txt  source text  start   index of the start of the match in in_txt  end     index of the end   of the match in in_txt  the match is in in_txt[start..end]</p>
+
+</section>
+						<section id="FnLog" class="doc-node">
+							<div class="title"><h2>type FnLog <a href="#FnLog">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> FnLog <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="FnValidator" class="doc-node">
+							<div class="title"><h2>type FnValidator <a href="#FnValidator">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> FnValidator <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token builtin">byte</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="Re_group" class="doc-node">
+							<div class="title"><h2>struct Re_group <a href="#Re_group">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Re_group</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	start <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+	end   <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="RE" class="doc-node">
+							<div class="title"><h2>struct RE <a href="#RE">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">RE</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	prog     <span class="token punctuation">[</span><span class="token punctuation">]</span>Token
+	prog_len <span class="token builtin">int</span>
+
+	cc       <span class="token punctuation">[</span><span class="token punctuation">]</span>CharClass
+	cc_index <span class="token builtin">int</span>
+
+	group_count      <span class="token builtin">int</span>
+	groups           <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span>
+	group_max_nested <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">3</span>
+	group_max        <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">8</span>
+
+	state_list <span class="token punctuation">[</span><span class="token punctuation">]</span>StateObj
+
+	group_csave_flag <span class="token builtin">bool</span>
+	group_csave      <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span>
+
+	group_map <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">int</span>
+
+	group_stack <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span>
+	group_data  <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span>
+
+	flag <span class="token builtin">int</span>
+
+	debug    <span class="token builtin">int</span>
+	log_func FnLog <span class="token operator">=</span> simple_log
+	query    <span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="RE.compile_opt" class="doc-node">
+							<div class="title"><h2>fn (RE) compile_opt <a href="#RE.compile_opt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> re RE<span class="token punctuation">)</span> <span class="token function">compile_opt</span><span class="token punctuation">(</span>pattern <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>compile_opt compile RE pattern string</p>
+
+</section>
+						<section id="RE.find" class="doc-node">
+							<div class="title"><h2>fn (RE) find <a href="#RE.find">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> re RE<span class="token punctuation">)</span> <span class="token function">find</span><span class="token punctuation">(</span>in_txt <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>find try to find the first match in the input string</p>
+
+</section>
+						<section id="RE.find_all" class="doc-node">
+							<div class="title"><h2>fn (RE) find_all <a href="#RE.find_all">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> re RE<span class="token punctuation">)</span> <span class="token function">find_all</span><span class="token punctuation">(</span>in_txt <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span></code></pre>
+<p>find_all find all the non overlapping occurrences of the match pattern</p>
+
+</section>
+						<section id="RE.find_all_str" class="doc-node">
+							<div class="title"><h2>fn (RE) find_all_str <a href="#RE.find_all_str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> re RE<span class="token punctuation">)</span> <span class="token function">find_all_str</span><span class="token punctuation">(</span>in_txt <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>find_all_str find all the non overlapping occurrences of the match pattern, return a string list</p>
+
+</section>
+						<section id="RE.find_from" class="doc-node">
+							<div class="title"><h2>fn (RE) find_from <a href="#RE.find_from">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> re RE<span class="token punctuation">)</span> <span class="token function">find_from</span><span class="token punctuation">(</span>in_txt <span class="token builtin">string</span><span class="token punctuation">,</span> start <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>find try to find the first match in the input string strarting from start index</p>
+
+</section>
+						<section id="RE.get_code" class="doc-node">
+							<div class="title"><h2>fn (RE) get_code <a href="#RE.get_code">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>re RE<span class="token punctuation">)</span> <span class="token function">get_code</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_code return the compiled code as regex string, note: may be different from the source!</p>
+
+</section>
+						<section id="RE.get_group_bounds_by_id" class="doc-node">
+							<div class="title"><h2>fn (RE) get_group_bounds_by_id <a href="#RE.get_group_bounds_by_id">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>re RE<span class="token punctuation">)</span> <span class="token function">get_group_bounds_by_id</span><span class="token punctuation">(</span>group_id <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>get_group_by_id get a group boundaries by its id</p>
+
+</section>
+						<section id="RE.get_group_bounds_by_name" class="doc-node">
+							<div class="title"><h2>fn (RE) get_group_bounds_by_name <a href="#RE.get_group_bounds_by_name">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>re RE<span class="token punctuation">)</span> <span class="token function">get_group_bounds_by_name</span><span class="token punctuation">(</span>group_name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>get_group_bounds_by_name get a group boundaries by its name</p>
+
+</section>
+						<section id="RE.get_group_by_id" class="doc-node">
+							<div class="title"><h2>fn (RE) get_group_by_id <a href="#RE.get_group_by_id">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>re RE<span class="token punctuation">)</span> <span class="token function">get_group_by_id</span><span class="token punctuation">(</span>in_txt <span class="token builtin">string</span><span class="token punctuation">,</span> group_id <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_group_by_id get a group string by its id</p>
+
+</section>
+						<section id="RE.get_group_by_name" class="doc-node">
+							<div class="title"><h2>fn (RE) get_group_by_name <a href="#RE.get_group_by_name">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>re RE<span class="token punctuation">)</span> <span class="token function">get_group_by_name</span><span class="token punctuation">(</span>in_txt <span class="token builtin">string</span><span class="token punctuation">,</span> group_name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_group_by_name get a group boundaries by its name</p>
+
+</section>
+						<section id="RE.get_group_list" class="doc-node">
+							<div class="title"><h2>fn (RE) get_group_list <a href="#RE.get_group_list">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>re RE<span class="token punctuation">)</span> <span class="token function">get_group_list</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>Re_group</code></pre>
+<p>get_group_list return a list of Re_group for the found groups</p>
+
+</section>
+						<section id="RE.get_query" class="doc-node">
+							<div class="title"><h2>fn (RE) get_query <a href="#RE.get_query">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>re RE<span class="token punctuation">)</span> <span class="token function">get_query</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_query return a string with a reconstruction of the query starting from the regex program code</p>
+
+</section>
+						<section id="RE.match_base" class="doc-node">
+							<div class="title"><h2>fn (RE) match_base <a href="#RE.match_base">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> re RE<span class="token punctuation">)</span> <span class="token function">match_base</span><span class="token punctuation">(</span>in_txt <span class="token operator">&</span><span class="token builtin">byte</span><span class="token punctuation">,</span> in_txt_len <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="RE.match_string" class="doc-node">
+							<div class="title"><h2>fn (RE) match_string <a href="#RE.match_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> re RE<span class="token punctuation">)</span> <span class="token function">match_string</span><span class="token punctuation">(</span>in_txt <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>match_string Match the pattern with the in_txt string</p>
+
+</section>
+						<section id="RE.replace" class="doc-node">
+							<div class="title"><h2>fn (RE) replace <a href="#RE.replace">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> re RE<span class="token punctuation">)</span> <span class="token function">replace</span><span class="token punctuation">(</span>in_txt <span class="token builtin">string</span><span class="token punctuation">,</span> repl_str <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>replace return a string where the matches are replaced with the repl_str string,  this function support use groups in the replace string</p>
+
+</section>
+						<section id="RE.replace_by_fn" class="doc-node">
+							<div class="title"><h2>fn (RE) replace_by_fn <a href="#RE.replace_by_fn">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> re RE<span class="token punctuation">)</span> <span class="token function">replace_by_fn</span><span class="token punctuation">(</span>in_txt <span class="token builtin">string</span><span class="token punctuation">,</span> repl_fn FnReplace<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>replace_by_fn return a string where the matches are replaced with the string from the repl_fn callback function</p>
+
+</section>
+						<section id="RE.replace_simple" class="doc-node">
+							<div class="title"><h2>fn (RE) replace_simple <a href="#RE.replace_simple">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> re RE<span class="token punctuation">)</span> <span class="token function">replace_simple</span><span class="token punctuation">(</span>in_txt <span class="token builtin">string</span><span class="token punctuation">,</span> repl <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>replace_simple return a string where the matches are replaced with the replace string</p>
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:27
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#readme_regex">README</a></li>
+<li class="open"><a href="#Constants">Constants</a></li>
+<li class="open"><a href="#regex_base">fn regex_base</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new">fn new</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#regex_opt">fn regex_opt</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FnReplace">type FnReplace</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FnLog">type FnLog</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FnValidator">type FnValidator</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Re_group">struct Re_group</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#RE">struct RE</a>        <ul>
+<li><a href="#RE.compile_opt">fn compile_opt</a></li>
+<li><a href="#RE.find">fn find</a></li>
+<li><a href="#RE.find_all">fn find_all</a></li>
+<li><a href="#RE.find_all_str">fn find_all_str</a></li>
+<li><a href="#RE.find_from">fn find_from</a></li>
+<li><a href="#RE.get_code">fn get_code</a></li>
+<li><a href="#RE.get_group_bounds_by_id">fn get_group_bounds_by_id</a></li>
+<li><a href="#RE.get_group_bounds_by_name">fn get_group_bounds_by_name</a></li>
+<li><a href="#RE.get_group_by_id">fn get_group_by_id</a></li>
+<li><a href="#RE.get_group_by_name">fn get_group_by_name</a></li>
+<li><a href="#RE.get_group_list">fn get_group_list</a></li>
+<li><a href="#RE.get_query">fn get_query</a></li>
+<li><a href="#RE.match_base">fn match_base</a></li>
+<li><a href="#RE.match_string">fn match_string</a></li>
+<li><a href="#RE.replace">fn replace</a></li>
+<li><a href="#RE.replace_by_fn">fn replace_by_fn</a></li>
+<li><a href="#RE.replace_simple">fn replace_simple</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>v.checker | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li class="active"><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_v.checker" class="doc-node">
+							<div class="title"><h1> v.checker <a href="#readme_v.checker">#</a></h1></div>
+
+</section>
+
+						<section id="new_checker" class="doc-node">
+							<div class="title"><h2>fn new_checker <a href="#new_checker">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_checker</span><span class="token punctuation">(</span>table <span class="token operator">&</span>ast<span class="token punctuation">.</span>Table<span class="token punctuation">,</span> pref <span class="token operator">&</span>pref<span class="token punctuation">.</span>Preferences<span class="token punctuation">)</span> <span class="token operator">&</span>Checker</code></pre>
+
+
+</section>
+						<section id="Checker" class="doc-node">
+							<div class="title"><h2>struct Checker <a href="#Checker">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Checker</span> <span class="token punctuation">{</span>
+	pref <span class="token operator">&</span>pref<span class="token punctuation">.</span>Preferences
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	table            <span class="token operator">&</span>ast<span class="token punctuation">.</span>Table
+	file             <span class="token operator">&</span>ast<span class="token punctuation">.</span>File <span class="token operator">=</span> <span class="token number">0</span>
+	nr_errors        <span class="token builtin">int</span>
+	nr_warnings      <span class="token builtin">int</span>
+	nr_notices       <span class="token builtin">int</span>
+	errors           <span class="token punctuation">[</span><span class="token punctuation">]</span>errors<span class="token punctuation">.</span>Error
+	warnings         <span class="token punctuation">[</span><span class="token punctuation">]</span>errors<span class="token punctuation">.</span>Warning
+	notices          <span class="token punctuation">[</span><span class="token punctuation">]</span>errors<span class="token punctuation">.</span>Notice
+	error_lines      <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span>
+	expected_type    ast<span class="token punctuation">.</span>Type
+	expected_or_type ast<span class="token punctuation">.</span>Type
+	const_decl       <span class="token builtin">string</span>
+	const_deps       <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	const_names      <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	global_names     <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	locked_names     <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	rlocked_names    <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	in_for_count     <span class="token builtin">int</span>
+
+	returns        <span class="token builtin">bool</span>
+	scope_returns  <span class="token builtin">bool</span>
+	mod            <span class="token builtin">string</span>
+	is_builtin_mod <span class="token builtin">bool</span>
+	inside_unsafe  <span class="token builtin">bool</span>
+	inside_const   <span class="token builtin">bool</span>
+	inside_anon_fn <span class="token builtin">bool</span>
+	inside_ref_lit <span class="token builtin">bool</span>
+	inside_fn_arg  <span class="token builtin">bool</span>
+	inside_ct_attr <span class="token builtin">bool</span>
+	skip_flags     <span class="token builtin">bool</span>
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	files                            <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>File
+	expr_level                       <span class="token builtin">int</span>
+	inside_sql                       <span class="token builtin">bool</span>
+	cur_orm_ts                       ast<span class="token punctuation">.</span>TypeSymbol
+	error_details                    <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	vmod_file_content                <span class="token builtin">string</span>
+	vweb_gen_types                   <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Type
+	prevent_sum_type_unwrapping_once <span class="token builtin">bool</span>
+	loop_label                       <span class="token builtin">string</span>
+	timers                           <span class="token operator">&</span>util<span class="token punctuation">.</span>Timers <span class="token operator">=</span> util<span class="token punctuation">.</span><span class="token function">new_timers</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+	comptime_fields_type             <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Type
+	fn_scope                         <span class="token operator">&</span>ast<span class="token punctuation">.</span>Scope <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	main_fn_decl_node                ast<span class="token punctuation">.</span>FnDecl
+	match_exhaustive_cutoff_limit    <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">10</span>
+
+	using_new_err_struct     <span class="token builtin">bool</span>
+	inside_selector_expr     <span class="token builtin">bool</span>
+	inside_println_arg       <span class="token builtin">bool</span>
+	inside_decl_rhs          <span class="token builtin">bool</span>
+	need_recheck_generic_fns <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Checker.add_error_detail" class="doc-node">
+							<div class="title"><h2>fn (Checker) add_error_detail <a href="#Checker.add_error_detail">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">add_error_detail</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>call this <em>before</em> calling error or warn</p>
+
+</section>
+						<section id="Checker.alias_type_decl" class="doc-node">
+							<div class="title"><h2>fn (Checker) alias_type_decl <a href="#Checker.alias_type_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">alias_type_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>AliasTypeDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.array_init" class="doc-node">
+							<div class="title"><h2>fn (Checker) array_init <a href="#Checker.array_init">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">array_init</span><span class="token punctuation">(</span><span class="token keyword">mut</span> array_init ast<span class="token punctuation">.</span>ArrayInit<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.assign_stmt" class="doc-node">
+							<div class="title"><h2>fn (Checker) assign_stmt <a href="#Checker.assign_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">assign_stmt</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>AssignStmt<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.call_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) call_expr <a href="#Checker.call_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">call_expr</span><span class="token punctuation">(</span><span class="token keyword">mut</span> call_expr ast<span class="token punctuation">.</span>CallExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.cast_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) cast_expr <a href="#Checker.cast_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">cast_expr</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>CastExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+<p>pub fn (mut c Checker) asm_reg(mut node ast.AsmRegister) ast.Type {  	name := node.name  	for bit_size, array in ast.x86_no_number_register_list {  		if name in array {  			return c.table.bitsize_to_type(bit_size)  		}  	}  	for bit_size, array in ast.x86_with_number_register_list {  		if name in array {  			return c.table.bitsize_to_type(bit_size)  		}  	}  	c.error('invalid register name: <code>$name</code>', node.pos)  	return ast.void_type  }</p>
+
+</section>
+						<section id="Checker.chan_init" class="doc-node">
+							<div class="title"><h2>fn (Checker) chan_init <a href="#Checker.chan_init">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">chan_init</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>ChanInit<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.change_current_file" class="doc-node">
+							<div class="title"><h2>fn (Checker) change_current_file <a href="#Checker.change_current_file">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">change_current_file</span><span class="token punctuation">(</span>file <span class="token operator">&</span>ast<span class="token punctuation">.</span>File<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.check" class="doc-node">
+							<div class="title"><h2>fn (Checker) check <a href="#Checker.check">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">check</span><span class="token punctuation">(</span>ast_file <span class="token operator">&</span>ast<span class="token punctuation">.</span>File<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.check2" class="doc-node">
+							<div class="title"><h2>fn (Checker) check2 <a href="#Checker.check2">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">check2</span><span class="token punctuation">(</span>ast_file <span class="token operator">&</span>ast<span class="token punctuation">.</span>File<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>errors<span class="token punctuation">.</span>Error</code></pre>
+<p>not used right now</p>
+
+</section>
+						<section id="Checker.check_basic" class="doc-node">
+							<div class="title"><h2>fn (Checker) check_basic <a href="#Checker.check_basic">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">check_basic</span><span class="token punctuation">(</span>got ast<span class="token punctuation">.</span>Type<span class="token punctuation">,</span> expected ast<span class="token punctuation">.</span>Type<span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="Checker.check_dup_keys" class="doc-node">
+							<div class="title"><h2>fn (Checker) check_dup_keys <a href="#Checker.check_dup_keys">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">check_dup_keys</span><span class="token punctuation">(</span>node <span class="token operator">&</span>ast<span class="token punctuation">.</span>MapInit<span class="token punctuation">,</span> i <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.check_expected" class="doc-node">
+							<div class="title"><h2>fn (Checker) check_expected <a href="#Checker.check_expected">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">check_expected</span><span class="token punctuation">(</span>got ast<span class="token punctuation">.</span>Type<span class="token punctuation">,</span> expected ast<span class="token punctuation">.</span>Type<span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="Checker.check_expected_arg_count" class="doc-node">
+							<div class="title"><h2>fn (Checker) check_expected_arg_count <a href="#Checker.check_expected_arg_count">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">check_expected_arg_count</span><span class="token punctuation">(</span><span class="token keyword">mut</span> call_expr ast<span class="token punctuation">.</span>CallExpr<span class="token punctuation">,</span> f <span class="token operator">&</span>ast<span class="token punctuation">.</span>Fn<span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="Checker.check_expected_call_arg" class="doc-node">
+							<div class="title"><h2>fn (Checker) check_expected_call_arg <a href="#Checker.check_expected_call_arg">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">check_expected_call_arg</span><span class="token punctuation">(</span>got ast<span class="token punctuation">.</span>Type<span class="token punctuation">,</span> expected_ ast<span class="token punctuation">.</span>Type<span class="token punctuation">,</span> language ast<span class="token punctuation">.</span>Language<span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="Checker.check_expr_opt_call" class="doc-node">
+							<div class="title"><h2>fn (Checker) check_expr_opt_call <a href="#Checker.check_expr_opt_call">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">check_expr_opt_call</span><span class="token punctuation">(</span>expr ast<span class="token punctuation">.</span>Expr<span class="token punctuation">,</span> ret_type ast<span class="token punctuation">.</span>Type<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+<p>return the actual type of the expression, once the optional is handled</p>
+
+</section>
+						<section id="Checker.check_files" class="doc-node">
+							<div class="title"><h2>fn (Checker) check_files <a href="#Checker.check_files">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">check_files</span><span class="token punctuation">(</span>ast_files <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&</span>ast<span class="token punctuation">.</span>File<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.check_matching_function_symbols" class="doc-node">
+							<div class="title"><h2>fn (Checker) check_matching_function_symbols <a href="#Checker.check_matching_function_symbols">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">check_matching_function_symbols</span><span class="token punctuation">(</span>got_type_sym <span class="token operator">&</span>ast<span class="token punctuation">.</span>TypeSymbol<span class="token punctuation">,</span> exp_type_sym <span class="token operator">&</span>ast<span class="token punctuation">.</span>TypeSymbol<span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="Checker.check_or_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) check_or_expr <a href="#Checker.check_or_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">check_or_expr</span><span class="token punctuation">(</span>or_expr ast<span class="token punctuation">.</span>OrExpr<span class="token punctuation">,</span> ret_type ast<span class="token punctuation">.</span>Type<span class="token punctuation">,</span> expr_return_type ast<span class="token punctuation">.</span>Type<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.check_scope_vars" class="doc-node">
+							<div class="title"><h2>fn (Checker) check_scope_vars <a href="#Checker.check_scope_vars">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">check_scope_vars</span><span class="token punctuation">(</span>sc <span class="token operator">&</span>ast<span class="token punctuation">.</span>Scope<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.check_types" class="doc-node">
+							<div class="title"><h2>fn (Checker) check_types <a href="#Checker.check_types">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">check_types</span><span class="token punctuation">(</span>got ast<span class="token punctuation">.</span>Type<span class="token punctuation">,</span> expected ast<span class="token punctuation">.</span>Type<span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>TODO: promote(), check_types(), symmetric_check() and check() overlap - should be rearranged</p>
+
+</section>
+						<section id="Checker.concat_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) concat_expr <a href="#Checker.concat_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">concat_expr</span><span class="token punctuation">(</span><span class="token keyword">mut</span> concat_expr ast<span class="token punctuation">.</span>ConcatExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.const_decl" class="doc-node">
+							<div class="title"><h2>fn (Checker) const_decl <a href="#Checker.const_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">const_decl</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>ConstDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.ensure_sumtype_array_has_default_value" class="doc-node">
+							<div class="title"><h2>fn (Checker) ensure_sumtype_array_has_default_value <a href="#Checker.ensure_sumtype_array_has_default_value">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">ensure_sumtype_array_has_default_value</span><span class="token punctuation">(</span>array_init ast<span class="token punctuation">.</span>ArrayInit<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.enum_decl" class="doc-node">
+							<div class="title"><h2>fn (Checker) enum_decl <a href="#Checker.enum_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">enum_decl</span><span class="token punctuation">(</span>decl ast<span class="token punctuation">.</span>EnumDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.enum_val" class="doc-node">
+							<div class="title"><h2>fn (Checker) enum_val <a href="#Checker.enum_val">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">enum_val</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>EnumVal<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+<p><code>.green</code> or <code>Color.green</code>  If a short form is used, <code>expected_type</code> needs to be an enum  with this value.</p>
+
+</section>
+						<section id="Checker.error" class="doc-node">
+							<div class="title"><h2>fn (Checker) error <a href="#Checker.error">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">error</span><span class="token punctuation">(</span>message <span class="token builtin">string</span><span class="token punctuation">,</span> pos token<span class="token punctuation">.</span>Position<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.expand_iface_embeds" class="doc-node">
+							<div class="title"><h2>fn (Checker) expand_iface_embeds <a href="#Checker.expand_iface_embeds">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">expand_iface_embeds</span><span class="token punctuation">(</span>idecl <span class="token operator">&</span>ast<span class="token punctuation">.</span>InterfaceDecl<span class="token punctuation">,</span> level <span class="token builtin">int</span><span class="token punctuation">,</span> iface_embeds <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>InterfaceEmbedding<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>InterfaceEmbedding</code></pre>
+
+
+</section>
+						<section id="Checker.expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) expr <a href="#Checker.expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">expr</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>Expr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+<p>TODO node must be mut</p>
+
+</section>
+						<section id="Checker.fail_if_unreadable" class="doc-node">
+							<div class="title"><h2>fn (Checker) fail_if_unreadable <a href="#Checker.fail_if_unreadable">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">fail_if_unreadable</span><span class="token punctuation">(</span>expr ast<span class="token punctuation">.</span>Expr<span class="token punctuation">,</span> typ ast<span class="token punctuation">.</span>Type<span class="token punctuation">,</span> what <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.find_unreachable_statements_after_noreturn_calls" class="doc-node">
+							<div class="title"><h2>fn (Checker) find_unreachable_statements_after_noreturn_calls <a href="#Checker.find_unreachable_statements_after_noreturn_calls">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">find_unreachable_statements_after_noreturn_calls</span><span class="token punctuation">(</span>stmts <span class="token punctuation">[</span><span class="token punctuation">]</span>ast<span class="token punctuation">.</span>Stmt<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.fn_call" class="doc-node">
+							<div class="title"><h2>fn (Checker) fn_call <a href="#Checker.fn_call">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">fn_call</span><span class="token punctuation">(</span><span class="token keyword">mut</span> call_expr ast<span class="token punctuation">.</span>CallExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.fn_type_decl" class="doc-node">
+							<div class="title"><h2>fn (Checker) fn_type_decl <a href="#Checker.fn_type_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">fn_type_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>FnTypeDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.generic_insts_to_concrete" class="doc-node">
+							<div class="title"><h2>fn (Checker) generic_insts_to_concrete <a href="#Checker.generic_insts_to_concrete">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">generic_insts_to_concrete</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>generic struct instantiations to concrete types</p>
+
+</section>
+						<section id="Checker.get_base_name" class="doc-node">
+							<div class="title"><h2>fn (Checker) get_base_name <a href="#Checker.get_base_name">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">get_base_name</span><span class="token punctuation">(</span>node <span class="token operator">&</span>ast<span class="token punctuation">.</span>Expr<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="Checker.get_default_fmt" class="doc-node">
+							<div class="title"><h2>fn (Checker) get_default_fmt <a href="#Checker.get_default_fmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">get_default_fmt</span><span class="token punctuation">(</span>ftyp ast<span class="token punctuation">.</span>Type<span class="token punctuation">,</span> typ ast<span class="token punctuation">.</span>Type<span class="token punctuation">)</span> <span class="token builtin">byte</span></code></pre>
+
+
+</section>
+						<section id="Checker.ident" class="doc-node">
+							<div class="title"><h2>fn (Checker) ident <a href="#Checker.ident">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">ident</span><span class="token punctuation">(</span><span class="token keyword">mut</span> ident ast<span class="token punctuation">.</span>Ident<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.if_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) if_expr <a href="#Checker.if_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">if_expr</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>IfExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.index_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) index_expr <a href="#Checker.index_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">index_expr</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>IndexExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.infer_fn_generic_types" class="doc-node">
+							<div class="title"><h2>fn (Checker) infer_fn_generic_types <a href="#Checker.infer_fn_generic_types">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">infer_fn_generic_types</span><span class="token punctuation">(</span>f ast<span class="token punctuation">.</span>Fn<span class="token punctuation">,</span> <span class="token keyword">mut</span> call_expr ast<span class="token punctuation">.</span>CallExpr<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.infix_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) infix_expr <a href="#Checker.infix_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">infix_expr</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>InfixExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.int_lit" class="doc-node">
+							<div class="title"><h2>fn (Checker) int_lit <a href="#Checker.int_lit">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">int_lit</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>IntegerLiteral<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.interface_decl" class="doc-node">
+							<div class="title"><h2>fn (Checker) interface_decl <a href="#Checker.interface_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">interface_decl</span><span class="token punctuation">(</span><span class="token keyword">mut</span> decl ast<span class="token punctuation">.</span>InterfaceDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.lock_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) lock_expr <a href="#Checker.lock_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">lock_expr</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>LockExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.map_init" class="doc-node">
+							<div class="title"><h2>fn (Checker) map_init <a href="#Checker.map_init">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">map_init</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>MapInit<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.mark_as_referenced" class="doc-node">
+							<div class="title"><h2>fn (Checker) mark_as_referenced <a href="#Checker.mark_as_referenced">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">mark_as_referenced</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>Expr<span class="token punctuation">,</span> as_interface <span class="token builtin">bool</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.match_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) match_expr <a href="#Checker.match_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">match_expr</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>MatchExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.method_call" class="doc-node">
+							<div class="title"><h2>fn (Checker) method_call <a href="#Checker.method_call">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">method_call</span><span class="token punctuation">(</span><span class="token keyword">mut</span> call_expr ast<span class="token punctuation">.</span>CallExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.note" class="doc-node">
+							<div class="title"><h2>fn (Checker) note <a href="#Checker.note">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">note</span><span class="token punctuation">(</span>message <span class="token builtin">string</span><span class="token punctuation">,</span> pos token<span class="token punctuation">.</span>Position<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.offset_of" class="doc-node">
+							<div class="title"><h2>fn (Checker) offset_of <a href="#Checker.offset_of">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">offset_of</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>OffsetOf<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.postfix_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) postfix_expr <a href="#Checker.postfix_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">postfix_expr</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>PostfixExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.prefix_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) prefix_expr <a href="#Checker.prefix_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">prefix_expr</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>PrefixExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.promote" class="doc-node">
+							<div class="title"><h2>fn (Checker) promote <a href="#Checker.promote">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">promote</span><span class="token punctuation">(</span>left_type ast<span class="token punctuation">.</span>Type<span class="token punctuation">,</span> right_type ast<span class="token punctuation">.</span>Type<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.return_stmt" class="doc-node">
+							<div class="title"><h2>fn (Checker) return_stmt <a href="#Checker.return_stmt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">return_stmt</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>Return<span class="token punctuation">)</span></code></pre>
+<p>TODO: non deferred</p>
+
+</section>
+						<section id="Checker.select_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) select_expr <a href="#Checker.select_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">select_expr</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>SelectExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.selector_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) selector_expr <a href="#Checker.selector_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">selector_expr</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>SelectorExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.string_inter_lit" class="doc-node">
+							<div class="title"><h2>fn (Checker) string_inter_lit <a href="#Checker.string_inter_lit">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">string_inter_lit</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>StringInterLiteral<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.string_lit" class="doc-node">
+							<div class="title"><h2>fn (Checker) string_lit <a href="#Checker.string_lit">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">string_lit</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>StringLiteral<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.struct_decl" class="doc-node">
+							<div class="title"><h2>fn (Checker) struct_decl <a href="#Checker.struct_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">struct_decl</span><span class="token punctuation">(</span><span class="token keyword">mut</span> decl ast<span class="token punctuation">.</span>StructDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.struct_init" class="doc-node">
+							<div class="title"><h2>fn (Checker) struct_init <a href="#Checker.struct_init">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">struct_init</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>StructInit<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.sum_type_decl" class="doc-node">
+							<div class="title"><h2>fn (Checker) sum_type_decl <a href="#Checker.sum_type_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">sum_type_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>SumTypeDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.symmetric_check" class="doc-node">
+							<div class="title"><h2>fn (Checker) symmetric_check <a href="#Checker.symmetric_check">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">symmetric_check</span><span class="token punctuation">(</span>left ast<span class="token punctuation">.</span>Type<span class="token punctuation">,</span> right ast<span class="token punctuation">.</span>Type<span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="Checker.type_decl" class="doc-node">
+							<div class="title"><h2>fn (Checker) type_decl <a href="#Checker.type_decl">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">type_decl</span><span class="token punctuation">(</span>node ast<span class="token punctuation">.</span>TypeDecl<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Checker.unsafe_expr" class="doc-node">
+							<div class="title"><h2>fn (Checker) unsafe_expr <a href="#Checker.unsafe_expr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">unsafe_expr</span><span class="token punctuation">(</span><span class="token keyword">mut</span> node ast<span class="token punctuation">.</span>UnsafeExpr<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.unwrap_generic" class="doc-node">
+							<div class="title"><h2>fn (Checker) unwrap_generic <a href="#Checker.unwrap_generic">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">unwrap_generic</span><span class="token punctuation">(</span>typ ast<span class="token punctuation">.</span>Type<span class="token punctuation">)</span> ast<span class="token punctuation">.</span>Type</code></pre>
+
+
+</section>
+						<section id="Checker.warn" class="doc-node">
+							<div class="title"><h2>fn (Checker) warn <a href="#Checker.warn">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> c Checker<span class="token punctuation">)</span> <span class="token function">warn</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">,</span> pos token<span class="token punctuation">.</span>Position<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:27
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#new_checker">fn new_checker</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Checker">struct Checker</a>        <ul>
+<li><a href="#Checker.add_error_detail">fn add_error_detail</a></li>
+<li><a href="#Checker.alias_type_decl">fn alias_type_decl</a></li>
+<li><a href="#Checker.array_init">fn array_init</a></li>
+<li><a href="#Checker.assign_stmt">fn assign_stmt</a></li>
+<li><a href="#Checker.call_expr">fn call_expr</a></li>
+<li><a href="#Checker.cast_expr">fn cast_expr</a></li>
+<li><a href="#Checker.chan_init">fn chan_init</a></li>
+<li><a href="#Checker.change_current_file">fn change_current_file</a></li>
+<li><a href="#Checker.check">fn check</a></li>
+<li><a href="#Checker.check2">fn check2</a></li>
+<li><a href="#Checker.check_basic">fn check_basic</a></li>
+<li><a href="#Checker.check_dup_keys">fn check_dup_keys</a></li>
+<li><a href="#Checker.check_expected">fn check_expected</a></li>
+<li><a href="#Checker.check_expected_arg_count">fn check_expected_arg_count</a></li>
+<li><a href="#Checker.check_expected_call_arg">fn check_expected_call_arg</a></li>
+<li><a href="#Checker.check_expr_opt_call">fn check_expr_opt_call</a></li>
+<li><a href="#Checker.check_files">fn check_files</a></li>
+<li><a href="#Checker.check_matching_function_symbols">fn check_matching_function_symbols</a></li>
+<li><a href="#Checker.check_or_expr">fn check_or_expr</a></li>
+<li><a href="#Checker.check_scope_vars">fn check_scope_vars</a></li>
+<li><a href="#Checker.check_types">fn check_types</a></li>
+<li><a href="#Checker.concat_expr">fn concat_expr</a></li>
+<li><a href="#Checker.const_decl">fn const_decl</a></li>
+<li><a href="#Checker.ensure_sumtype_array_has_default_value">fn ensure_sumtype_array_has_default_value</a></li>
+<li><a href="#Checker.enum_decl">fn enum_decl</a></li>
+<li><a href="#Checker.enum_val">fn enum_val</a></li>
+<li><a href="#Checker.error">fn error</a></li>
+<li><a href="#Checker.expand_iface_embeds">fn expand_iface_embeds</a></li>
+<li><a href="#Checker.expr">fn expr</a></li>
+<li><a href="#Checker.fail_if_unreadable">fn fail_if_unreadable</a></li>
+<li><a href="#Checker.find_unreachable_statements_after_noreturn_calls">fn find_unreachable_statements_after_noreturn_calls</a></li>
+<li><a href="#Checker.fn_call">fn fn_call</a></li>
+<li><a href="#Checker.fn_type_decl">fn fn_type_decl</a></li>
+<li><a href="#Checker.generic_insts_to_concrete">fn generic_insts_to_concrete</a></li>
+<li><a href="#Checker.get_base_name">fn get_base_name</a></li>
+<li><a href="#Checker.get_default_fmt">fn get_default_fmt</a></li>
+<li><a href="#Checker.ident">fn ident</a></li>
+<li><a href="#Checker.if_expr">fn if_expr</a></li>
+<li><a href="#Checker.index_expr">fn index_expr</a></li>
+<li><a href="#Checker.infer_fn_generic_types">fn infer_fn_generic_types</a></li>
+<li><a href="#Checker.infix_expr">fn infix_expr</a></li>
+<li><a href="#Checker.int_lit">fn int_lit</a></li>
+<li><a href="#Checker.interface_decl">fn interface_decl</a></li>
+<li><a href="#Checker.lock_expr">fn lock_expr</a></li>
+<li><a href="#Checker.map_init">fn map_init</a></li>
+<li><a href="#Checker.mark_as_referenced">fn mark_as_referenced</a></li>
+<li><a href="#Checker.match_expr">fn match_expr</a></li>
+<li><a href="#Checker.method_call">fn method_call</a></li>
+<li><a href="#Checker.note">fn note</a></li>
+<li><a href="#Checker.offset_of">fn offset_of</a></li>
+<li><a href="#Checker.postfix_expr">fn postfix_expr</a></li>
+<li><a href="#Checker.prefix_expr">fn prefix_expr</a></li>
+<li><a href="#Checker.promote">fn promote</a></li>
+<li><a href="#Checker.return_stmt">fn return_stmt</a></li>
+<li><a href="#Checker.select_expr">fn select_expr</a></li>
+<li><a href="#Checker.selector_expr">fn selector_expr</a></li>
+<li><a href="#Checker.string_inter_lit">fn string_inter_lit</a></li>
+<li><a href="#Checker.string_lit">fn string_lit</a></li>
+<li><a href="#Checker.struct_decl">fn struct_decl</a></li>
+<li><a href="#Checker.struct_init">fn struct_init</a></li>
+<li><a href="#Checker.sum_type_decl">fn sum_type_decl</a></li>
+<li><a href="#Checker.symmetric_check">fn symmetric_check</a></li>
+<li><a href="#Checker.type_decl">fn type_decl</a></li>
+<li><a href="#Checker.unsafe_expr">fn unsafe_expr</a></li>
+<li><a href="#Checker.unwrap_generic">fn unwrap_generic</a></li>
+<li><a href="#Checker.warn">fn warn</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

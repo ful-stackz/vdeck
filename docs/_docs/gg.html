@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>gg | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open active"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_gg" class="doc-node">
+							<div class="title"><h1> gg <a href="#readme_gg">#</a></h1></div>
+
+</section>
+
+						<section id="high_dpi" class="doc-node">
+							<div class="title"><h2>fn high_dpi <a href="#high_dpi">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">high_dpi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="window_size" class="doc-node">
+							<div class="title"><h2>fn window_size <a href="#window_size">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">window_size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Size</code></pre>
+<p>window_size returns the <code>Size</code> of the active window</p>
+
+</section>
+						<section id="dpi_scale" class="doc-node">
+							<div class="title"><h2>fn dpi_scale <a href="#dpi_scale">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">dpi_scale</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">f32</span></code></pre>
+
+
+</section>
+						<section id="system_font_path" class="doc-node">
+							<div class="title"><h2>fn system_font_path <a href="#system_font_path">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">system_font_path</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="screen_size" class="doc-node">
+							<div class="title"><h2>fn screen_size <a href="#screen_size">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">screen_size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Size</code></pre>
+
+
+</section>
+						<section id="new_context" class="doc-node">
+							<div class="title"><h2>fn new_context <a href="#new_context">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_context</span><span class="token punctuation">(</span>cfg Config<span class="token punctuation">)</span> <span class="token operator">&</span>Context</code></pre>
+
+
+</section>
+						<section id="window_size_real_pixels" class="doc-node">
+							<div class="title"><h2>fn window_size_real_pixels <a href="#window_size_real_pixels">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">window_size_real_pixels</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Size</code></pre>
+<p>window_size_real_pixels returns the <code>Size</code> of the active window without scale</p>
+
+</section>
+						<section id="FNClick" class="doc-node">
+							<div class="title"><h2>type FNClick <a href="#FNClick">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> FNClick <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> button MouseButton<span class="token punctuation">,</span> data <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="FNEvent" class="doc-node">
+							<div class="title"><h2>type FNEvent <a href="#FNEvent">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> FNEvent <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>e <span class="token operator">&</span>Event<span class="token punctuation">,</span> data <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="FNFail" class="doc-node">
+							<div class="title"><h2>type FNFail <a href="#FNFail">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> FNFail <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>msg <span class="token builtin">string</span><span class="token punctuation">,</span> data <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="FNKeyDown" class="doc-node">
+							<div class="title"><h2>type FNKeyDown <a href="#FNKeyDown">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> FNKeyDown <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>c KeyCode<span class="token punctuation">,</span> m Modifier<span class="token punctuation">,</span> data <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="FNKeyUp" class="doc-node">
+							<div class="title"><h2>type FNKeyUp <a href="#FNKeyUp">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> FNKeyUp <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>c KeyCode<span class="token punctuation">,</span> m Modifier<span class="token punctuation">,</span> data <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="FNMove" class="doc-node">
+							<div class="title"><h2>type FNMove <a href="#FNMove">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> FNMove <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> data <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="FNUnClick" class="doc-node">
+							<div class="title"><h2>type FNUnClick <a href="#FNUnClick">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> FNUnClick <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> button MouseButton<span class="token punctuation">,</span> data <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="FT.flush" class="doc-node">
+							<div class="title"><h2>fn (FT) flush <a href="#FT.flush">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ft <span class="token operator">&</span>FT<span class="token punctuation">)</span> <span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="FNChar" class="doc-node">
+							<div class="title"><h2>type FNChar <a href="#FNChar">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> FNChar <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token builtin">u32</span><span class="token punctuation">,</span> data <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="FNCb" class="doc-node">
+							<div class="title"><h2>type FNCb <a href="#FNCb">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> FNCb <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>data <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Modifier" class="doc-node">
+							<div class="title"><h2>enum Modifier <a href="#Modifier">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Modifier</span> <span class="token punctuation">{</span>
+	shift
+	ctrl
+	alt
+	super
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="MouseButton" class="doc-node">
+							<div class="title"><h2>enum MouseButton <a href="#MouseButton">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">MouseButton</span> <span class="token punctuation">{</span>
+	left <span class="token operator">=</span> <span class="token number">0</span>
+	right <span class="token operator">=</span> <span class="token number">1</span>
+	middle <span class="token operator">=</span> <span class="token number">2</span>
+	invalid <span class="token operator">=</span> <span class="token number">256</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="MouseButtons" class="doc-node">
+							<div class="title"><h2>enum MouseButtons <a href="#MouseButtons">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">MouseButtons</span> <span class="token punctuation">{</span>
+	left
+	right
+	middle
+<span class="token punctuation">}</span></code></pre>
+<p>NB: unlike the MouseButton enum from above,  the [flag]-ed enum here can have combined states,  representing several pressed buttons at once.</p>
+
+</section>
+						<section id="KeyCode" class="doc-node">
+							<div class="title"><h2>enum KeyCode <a href="#KeyCode">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">KeyCode</span> <span class="token punctuation">{</span>
+	invalid <span class="token operator">=</span> <span class="token number">0</span>
+	space <span class="token operator">=</span> <span class="token number">32</span>
+	apostrophe <span class="token operator">=</span> <span class="token number">39</span>
+	comma <span class="token operator">=</span> <span class="token number">44</span>
+	minus <span class="token operator">=</span> <span class="token number">45</span>
+	period <span class="token operator">=</span> <span class="token number">46</span>
+	slash <span class="token operator">=</span> <span class="token number">47</span>
+	_0 <span class="token operator">=</span> <span class="token number">48</span>
+	_1 <span class="token operator">=</span> <span class="token number">49</span>
+	_2 <span class="token operator">=</span> <span class="token number">50</span>
+	_3 <span class="token operator">=</span> <span class="token number">51</span>
+	_4 <span class="token operator">=</span> <span class="token number">52</span>
+	_5 <span class="token operator">=</span> <span class="token number">53</span>
+	_6 <span class="token operator">=</span> <span class="token number">54</span>
+	_7 <span class="token operator">=</span> <span class="token number">55</span>
+	_8 <span class="token operator">=</span> <span class="token number">56</span>
+	_9 <span class="token operator">=</span> <span class="token number">57</span>
+	semicolon <span class="token operator">=</span> <span class="token number">59</span>
+	equal <span class="token operator">=</span> <span class="token number">61</span>
+	a <span class="token operator">=</span> <span class="token number">65</span>
+	b <span class="token operator">=</span> <span class="token number">66</span>
+	c <span class="token operator">=</span> <span class="token number">67</span>
+	d <span class="token operator">=</span> <span class="token number">68</span>
+	e <span class="token operator">=</span> <span class="token number">69</span>
+	f <span class="token operator">=</span> <span class="token number">70</span>
+	g <span class="token operator">=</span> <span class="token number">71</span>
+	h <span class="token operator">=</span> <span class="token number">72</span>
+	i <span class="token operator">=</span> <span class="token number">73</span>
+	j <span class="token operator">=</span> <span class="token number">74</span>
+	k <span class="token operator">=</span> <span class="token number">75</span>
+	l <span class="token operator">=</span> <span class="token number">76</span>
+	m <span class="token operator">=</span> <span class="token number">77</span>
+	n <span class="token operator">=</span> <span class="token number">78</span>
+	o <span class="token operator">=</span> <span class="token number">79</span>
+	p <span class="token operator">=</span> <span class="token number">80</span>
+	q <span class="token operator">=</span> <span class="token number">81</span>
+	r <span class="token operator">=</span> <span class="token number">82</span>
+	s <span class="token operator">=</span> <span class="token number">83</span>
+	t <span class="token operator">=</span> <span class="token number">84</span>
+	u <span class="token operator">=</span> <span class="token number">85</span>
+	v <span class="token operator">=</span> <span class="token number">86</span>
+	w <span class="token operator">=</span> <span class="token number">87</span>
+	x <span class="token operator">=</span> <span class="token number">88</span>
+	y <span class="token operator">=</span> <span class="token number">89</span>
+	z <span class="token operator">=</span> <span class="token number">90</span>
+	left_bracket <span class="token operator">=</span> <span class="token number">91</span>
+	backslash <span class="token operator">=</span> <span class="token number">92</span>
+	right_bracket <span class="token operator">=</span> <span class="token number">93</span>
+	grave_accent <span class="token operator">=</span> <span class="token number">96</span>
+	world_1 <span class="token operator">=</span> <span class="token number">161</span>
+	world_2 <span class="token operator">=</span> <span class="token number">162</span>
+	escape <span class="token operator">=</span> <span class="token number">256</span>
+	enter <span class="token operator">=</span> <span class="token number">257</span>
+	tab <span class="token operator">=</span> <span class="token number">258</span>
+	backspace <span class="token operator">=</span> <span class="token number">259</span>
+	insert <span class="token operator">=</span> <span class="token number">260</span>
+	delete <span class="token operator">=</span> <span class="token number">261</span>
+	right <span class="token operator">=</span> <span class="token number">262</span>
+	left <span class="token operator">=</span> <span class="token number">263</span>
+	down <span class="token operator">=</span> <span class="token number">264</span>
+	up <span class="token operator">=</span> <span class="token number">265</span>
+	page_up <span class="token operator">=</span> <span class="token number">266</span>
+	page_down <span class="token operator">=</span> <span class="token number">267</span>
+	home <span class="token operator">=</span> <span class="token number">268</span>
+	end <span class="token operator">=</span> <span class="token number">269</span>
+	caps_lock <span class="token operator">=</span> <span class="token number">280</span>
+	scroll_lock <span class="token operator">=</span> <span class="token number">281</span>
+	num_lock <span class="token operator">=</span> <span class="token number">282</span>
+	print_screen <span class="token operator">=</span> <span class="token number">283</span>
+	pause <span class="token operator">=</span> <span class="token number">284</span>
+	f1 <span class="token operator">=</span> <span class="token number">290</span>
+	f2 <span class="token operator">=</span> <span class="token number">291</span>
+	f3 <span class="token operator">=</span> <span class="token number">292</span>
+	f4 <span class="token operator">=</span> <span class="token number">293</span>
+	f5 <span class="token operator">=</span> <span class="token number">294</span>
+	f6 <span class="token operator">=</span> <span class="token number">295</span>
+	f7 <span class="token operator">=</span> <span class="token number">296</span>
+	f8 <span class="token operator">=</span> <span class="token number">297</span>
+	f9 <span class="token operator">=</span> <span class="token number">298</span>
+	f10 <span class="token operator">=</span> <span class="token number">299</span>
+	f11 <span class="token operator">=</span> <span class="token number">300</span>
+	f12 <span class="token operator">=</span> <span class="token number">301</span>
+	f13 <span class="token operator">=</span> <span class="token number">302</span>
+	f14 <span class="token operator">=</span> <span class="token number">303</span>
+	f15 <span class="token operator">=</span> <span class="token number">304</span>
+	f16 <span class="token operator">=</span> <span class="token number">305</span>
+	f17 <span class="token operator">=</span> <span class="token number">306</span>
+	f18 <span class="token operator">=</span> <span class="token number">307</span>
+	f19 <span class="token operator">=</span> <span class="token number">308</span>
+	f20 <span class="token operator">=</span> <span class="token number">309</span>
+	f21 <span class="token operator">=</span> <span class="token number">310</span>
+	f22 <span class="token operator">=</span> <span class="token number">311</span>
+	f23 <span class="token operator">=</span> <span class="token number">312</span>
+	f24 <span class="token operator">=</span> <span class="token number">313</span>
+	f25 <span class="token operator">=</span> <span class="token number">314</span>
+	kp_0 <span class="token operator">=</span> <span class="token number">320</span>
+	kp_1 <span class="token operator">=</span> <span class="token number">321</span>
+	kp_2 <span class="token operator">=</span> <span class="token number">322</span>
+	kp_3 <span class="token operator">=</span> <span class="token number">323</span>
+	kp_4 <span class="token operator">=</span> <span class="token number">324</span>
+	kp_5 <span class="token operator">=</span> <span class="token number">325</span>
+	kp_6 <span class="token operator">=</span> <span class="token number">326</span>
+	kp_7 <span class="token operator">=</span> <span class="token number">327</span>
+	kp_8 <span class="token operator">=</span> <span class="token number">328</span>
+	kp_9 <span class="token operator">=</span> <span class="token number">329</span>
+	kp_decimal <span class="token operator">=</span> <span class="token number">330</span>
+	kp_divide <span class="token operator">=</span> <span class="token number">331</span>
+	kp_multiply <span class="token operator">=</span> <span class="token number">332</span>
+	kp_subtract <span class="token operator">=</span> <span class="token number">333</span>
+	kp_add <span class="token operator">=</span> <span class="token number">334</span>
+	kp_enter <span class="token operator">=</span> <span class="token number">335</span>
+	kp_equal <span class="token operator">=</span> <span class="token number">336</span>
+	left_shift <span class="token operator">=</span> <span class="token number">340</span>
+	left_control <span class="token operator">=</span> <span class="token number">341</span>
+	left_alt <span class="token operator">=</span> <span class="token number">342</span>
+	left_super <span class="token operator">=</span> <span class="token number">343</span>
+	right_shift <span class="token operator">=</span> <span class="token number">344</span>
+	right_control <span class="token operator">=</span> <span class="token number">345</span>
+	right_alt <span class="token operator">=</span> <span class="token number">346</span>
+	right_super <span class="token operator">=</span> <span class="token number">347</span>
+	menu <span class="token operator">=</span> <span class="token number">348</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="PenLineType" class="doc-node">
+							<div class="title"><h2>enum PenLineType <a href="#PenLineType">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">PenLineType</span> <span class="token punctuation">{</span>
+	solid
+	dashed
+	dotted
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Image" class="doc-node">
+							<div class="title"><h2>struct Image <a href="#Image">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Image</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	id          <span class="token builtin">int</span>
+	width       <span class="token builtin">int</span>
+	height      <span class="token builtin">int</span>
+	nr_channels <span class="token builtin">int</span>
+	ok          <span class="token builtin">bool</span>
+	data        <span class="token builtin">voidptr</span>
+	ext         <span class="token builtin">string</span>
+	simg_ok     <span class="token builtin">bool</span>
+	simg        C<span class="token punctuation">.</span>sg_image
+	path        <span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Image.init_sokol_image" class="doc-node">
+							<div class="title"><h2>fn (Image) init_sokol_image <a href="#Image.init_sokol_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> img Image<span class="token punctuation">)</span> <span class="token function">init_sokol_image</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&</span>Image</code></pre>
+
+
+</section>
+						<section id="Image.update_pixel_data" class="doc-node">
+							<div class="title"><h2>fn (Image) update_pixel_data <a href="#Image.update_pixel_data">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> img Image<span class="token punctuation">)</span> <span class="token function">update_pixel_data</span><span class="token punctuation">(</span>buf <span class="token operator">&</span><span class="token builtin">byte</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Rect" class="doc-node">
+							<div class="title"><h2>struct Rect <a href="#Rect">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Rect</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	x      <span class="token builtin">f32</span>
+	y      <span class="token builtin">f32</span>
+	width  <span class="token builtin">f32</span>
+	height <span class="token builtin">f32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Event" class="doc-node">
+							<div class="title"><h2>struct Event <a href="#Event">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Event</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	frame_count        <span class="token builtin">u64</span>
+	typ                sapp<span class="token punctuation">.</span>EventType
+	key_code           KeyCode
+	char_code          <span class="token builtin">u32</span>
+	key_repeat         <span class="token builtin">bool</span>
+	modifiers          <span class="token builtin">u32</span>
+	mouse_button       MouseButton
+	mouse_x            <span class="token builtin">f32</span>
+	mouse_y            <span class="token builtin">f32</span>
+	mouse_dx           <span class="token builtin">f32</span>
+	mouse_dy           <span class="token builtin">f32</span>
+	scroll_x           <span class="token builtin">f32</span>
+	scroll_y           <span class="token builtin">f32</span>
+	num_touches        <span class="token builtin">int</span>
+	touches            <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sapp_touchpoint
+	window_width       <span class="token builtin">int</span>
+	window_height      <span class="token builtin">int</span>
+	framebuffer_width  <span class="token builtin">int</span>
+	framebuffer_height <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Size" class="doc-node">
+							<div class="title"><h2>struct Size <a href="#Size">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Size</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	width  <span class="token builtin">int</span>
+	height <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="DrawImageConfig" class="doc-node">
+							<div class="title"><h2>struct DrawImageConfig <a href="#DrawImageConfig">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">DrawImageConfig</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	flip_x    <span class="token builtin">bool</span>
+	flip_y    <span class="token builtin">bool</span>
+	img       <span class="token operator">&</span>Image <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	img_id    <span class="token builtin">int</span>
+	img_rect  Rect
+	part_rect Rect
+	rotate    <span class="token builtin">int</span>
+	z         <span class="token builtin">f32</span>
+<span class="token punctuation">}</span></code></pre>
+<p>DrawImageConfig struct defines the various options  that can be used to draw an image onto the screen</p>
+
+</section>
+						<section id="Context" class="doc-node">
+							<div class="title"><h2>struct Context <a href="#Context">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Context</span> <span class="token punctuation">{</span>
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	render_text <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+
+	image_cache   <span class="token punctuation">[</span><span class="token punctuation">]</span>Image
+	needs_refresh <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+	ticks         <span class="token builtin">int</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	native_rendering <span class="token builtin">bool</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	scale <span class="token builtin">f32</span> <span class="token operator">=</span> <span class="token number">1.0</span>
+
+	width       <span class="token builtin">int</span>
+	height      <span class="token builtin">int</span>
+	clear_pass  C<span class="token punctuation">.</span>sg_pass_action
+	window      C<span class="token punctuation">.</span>sapp_desc
+	timage_pip  C<span class="token punctuation">.</span>sgl_pipeline
+	config      Config
+	ft          <span class="token operator">&</span>FT
+	font_inited <span class="token builtin">bool</span>
+	ui_mode     <span class="token builtin">bool</span>
+	frame       <span class="token builtin">u64</span>
+
+	mbtn_mask     <span class="token builtin">byte</span>
+	mouse_buttons MouseButtons
+	mouse_pos_x   <span class="token builtin">int</span>
+	mouse_pos_y   <span class="token builtin">int</span>
+	mouse_dx      <span class="token builtin">int</span>
+	mouse_dy      <span class="token builtin">int</span>
+	scroll_x      <span class="token builtin">int</span>
+	scroll_y      <span class="token builtin">int</span>
+
+	key_modifiers Modifier
+	key_repeat    <span class="token builtin">bool</span>
+	pressed_keys  <span class="token punctuation">[</span>key_code_max<span class="token punctuation">]</span><span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Context.begin" class="doc-node">
+							<div class="title"><h2>fn (Context) begin <a href="#Context.begin">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>gg <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.cache_image" class="doc-node">
+							<div class="title"><h2>fn (Context) cache_image <a href="#Context.cache_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">cache_image</span><span class="token punctuation">(</span>img Image<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="Context.create_image" class="doc-node">
+							<div class="title"><h2>fn (Context) create_image <a href="#Context.create_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">create_image</span><span class="token punctuation">(</span>file <span class="token builtin">string</span><span class="token punctuation">)</span> Image</code></pre>
+
+
+</section>
+						<section id="Context.create_image_from_byte_array" class="doc-node">
+							<div class="title"><h2>fn (Context) create_image_from_byte_array <a href="#Context.create_image_from_byte_array">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">create_image_from_byte_array</span><span class="token punctuation">(</span>b <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> Image</code></pre>
+
+
+</section>
+						<section id="Context.create_image_from_memory" class="doc-node">
+							<div class="title"><h2>fn (Context) create_image_from_memory <a href="#Context.create_image_from_memory">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">create_image_from_memory</span><span class="token punctuation">(</span>buf <span class="token operator">&</span><span class="token builtin">byte</span><span class="token punctuation">,</span> bufsize <span class="token builtin">int</span><span class="token punctuation">)</span> Image</code></pre>
+
+
+</section>
+						<section id="Context.create_image_with_size" class="doc-node">
+							<div class="title"><h2>fn (Context) create_image_with_size <a href="#Context.create_image_with_size">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">create_image_with_size</span><span class="token punctuation">(</span>file <span class="token builtin">string</span><span class="token punctuation">,</span> width <span class="token builtin">int</span><span class="token punctuation">,</span> height <span class="token builtin">int</span><span class="token punctuation">)</span> Image</code></pre>
+<p>TODO copypasta</p>
+
+</section>
+						<section id="Context.draw_arc" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_arc <a href="#Context.draw_arc">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_arc</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> r <span class="token builtin">int</span><span class="token punctuation">,</span> start_angle <span class="token builtin">f32</span><span class="token punctuation">,</span> arc_angle <span class="token builtin">f32</span><span class="token punctuation">,</span> segments <span class="token builtin">int</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.draw_arc_line" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_arc_line <a href="#Context.draw_arc_line">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_arc_line</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> r <span class="token builtin">int</span><span class="token punctuation">,</span> start_angle <span class="token builtin">f32</span><span class="token punctuation">,</span> arc_angle <span class="token builtin">f32</span><span class="token punctuation">,</span> segments <span class="token builtin">int</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.draw_circle" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_circle <a href="#Context.draw_circle">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_circle</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> r <span class="token builtin">f32</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.draw_circle_line" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_circle_line <a href="#Context.draw_circle_line">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_circle_line</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> r <span class="token builtin">int</span><span class="token punctuation">,</span> segments <span class="token builtin">int</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.draw_circle_with_segments" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_circle_with_segments <a href="#Context.draw_circle_with_segments">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_circle_with_segments</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> r <span class="token builtin">f32</span><span class="token punctuation">,</span> segments <span class="token builtin">int</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.draw_convex_poly" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_convex_poly <a href="#Context.draw_convex_poly">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_convex_poly</span><span class="token punctuation">(</span>points <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">f32</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+<p>draw_convex_poly draws a convex polygon, given an array of points, and a color.  Note that the points must be given in clockwise order.</p>
+
+</section>
+						<section id="Context.draw_empty_poly" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_empty_poly <a href="#Context.draw_empty_poly">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_empty_poly</span><span class="token punctuation">(</span>points <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">f32</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+<p>draw_empty_poly - draws the borders of a polygon, given an array of points, and a color.  Note that the points must be given in clockwise order.</p>
+
+</section>
+						<section id="Context.draw_empty_rect" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_empty_rect <a href="#Context.draw_empty_rect">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_empty_rect</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> w <span class="token builtin">f32</span><span class="token punctuation">,</span> h <span class="token builtin">f32</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.draw_empty_rounded_rect" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_empty_rounded_rect <a href="#Context.draw_empty_rounded_rect">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_empty_rounded_rect</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> w <span class="token builtin">f32</span><span class="token punctuation">,</span> h <span class="token builtin">f32</span><span class="token punctuation">,</span> radius <span class="token builtin">f32</span><span class="token punctuation">,</span> border_color gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.draw_empty_square" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_empty_square <a href="#Context.draw_empty_square">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_empty_square</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> s <span class="token builtin">f32</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.draw_image" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_image <a href="#Context.draw_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_image</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> width <span class="token builtin">f32</span><span class="token punctuation">,</span> height <span class="token builtin">f32</span><span class="token punctuation">,</span> img_ <span class="token operator">&</span>Image<span class="token punctuation">)</span></code></pre>
+<p>draw_image draws the provided image onto the screen</p>
+
+</section>
+						<section id="Context.draw_image_3d" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_image_3d <a href="#Context.draw_image_3d">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_image_3d</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> z <span class="token builtin">f32</span><span class="token punctuation">,</span> width <span class="token builtin">f32</span><span class="token punctuation">,</span> height <span class="token builtin">f32</span><span class="token punctuation">,</span> img_ <span class="token operator">&</span>Image<span class="token punctuation">)</span></code></pre>
+<p>draw_image_3d draws an image with a z depth</p>
+
+</section>
+						<section id="Context.draw_image_by_id" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_image_by_id <a href="#Context.draw_image_by_id">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_image_by_id</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> width <span class="token builtin">f32</span><span class="token punctuation">,</span> height <span class="token builtin">f32</span><span class="token punctuation">,</span> id <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>draw_image_by_id draws an image by its id</p>
+
+</section>
+						<section id="Context.draw_image_flipped" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_image_flipped <a href="#Context.draw_image_flipped">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_image_flipped</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> width <span class="token builtin">f32</span><span class="token punctuation">,</span> height <span class="token builtin">f32</span><span class="token punctuation">,</span> img_ <span class="token operator">&</span>Image<span class="token punctuation">)</span></code></pre>
+<p>draw_image_flipped draws the provided image flipped horizontally (use <code>draw_image_with_config</code> to flip vertically)</p>
+
+</section>
+						<section id="Context.draw_image_part" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_image_part <a href="#Context.draw_image_part">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_image_part</span><span class="token punctuation">(</span>img_rect Rect<span class="token punctuation">,</span> part_rect Rect<span class="token punctuation">,</span> img_ <span class="token operator">&</span>Image<span class="token punctuation">)</span></code></pre>
+<p>Draw part of an image using uv coordinates  img_rect is the size and position (in pixels on screen) of the displayed rectangle (ie the draw_image args)  part_rect is the size and position (in absolute pixels in the image) of the wanted part  eg. On a 600<em>600 context, to display only the first 400</em>400 pixels of a 2000*2000 image  on the entire context surface, call :  draw_image_part(Rect{0, 0, 600, 600}, Rect{0, 0, 400, 400}, img)</p>
+
+</section>
+						<section id="Context.draw_image_with_config" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_image_with_config <a href="#Context.draw_image_with_config">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_image_with_config</span><span class="token punctuation">(</span>config DrawImageConfig<span class="token punctuation">)</span></code></pre>
+<p>draw_image_with_config takes in a config that details how the  provided image should be drawn onto the screen</p>
+
+</section>
+						<section id="Context.draw_line" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_line <a href="#Context.draw_line">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_line</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> x2 <span class="token builtin">f32</span><span class="token punctuation">,</span> y2 <span class="token builtin">f32</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+<p>draw_line draws a line between the points provided</p>
+
+</section>
+						<section id="Context.draw_line_with_config" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_line_with_config <a href="#Context.draw_line_with_config">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_line_with_config</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> x2 <span class="token builtin">f32</span><span class="token punctuation">,</span> y2 <span class="token builtin">f32</span><span class="token punctuation">,</span> config PenConfig<span class="token punctuation">)</span></code></pre>
+<p>draw_line_with_config draws a line between the points provided with the PenConfig</p>
+
+</section>
+						<section id="Context.draw_rect" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_rect <a href="#Context.draw_rect">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_rect</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> w <span class="token builtin">f32</span><span class="token punctuation">,</span> h <span class="token builtin">f32</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+<p>TODO: Fix alpha</p>
+
+</section>
+						<section id="Context.draw_rounded_rect" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_rounded_rect <a href="#Context.draw_rounded_rect">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_rounded_rect</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> w <span class="token builtin">f32</span><span class="token punctuation">,</span> h <span class="token builtin">f32</span><span class="token punctuation">,</span> radius <span class="token builtin">f32</span><span class="token punctuation">,</span> color gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.draw_square" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_square <a href="#Context.draw_square">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_square</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> s <span class="token builtin">f32</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.draw_text" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_text <a href="#Context.draw_text">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_text</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">,</span> text_ <span class="token builtin">string</span><span class="token punctuation">,</span> cfg gx<span class="token punctuation">.</span>TextCfg<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.draw_text_def" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_text_def <a href="#Context.draw_text_def">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_text_def</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">,</span> text <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.draw_triangle" class="doc-node">
+							<div class="title"><h2>fn (Context) draw_triangle <a href="#Context.draw_triangle">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">draw_triangle</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> x2 <span class="token builtin">f32</span><span class="token punctuation">,</span> y2 <span class="token builtin">f32</span><span class="token punctuation">,</span> x3 <span class="token builtin">f32</span><span class="token punctuation">,</span> y3 <span class="token builtin">f32</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.end" class="doc-node">
+							<div class="title"><h2>fn (Context) end <a href="#Context.end">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>gg <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.get_cached_image_by_idx" class="doc-node">
+							<div class="title"><h2>fn (Context) get_cached_image_by_idx <a href="#Context.get_cached_image_by_idx">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">get_cached_image_by_idx</span><span class="token punctuation">(</span>image_idx <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">&</span>Image</code></pre>
+
+
+</section>
+						<section id="Context.new_streaming_image" class="doc-node">
+							<div class="title"><h2>fn (Context) new_streaming_image <a href="#Context.new_streaming_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">new_streaming_image</span><span class="token punctuation">(</span>w <span class="token builtin">int</span><span class="token punctuation">,</span> h <span class="token builtin">int</span><span class="token punctuation">,</span> channels <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>new_streaming_image returns a cached <code>image_idx</code> of a special image, that  can be updated <em>each frame</em> by calling:  gg.update_pixel_data(image_idx, buf)  ... where buf is a pointer to the actual pixel data for the image.  NB: you still need to call app.gg.draw_image after that, to actually draw it.</p>
+
+</section>
+						<section id="Context.quit" class="doc-node">
+							<div class="title"><h2>fn (Context) quit <a href="#Context.quit">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">quit</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>quit closes the context window and exits the event loop for it</p>
+
+</section>
+						<section id="Context.refresh_ui" class="doc-node">
+							<div class="title"><h2>fn (Context) refresh_ui <a href="#Context.refresh_ui">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">refresh_ui</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.resize" class="doc-node">
+							<div class="title"><h2>fn (Context) resize <a href="#Context.resize">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">resize</span><span class="token punctuation">(</span>width <span class="token builtin">int</span><span class="token punctuation">,</span> height <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>resize the context's Window</p>
+
+</section>
+						<section id="Context.run" class="doc-node">
+							<div class="title"><h2>fn (Context) run <a href="#Context.run">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>gg <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.set_bg_color" class="doc-node">
+							<div class="title"><h2>fn (Context) set_bg_color <a href="#Context.set_bg_color">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">set_bg_color</span><span class="token punctuation">(</span>c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.set_cfg" class="doc-node">
+							<div class="title"><h2>fn (Context) set_cfg <a href="#Context.set_cfg">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">set_cfg</span><span class="token punctuation">(</span>cfg gx<span class="token punctuation">.</span>TextCfg<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.set_pixel" class="doc-node">
+							<div class="title"><h2>fn (Context) set_pixel <a href="#Context.set_pixel">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">set_pixel</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">,</span> c gx<span class="token punctuation">.</span>Color<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.text_height" class="doc-node">
+							<div class="title"><h2>fn (Context) text_height <a href="#Context.text_height">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">text_height</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="Context.text_size" class="doc-node">
+							<div class="title"><h2>fn (Context) text_size <a href="#Context.text_size">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">text_size</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Context.text_width" class="doc-node">
+							<div class="title"><h2>fn (Context) text_width <a href="#Context.text_width">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>ctx <span class="token operator">&</span>Context<span class="token punctuation">)</span> <span class="token function">text_width</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="Context.update_pixel_data" class="doc-node">
+							<div class="title"><h2>fn (Context) update_pixel_data <a href="#Context.update_pixel_data">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> ctx Context<span class="token punctuation">)</span> <span class="token function">update_pixel_data</span><span class="token punctuation">(</span>cached_image_idx <span class="token builtin">int</span><span class="token punctuation">,</span> buf <span class="token operator">&</span><span class="token builtin">byte</span><span class="token punctuation">)</span></code></pre>
+<p>update_pixel_data is a helper for working with image streams (i.e. images,  that are updated dynamically by the CPU on each frame)</p>
+
+</section>
+						<section id="Config" class="doc-node">
+							<div class="title"><h2>struct Config <a href="#Config">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Config</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	width         <span class="token builtin">int</span>
+	height        <span class="token builtin">int</span>
+	use_ortho     <span class="token builtin">bool</span>
+	retina        <span class="token builtin">bool</span>
+	resizable     <span class="token builtin">bool</span>
+	user_data     <span class="token builtin">voidptr</span>
+	font_size     <span class="token builtin">int</span>
+	create_window <span class="token builtin">bool</span>
+
+	window_title      <span class="token builtin">string</span>
+	borderless_window <span class="token builtin">bool</span>
+	always_on_top     <span class="token builtin">bool</span>
+	bg_color          gx<span class="token punctuation">.</span>Color
+	init_fn           FNCb   <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	frame_fn          FNCb   <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	native_frame_fn   FNCb   <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	cleanup_fn        FNCb   <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	fail_fn           FNFail <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+	event_fn FNEvent <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	quit_fn  FNEvent <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+	keydown_fn FNKeyDown <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	keyup_fn   FNKeyUp   <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	char_fn    FNChar    <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+	move_fn    FNMove    <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	click_fn   FNClick   <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	unclick_fn FNUnClick <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	leave_fn   FNEvent   <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	enter_fn   FNEvent   <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	resized_fn FNEvent   <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	scroll_fn  FNEvent   <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+	fullscreen   <span class="token builtin">bool</span>
+	scale        <span class="token builtin">f32</span> <span class="token operator">=</span> <span class="token number">1.0</span>
+	sample_count <span class="token builtin">int</span>
+
+	font_path             <span class="token builtin">string</span>
+	custom_bold_font_path <span class="token builtin">string</span>
+	ui_mode               <span class="token builtin">bool</span>
+
+	font_bytes_normal <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>
+	font_bytes_bold   <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>
+	font_bytes_mono   <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>
+	font_bytes_italic <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>
+	native_rendering  <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="PenConfig" class="doc-node">
+							<div class="title"><h2>struct PenConfig <a href="#PenConfig">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">PenConfig</span> <span class="token punctuation">{</span>
+	color     gx<span class="token punctuation">.</span>Color
+	line_type PenLineType <span class="token operator">=</span> <span class="token punctuation">.</span>solid
+	thickness <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:26
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#high_dpi">fn high_dpi</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#window_size">fn window_size</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#dpi_scale">fn dpi_scale</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#system_font_path">fn system_font_path</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#screen_size">fn screen_size</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new_context">fn new_context</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#window_size_real_pixels">fn window_size_real_pixels</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FNClick">type FNClick</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FNEvent">type FNEvent</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FNFail">type FNFail</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FNKeyDown">type FNKeyDown</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FNKeyUp">type FNKeyUp</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FNMove">type FNMove</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FNUnClick">type FNUnClick</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FT.flush">type FT</a>        <ul>
+<li><a href="#FT.flush">fn flush</a></li>
+</ul>
+</li>
+<li class="open"><a href="#FNChar">type FNChar</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FNCb">type FNCb</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Modifier">enum Modifier</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#MouseButton">enum MouseButton</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#MouseButtons">enum MouseButtons</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#KeyCode">enum KeyCode</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#PenLineType">enum PenLineType</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Image">struct Image</a>        <ul>
+<li><a href="#Image.init_sokol_image">fn init_sokol_image</a></li>
+<li><a href="#Image.update_pixel_data">fn update_pixel_data</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Rect">struct Rect</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Event">struct Event</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Size">struct Size</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#DrawImageConfig">struct DrawImageConfig</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Context">struct Context</a>        <ul>
+<li><a href="#Context.begin">fn begin</a></li>
+<li><a href="#Context.cache_image">fn cache_image</a></li>
+<li><a href="#Context.create_image">fn create_image</a></li>
+<li><a href="#Context.create_image_from_byte_array">fn create_image_from_byte_array</a></li>
+<li><a href="#Context.create_image_from_memory">fn create_image_from_memory</a></li>
+<li><a href="#Context.create_image_with_size">fn create_image_with_size</a></li>
+<li><a href="#Context.draw_arc">fn draw_arc</a></li>
+<li><a href="#Context.draw_arc_line">fn draw_arc_line</a></li>
+<li><a href="#Context.draw_circle">fn draw_circle</a></li>
+<li><a href="#Context.draw_circle_line">fn draw_circle_line</a></li>
+<li><a href="#Context.draw_circle_with_segments">fn draw_circle_with_segments</a></li>
+<li><a href="#Context.draw_convex_poly">fn draw_convex_poly</a></li>
+<li><a href="#Context.draw_empty_poly">fn draw_empty_poly</a></li>
+<li><a href="#Context.draw_empty_rect">fn draw_empty_rect</a></li>
+<li><a href="#Context.draw_empty_rounded_rect">fn draw_empty_rounded_rect</a></li>
+<li><a href="#Context.draw_empty_square">fn draw_empty_square</a></li>
+<li><a href="#Context.draw_image">fn draw_image</a></li>
+<li><a href="#Context.draw_image_3d">fn draw_image_3d</a></li>
+<li><a href="#Context.draw_image_by_id">fn draw_image_by_id</a></li>
+<li><a href="#Context.draw_image_flipped">fn draw_image_flipped</a></li>
+<li><a href="#Context.draw_image_part">fn draw_image_part</a></li>
+<li><a href="#Context.draw_image_with_config">fn draw_image_with_config</a></li>
+<li><a href="#Context.draw_line">fn draw_line</a></li>
+<li><a href="#Context.draw_line_with_config">fn draw_line_with_config</a></li>
+<li><a href="#Context.draw_rect">fn draw_rect</a></li>
+<li><a href="#Context.draw_rounded_rect">fn draw_rounded_rect</a></li>
+<li><a href="#Context.draw_square">fn draw_square</a></li>
+<li><a href="#Context.draw_text">fn draw_text</a></li>
+<li><a href="#Context.draw_text_def">fn draw_text_def</a></li>
+<li><a href="#Context.draw_triangle">fn draw_triangle</a></li>
+<li><a href="#Context.end">fn end</a></li>
+<li><a href="#Context.get_cached_image_by_idx">fn get_cached_image_by_idx</a></li>
+<li><a href="#Context.new_streaming_image">fn new_streaming_image</a></li>
+<li><a href="#Context.quit">fn quit</a></li>
+<li><a href="#Context.refresh_ui">fn refresh_ui</a></li>
+<li><a href="#Context.resize">fn resize</a></li>
+<li><a href="#Context.run">fn run</a></li>
+<li><a href="#Context.set_bg_color">fn set_bg_color</a></li>
+<li><a href="#Context.set_cfg">fn set_cfg</a></li>
+<li><a href="#Context.set_pixel">fn set_pixel</a></li>
+<li><a href="#Context.text_height">fn text_height</a></li>
+<li><a href="#Context.text_size">fn text_size</a></li>
+<li><a href="#Context.text_width">fn text_width</a></li>
+<li><a href="#Context.update_pixel_data">fn update_pixel_data</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Config">struct Config</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#PenConfig">struct PenConfig</a>        <ul>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

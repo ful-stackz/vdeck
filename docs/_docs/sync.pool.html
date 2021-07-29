@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>sync.pool | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li class="active"><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_sync.pool" class="doc-node">
+							<div class="title"><h1> sync.pool <a href="#readme_sync.pool">#</a></h1></div><p>The <code>sync.pool</code> module provides a convenient way to run identical tasks over
+an array of items <em>in parallel</em>, without worrying about thread synchronization,
+waitgroups, mutexes etc.., you just need to supply a callback function, that
+will be called once per each item in your input array.</p>
+<p>After all the work is done in parallel by the worker threads in the pool,
+pool.work_on_items will return. You can then call pool.get_results<Result>()
+to retrieve a list of all the results, that the worker callbacks returned
+for each input item. Example:</p>
+<pre><code class="language-v">import sync.pool
+
+struct SResult {
+    s string
+}
+
+fn sprocess(pp &amp;pool.PoolProcessor, idx int, wid int) &amp;SResult {
+    item := pp.get_item&lt;string&gt;(idx)
+    println('idx: $idx, wid: $wid, item: ' + item)
+    return &amp;SResult{item.reverse()}
+}
+
+fn main() {
+    mut pp := pool.new_pool_processor(callback: sprocess)
+    pp.work_on_items(['1abc', '2abc', '3abc', '4abc', '5abc', '6abc', '7abc'])
+    // optionally, you can iterate over the results too:
+    for x in pp.get_results&lt;SResult&gt;() {
+        println('result: $x.s')
+    }
+}
+</code></pre>
+<p>See <a href="https://github.com/vlang/v/blob/master/vlib/sync/pool/pool_test.v">https://github.com/vlang/v/blob/master/vlib/sync/pool/pool_test.v</a> for a
+more detailed usage example.</p>
+
+</section>
+
+						<section id="Constants" class="doc-node const">
+							<div class="title"><h2>Constants <a href="#Constants">#</a></h2></div>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	no_result <span class="token operator">=</span> <span class="token builtin">voidptr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="new_pool_processor" class="doc-node">
+							<div class="title"><h2>fn new_pool_processor <a href="#new_pool_processor">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_pool_processor</span><span class="token punctuation">(</span>context PoolProcessorConfig<span class="token punctuation">)</span> <span class="token operator">&</span>PoolProcessor</code></pre>
+<p>new_pool_processor returns a new PoolProcessor instance.  The parameters of new_pool_processor are:     context.maxjobs: when 0 (the default), the PoolProcessor will use a       number of threads, that is optimal for your system to process your items.     context.callback: this should be a callback function, that each worker       thread in the pool will run for each item.       The callback function will receive as parameters:       1) the PoolProcessor instance, so it can call             p.get_item&lt;int&gt;(idx) to get the actual item at index idx       2) idx - the index of the currently processed item       3) task_id - the index of the worker thread in which the callback             function is running.</p>
+
+</section>
+						<section id="ThreadCB" class="doc-node">
+							<div class="title"><h2>type ThreadCB <a href="#ThreadCB">#</a></h2></div><pre class="signature"><code><span class="token keyword">type</span> ThreadCB <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>p <span class="token operator">&</span>PoolProcessor<span class="token punctuation">,</span> idx <span class="token builtin">int</span><span class="token punctuation">,</span> task_id <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+
+
+</section>
+						<section id="PoolProcessorConfig" class="doc-node">
+							<div class="title"><h2>struct PoolProcessorConfig <a href="#PoolProcessorConfig">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">PoolProcessorConfig</span> <span class="token punctuation">{</span>
+	maxjobs  <span class="token builtin">int</span>
+	callback ThreadCB
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="PoolProcessor" class="doc-node">
+							<div class="title"><h2>struct PoolProcessor <a href="#PoolProcessor">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">PoolProcessor</span> <span class="token punctuation">{</span>
+	thread_cb <span class="token builtin">voidptr</span>
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	njobs           <span class="token builtin">int</span>
+	items           <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">voidptr</span>
+	results         <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">voidptr</span>
+	ntask           <span class="token builtin">u32</span>
+	waitgroup       sync<span class="token punctuation">.</span>WaitGroup
+	shared_context  <span class="token builtin">voidptr</span>
+	thread_contexts <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">voidptr</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="PoolProcessor.set_max_jobs" class="doc-node">
+							<div class="title"><h2>fn (PoolProcessor) set_max_jobs <a href="#PoolProcessor.set_max_jobs">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> pool PoolProcessor<span class="token punctuation">)</span> <span class="token function">set_max_jobs</span><span class="token punctuation">(</span>njobs <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>set_max_jobs gives you the ability to override the number  of jobs <em>after</em> the PoolProcessor had been created already.</p>
+
+</section>
+						<section id="PoolProcessor.work_on_items" class="doc-node">
+							<div class="title"><h2>fn (PoolProcessor) work_on_items <a href="#PoolProcessor.work_on_items">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> pool PoolProcessor<span class="token punctuation">)</span> work_on_items<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span>items <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">T</span><span class="token punctuation">)</span></code></pre>
+<p>work_on_items receives a list of items of type T,  then starts a work pool of pool.njobs threads, each running  pool.thread_cb in a loop, untill all items in the list,  are processed.  When pool.njobs is 0, the number of jobs is determined  by the number of available cores on the system.  work_on_items returns <em>after</em> all threads finish.  You can optionally call get_results after that.</p>
+
+</section>
+						<section id="PoolProcessor.work_on_pointers" class="doc-node">
+							<div class="title"><h2>fn (PoolProcessor) work_on_pointers <a href="#PoolProcessor.work_on_pointers">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> pool PoolProcessor<span class="token punctuation">)</span> <span class="token function">work_on_pointers</span><span class="token punctuation">(</span>items <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="PoolProcessor.get_item" class="doc-node">
+							<div class="title"><h2>fn (PoolProcessor) get_item <a href="#PoolProcessor.get_item">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>pool <span class="token operator">&</span>PoolProcessor<span class="token punctuation">)</span> get_item<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span>idx <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">T</span></code></pre>
+<p>get_item - called by the worker callback.  Retrieves a type safe instance of the currently processed item</p>
+
+</section>
+						<section id="PoolProcessor.get_result" class="doc-node">
+							<div class="title"><h2>fn (PoolProcessor) get_result <a href="#PoolProcessor.get_result">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>pool <span class="token operator">&</span>PoolProcessor<span class="token punctuation">)</span> get_result<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span>idx <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">T</span></code></pre>
+<p>get_result - called by the main thread to get a specific result.  Retrieves a type safe instance of the produced result.</p>
+
+</section>
+						<section id="PoolProcessor.get_results" class="doc-node">
+							<div class="title"><h2>fn (PoolProcessor) get_results <a href="#PoolProcessor.get_results">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>pool <span class="token operator">&</span>PoolProcessor<span class="token punctuation">)</span> get_results<span class="token operator"><</span><span class="token builtin">T</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">T</span></code></pre>
+<p>get_results - get a list of type safe results in the main thread.</p>
+
+</section>
+						<section id="PoolProcessor.set_shared_context" class="doc-node">
+							<div class="title"><h2>fn (PoolProcessor) set_shared_context <a href="#PoolProcessor.set_shared_context">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> pool PoolProcessor<span class="token punctuation">)</span> <span class="token function">set_shared_context</span><span class="token punctuation">(</span>context <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+<p>set_shared_context - can be called during the setup so that you can  provide a context that is shared between all worker threads, like  common options/settings.</p>
+
+</section>
+						<section id="PoolProcessor.get_shared_context" class="doc-node">
+							<div class="title"><h2>fn (PoolProcessor) get_shared_context <a href="#PoolProcessor.get_shared_context">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>pool <span class="token operator">&</span>PoolProcessor<span class="token punctuation">)</span> <span class="token function">get_shared_context</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>get_shared_context - can be called in each worker callback, to get  the context set by pool.set_shared_context</p>
+
+</section>
+						<section id="PoolProcessor.set_thread_context" class="doc-node">
+							<div class="title"><h2>fn (PoolProcessor) set_thread_context <a href="#PoolProcessor.set_thread_context">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> pool PoolProcessor<span class="token punctuation">)</span> <span class="token function">set_thread_context</span><span class="token punctuation">(</span>idx <span class="token builtin">int</span><span class="token punctuation">,</span> context <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+<p>set_thread_context - can be called during the setup at the start of  each worker callback, so that the worker callback can have some thread  local storage area where it can write/read information that is private  to the given thread, without worrying that it will get overwritten by  another thread</p>
+
+</section>
+						<section id="PoolProcessor.get_thread_context" class="doc-node">
+							<div class="title"><h2>fn (PoolProcessor) get_thread_context <a href="#PoolProcessor.get_thread_context">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>pool <span class="token operator">&</span>PoolProcessor<span class="token punctuation">)</span> <span class="token function">get_thread_context</span><span class="token punctuation">(</span>idx <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>get_thread_context - returns a pointer, that was set with  pool.set_thread_context . This pointer is private to each thread.</p>
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:27
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#readme_sync.pool">README</a></li>
+<li class="open"><a href="#Constants">Constants</a></li>
+<li class="open"><a href="#new_pool_processor">fn new_pool_processor</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ThreadCB">type ThreadCB</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#PoolProcessorConfig">struct PoolProcessorConfig</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#PoolProcessor">struct PoolProcessor</a>        <ul>
+<li><a href="#PoolProcessor.set_max_jobs">fn set_max_jobs</a></li>
+<li><a href="#PoolProcessor.work_on_items">fn work_on_items</a></li>
+<li><a href="#PoolProcessor.work_on_pointers">fn work_on_pointers</a></li>
+<li><a href="#PoolProcessor.get_item">fn get_item</a></li>
+<li><a href="#PoolProcessor.get_result">fn get_result</a></li>
+<li><a href="#PoolProcessor.get_results">fn get_results</a></li>
+<li><a href="#PoolProcessor.set_shared_context">fn set_shared_context</a></li>
+<li><a href="#PoolProcessor.get_shared_context">fn get_shared_context</a></li>
+<li><a href="#PoolProcessor.set_thread_context">fn set_thread_context</a></li>
+<li><a href="#PoolProcessor.get_thread_context">fn get_thread_context</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

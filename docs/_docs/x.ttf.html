@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>x.ttf | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li class="active"><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_x.ttf" class="doc-node">
+							<div class="title"><h1> x.ttf <a href="#readme_x.ttf">#</a></h1></div><h1>TTF font utility</h1>
+<h2>introduction</h2>
+<p>This module is designed to perform two main task</p>
+<ul>
+<li>Load the font file</li>
+<li>Render text using a TTF font</li>
+</ul>
+<p>The render system can be single or multiple, for example it is possible to have a bitmap
+render and a HW accelerated render.</p>
+<h2>TTF loader</h2>
+<p>This part of the module do a simple task, load a TTF file and preprocess all the loaded data
+in order to simplify the rendering phase.</p>
+<p>Let's start with a simple snippet of code that load a font from the disk:</p>
+<pre><code class="language-v">mut ttf_font := ttf.TTF_File{}
+ttf_font.buf = os.read_bytes(&quot;arial.ttf&quot;) or { panic(err) }
+ttf_font.init()
+</code></pre>
+<p><em>Note: the font must be passed to the <code>TTF_file</code> as RAM buffer.</em>
+At this point the font &quot;arial&quot; is loaded and parsed and if it is a valid TTF font it is
+ready for the rendering.
+We can get some quick info on the font as string using the <code>get_info_string</code> function:</p>
+<pre><code class="language-v">println(ttf_font.get_info_string())
+</code></pre>
+<p>produces an output like this:</p>
+<pre><code>----- Font Info -----
+font_family     : Arial
+font_sub_family : Normal
+full_name       : Arial
+postscript_name : ArialMT
+version         : 1
+font_revision   : 5.06
+magic_number    : 5f0f3cf5
+flags           : 81b
+created  unixTS : 649950890
+modified unixTS : 1282151447
+units_per_em    : 2048
+box             : [x_min:-1361, y_min:-665, x_Max:4096, y_Max:2060]
+mac_style       : 0
+-----------------------
+</code></pre>
+<p>Once loaded a font the <code>TTF_File</code> struct is filled with the font data and texts can be rendered.
+At high level no more action are required to use the loaded font.
+Multiple fonts can be loaded without problems at the same time.</p>
+<h2>TTF Bitmap render</h2>
+<p>In this modue it is possible to have different renders running at the same time.
+At the present time all the rendering are made on the CPU, sokol is used only to draw the
+rendered text to the screen.
+Let's start with a simple snippet of code:</p>
+<pre><code class="language-v">import os
+import x.ttf
+
+[console]
+fn main() {
+    mut ttf_font := ttf.TTF_File{}
+    ttf_font.buf = os.read_bytes('arial.ttf') or { panic(err) }
+    ttf_font.init()
+    // print font info
+    println(ttf_font.get_info_string())
+}
+</code></pre>
+<p>This simple code load a TTF font and display its basic informations.</p>
+<h3>draw_text</h3>
+<p>The draw text function draw simple strings without indentation or other imagination tasks.
+At this point we can render a simple text:</p>
+<pre><code class="language-v">import os
+import x.ttf
+
+[console]
+fn main() {
+    mut ttf_font := ttf.TTF_File{}
+    ttf_font.buf = os.read_bytes('arial.ttf') or { panic(err) }
+    ttf_font.init()
+    // print font info
+    println(ttf_font.get_info_string())
+
+    bmp_width := 200
+    bmp_heigth := 64
+    bmp_layers := 4 // number of planes for an RGBA buffer
+    // memory size of the buffer
+    bmp_size := bmp_width * bmp_heigth * bmp_layers
+
+    font_size := 32 // font size in points
+    device_dpi := 72 // default screen DPI
+    // Formula for scale calculation
+    // scaler := (font_size * device dpi) / (72dpi * em_unit)
+    scale := f32(font_size * device_dpi) / f32(72 * ttf_font.units_per_em)
+    // height of the font to use in the buffer to separate the lines
+    y_base := int((ttf_font.y_max - ttf_font.y_min) * scale)
+
+    // declare the bitmap struct
+    mut bmp := ttf.BitMap{
+        tf: &amp;ttf_font
+        buf: malloc(bmp_size)
+        buf_size: bmp_size
+        width: bmp_width
+        height: bmp_heigth
+        bp: bmp_layers
+        color: 0x000000_FF // RGBA black
+        scale: scale
+    }
+    bmp.init_filler()
+    bmp.clear()
+    bmp.set_pos(10, y_base)
+    bmp.draw_text('Test Text!')
+    bmp.save_as_ppm('test.ppm')
+}
+</code></pre>
+<p>This is the low level render that draw ther text on a bitmap and save the bitmap on a disk as
+<code>.ppm</code> file.
+<em>Note: The render in this case is a raw rendering without any postfiltering or other processing.</em></p>
+<p>Using the low level rendering you need to manage all the amenities like allocate and release
+memory and other tasks like calc the character dimensions.</p>
+<p>You can specify the style for the text rendering in the <code>BitMap</code> struct::</p>
+<pre><code class="language-v">enum Style {
+    outline
+    outline_aliased
+    filled // default syle
+    raw
+}
+</code></pre>
+<p>Use this level only if you want achieve particular result on text rendering.</p>
+<h3>draw_text_block</h3>
+<p>Draw text block draw a justified and indented block of multiline text in the bitmap.</p>
+<pre><code class="language-v">import os
+import x.ttf
+
+[console]
+fn main() {
+    mut ttf_font := ttf.TTF_File{}
+    ttf_font.buf = os.read_bytes('arial.ttf') or { panic(err) }
+    ttf_font.init()
+    // print font info
+    println(ttf_font.get_info_string())
+
+    bmp_width := 200
+    bmp_heigth := 200
+    bmp_layers := 4 // number of planes for an RGBA buffer
+    // memory size of the buffer
+    bmp_size := bmp_width * bmp_heigth * bmp_layers
+
+    font_size := 32 // font size in points
+    device_dpi := 72 // default screen DPI
+    // Formula for scale calculation
+    // scaler := (font_size * device dpi) / (72dpi * em_unit)
+    scale := f32(font_size * device_dpi) / f32(72 * ttf_font.units_per_em)
+    // height of the font to use in the buffer to separate the lines
+    y_base := int((ttf_font.y_max - ttf_font.y_min) * scale)
+
+    text := &quot;Today it is a good day!
+Tomorrow I'm not so sure :(
+But Vwill prevail for sure, V is the way!!
+òàèì@ò!£$%&amp;
+&quot;
+    // declare the bitmap struct
+    mut bmp := ttf.BitMap{
+        tf: &amp;ttf_font
+        buf: malloc(bmp_size)
+        buf_size: bmp_size
+        width: bmp_width
+        height: bmp_heigth
+        bp: bmp_layers
+        color: 0x000000_FF // RGBA black
+        scale: scale
+    }
+    bmp.init_filler()
+    bmp.clear()
+    bmp.justify = true
+    bmp.align = .left
+    bmp.draw_text_block(text, x: 0, y: 0, w: bmp_width - 20, h: bmp_heigth)
+    bmp.save_as_ppm('test.ppm')
+}
+</code></pre>
+<p>This is the low level render that draw text block on the bitmap.
+A text block is defined from a <code>Text_block</code> struct:</p>
+<pre><code class="language-v">struct Text_block {
+    x         int  // x postion of the left high corner
+    y         int  // y postion of the left high corner
+    w         int  // width of the text block
+    h         int  // heigth of the text block
+    cut_lines bool = true // force to cut the line if the length is over the text block width
+}
+</code></pre>
+<p>and use the following bitmap fields:</p>
+<pre><code class="language-v">    style              Style      = .filled // default syle
+    align              Text_align = .left   // default text align
+    justify            bool				    // justify text flag, default deactivated
+    justify_fill_ratio f32        = 0.5     // justify fill ratio, if the ratio of the filled
+                                          // row is &gt;= of this then justify the text
+</code></pre>
+<p>It is possible to modify these parameters to obtain the desired effect on the text rendering.</p>
+<h2>TTF Sokol render</h2>
+<p>The sokol render use the  bitmap render to create the text and the <code>gg</code> functions to render
+the text to the screen.
+It is mor esimpel to use in a <code>gg app</code> that the raw bitmap render.
+Each single text rendered need its own reder to be declared, after you can modify it.
+Here a simple example of the usage:</p>
+<pre><code class="language-v">import gg
+import gx
+import sokol.sapp
+import sokol.sgl
+import x.ttf
+import os
+
+const (
+    win_width  = 600
+    win_height = 700
+    bg_color   = gx.white
+    font_paths = [
+        'arial.ttf',
+    ]
+)
+
+struct App_data {
+pub mut:
+    gg        &amp;gg.Context
+    sg_img    C.sg_image
+    init_flag bool
+    frame_c   int
+
+    tf         []ttf.TTF_File
+    ttf_render []ttf.TTF_render_Sokol
+}
+
+fn my_init(mut app App_data) {
+    app.init_flag = true
+}
+
+fn draw_frame(mut app App_data) {
+    cframe_txt := 'Current Frame: $app.frame_c'
+
+    app.gg.begin()
+
+    sgl.defaults()
+    sgl.matrix_mode_projection()
+    sgl.ortho(0.0, f32(sapp.width()), f32(sapp.height()), 0.0, -1.0, 1.0)
+
+    // draw text only if the app is already initialized
+    if app.init_flag == true {
+        // update the text
+        mut txt1 := &amp;app.ttf_render[0]
+        txt1.destroy_texture()
+        txt1.create_text(cframe_txt, 43)
+        txt1.create_texture()
+        txt1.draw_text_bmp(app.gg, 30, 60)
+    }
+    app.frame_c++
+    app.gg.end()
+}
+
+[console]
+fn main() {
+    mut app := &amp;App_data{
+        gg: 0
+    }
+
+    app.gg = gg.new_context(
+        width: win_width
+        height: win_height
+        create_window: true
+        window_title: 'Test TTF module'
+        user_data: app
+        bg_color: bg_color
+        frame_fn: draw_frame
+        init_fn: my_init
+    )
+
+    // load TTF fonts
+    for font_path in font_paths {
+        mut tf := ttf.TTF_File{}
+        tf.buf = os.read_bytes(font_path) or { panic(err) }
+        println('TrueTypeFont file [$font_path] len: $tf.buf.len')
+        tf.init()
+        println(tf.get_info_string())
+        app.tf &lt;&lt; tf
+    }
+
+    // TTF render 0 Frame counter
+    app.ttf_render &lt;&lt; &amp;ttf.TTF_render_Sokol{
+        bmp: &amp;ttf.BitMap{
+            tf: &amp;(app.tf[0])
+            buf: unsafe { malloc(32000000) }
+            buf_size: (32000000)
+            color: 0xFF0000FF
+            // style: .raw
+        }
+    }
+
+    app.gg.run()
+}
+</code></pre>
+
+</section>
+
+						<section id="color_multiply" class="doc-node">
+							<div class="title"><h2>fn color_multiply <a href="#color_multiply">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">color_multiply</span><span class="token punctuation">(</span>c <span class="token builtin">u32</span><span class="token punctuation">,</span> level <span class="token builtin">f32</span><span class="token punctuation">)</span> <span class="token builtin">u32</span></code></pre>
+
+
+</section>
+						<section id="color_multiply_alpha" class="doc-node">
+							<div class="title"><h2>fn color_multiply_alpha <a href="#color_multiply_alpha">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">color_multiply_alpha</span><span class="token punctuation">(</span>c <span class="token builtin">u32</span><span class="token punctuation">,</span> level <span class="token builtin">f32</span><span class="token punctuation">)</span> <span class="token builtin">u32</span></code></pre>
+
+
+</section>
+						<section id="Text_align" class="doc-node">
+							<div class="title"><h2>enum Text_align <a href="#Text_align">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Text_align</span> <span class="token punctuation">{</span>
+	left
+	center
+	right
+	justify
+<span class="token punctuation">}</span></code></pre>
+<p>text align</p>
+
+</section>
+						<section id="Style" class="doc-node">
+							<div class="title"><h2>enum Style <a href="#Style">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Style</span> <span class="token punctuation">{</span>
+	outline
+	outline_aliased
+	filled
+	raw
+<span class="token punctuation">}</span></code></pre>
+<p>draw style</p>
+
+</section>
+						<section id="BitMap" class="doc-node">
+							<div class="title"><h2>struct BitMap <a href="#BitMap">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">BitMap</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	tf       <span class="token operator">&</span>TTF_File
+	buf      <span class="token operator">&</span><span class="token builtin">byte</span> <span class="token operator">=</span> <span class="token number">0</span>
+	buf_size <span class="token builtin">int</span>
+	width    <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span>
+	height   <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span>
+	bp       <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">4</span>
+	bg_color <span class="token builtin">u32</span> <span class="token operator">=</span> 0<span class="token number">0xFFFFFF00</span>
+	color    <span class="token builtin">u32</span> <span class="token operator">=</span> 0<span class="token number">0x000000FF</span>
+	scale    <span class="token builtin">f32</span> <span class="token operator">=</span> <span class="token number">1.0</span>
+	scale_x  <span class="token builtin">f32</span> <span class="token operator">=</span> <span class="token number">1.0</span>
+	scale_y  <span class="token builtin">f32</span> <span class="token operator">=</span> <span class="token number">1.0</span>
+	angle    <span class="token builtin">f32</span> <span class="token operator">=</span> <span class="token number">0.0</span>
+
+	space_cw   <span class="token builtin">f32</span> <span class="token operator">=</span> <span class="token number">1.0</span>
+	space_mult <span class="token builtin">f32</span> <span class="token operator">=</span> <span class="token builtin">f32</span><span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">)</span>
+
+	tr_matrix          <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">f32</span>      <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">f32</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+	ch_matrix          <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">f32</span>      <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">f32</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+	style              Style      <span class="token operator">=</span> <span class="token punctuation">.</span>filled
+	align              Text_align <span class="token operator">=</span> <span class="token punctuation">.</span>left
+	justify            <span class="token builtin">bool</span>
+	justify_fill_ratio <span class="token builtin">f32</span> <span class="token operator">=</span> <span class="token number">0.5</span>
+	filler             <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span>
+
+	use_font_metrics <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="BitMap.aline" class="doc-node">
+							<div class="title"><h2>fn (BitMap) aline <a href="#BitMap.aline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">aline</span><span class="token punctuation">(</span>in_x0 <span class="token builtin">int</span><span class="token punctuation">,</span> in_y0 <span class="token builtin">int</span><span class="token punctuation">,</span> in_x1 <span class="token builtin">int</span><span class="token punctuation">,</span> in_y1 <span class="token builtin">int</span><span class="token punctuation">,</span> c <span class="token builtin">u32</span><span class="token punctuation">)</span></code></pre>
+<p>aline draw an aliased line on the bitmap</p>
+
+</section>
+						<section id="BitMap.box" class="doc-node">
+							<div class="title"><h2>fn (BitMap) box <a href="#BitMap.box">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">box</span><span class="token punctuation">(</span>in_x0 <span class="token builtin">int</span><span class="token punctuation">,</span> in_y0 <span class="token builtin">int</span><span class="token punctuation">,</span> in_x1 <span class="token builtin">int</span><span class="token punctuation">,</span> in_y1 <span class="token builtin">int</span><span class="token punctuation">,</span> c <span class="token builtin">u32</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="BitMap.clear" class="doc-node">
+							<div class="title"><h2>fn (BitMap) clear <a href="#BitMap.clear">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>clear clear the bitmap with 0 bytes</p>
+
+</section>
+						<section id="BitMap.clear_filler" class="doc-node">
+							<div class="title"><h2>fn (BitMap) clear_filler <a href="#BitMap.clear_filler">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">clear_filler</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="BitMap.draw_glyph" class="doc-node">
+							<div class="title"><h2>fn (BitMap) draw_glyph <a href="#BitMap.draw_glyph">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">draw_glyph</span><span class="token punctuation">(</span>index <span class="token builtin">u16</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="BitMap.draw_text" class="doc-node">
+							<div class="title"><h2>fn (BitMap) draw_text <a href="#BitMap.draw_text">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">draw_text</span><span class="token punctuation">(</span>in_string <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="BitMap.draw_text_block" class="doc-node">
+							<div class="title"><h2>fn (BitMap) draw_text_block <a href="#BitMap.draw_text_block">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">draw_text_block</span><span class="token punctuation">(</span>text <span class="token builtin">string</span><span class="token punctuation">,</span> block Text_block<span class="token punctuation">)</span></code></pre>
+<p>write out a text</p>
+
+</section>
+						<section id="BitMap.exec_filler" class="doc-node">
+							<div class="title"><h2>fn (BitMap) exec_filler <a href="#BitMap.exec_filler">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">exec_filler</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="BitMap.fline" class="doc-node">
+							<div class="title"><h2>fn (BitMap) fline <a href="#BitMap.fline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">fline</span><span class="token punctuation">(</span>in_x0 <span class="token builtin">int</span><span class="token punctuation">,</span> in_y0 <span class="token builtin">int</span><span class="token punctuation">,</span> in_x1 <span class="token builtin">int</span><span class="token punctuation">,</span> in_y1 <span class="token builtin">int</span><span class="token punctuation">,</span> c <span class="token builtin">u32</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="BitMap.get_bbox" class="doc-node">
+							<div class="title"><h2>fn (BitMap) get_bbox <a href="#BitMap.get_bbox">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">get_bbox</span><span class="token punctuation">(</span>in_string <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="BitMap.get_chars_bbox" class="doc-node">
+							<div class="title"><h2>fn (BitMap) get_chars_bbox <a href="#BitMap.get_chars_bbox">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">get_chars_bbox</span><span class="token punctuation">(</span>in_string <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="BitMap.get_raw_bytes" class="doc-node">
+							<div class="title"><h2>fn (BitMap) get_raw_bytes <a href="#BitMap.get_raw_bytes">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">get_raw_bytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span></code></pre>
+
+
+</section>
+						<section id="BitMap.init_filler" class="doc-node">
+							<div class="title"><h2>fn (BitMap) init_filler <a href="#BitMap.init_filler">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">init_filler</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="BitMap.line" class="doc-node">
+							<div class="title"><h2>fn (BitMap) line <a href="#BitMap.line">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">line</span><span class="token punctuation">(</span>in_x0 <span class="token builtin">int</span><span class="token punctuation">,</span> in_y0 <span class="token builtin">int</span><span class="token punctuation">,</span> in_x1 <span class="token builtin">int</span><span class="token punctuation">,</span> in_y1 <span class="token builtin">int</span><span class="token punctuation">,</span> c <span class="token builtin">u32</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="BitMap.plot" class="doc-node">
+							<div class="title"><h2>fn (BitMap) plot <a href="#BitMap.plot">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">plot</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">,</span> c <span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="BitMap.quadratic" class="doc-node">
+							<div class="title"><h2>fn (BitMap) quadratic <a href="#BitMap.quadratic">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">quadratic</span><span class="token punctuation">(</span>in_x0 <span class="token builtin">int</span><span class="token punctuation">,</span> in_y0 <span class="token builtin">int</span><span class="token punctuation">,</span> in_x1 <span class="token builtin">int</span><span class="token punctuation">,</span> in_y1 <span class="token builtin">int</span><span class="token punctuation">,</span> in_cx <span class="token builtin">int</span><span class="token punctuation">,</span> in_cy <span class="token builtin">int</span><span class="token punctuation">,</span> c <span class="token builtin">u32</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="BitMap.save_as_ppm" class="doc-node">
+							<div class="title"><h2>fn (BitMap) save_as_ppm <a href="#BitMap.save_as_ppm">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">save_as_ppm</span><span class="token punctuation">(</span>file_name <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>write out a .ppm file</p>
+
+</section>
+						<section id="BitMap.save_raw_data" class="doc-node">
+							<div class="title"><h2>fn (BitMap) save_raw_data <a href="#BitMap.save_raw_data">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">save_raw_data</span><span class="token punctuation">(</span>file_name <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="BitMap.set_pos" class="doc-node">
+							<div class="title"><h2>fn (BitMap) set_pos <a href="#BitMap.set_pos">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">set_pos</span><span class="token punctuation">(</span>x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">)</span></code></pre>
+<p>set draw postion in the buffer</p>
+
+</section>
+						<section id="BitMap.set_rotation" class="doc-node">
+							<div class="title"><h2>fn (BitMap) set_rotation <a href="#BitMap.set_rotation">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> bmp BitMap<span class="token punctuation">)</span> <span class="token function">set_rotation</span><span class="token punctuation">(</span>a <span class="token builtin">f32</span><span class="token punctuation">)</span></code></pre>
+<p>set the rotation angle in radiants</p>
+
+</section>
+						<section id="Point" class="doc-node">
+							<div class="title"><h2>struct Point <a href="#Point">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Point</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	x        <span class="token builtin">int</span>
+	y        <span class="token builtin">int</span>
+	on_curve <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Glyph" class="doc-node">
+							<div class="title"><h2>struct Glyph <a href="#Glyph">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Glyph</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	g_type             <span class="token builtin">u16</span> <span class="token operator">=</span> ttf<span class="token punctuation">.</span>g_type_simple
+	contour_ends       <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">u16</span>
+	number_of_contours <span class="token builtin">i16</span>
+	points             <span class="token punctuation">[</span><span class="token punctuation">]</span>Point
+	x_min              <span class="token builtin">i16</span>
+	x_max              <span class="token builtin">i16</span>
+	y_min              <span class="token builtin">i16</span>
+	y_max              <span class="token builtin">i16</span>
+	valid_glyph        <span class="token builtin">bool</span>
+	components         <span class="token punctuation">[</span><span class="token punctuation">]</span>Component
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Text_block" class="doc-node">
+							<div class="title"><h2>struct Text_block <a href="#Text_block">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Text_block</span> <span class="token punctuation">{</span>
+	x         <span class="token builtin">int</span>
+	y         <span class="token builtin">int</span>
+	w         <span class="token builtin">int</span>
+	h         <span class="token builtin">int</span>
+	cut_lines <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="TTF_File" class="doc-node">
+							<div class="title"><h2>struct TTF_File <a href="#TTF_File">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">TTF_File</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	buf                     <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>
+	pos                     <span class="token builtin">u32</span>
+	length                  <span class="token builtin">u16</span>
+	scalar_type             <span class="token builtin">u32</span>
+	search_range            <span class="token builtin">u16</span>
+	entry_selector          <span class="token builtin">u16</span>
+	range_shift             <span class="token builtin">u16</span>
+	tables                  <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span>Offset_Table
+	version                 <span class="token builtin">f32</span>
+	font_revision           <span class="token builtin">f32</span>
+	checksum_adjustment     <span class="token builtin">u32</span>
+	magic_number            <span class="token builtin">u32</span>
+	flags                   <span class="token builtin">u16</span>
+	units_per_em            <span class="token builtin">u16</span>
+	created                 <span class="token builtin">u64</span>
+	modified                <span class="token builtin">u64</span>
+	x_min                   <span class="token builtin">f32</span>
+	y_min                   <span class="token builtin">f32</span>
+	x_max                   <span class="token builtin">f32</span>
+	y_max                   <span class="token builtin">f32</span>
+	mac_style               <span class="token builtin">u16</span>
+	lowest_rec_ppem         <span class="token builtin">u16</span>
+	font_direction_hint     <span class="token builtin">i16</span>
+	index_to_loc_format     <span class="token builtin">i16</span>
+	glyph_data_format       <span class="token builtin">i16</span>
+	font_family             <span class="token builtin">string</span>
+	font_sub_family         <span class="token builtin">string</span>
+	full_name               <span class="token builtin">string</span>
+	postscript_name         <span class="token builtin">string</span>
+	cmaps                   <span class="token punctuation">[</span><span class="token punctuation">]</span>TrueTypeCmap
+	ascent                  <span class="token builtin">i16</span>
+	descent                 <span class="token builtin">i16</span>
+	line_gap                <span class="token builtin">i16</span>
+	advance_width_max       <span class="token builtin">u16</span>
+	min_left_side_bearing   <span class="token builtin">i16</span>
+	min_right_side_bearing  <span class="token builtin">i16</span>
+	x_max_extent            <span class="token builtin">i16</span>
+	caret_slope_rise        <span class="token builtin">i16</span>
+	caret_slope_run         <span class="token builtin">i16</span>
+	caret_offset            <span class="token builtin">i16</span>
+	metric_data_format      <span class="token builtin">i16</span>
+	num_of_long_hor_metrics <span class="token builtin">u16</span>
+	kern                    <span class="token punctuation">[</span><span class="token punctuation">]</span>Kern0Table
+
+	glyph_cache <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span>Glyph
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="TTF_File.init" class="doc-node">
+							<div class="title"><h2>fn (TTF_File) init <a href="#TTF_File.init">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> tf TTF_File<span class="token punctuation">)</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TTF_File.get_horizontal_metrics" class="doc-node">
+							<div class="title"><h2>fn (TTF_File) get_horizontal_metrics <a href="#TTF_File.get_horizontal_metrics">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> tf TTF_File<span class="token punctuation">)</span> <span class="token function">get_horizontal_metrics</span><span class="token punctuation">(</span>glyph_index <span class="token builtin">u16</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TTF_File.read_glyph_dim" class="doc-node">
+							<div class="title"><h2>fn (TTF_File) read_glyph_dim <a href="#TTF_File.read_glyph_dim">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> tf TTF_File<span class="token punctuation">)</span> <span class="token function">read_glyph_dim</span><span class="token punctuation">(</span>index <span class="token builtin">u16</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TTF_File.read_glyph" class="doc-node">
+							<div class="title"><h2>fn (TTF_File) read_glyph <a href="#TTF_File.read_glyph">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> tf TTF_File<span class="token punctuation">)</span> <span class="token function">read_glyph</span><span class="token punctuation">(</span>index <span class="token builtin">u16</span><span class="token punctuation">)</span> Glyph</code></pre>
+
+
+</section>
+						<section id="TTF_File.get_info_string" class="doc-node">
+							<div class="title"><h2>fn (TTF_File) get_info_string <a href="#TTF_File.get_info_string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>tf TTF_File<span class="token punctuation">)</span> <span class="token function">get_info_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="TTF_render_Sokol" class="doc-node">
+							<div class="title"><h2>struct TTF_render_Sokol <a href="#TTF_render_Sokol">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">TTF_render_Sokol</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	bmp <span class="token operator">&</span>BitMap
+
+	sg_img       C<span class="token punctuation">.</span>sg_image
+	scale_reduct <span class="token builtin">f32</span> <span class="token operator">=</span> <span class="token number">2.0</span>
+	device_dpi   <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">72</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="TTF_render_Sokol.format_texture" class="doc-node">
+							<div class="title"><h2>fn (TTF_render_Sokol) format_texture <a href="#TTF_render_Sokol.format_texture">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> tf_skl TTF_render_Sokol<span class="token punctuation">)</span> <span class="token function">format_texture</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TTF_render_Sokol.create_text" class="doc-node">
+							<div class="title"><h2>fn (TTF_render_Sokol) create_text <a href="#TTF_render_Sokol.create_text">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> tf_skl TTF_render_Sokol<span class="token punctuation">)</span> <span class="token function">create_text</span><span class="token punctuation">(</span>in_txt <span class="token builtin">string</span><span class="token punctuation">,</span> in_font_size <span class="token builtin">f32</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TTF_render_Sokol.create_text_block" class="doc-node">
+							<div class="title"><h2>fn (TTF_render_Sokol) create_text_block <a href="#TTF_render_Sokol.create_text_block">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> tf_skl TTF_render_Sokol<span class="token punctuation">)</span> <span class="token function">create_text_block</span><span class="token punctuation">(</span>in_txt <span class="token builtin">string</span><span class="token punctuation">,</span> in_w <span class="token builtin">int</span><span class="token punctuation">,</span> in_h <span class="token builtin">int</span><span class="token punctuation">,</span> in_font_size <span class="token builtin">f32</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TTF_render_Sokol.create_texture" class="doc-node">
+							<div class="title"><h2>fn (TTF_render_Sokol) create_texture <a href="#TTF_render_Sokol.create_texture">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> tf_skl TTF_render_Sokol<span class="token punctuation">)</span> <span class="token function">create_texture</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TTF_render_Sokol.destroy_texture" class="doc-node">
+							<div class="title"><h2>fn (TTF_render_Sokol) destroy_texture <a href="#TTF_render_Sokol.destroy_texture">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>tf_skl TTF_render_Sokol<span class="token punctuation">)</span> <span class="token function">destroy_texture</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="TTF_render_Sokol.update_text_texture" class="doc-node">
+							<div class="title"><h2>fn (TTF_render_Sokol) update_text_texture <a href="#TTF_render_Sokol.update_text_texture">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> tf_skl TTF_render_Sokol<span class="token punctuation">)</span> <span class="token function">update_text_texture</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>Use only if usage: .dynamic</p>
+
+</section>
+						<section id="TTF_render_Sokol.draw_text_bmp" class="doc-node">
+							<div class="title"><h2>fn (TTF_render_Sokol) draw_text_bmp <a href="#TTF_render_Sokol.draw_text_bmp">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>tf_skl TTF_render_Sokol<span class="token punctuation">)</span> <span class="token function">draw_text_bmp</span><span class="token punctuation">(</span>ctx <span class="token operator">&</span>gg<span class="token punctuation">.</span>Context<span class="token punctuation">,</span> x <span class="token builtin">f32</span><span class="token punctuation">,</span> y <span class="token builtin">f32</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:28
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#readme_x.ttf">README</a></li>
+<li class="open"><a href="#color_multiply">fn color_multiply</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#color_multiply_alpha">fn color_multiply_alpha</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Text_align">enum Text_align</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Style">enum Style</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#BitMap">struct BitMap</a>        <ul>
+<li><a href="#BitMap.aline">fn aline</a></li>
+<li><a href="#BitMap.box">fn box</a></li>
+<li><a href="#BitMap.clear">fn clear</a></li>
+<li><a href="#BitMap.clear_filler">fn clear_filler</a></li>
+<li><a href="#BitMap.draw_glyph">fn draw_glyph</a></li>
+<li><a href="#BitMap.draw_text">fn draw_text</a></li>
+<li><a href="#BitMap.draw_text_block">fn draw_text_block</a></li>
+<li><a href="#BitMap.exec_filler">fn exec_filler</a></li>
+<li><a href="#BitMap.fline">fn fline</a></li>
+<li><a href="#BitMap.get_bbox">fn get_bbox</a></li>
+<li><a href="#BitMap.get_chars_bbox">fn get_chars_bbox</a></li>
+<li><a href="#BitMap.get_raw_bytes">fn get_raw_bytes</a></li>
+<li><a href="#BitMap.init_filler">fn init_filler</a></li>
+<li><a href="#BitMap.line">fn line</a></li>
+<li><a href="#BitMap.plot">fn plot</a></li>
+<li><a href="#BitMap.quadratic">fn quadratic</a></li>
+<li><a href="#BitMap.save_as_ppm">fn save_as_ppm</a></li>
+<li><a href="#BitMap.save_raw_data">fn save_raw_data</a></li>
+<li><a href="#BitMap.set_pos">fn set_pos</a></li>
+<li><a href="#BitMap.set_rotation">fn set_rotation</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Point">struct Point</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Glyph">struct Glyph</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Text_block">struct Text_block</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#TTF_File">struct TTF_File</a>        <ul>
+<li><a href="#TTF_File.init">fn init</a></li>
+<li><a href="#TTF_File.get_horizontal_metrics">fn get_horizontal_metrics</a></li>
+<li><a href="#TTF_File.read_glyph_dim">fn read_glyph_dim</a></li>
+<li><a href="#TTF_File.read_glyph">fn read_glyph</a></li>
+<li><a href="#TTF_File.get_info_string">fn get_info_string</a></li>
+</ul>
+</li>
+<li class="open"><a href="#TTF_render_Sokol">struct TTF_render_Sokol</a>        <ul>
+<li><a href="#TTF_render_Sokol.format_texture">fn format_texture</a></li>
+<li><a href="#TTF_render_Sokol.create_text">fn create_text</a></li>
+<li><a href="#TTF_render_Sokol.create_text_block">fn create_text_block</a></li>
+<li><a href="#TTF_render_Sokol.create_texture">fn create_texture</a></li>
+<li><a href="#TTF_render_Sokol.destroy_texture">fn destroy_texture</a></li>
+<li><a href="#TTF_render_Sokol.update_text_texture">fn update_text_texture</a></li>
+<li><a href="#TTF_render_Sokol.draw_text_bmp">fn draw_text_bmp</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

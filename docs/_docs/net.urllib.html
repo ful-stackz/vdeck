@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>net.urllib | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li class="active"><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_net.urllib" class="doc-node">
+							<div class="title"><h1> net.urllib <a href="#readme_net.urllib">#</a></h1></div>
+
+</section>
+
+						<section id="ishex" class="doc-node">
+							<div class="title"><h2>fn ishex <a href="#ishex">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">ishex</span><span class="token punctuation">(</span>c <span class="token builtin">byte</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="new_values" class="doc-node">
+							<div class="title"><h2>fn new_values <a href="#new_values">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_values</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Values</code></pre>
+<p>new_values returns a new Values struct for creating  urlencoded query string parameters. it can also be to  post form data with application/x-www-form-urlencoded.  values.encode() will return the encoded data</p>
+
+</section>
+						<section id="parse" class="doc-node">
+							<div class="title"><h2>fn parse <a href="#parse">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse</span><span class="token punctuation">(</span>rawurl <span class="token builtin">string</span><span class="token punctuation">)</span> ?URL</code></pre>
+<p>parse parses rawurl into a URL structure.   The rawurl may be relative (a path, without a host) or absolute  (starting with a scheme). Trying to parse a hostname and path  without a scheme is invalid but may not necessarily return an  error, due to parsing ambiguities.</p>
+
+</section>
+						<section id="parse_query" class="doc-node">
+							<div class="title"><h2>fn parse_query <a href="#parse_query">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse_query</span><span class="token punctuation">(</span>query <span class="token builtin">string</span><span class="token punctuation">)</span> ?Values</code></pre>
+<p>Values maps a string key to a list of values.  It is typically used for query parameters and form values.  Unlike in the http.Header map, the keys in a Values map  are case-sensitive.  parseQuery parses the URL-encoded query string and returns  a map listing the values specified for each key.  parseQuery always returns a non-nil map containing all the  valid query parameters found; err describes the first decoding error  encountered, if any.   Query is expected to be a list of key=value settings separated by  ampersands or semicolons. A setting without an equals sign is  interpreted as a key set to an empty value.</p>
+
+</section>
+						<section id="path_escape" class="doc-node">
+							<div class="title"><h2>fn path_escape <a href="#path_escape">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">path_escape</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>path_escape escapes the string so it can be safely placed inside a URL path segment,  replacing special characters (including /) with %XX sequences as needed.</p>
+
+</section>
+						<section id="path_unescape" class="doc-node">
+							<div class="title"><h2>fn path_unescape <a href="#path_unescape">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">path_unescape</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+<p>path_unescape does the inverse transformation of path_escape,  converting each 3-byte encoded substring of the form '%AB' into the  hex-decoded byte 0xAB. It returns an error if any % is not followed  by two hexadecimal digits.   path_unescape is identical to query_unescape except that it does not  unescape '+' to ' ' (space).</p>
+
+</section>
+						<section id="query_escape" class="doc-node">
+							<div class="title"><h2>fn query_escape <a href="#query_escape">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_escape</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>query_escape escapes the string so it can be safely placed  inside a URL query.</p>
+
+</section>
+						<section id="query_unescape" class="doc-node">
+							<div class="title"><h2>fn query_unescape <a href="#query_unescape">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_unescape</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+<p>query_unescape does the inverse transformation of query_escape,  converting each 3-byte encoded substring of the form '%AB' into the  hex-decoded byte 0xAB.  It returns an error if any % is not followed by two hexadecimal  digits.</p>
+
+</section>
+						<section id="valid_userinfo" class="doc-node">
+							<div class="title"><h2>fn valid_userinfo <a href="#valid_userinfo">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">valid_userinfo</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>valid_userinfo reports whether s is a valid userinfo string per RFC 3986  Section 3.2.1:  userinfo    = <em>( unreserved / pct-encoded / sub-delims / ':' )  unreserved  = ALPHA / DIGIT / '-' / '.' / '_' / '~'  sub-delims  = '!' / '$' / '&amp;' / ''' / '(' / ')'  / '</em>' / '+' / ',' / ';' / '='   It doesn't validate pct-encoded. The caller does that via fn unescape.</p>
+
+</section>
+						<section id="user" class="doc-node">
+							<div class="title"><h2>fn user <a href="#user">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">user</span><span class="token punctuation">(</span>username <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">&</span>Userinfo</code></pre>
+<p>user returns a Userinfo containing the provided username  and no password set.</p>
+
+</section>
+						<section id="Value.all" class="doc-node">
+							<div class="title"><h2>fn (Value) all <a href="#Value.all">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>v <span class="token operator">&</span>Value<span class="token punctuation">)</span> <span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>Currently you will need to use all()[key].data  once map[string][]string is implemented  this will be fixed</p>
+
+</section>
+						<section id="Values.del" class="doc-node">
+							<div class="title"><h2>fn (Values) del <a href="#Values.del">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> v Values<span class="token punctuation">)</span> <span class="token function">del</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>del deletes the values associated with key.</p>
+
+</section>
+						<section id="Values.encode" class="doc-node">
+							<div class="title"><h2>fn (Values) encode <a href="#Values.encode">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>v Values<span class="token punctuation">)</span> <span class="token function">encode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>encode encodes the values into ``URL encoded'' form  ('bar=baz&amp;foo=quux') sorted by key.</p>
+
+</section>
+						<section id="Values.get" class="doc-node">
+							<div class="title"><h2>fn (Values) get <a href="#Values.get">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>v <span class="token operator">&</span>Values<span class="token punctuation">)</span> <span class="token function">get</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get gets the first value associated with the given key.  If there are no values associated with the key, get returns  a empty string.</p>
+
+</section>
+						<section id="Values.get_all" class="doc-node">
+							<div class="title"><h2>fn (Values) get_all <a href="#Values.get_all">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>v <span class="token operator">&</span>Values<span class="token punctuation">)</span> <span class="token function">get_all</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>get_all gets the all the values associated with the given key.  If there are no values associated with the key, get returns  a empty []string.</p>
+
+</section>
+						<section id="Values.set" class="doc-node">
+							<div class="title"><h2>fn (Values) set <a href="#Values.set">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> v Values<span class="token punctuation">)</span> <span class="token function">set</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">,</span> value <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>set sets the key to value. It replaces any existing  values.</p>
+
+</section>
+						<section id="Values.add" class="doc-node">
+							<div class="title"><h2>fn (Values) add <a href="#Values.add">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> v Values<span class="token punctuation">)</span> <span class="token function">add</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">,</span> value <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>add adds the value to key. It appends to any existing  values associated with key.</p>
+
+</section>
+						<section id="URL" class="doc-node">
+							<div class="title"><h2>struct URL <a href="#URL">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">URL</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	scheme      <span class="token builtin">string</span>
+	opaque      <span class="token builtin">string</span>
+	user        <span class="token operator">&</span>Userinfo
+	host        <span class="token builtin">string</span>
+	path        <span class="token builtin">string</span>
+	raw_path    <span class="token builtin">string</span>
+	force_query <span class="token builtin">bool</span>
+	raw_query   <span class="token builtin">string</span>
+	fragment    <span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+<p>A URL represents a parsed URL (technically, a URI reference).   The general form represented is:   [scheme:][//[userinfo@]host][/]path[?query][#fragment]   URLs that do not start with a slash after the scheme are interpreted as:   scheme:opaque[?query][#fragment]   Note that the path field is stored in decoded form: /%47%6f%2f becomes /Go/.  A consequence is that it is impossible to tell which slashes in the path were  slashes in the raw URL and which were %2f. This distinction is rarely important,  but when it is, the code should use raw_path, an optional field which only gets  set if the default encoding is different from path.   URL's String method uses the escaped_path method to obtain the path. See the  escaped_path method for more details.</p>
+
+</section>
+						<section id="URL.set_path" class="doc-node">
+							<div class="title"><h2>fn (URL) set_path <a href="#URL.set_path">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> u URL<span class="token punctuation">)</span> <span class="token function">set_path</span><span class="token punctuation">(</span>p <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+<p>set_path sets the path and raw_path fields of the URL based on the provided  escaped path p. It maintains the invariant that raw_path is only specified  when it differs from the default encoding of the path.  For example:  - set_path('/foo/bar')   will set path='/foo/bar' and raw_path=''  - set_path('/foo%2fbar') will set path='/foo/bar' and raw_path='/foo%2fbar'  set_path will return an error only if the provided path contains an invalid  escaping.</p>
+
+</section>
+						<section id="URL.escaped_path" class="doc-node">
+							<div class="title"><h2>fn (URL) escaped_path <a href="#URL.escaped_path">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>u <span class="token operator">&</span>URL<span class="token punctuation">)</span> <span class="token function">escaped_path</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>escaped_path returns the escaped form of u.path.  In general there are multiple possible escaped forms of any path.  escaped_path returns u.raw_path when it is a valid escaping of u.path.  Otherwise escaped_path ignores u.raw_path and computes an escaped  form on its own.  The String and request_uri methods use escaped_path to construct  their results.  In general, code should call escaped_path instead of  reading u.raw_path directly.</p>
+
+</section>
+						<section id="URL.str" class="doc-node">
+							<div class="title"><h2>fn (URL) str <a href="#URL.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>u URL<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>str reassembles the URL into a valid URL string.  The general form of the result is one of:   scheme:opaque?query#fragment  scheme://userinfo@host/path?query#fragment   If u.opaque is non-empty, String uses the first form;  otherwise it uses the second form.  Any non-ASCII characters in host are escaped.  To obtain the path, String uses u.escaped_path().   In the second form, the following rules apply:  - if u.scheme is empty, scheme: is omitted.  - if u.user is nil, userinfo@ is omitted.  - if u.host is empty, host/ is omitted.  - if u.scheme and u.host are empty and u.user is nil,  the entire scheme://userinfo@host/ is omitted.  - if u.host is non-empty and u.path begins with a /,  the form host/path does not add its own /.  - if u.raw_query is empty, ?query is omitted.  - if u.fragment is empty, #fragment is omitted.</p>
+
+</section>
+						<section id="URL.is_abs" class="doc-node">
+							<div class="title"><h2>fn (URL) is_abs <a href="#URL.is_abs">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>u <span class="token operator">&</span>URL<span class="token punctuation">)</span> <span class="token function">is_abs</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_abs reports whether the URL is absolute.  Absolute means that it has a non-empty scheme.</p>
+
+</section>
+						<section id="URL.parse" class="doc-node">
+							<div class="title"><h2>fn (URL) parse <a href="#URL.parse">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>u <span class="token operator">&</span>URL<span class="token punctuation">)</span> <span class="token function">parse</span><span class="token punctuation">(</span>ref <span class="token builtin">string</span><span class="token punctuation">)</span> ?URL</code></pre>
+<p>parse parses a URL in the context of the receiver. The provided URL  may be relative or absolute. parse returns nil, err on parse  failure, otherwise its return value is the same as resolve_reference.</p>
+
+</section>
+						<section id="URL.resolve_reference" class="doc-node">
+							<div class="title"><h2>fn (URL) resolve_reference <a href="#URL.resolve_reference">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>u <span class="token operator">&</span>URL<span class="token punctuation">)</span> <span class="token function">resolve_reference</span><span class="token punctuation">(</span>ref <span class="token operator">&</span>URL<span class="token punctuation">)</span> ?URL</code></pre>
+<p>resolve_reference resolves a URI reference to an absolute URI from  an absolute base URI u, per RFC 3986 Section 5.2. The URI reference  may be relative or absolute. resolve_reference always returns a new  URL instance, even if the returned URL is identical to either the  base or reference. If ref is an absolute URL, then resolve_reference  ignores base and returns a copy of ref.</p>
+
+</section>
+						<section id="URL.query" class="doc-node">
+							<div class="title"><h2>fn (URL) query <a href="#URL.query">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>u <span class="token operator">&</span>URL<span class="token punctuation">)</span> <span class="token function">query</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Values</code></pre>
+<p>query parses raw_query and returns the corresponding values.  It silently discards malformed value pairs.  To check errors use parseQuery.</p>
+
+</section>
+						<section id="URL.request_uri" class="doc-node">
+							<div class="title"><h2>fn (URL) request_uri <a href="#URL.request_uri">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>u <span class="token operator">&</span>URL<span class="token punctuation">)</span> <span class="token function">request_uri</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>request_uri returns the encoded path?query or opaque?query  string that would be used in an HTTP request for u.</p>
+
+</section>
+						<section id="URL.hostname" class="doc-node">
+							<div class="title"><h2>fn (URL) hostname <a href="#URL.hostname">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>u <span class="token operator">&</span>URL<span class="token punctuation">)</span> <span class="token function">hostname</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>hostname returns u.host, stripping any valid port number if present.   If the result is enclosed in square brackets, as literal IPv6 addresses are,  the square brackets are removed from the result.</p>
+
+</section>
+						<section id="URL.port" class="doc-node">
+							<div class="title"><h2>fn (URL) port <a href="#URL.port">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>u <span class="token operator">&</span>URL<span class="token punctuation">)</span> <span class="token function">port</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>port returns the port part of u.host, without the leading colon.  If u.host doesn't contain a port, port returns an empty string.</p>
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:26
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#ishex">fn ishex</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new_values">fn new_values</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#parse">fn parse</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#parse_query">fn parse_query</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#path_escape">fn path_escape</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#path_unescape">fn path_unescape</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_escape">fn query_escape</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_unescape">fn query_unescape</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#valid_userinfo">fn valid_userinfo</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#user">fn user</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Value.all">type Value</a>        <ul>
+<li><a href="#Value.all">fn all</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Values.del">type Values</a>        <ul>
+<li><a href="#Values.del">fn del</a></li>
+<li><a href="#Values.encode">fn encode</a></li>
+<li><a href="#Values.get">fn get</a></li>
+<li><a href="#Values.get_all">fn get_all</a></li>
+<li><a href="#Values.set">fn set</a></li>
+<li><a href="#Values.add">fn add</a></li>
+</ul>
+</li>
+<li class="open"><a href="#URL">struct URL</a>        <ul>
+<li><a href="#URL.set_path">fn set_path</a></li>
+<li><a href="#URL.escaped_path">fn escaped_path</a></li>
+<li><a href="#URL.str">fn str</a></li>
+<li><a href="#URL.is_abs">fn is_abs</a></li>
+<li><a href="#URL.parse">fn parse</a></li>
+<li><a href="#URL.resolve_reference">fn resolve_reference</a></li>
+<li><a href="#URL.query">fn query</a></li>
+<li><a href="#URL.request_uri">fn request_uri</a></li>
+<li><a href="#URL.hostname">fn hostname</a></li>
+<li><a href="#URL.port">fn port</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>net.http | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li class="active"><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_net.http" class="doc-node">
+							<div class="title"><h1> net.http <a href="#readme_net.http">#</a></h1></div>
+
+</section>
+
+						<section id="new_request" class="doc-node">
+							<div class="title"><h2>fn new_request <a href="#new_request">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_request</span><span class="token punctuation">(</span>method Method<span class="token punctuation">,</span> url_ <span class="token builtin">string</span><span class="token punctuation">,</span> data <span class="token builtin">string</span><span class="token punctuation">)</span> ?Request</code></pre>
+
+
+</section>
+						<section id="url_encode_form_data" class="doc-node">
+							<div class="title"><h2>fn url_encode_form_data <a href="#url_encode_form_data">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">url_encode_form_data</span><span class="token punctuation">(</span>data <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>url_encode_form_data converts mapped data to an URL encoded string</p>
+
+</section>
+						<section id="delete" class="doc-node">
+							<div class="title"><h2>fn delete <a href="#delete">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">delete</span><span class="token punctuation">(</span>url <span class="token builtin">string</span><span class="token punctuation">)</span> ?Response</code></pre>
+<p>delete sends a DELETE HTTP request to the URL</p>
+
+</section>
+						<section id="download_file" class="doc-node">
+							<div class="title"><h2>fn download_file <a href="#download_file">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">download_file</span><span class="token punctuation">(</span>url <span class="token builtin">string</span><span class="token punctuation">,</span> out <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+						<section id="escape" class="doc-node">
+							<div class="title"><h2>fn escape <a href="#escape">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">escape</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>escape is deprecated, use urllib.query_unescape() instead</p>
+
+</section>
+						<section id="escape_url" class="doc-node">
+							<div class="title"><h2>fn escape_url <a href="#escape_url">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">escape_url</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>escape_url is deprecated, use urllib.query_escape() instead</p>
+
+</section>
+						<section id="fetch" class="doc-node">
+							<div class="title"><h2>fn fetch <a href="#fetch">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">fetch</span><span class="token punctuation">(</span>_url <span class="token builtin">string</span><span class="token punctuation">,</span> config FetchConfig<span class="token punctuation">)</span> ?Response</code></pre>
+<p>fetch sends an HTTP request to the URL with the given method and configurations</p>
+
+</section>
+						<section id="unescape_url" class="doc-node">
+							<div class="title"><h2>fn unescape_url <a href="#unescape_url">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">unescape_url</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>unescape_url is deprecated, use urllib.query_unescape() instead</p>
+
+</section>
+						<section id="get" class="doc-node">
+							<div class="title"><h2>fn get <a href="#get">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get</span><span class="token punctuation">(</span>url <span class="token builtin">string</span><span class="token punctuation">)</span> ?Response</code></pre>
+<p>get sends a GET HTTP request to the URL</p>
+
+</section>
+						<section id="get_text" class="doc-node">
+							<div class="title"><h2>fn get_text <a href="#get_text">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_text</span><span class="token punctuation">(</span>url <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>get_text sends a GET HTTP request to the URL and returns the text content of the response</p>
+
+</section>
+						<section id="head" class="doc-node">
+							<div class="title"><h2>fn head <a href="#head">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">head</span><span class="token punctuation">(</span>url <span class="token builtin">string</span><span class="token punctuation">)</span> ?Response</code></pre>
+<p>head sends a HEAD HTTP request to the URL</p>
+
+</section>
+						<section id="unescape" class="doc-node">
+							<div class="title"><h2>fn unescape <a href="#unescape">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">unescape</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>unescape is deprecated, use urllib.query_escape() instead</p>
+
+</section>
+						<section id="status_from_int" class="doc-node">
+							<div class="title"><h2>fn status_from_int <a href="#status_from_int">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">status_from_int</span><span class="token punctuation">(</span>code <span class="token builtin">int</span><span class="token punctuation">)</span> Status</code></pre>
+
+
+</section>
+						<section id="sanitize_cookie_value" class="doc-node">
+							<div class="title"><h2>fn sanitize_cookie_value <a href="#sanitize_cookie_value">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">sanitize_cookie_value</span><span class="token punctuation">(</span>v <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p><a href="https://tools.ietf.org/html/rfc6265#section-4.1.1">https://tools.ietf.org/html/rfc6265#section-4.1.1</a>  cookie-value      = *cookie-octet / ( DQUOTE *cookie-octet DQUOTE )  cookie-octet      = %x21 / %x23-2B / %x2D-3A / %x3C-5B / %x5D-7E            ; US-ASCII characters excluding CTLs,            ; whitespace DQUOTE, comma, semicolon,            ; and backslash  We loosen this as spaces and commas are common in cookie values  but we produce a quoted cookie-value in when value starts or ends  with a comma or space.</p>
+
+</section>
+						<section id="read_set_cookies" class="doc-node">
+							<div class="title"><h2>fn read_set_cookies <a href="#read_set_cookies">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">read_set_cookies</span><span class="token punctuation">(</span>h <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&</span>Cookie</code></pre>
+<p>Parses all &quot;Set-Cookie&quot; values from the header <code>h</code> and  returns the successfully parsed Cookies.</p>
+
+</section>
+						<section id="read_cookies" class="doc-node">
+							<div class="title"><h2>fn read_cookies <a href="#read_cookies">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">read_cookies</span><span class="token punctuation">(</span>h <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> filter <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&</span>Cookie</code></pre>
+<p>Parses all &quot;Cookie&quot; values from the header <code>h</code> and  returns the successfully parsed Cookies.   if <code>filter</code> isn't empty, only cookies of that name are returned</p>
+
+</section>
+						<section id="is_cookie_domain_name" class="doc-node">
+							<div class="title"><h2>fn is_cookie_domain_name <a href="#is_cookie_domain_name">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">is_cookie_domain_name</span><span class="token punctuation">(</span>_s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="put" class="doc-node">
+							<div class="title"><h2>fn put <a href="#put">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">put</span><span class="token punctuation">(</span>url <span class="token builtin">string</span><span class="token punctuation">,</span> data <span class="token builtin">string</span><span class="token punctuation">)</span> ?Response</code></pre>
+<p>put sends a PUT HTTP request to the URL with a string data</p>
+
+</section>
+						<section id="method_from_str" class="doc-node">
+							<div class="title"><h2>fn method_from_str <a href="#method_from_str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">method_from_str</span><span class="token punctuation">(</span>m <span class="token builtin">string</span><span class="token punctuation">)</span> Method</code></pre>
+
+
+</section>
+						<section id="new_custom_header_from_map" class="doc-node">
+							<div class="title"><h2>fn new_custom_header_from_map <a href="#new_custom_header_from_map">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_custom_header_from_map</span><span class="token punctuation">(</span>kvs <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span> ?Header</code></pre>
+<p>new_custom_header_from_map creates a Header from string key value pairs</p>
+
+</section>
+						<section id="new_header" class="doc-node">
+							<div class="title"><h2>fn new_header <a href="#new_header">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_header</span><span class="token punctuation">(</span>kvs ...HeaderConfig<span class="token punctuation">)</span> Header</code></pre>
+<p>Create a new Header object</p>
+
+</section>
+						<section id="new_header_from_map" class="doc-node">
+							<div class="title"><h2>fn new_header_from_map <a href="#new_header_from_map">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_header_from_map</span><span class="token punctuation">(</span>kvs <span class="token builtin">map</span><span class="token punctuation">[</span>CommonHeader<span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span> Header</code></pre>
+<p>new_header_from_map creates a Header from key value pairs</p>
+
+</section>
+						<section id="version_from_str" class="doc-node">
+							<div class="title"><h2>fn version_from_str <a href="#version_from_str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">version_from_str</span><span class="token punctuation">(</span>v <span class="token builtin">string</span><span class="token punctuation">)</span> Version</code></pre>
+
+
+</section>
+						<section id="parse_request" class="doc-node">
+							<div class="title"><h2>fn parse_request <a href="#parse_request">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse_request</span><span class="token punctuation">(</span><span class="token keyword">mut</span> reader io<span class="token punctuation">.</span>BufferedReader<span class="token punctuation">)</span> ?Request</code></pre>
+<p>Parse a raw HTTP request into a Request object</p>
+
+</section>
+						<section id="parse_response" class="doc-node">
+							<div class="title"><h2>fn parse_response <a href="#parse_response">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">parse_response</span><span class="token punctuation">(</span>resp <span class="token builtin">string</span><span class="token punctuation">)</span> Response</code></pre>
+<p>Parse a raw HTTP response into a Response object</p>
+
+</section>
+						<section id="patch" class="doc-node">
+							<div class="title"><h2>fn patch <a href="#patch">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">patch</span><span class="token punctuation">(</span>url <span class="token builtin">string</span><span class="token punctuation">,</span> data <span class="token builtin">string</span><span class="token punctuation">)</span> ?Response</code></pre>
+<p>patch sends a PATCH HTTP request to the URL with a string data</p>
+
+</section>
+						<section id="post" class="doc-node">
+							<div class="title"><h2>fn post <a href="#post">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">post</span><span class="token punctuation">(</span>url <span class="token builtin">string</span><span class="token punctuation">,</span> data <span class="token builtin">string</span><span class="token punctuation">)</span> ?Response</code></pre>
+<p>post sends a POST HTTP request to the URL with a string data</p>
+
+</section>
+						<section id="post_form" class="doc-node">
+							<div class="title"><h2>fn post_form <a href="#post_form">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">post_form</span><span class="token punctuation">(</span>url <span class="token builtin">string</span><span class="token punctuation">,</span> data <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span> ?Response</code></pre>
+<p>post_form sends a POST HTTP request to the URL with X-WWW-FORM-URLENCODED data</p>
+
+</section>
+						<section id="post_json" class="doc-node">
+							<div class="title"><h2>fn post_json <a href="#post_json">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">post_json</span><span class="token punctuation">(</span>url <span class="token builtin">string</span><span class="token punctuation">,</span> data <span class="token builtin">string</span><span class="token punctuation">)</span> ?Response</code></pre>
+<p>post_json sends a POST HTTP request to the URL with a JSON data</p>
+
+</section>
+						<section id="Method" class="doc-node">
+							<div class="title"><h2>enum Method <a href="#Method">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Method</span> <span class="token punctuation">{</span>
+	get
+	post
+	put
+	head
+	delete
+	options
+	trace
+	connect
+	patch
+<span class="token punctuation">}</span></code></pre>
+<p>The methods listed here are some of the most used ones, ordered by  commonality. A comprehensive list is available at:  <a href="https://www.iana.org/assignments/http-methods/http-methods.xhtml">https://www.iana.org/assignments/http-methods/http-methods.xhtml</a></p>
+
+</section>
+						<section id="Method.str" class="doc-node">
+							<div class="title"><h2>fn (Method) str <a href="#Method.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>m Method<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="Version" class="doc-node">
+							<div class="title"><h2>enum Version <a href="#Version">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Version</span> <span class="token punctuation">{</span>
+	unknown
+	v1_1
+	v2_0
+	v1_0
+<span class="token punctuation">}</span></code></pre>
+<p>The versions listed here are the most common ones.</p>
+
+</section>
+						<section id="Version.str" class="doc-node">
+							<div class="title"><h2>fn (Version) str <a href="#Version.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>v Version<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="Status" class="doc-node">
+							<div class="title"><h2>enum Status <a href="#Status">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Status</span> <span class="token punctuation">{</span>
+	unknown <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+	unassigned <span class="token operator">=</span> <span class="token number">0</span>
+	cont <span class="token operator">=</span> <span class="token number">100</span>
+	switching_protocols <span class="token operator">=</span> <span class="token number">101</span>
+	processing <span class="token operator">=</span> <span class="token number">102</span>
+	checkpoint_draft <span class="token operator">=</span> <span class="token number">103</span>
+	ok <span class="token operator">=</span> <span class="token number">200</span>
+	created <span class="token operator">=</span> <span class="token number">201</span>
+	accepted <span class="token operator">=</span> <span class="token number">202</span>
+	non_authoritative_information <span class="token operator">=</span> <span class="token number">203</span>
+	no_content <span class="token operator">=</span> <span class="token number">204</span>
+	reset_content <span class="token operator">=</span> <span class="token number">205</span>
+	partial_content <span class="token operator">=</span> <span class="token number">206</span>
+	multi_status <span class="token operator">=</span> <span class="token number">207</span>
+	already_reported <span class="token operator">=</span> <span class="token number">208</span>
+	im_used <span class="token operator">=</span> <span class="token number">226</span>
+	multiple_choices <span class="token operator">=</span> <span class="token number">300</span>
+	moved_permanently <span class="token operator">=</span> <span class="token number">301</span>
+	found <span class="token operator">=</span> <span class="token number">302</span>
+	see_other <span class="token operator">=</span> <span class="token number">303</span>
+	not_modified <span class="token operator">=</span> <span class="token number">304</span>
+	use_proxy <span class="token operator">=</span> <span class="token number">305</span>
+	switch_proxy <span class="token operator">=</span> <span class="token number">306</span>
+	temporary_redirect <span class="token operator">=</span> <span class="token number">307</span>
+	permanent_redirect <span class="token operator">=</span> <span class="token number">308</span>
+	bad_request <span class="token operator">=</span> <span class="token number">400</span>
+	unauthorized <span class="token operator">=</span> <span class="token number">401</span>
+	payment_required <span class="token operator">=</span> <span class="token number">402</span>
+	forbidden <span class="token operator">=</span> <span class="token number">403</span>
+	not_found <span class="token operator">=</span> <span class="token number">404</span>
+	method_not_allowed <span class="token operator">=</span> <span class="token number">405</span>
+	not_acceptable <span class="token operator">=</span> <span class="token number">406</span>
+	proxy_authentication_required <span class="token operator">=</span> <span class="token number">407</span>
+	request_timeout <span class="token operator">=</span> <span class="token number">408</span>
+	conflict <span class="token operator">=</span> <span class="token number">409</span>
+	gone <span class="token operator">=</span> <span class="token number">410</span>
+	length_required <span class="token operator">=</span> <span class="token number">411</span>
+	precondition_failed <span class="token operator">=</span> <span class="token number">412</span>
+	request_entity_too_large <span class="token operator">=</span> <span class="token number">413</span>
+	request_uri_too_long <span class="token operator">=</span> <span class="token number">414</span>
+	unsupported_media_type <span class="token operator">=</span> <span class="token number">415</span>
+	requested_range_not_satisfiable <span class="token operator">=</span> <span class="token number">416</span>
+	expectation_failed <span class="token operator">=</span> <span class="token number">417</span>
+	im_a_teapot <span class="token operator">=</span> <span class="token number">418</span>
+	misdirected_request <span class="token operator">=</span> <span class="token number">421</span>
+	unprocessable_entity <span class="token operator">=</span> <span class="token number">422</span>
+	locked <span class="token operator">=</span> <span class="token number">423</span>
+	failed_dependency <span class="token operator">=</span> <span class="token number">424</span>
+	unordered_collection <span class="token operator">=</span> <span class="token number">425</span>
+	upgrade_required <span class="token operator">=</span> <span class="token number">426</span>
+	precondition_required <span class="token operator">=</span> <span class="token number">428</span>
+	too_many_requests <span class="token operator">=</span> <span class="token number">429</span>
+	request_header_fields_too_large <span class="token operator">=</span> <span class="token number">431</span>
+	unavailable_for_legal_reasons <span class="token operator">=</span> <span class="token number">451</span>
+	client_closed_request <span class="token operator">=</span> <span class="token number">499</span>
+	internal_server_error <span class="token operator">=</span> <span class="token number">500</span>
+	not_implemented <span class="token operator">=</span> <span class="token number">501</span>
+	bad_gateway <span class="token operator">=</span> <span class="token number">502</span>
+	service_unavailable <span class="token operator">=</span> <span class="token number">503</span>
+	gateway_timeout <span class="token operator">=</span> <span class="token number">504</span>
+	http_version_not_supported <span class="token operator">=</span> <span class="token number">505</span>
+	variant_also_negotiates <span class="token operator">=</span> <span class="token number">506</span>
+	insufficient_storage <span class="token operator">=</span> <span class="token number">507</span>
+	loop_detected <span class="token operator">=</span> <span class="token number">508</span>
+	bandwidth_limit_exceeded <span class="token operator">=</span> <span class="token number">509</span>
+	not_extended <span class="token operator">=</span> <span class="token number">510</span>
+	network_authentication_required <span class="token operator">=</span> <span class="token number">511</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The status codes listed here are based on the comprehensive list,  available at:  <a href="https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml">https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml</a></p>
+
+</section>
+						<section id="Status.str" class="doc-node">
+							<div class="title"><h2>fn (Status) str <a href="#Status.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>code Status<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="Status.int" class="doc-node">
+							<div class="title"><h2>fn (Status) int <a href="#Status.int">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>code Status<span class="token punctuation">)</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>int converts an assigned and known Status to its integral equivalent.  if a Status is unknown or unassigned, this method will return zero</p>
+
+</section>
+						<section id="Status.is_valid" class="doc-node">
+							<div class="title"><h2>fn (Status) is_valid <a href="#Status.is_valid">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>code Status<span class="token punctuation">)</span> <span class="token function">is_valid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_valid returns true if the status code is assigned and known</p>
+
+</section>
+						<section id="Status.is_error" class="doc-node">
+							<div class="title"><h2>fn (Status) is_error <a href="#Status.is_error">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>code Status<span class="token punctuation">)</span> <span class="token function">is_error</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_error will return true if the status code represents either a client or  a server error; otherwise will return false</p>
+
+</section>
+						<section id="Status.is_success" class="doc-node">
+							<div class="title"><h2>fn (Status) is_success <a href="#Status.is_success">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>code Status<span class="token punctuation">)</span> <span class="token function">is_success</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>is_success will return true if the status code represents either an  informational, success, or redirection response; otherwise will return false</p>
+
+</section>
+						<section id="CommonHeader" class="doc-node">
+							<div class="title"><h2>enum CommonHeader <a href="#CommonHeader">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">CommonHeader</span> <span class="token punctuation">{</span>
+	accept
+	accept_ch
+	accept_charset
+	accept_ch_lifetime
+	accept_encoding
+	accept_language
+	accept_patch
+	accept_post
+	accept_ranges
+	access_control_allow_credentials
+	access_control_allow_headers
+	access_control_allow_methods
+	access_control_allow_origin
+	access_control_expose_headers
+	access_control_max_age
+	access_control_request_headers
+	access_control_request_method
+	age
+	allow
+	alt_svc
+	authorization
+	cache_control
+	clear_site_data
+	connection
+	content_disposition
+	content_encoding
+	content_language
+	content_length
+	content_location
+	content_range
+	content_security_policy
+	content_security_policy_report_only
+	content_type
+	cookie
+	cross_origin_embedder_policy
+	cross_origin_opener_policy
+	cross_origin_resource_policy
+	date
+	device_memory
+	digest
+	dnt
+	early_data
+	etag
+	expect
+	expect_ct
+	expires
+	feature_policy
+	forwarded
+	from
+	host
+	if_match
+	if_modified_since
+	if_none_match
+	if_range
+	if_unmodified_since
+	index
+	keep_alive
+	large_allocation
+	last_modified
+	link
+	location
+	nel
+	origin
+	pragma
+	proxy_authenticate
+	proxy_authorization
+	range
+	referer
+	referrer_policy
+	retry_after
+	save_data
+	sec_fetch_dest
+	sec_fetch_mode
+	sec_fetch_site
+	sec_fetch_user
+	sec_websocket_accept
+	server
+	server_timing
+	set_cookie
+	sourcemap
+	strict_transport_security
+	te
+	timing_allow_origin
+	tk
+	trailer
+	transfer_encoding
+	upgrade
+	upgrade_insecure_requests
+	user_agent
+	vary
+	via
+	want_digest
+	warning
+	www_authenticate
+	x_content_type_options
+	x_dns_prefetch_control
+	x_forwarded_for
+	x_forwarded_host
+	x_forwarded_proto
+	x_frame_options
+	x_xss_protection
+<span class="token punctuation">}</span></code></pre>
+<p>CommonHeader is an enum of the most common HTTP headers</p>
+
+</section>
+						<section id="CommonHeader.str" class="doc-node">
+							<div class="title"><h2>fn (CommonHeader) str <a href="#CommonHeader.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>h CommonHeader<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="SameSite" class="doc-node">
+							<div class="title"><h2>enum SameSite <a href="#SameSite">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">SameSite</span> <span class="token punctuation">{</span>
+	same_site_default_mode <span class="token operator">=</span> <span class="token number">1</span>
+	same_site_lax_mode
+	same_site_strict_mode
+	same_site_none_mode
+<span class="token punctuation">}</span></code></pre>
+<p>SameSite allows a server to define a cookie attribute making it impossible for  the browser to send this cookie along with cross-site requests. The main  goal is to mitigate the risk of cross-origin information leakage, and provide  some protection against cross-site request forgery attacks.   See <a href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00">https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00</a> for details.</p>
+
+</section>
+						<section id="Response" class="doc-node">
+							<div class="title"><h2>struct Response <a href="#Response">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Response</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	text        <span class="token builtin">string</span>
+	header      Header
+	cookies     <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	status_code <span class="token builtin">int</span>
+	version     Version
+<span class="token punctuation">}</span></code></pre>
+<p>Response represents the result of the request</p>
+
+</section>
+						<section id="Response.bytes" class="doc-node">
+							<div class="title"><h2>fn (Response) bytes <a href="#Response.bytes">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>resp Response<span class="token punctuation">)</span> <span class="token function">bytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span></code></pre>
+<p>Formats resp to bytes suitable for HTTP response transmission</p>
+
+</section>
+						<section id="Response.bytestr" class="doc-node">
+							<div class="title"><h2>fn (Response) bytestr <a href="#Response.bytestr">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>resp Response<span class="token punctuation">)</span> <span class="token function">bytestr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>Formats resp to a string suitable for HTTP response transmission</p>
+
+</section>
+						<section id="HeaderConfig" class="doc-node">
+							<div class="title"><h2>struct HeaderConfig <a href="#HeaderConfig">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">HeaderConfig</span> <span class="token punctuation">{</span>
+	key   CommonHeader
+	value <span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Request" class="doc-node">
+							<div class="title"><h2>struct Request <a href="#Request">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Request</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	version    Version <span class="token operator">=</span> <span class="token punctuation">.</span>v1_1
+	method     Method
+	header     Header
+	cookies    <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	data       <span class="token builtin">string</span>
+	url        <span class="token builtin">string</span>
+	user_agent <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'v.http'</span>
+	verbose    <span class="token builtin">bool</span>
+	user_ptr   <span class="token builtin">voidptr</span>
+
+	read_timeout  <span class="token builtin">i64</span> <span class="token operator">=</span> <span class="token number">30</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>second
+	write_timeout <span class="token builtin">i64</span> <span class="token operator">=</span> <span class="token number">30</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>second
+<span class="token punctuation">}</span></code></pre>
+<p>Request holds information about an HTTP request (either received by  a server or to be sent by a client)</p>
+
+</section>
+						<section id="Request.add_header" class="doc-node">
+							<div class="title"><h2>fn (Request) add_header <a href="#Request.add_header">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> req Request<span class="token punctuation">)</span> <span class="token function">add_header</span><span class="token punctuation">(</span>key CommonHeader<span class="token punctuation">,</span> val <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>add_header adds the key and value of an HTTP request header  To add a custom header, use add_custom_header</p>
+
+</section>
+						<section id="Request.add_custom_header" class="doc-node">
+							<div class="title"><h2>fn (Request) add_custom_header <a href="#Request.add_custom_header">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> req Request<span class="token punctuation">)</span> <span class="token function">add_custom_header</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">,</span> val <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>add_custom_header adds the key and value of an HTTP request header  This method may fail if the key contains characters that are not permitted</p>
+
+</section>
+						<section id="Request.do" class="doc-node">
+							<div class="title"><h2>fn (Request) do <a href="#Request.do">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>req <span class="token operator">&</span>Request<span class="token punctuation">)</span> <span class="token function">do</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?Response</code></pre>
+<p>do will send the HTTP request and returns <code>http.Response</code> as soon as the response is recevied</p>
+
+</section>
+						<section id="Request.referer" class="doc-node">
+							<div class="title"><h2>fn (Request) referer <a href="#Request.referer">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>req <span class="token operator">&</span>Request<span class="token punctuation">)</span> <span class="token function">referer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>referer returns 'Referer' header value of the given request</p>
+
+</section>
+						<section id="HeaderQueryConfig" class="doc-node">
+							<div class="title"><h2>struct HeaderQueryConfig <a href="#HeaderQueryConfig">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">HeaderQueryConfig</span> <span class="token punctuation">{</span>
+	exact <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="HeaderCoerceConfig" class="doc-node">
+							<div class="title"><h2>struct HeaderCoerceConfig <a href="#HeaderCoerceConfig">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">HeaderCoerceConfig</span> <span class="token punctuation">{</span>
+	canonicalize <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Header" class="doc-node">
+							<div class="title"><h2>struct Header <a href="#Header">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Header</span> <span class="token punctuation">{</span>
+<span class="token keyword">mut</span><span class="token punctuation">:</span>
+	data <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+
+	keys <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Header.free" class="doc-node">
+							<div class="title"><h2>fn (Header) free <a href="#Header.free">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> h Header<span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="Header.add" class="doc-node">
+							<div class="title"><h2>fn (Header) add <a href="#Header.add">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> h Header<span class="token punctuation">)</span> <span class="token function">add</span><span class="token punctuation">(</span>key CommonHeader<span class="token punctuation">,</span> value <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>add appends a value to the header key.</p>
+
+</section>
+						<section id="Header.add_custom" class="doc-node">
+							<div class="title"><h2>fn (Header) add_custom <a href="#Header.add_custom">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> h Header<span class="token punctuation">)</span> <span class="token function">add_custom</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">,</span> value <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>add_custom appends a value to a custom header key. This function will  return an error if the key contains invalid header characters.</p>
+
+</section>
+						<section id="Header.add_map" class="doc-node">
+							<div class="title"><h2>fn (Header) add_map <a href="#Header.add_map">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> h Header<span class="token punctuation">)</span> <span class="token function">add_map</span><span class="token punctuation">(</span>kvs <span class="token builtin">map</span><span class="token punctuation">[</span>CommonHeader<span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>add_map appends the value for each header key.</p>
+
+</section>
+						<section id="Header.add_custom_map" class="doc-node">
+							<div class="title"><h2>fn (Header) add_custom_map <a href="#Header.add_custom_map">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> h Header<span class="token punctuation">)</span> <span class="token function">add_custom_map</span><span class="token punctuation">(</span>kvs <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>add_custom_map appends the value for each custom header key.</p>
+
+</section>
+						<section id="Header.set" class="doc-node">
+							<div class="title"><h2>fn (Header) set <a href="#Header.set">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> h Header<span class="token punctuation">)</span> <span class="token function">set</span><span class="token punctuation">(</span>key CommonHeader<span class="token punctuation">,</span> value <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>set sets the key-value pair. This function will clear any other values  that exist for the CommonHeader.</p>
+
+</section>
+						<section id="Header.set_custom" class="doc-node">
+							<div class="title"><h2>fn (Header) set_custom <a href="#Header.set_custom">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> h Header<span class="token punctuation">)</span> <span class="token function">set_custom</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">,</span> value <span class="token builtin">string</span><span class="token punctuation">)</span> ?</code></pre>
+<p>set_custom sets the key-value pair for a custom header key. This  function will clear any other values that exist for the header. This  function will return an error if the key contains invalid header  characters.</p>
+
+</section>
+						<section id="Header.delete" class="doc-node">
+							<div class="title"><h2>fn (Header) delete <a href="#Header.delete">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> h Header<span class="token punctuation">)</span> <span class="token function">delete</span><span class="token punctuation">(</span>key CommonHeader<span class="token punctuation">)</span></code></pre>
+<p>delete deletes all values for a key.</p>
+
+</section>
+						<section id="Header.delete_custom" class="doc-node">
+							<div class="title"><h2>fn (Header) delete_custom <a href="#Header.delete_custom">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> h Header<span class="token punctuation">)</span> <span class="token function">delete_custom</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>delete_custom deletes all values for a custom header key.</p>
+
+</section>
+						<section id="Header.coerce" class="doc-node">
+							<div class="title"><h2>fn (Header) coerce <a href="#Header.coerce">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> h Header<span class="token punctuation">)</span> <span class="token function">coerce</span><span class="token punctuation">(</span>flags ...HeaderCoerceConfig<span class="token punctuation">)</span></code></pre>
+<p>coerce coerces data in the Header by joining keys that match  case-insensitively into one entry.</p>
+
+</section>
+						<section id="Header.contains" class="doc-node">
+							<div class="title"><h2>fn (Header) contains <a href="#Header.contains">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>h Header<span class="token punctuation">)</span> <span class="token function">contains</span><span class="token punctuation">(</span>key CommonHeader<span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>contains returns whether the header key exists in the map.</p>
+
+</section>
+						<section id="Header.contains_custom" class="doc-node">
+							<div class="title"><h2>fn (Header) contains_custom <a href="#Header.contains_custom">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>h Header<span class="token punctuation">)</span> <span class="token function">contains_custom</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">,</span> flags ...HeaderQueryConfig<span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>contains_custom returns whether the custom header key exists in the map.</p>
+
+</section>
+						<section id="Header.get" class="doc-node">
+							<div class="title"><h2>fn (Header) get <a href="#Header.get">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>h Header<span class="token punctuation">)</span> <span class="token function">get</span><span class="token punctuation">(</span>key CommonHeader<span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+<p>get gets the first value for the CommonHeader, or none if the key  does not exist.</p>
+
+</section>
+						<section id="Header.get_custom" class="doc-node">
+							<div class="title"><h2>fn (Header) get_custom <a href="#Header.get_custom">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>h Header<span class="token punctuation">)</span> <span class="token function">get_custom</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">,</span> flags ...HeaderQueryConfig<span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+<p>get_custom gets the first value for the custom header, or none if  the key does not exist.</p>
+
+</section>
+						<section id="Header.starting_with" class="doc-node">
+							<div class="title"><h2>fn (Header) starting_with <a href="#Header.starting_with">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>h Header<span class="token punctuation">)</span> <span class="token function">starting_with</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+<p>starting_with gets the first header starting with key, or none if  the key does not exist.</p>
+
+</section>
+						<section id="Header.values" class="doc-node">
+							<div class="title"><h2>fn (Header) values <a href="#Header.values">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>h Header<span class="token punctuation">)</span> <span class="token function">values</span><span class="token punctuation">(</span>key CommonHeader<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>values gets all values for the CommonHeader.</p>
+
+</section>
+						<section id="Header.custom_values" class="doc-node">
+							<div class="title"><h2>fn (Header) custom_values <a href="#Header.custom_values">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>h Header<span class="token punctuation">)</span> <span class="token function">custom_values</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">,</span> flags ...HeaderQueryConfig<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>custom_values gets all values for the custom header.</p>
+
+</section>
+						<section id="Header.keys" class="doc-node">
+							<div class="title"><h2>fn (Header) keys <a href="#Header.keys">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>h Header<span class="token punctuation">)</span> <span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>keys gets all header keys as strings</p>
+
+</section>
+						<section id="Header.render" class="doc-node">
+							<div class="title"><h2>fn (Header) render <a href="#Header.render">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>h Header<span class="token punctuation">)</span> <span class="token function">render</span><span class="token punctuation">(</span>flags HeaderRenderConfig<span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>render renders the Header into a string for use in sending HTTP  requests. All header lines will end in <code>\r\n</code></p>
+
+</section>
+						<section id="Header.join" class="doc-node">
+							<div class="title"><h2>fn (Header) join <a href="#Header.join">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>h Header<span class="token punctuation">)</span> <span class="token function">join</span><span class="token punctuation">(</span>other Header<span class="token punctuation">)</span> Header</code></pre>
+<p>join combines two Header structs into a new Header struct</p>
+
+</section>
+						<section id="Header.str" class="doc-node">
+							<div class="title"><h2>fn (Header) str <a href="#Header.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>h Header<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>str returns the headers string as seen in HTTP/1.1 requests.  Key order is not guaranteed.</p>
+
+</section>
+						<section id="FetchConfig" class="doc-node">
+							<div class="title"><h2>struct FetchConfig <a href="#FetchConfig">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">FetchConfig</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	method     Method
+	header     Header
+	data       <span class="token builtin">string</span>
+	params     <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	cookies    <span class="token builtin">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	user_agent <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'v.http'</span>
+	verbose    <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+<p>FetchConfig holds configurations of fetch</p>
+
+</section>
+						<section id="Cookie" class="doc-node">
+							<div class="title"><h2>struct Cookie <a href="#Cookie">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Cookie</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	name        <span class="token builtin">string</span>
+	value       <span class="token builtin">string</span>
+	path        <span class="token builtin">string</span>
+	domain      <span class="token builtin">string</span>
+	expires     time<span class="token punctuation">.</span>Time
+	raw_expires <span class="token builtin">string</span>
+
+	max_age   <span class="token builtin">int</span>
+	secure    <span class="token builtin">bool</span>
+	http_only <span class="token builtin">bool</span>
+	same_site SameSite
+	raw       <span class="token builtin">string</span>
+	unparsed  <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Cookie.str" class="doc-node">
+							<div class="title"><h2>fn (Cookie) str <a href="#Cookie.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>c <span class="token operator">&</span>Cookie<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>Returns the serialization of the cookie for use in a Cookie header  (if only Name and Value are set) or a Set-Cookie response  header (if other fields are set).   If c.name is invalid, the empty string is returned.</p>
+
+</section>
+						<section id="HeaderRenderConfig" class="doc-node">
+							<div class="title"><h2>struct HeaderRenderConfig <a href="#HeaderRenderConfig">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">HeaderRenderConfig</span> <span class="token punctuation">{</span>
+	version      Version
+	coerce       <span class="token builtin">bool</span>
+	canonicalize <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Server" class="doc-node">
+							<div class="title"><h2>struct Server <a href="#Server">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Server</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	port          <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">8080</span>
+	handler       <span class="token keyword">fn</span> <span class="token punctuation">(</span>Request<span class="token punctuation">)</span> Response
+	read_timeout  time<span class="token punctuation">.</span>Duration <span class="token operator">=</span> <span class="token number">30</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>second
+	write_timeout time<span class="token punctuation">.</span>Duration <span class="token operator">=</span> <span class="token number">30</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>second
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Server.listen_and_serve" class="doc-node">
+							<div class="title"><h2>fn (Server) listen_and_serve <a href="#Server.listen_and_serve">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> s Server<span class="token punctuation">)</span> <span class="token function">listen_and_serve</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?</code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:26
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#new_request">fn new_request</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#url_encode_form_data">fn url_encode_form_data</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#delete">fn delete</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#download_file">fn download_file</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#escape">fn escape</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#escape_url">fn escape_url</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#fetch">fn fetch</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#unescape_url">fn unescape_url</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get">fn get</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_text">fn get_text</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#head">fn head</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#unescape">fn unescape</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#status_from_int">fn status_from_int</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#sanitize_cookie_value">fn sanitize_cookie_value</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#read_set_cookies">fn read_set_cookies</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#read_cookies">fn read_cookies</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#is_cookie_domain_name">fn is_cookie_domain_name</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#put">fn put</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#method_from_str">fn method_from_str</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new_custom_header_from_map">fn new_custom_header_from_map</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new_header">fn new_header</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new_header_from_map">fn new_header_from_map</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#version_from_str">fn version_from_str</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#parse_request">fn parse_request</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#parse_response">fn parse_response</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#patch">fn patch</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#post">fn post</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#post_form">fn post_form</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#post_json">fn post_json</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Method">enum Method</a>        <ul>
+<li><a href="#Method.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Version">enum Version</a>        <ul>
+<li><a href="#Version.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Status">enum Status</a>        <ul>
+<li><a href="#Status.str">fn str</a></li>
+<li><a href="#Status.int">fn int</a></li>
+<li><a href="#Status.is_valid">fn is_valid</a></li>
+<li><a href="#Status.is_error">fn is_error</a></li>
+<li><a href="#Status.is_success">fn is_success</a></li>
+</ul>
+</li>
+<li class="open"><a href="#CommonHeader">enum CommonHeader</a>        <ul>
+<li><a href="#CommonHeader.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#SameSite">enum SameSite</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Response">struct Response</a>        <ul>
+<li><a href="#Response.bytes">fn bytes</a></li>
+<li><a href="#Response.bytestr">fn bytestr</a></li>
+</ul>
+</li>
+<li class="open"><a href="#HeaderConfig">struct HeaderConfig</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Request">struct Request</a>        <ul>
+<li><a href="#Request.add_header">fn add_header</a></li>
+<li><a href="#Request.add_custom_header">fn add_custom_header</a></li>
+<li><a href="#Request.do">fn do</a></li>
+<li><a href="#Request.referer">fn referer</a></li>
+</ul>
+</li>
+<li class="open"><a href="#HeaderQueryConfig">struct HeaderQueryConfig</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#HeaderCoerceConfig">struct HeaderCoerceConfig</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Header">struct Header</a>        <ul>
+<li><a href="#Header.free">fn free</a></li>
+<li><a href="#Header.add">fn add</a></li>
+<li><a href="#Header.add_custom">fn add_custom</a></li>
+<li><a href="#Header.add_map">fn add_map</a></li>
+<li><a href="#Header.add_custom_map">fn add_custom_map</a></li>
+<li><a href="#Header.set">fn set</a></li>
+<li><a href="#Header.set_custom">fn set_custom</a></li>
+<li><a href="#Header.delete">fn delete</a></li>
+<li><a href="#Header.delete_custom">fn delete_custom</a></li>
+<li><a href="#Header.coerce">fn coerce</a></li>
+<li><a href="#Header.contains">fn contains</a></li>
+<li><a href="#Header.contains_custom">fn contains_custom</a></li>
+<li><a href="#Header.get">fn get</a></li>
+<li><a href="#Header.get_custom">fn get_custom</a></li>
+<li><a href="#Header.starting_with">fn starting_with</a></li>
+<li><a href="#Header.values">fn values</a></li>
+<li><a href="#Header.custom_values">fn custom_values</a></li>
+<li><a href="#Header.keys">fn keys</a></li>
+<li><a href="#Header.render">fn render</a></li>
+<li><a href="#Header.join">fn join</a></li>
+<li><a href="#Header.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#FetchConfig">struct FetchConfig</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Cookie">struct Cookie</a>        <ul>
+<li><a href="#Cookie.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#HeaderRenderConfig">struct HeaderRenderConfig</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Server">struct Server</a>        <ul>
+<li><a href="#Server.listen_and_serve">fn listen_and_serve</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

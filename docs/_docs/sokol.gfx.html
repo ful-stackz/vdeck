@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>sokol.gfx | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li class="active"><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_sokol.gfx" class="doc-node">
+							<div class="title"><h1> sokol.gfx <a href="#readme_sokol.gfx">#</a></h1></div>
+
+</section>
+
+						<section id="Constants" class="doc-node const">
+							<div class="title"><h2>Constants <a href="#Constants">#</a></h2></div>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> sg_max_mipmaps <span class="token operator">=</span> <span class="token number">16</span></code></pre>
+
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	version     <span class="token operator">=</span> <span class="token number">1</span>
+	used_import <span class="token operator">=</span> c<span class="token punctuation">.</span>used_import
+<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> sg_cubeface_num <span class="token operator">=</span> <span class="token number">6</span></code></pre>
+
+
+</section>
+						<section id="activate_context" class="doc-node">
+							<div class="title"><h2>fn activate_context <a href="#activate_context">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">activate_context</span><span class="token punctuation">(</span>ctx_id C<span class="token punctuation">.</span>sg_context<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="append_buffer" class="doc-node">
+							<div class="title"><h2>fn append_buffer <a href="#append_buffer">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">append_buffer</span><span class="token punctuation">(</span>buf C<span class="token punctuation">.</span>sg_buffer<span class="token punctuation">,</span> data <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_range<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="apply_bindings" class="doc-node">
+							<div class="title"><h2>fn apply_bindings <a href="#apply_bindings">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">apply_bindings</span><span class="token punctuation">(</span>bindings <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_bindings<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="apply_pipeline" class="doc-node">
+							<div class="title"><h2>fn apply_pipeline <a href="#apply_pipeline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">apply_pipeline</span><span class="token punctuation">(</span>pip C<span class="token punctuation">.</span>sg_pipeline<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="apply_scissor_rect" class="doc-node">
+							<div class="title"><h2>fn apply_scissor_rect <a href="#apply_scissor_rect">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">apply_scissor_rect</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">,</span> width <span class="token builtin">int</span><span class="token punctuation">,</span> height <span class="token builtin">int</span><span class="token punctuation">,</span> origin_top_left <span class="token builtin">bool</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="apply_uniforms" class="doc-node">
+							<div class="title"><h2>fn apply_uniforms <a href="#apply_uniforms">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">apply_uniforms</span><span class="token punctuation">(</span>stage <span class="token builtin">int</span><span class="token punctuation">,</span> ub_index <span class="token builtin">int</span><span class="token punctuation">,</span> data <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_range<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="apply_viewport" class="doc-node">
+							<div class="title"><h2>fn apply_viewport <a href="#apply_viewport">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">apply_viewport</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">,</span> width <span class="token builtin">int</span><span class="token punctuation">,</span> height <span class="token builtin">int</span><span class="token punctuation">,</span> origin_top_left <span class="token builtin">bool</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="destroy_shader" class="doc-node">
+							<div class="title"><h2>fn destroy_shader <a href="#destroy_shader">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">destroy_shader</span><span class="token punctuation">(</span>shd C<span class="token punctuation">.</span>sg_shader<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="begin_default_pass" class="doc-node">
+							<div class="title"><h2>fn begin_default_pass <a href="#begin_default_pass">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">begin_default_pass</span><span class="token punctuation">(</span>actions <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_pass_action<span class="token punctuation">,</span> width <span class="token builtin">int</span><span class="token punctuation">,</span> height <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>rendering functions</p>
+
+</section>
+						<section id="begin_pass" class="doc-node">
+							<div class="title"><h2>fn begin_pass <a href="#begin_pass">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">begin_pass</span><span class="token punctuation">(</span>pass C<span class="token punctuation">.</span>sg_pass<span class="token punctuation">,</span> actions <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_pass_action<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="destroy_pipeline" class="doc-node">
+							<div class="title"><h2>fn destroy_pipeline <a href="#destroy_pipeline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">destroy_pipeline</span><span class="token punctuation">(</span>pip C<span class="token punctuation">.</span>sg_pipeline<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="destroy_pass" class="doc-node">
+							<div class="title"><h2>fn destroy_pass <a href="#destroy_pass">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">destroy_pass</span><span class="token punctuation">(</span>pass C<span class="token punctuation">.</span>sg_pass<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="destroy_image" class="doc-node">
+							<div class="title"><h2>fn destroy_image <a href="#destroy_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">destroy_image</span><span class="token punctuation">(</span>img C<span class="token punctuation">.</span>sg_image<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="destroy_buffer" class="doc-node">
+							<div class="title"><h2>fn destroy_buffer <a href="#destroy_buffer">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">destroy_buffer</span><span class="token punctuation">(</span>buf C<span class="token punctuation">.</span>sg_buffer<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="draw" class="doc-node">
+							<div class="title"><h2>fn draw <a href="#draw">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">draw</span><span class="token punctuation">(</span>base_element <span class="token builtin">int</span><span class="token punctuation">,</span> num_elements <span class="token builtin">int</span><span class="token punctuation">,</span> num_instances <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="create_clear_pass" class="doc-node">
+							<div class="title"><h2>fn create_clear_pass <a href="#create_clear_pass">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">create_clear_pass</span><span class="token punctuation">(</span>r <span class="token builtin">f32</span><span class="token punctuation">,</span> g <span class="token builtin">f32</span><span class="token punctuation">,</span> b <span class="token builtin">f32</span><span class="token punctuation">,</span> a <span class="token builtin">f32</span><span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_pass_action</code></pre>
+
+
+</section>
+						<section id="query_pass_defaults" class="doc-node">
+							<div class="title"><h2>fn query_pass_defaults <a href="#query_pass_defaults">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_pass_defaults</span><span class="token punctuation">(</span>desc <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_pass<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_pass_desc</code></pre>
+
+
+</section>
+						<section id="update_image" class="doc-node">
+							<div class="title"><h2>fn update_image <a href="#update_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">update_image</span><span class="token punctuation">(</span>img C<span class="token punctuation">.</span>sg_image<span class="token punctuation">,</span> data <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_image_data<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="update_buffer" class="doc-node">
+							<div class="title"><h2>fn update_buffer <a href="#update_buffer">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">update_buffer</span><span class="token punctuation">(</span>buf C<span class="token punctuation">.</span>sg_buffer<span class="token punctuation">,</span> data <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_range<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="commit" class="doc-node">
+							<div class="title"><h2>fn commit <a href="#commit">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">commit</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="end_pass" class="doc-node">
+							<div class="title"><h2>fn end_pass <a href="#end_pass">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">end_pass</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="shutdown" class="doc-node">
+							<div class="title"><h2>fn shutdown <a href="#shutdown">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">shutdown</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="make_buffer" class="doc-node">
+							<div class="title"><h2>fn make_buffer <a href="#make_buffer">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">make_buffer</span><span class="token punctuation">(</span>desc <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_buffer_desc<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_buffer</code></pre>
+<p>resource creation, destruction and updating</p>
+
+</section>
+						<section id="setup_context" class="doc-node">
+							<div class="title"><h2>fn setup_context <a href="#setup_context">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">setup_context</span><span class="token punctuation">(</span><span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_context</code></pre>
+<p>rendering contexts (optional)</p>
+
+</section>
+						<section id="setup" class="doc-node">
+							<div class="title"><h2>fn setup <a href="#setup">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">setup</span><span class="token punctuation">(</span>desc <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_desc<span class="token punctuation">)</span></code></pre>
+<p>setup and misc functions</p>
+
+</section>
+						<section id="make_image" class="doc-node">
+							<div class="title"><h2>fn make_image <a href="#make_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">make_image</span><span class="token punctuation">(</span>desc <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_image_desc<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_image</code></pre>
+
+
+</section>
+						<section id="reset_state_cache" class="doc-node">
+							<div class="title"><h2>fn reset_state_cache <a href="#reset_state_cache">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">reset_state_cache</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="query_shader_state" class="doc-node">
+							<div class="title"><h2>fn query_shader_state <a href="#query_shader_state">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_shader_state</span><span class="token punctuation">(</span>shd C<span class="token punctuation">.</span>sg_shader<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_resource_state</code></pre>
+
+
+</section>
+						<section id="query_shader_info" class="doc-node">
+							<div class="title"><h2>fn query_shader_info <a href="#query_shader_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_shader_info</span><span class="token punctuation">(</span>shd C<span class="token punctuation">.</span>sg_shader<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_shader_info</code></pre>
+
+
+</section>
+						<section id="query_shader_defaults" class="doc-node">
+							<div class="title"><h2>fn query_shader_defaults <a href="#query_shader_defaults">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_shader_defaults</span><span class="token punctuation">(</span>desc <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_shader<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_shader_desc</code></pre>
+
+
+</section>
+						<section id="query_pixelformat" class="doc-node">
+							<div class="title"><h2>fn query_pixelformat <a href="#query_pixelformat">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_pixelformat</span><span class="token punctuation">(</span>fmt PixelFormat<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_pixelformat_info</code></pre>
+
+
+</section>
+						<section id="query_pipeline_state" class="doc-node">
+							<div class="title"><h2>fn query_pipeline_state <a href="#query_pipeline_state">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_pipeline_state</span><span class="token punctuation">(</span>pip C<span class="token punctuation">.</span>sg_pipeline<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_resource_state</code></pre>
+
+
+</section>
+						<section id="query_pipeline_info" class="doc-node">
+							<div class="title"><h2>fn query_pipeline_info <a href="#query_pipeline_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_pipeline_info</span><span class="token punctuation">(</span>pip C<span class="token punctuation">.</span>sg_pipeline<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_pipeline_info</code></pre>
+
+
+</section>
+						<section id="query_pipeline_defaults" class="doc-node">
+							<div class="title"><h2>fn query_pipeline_defaults <a href="#query_pipeline_defaults">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_pipeline_defaults</span><span class="token punctuation">(</span>desc <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_pipeline<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_pipeline_desc</code></pre>
+
+
+</section>
+						<section id="query_pass_state" class="doc-node">
+							<div class="title"><h2>fn query_pass_state <a href="#query_pass_state">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_pass_state</span><span class="token punctuation">(</span>pass C<span class="token punctuation">.</span>sg_pass<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_resource_state</code></pre>
+
+
+</section>
+						<section id="query_pass_info" class="doc-node">
+							<div class="title"><h2>fn query_pass_info <a href="#query_pass_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_pass_info</span><span class="token punctuation">(</span>pass C<span class="token punctuation">.</span>sg_pass<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_pass_info</code></pre>
+
+
+</section>
+						<section id="discard_context" class="doc-node">
+							<div class="title"><h2>fn discard_context <a href="#discard_context">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">discard_context</span><span class="token punctuation">(</span>ctx_id C<span class="token punctuation">.</span>sg_context<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="query_limits" class="doc-node">
+							<div class="title"><h2>fn query_limits <a href="#query_limits">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_limits</span><span class="token punctuation">(</span><span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_limits</code></pre>
+
+
+</section>
+						<section id="query_image_state" class="doc-node">
+							<div class="title"><h2>fn query_image_state <a href="#query_image_state">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_image_state</span><span class="token punctuation">(</span>img C<span class="token punctuation">.</span>sg_image<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_resource_state</code></pre>
+
+
+</section>
+						<section id="query_image_info" class="doc-node">
+							<div class="title"><h2>fn query_image_info <a href="#query_image_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_image_info</span><span class="token punctuation">(</span>img C<span class="token punctuation">.</span>sg_image<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_image_info</code></pre>
+
+
+</section>
+						<section id="query_image_defaults" class="doc-node">
+							<div class="title"><h2>fn query_image_defaults <a href="#query_image_defaults">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_image_defaults</span><span class="token punctuation">(</span>desc <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_image<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_image_desc</code></pre>
+
+
+</section>
+						<section id="query_features" class="doc-node">
+							<div class="title"><h2>fn query_features <a href="#query_features">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_features</span><span class="token punctuation">(</span><span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_features</code></pre>
+
+
+</section>
+						<section id="query_desc" class="doc-node">
+							<div class="title"><h2>fn query_desc <a href="#query_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_desc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_desc</code></pre>
+<p>getting information</p>
+
+</section>
+						<section id="query_buffer_state" class="doc-node">
+							<div class="title"><h2>fn query_buffer_state <a href="#query_buffer_state">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_buffer_state</span><span class="token punctuation">(</span>buf C<span class="token punctuation">.</span>sg_buffer<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_resource_state</code></pre>
+<p>get current state of a resource (INITIAL, ALLOC, VALID, FAILED, INVALID)</p>
+
+</section>
+						<section id="query_buffer_overflow" class="doc-node">
+							<div class="title"><h2>fn query_buffer_overflow <a href="#query_buffer_overflow">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_buffer_overflow</span><span class="token punctuation">(</span>buf C<span class="token punctuation">.</span>sg_buffer<span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+
+
+</section>
+						<section id="query_buffer_info" class="doc-node">
+							<div class="title"><h2>fn query_buffer_info <a href="#query_buffer_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_buffer_info</span><span class="token punctuation">(</span>buf C<span class="token punctuation">.</span>sg_buffer<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_buffer_info</code></pre>
+<p>get runtime information about a resource</p>
+
+</section>
+						<section id="query_buffer_defaults" class="doc-node">
+							<div class="title"><h2>fn query_buffer_defaults <a href="#query_buffer_defaults">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_buffer_defaults</span><span class="token punctuation">(</span>desc <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_buffer<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_buffer_desc</code></pre>
+<p>get resource creation desc struct with their default values replaced</p>
+
+</section>
+						<section id="query_backend" class="doc-node">
+							<div class="title"><h2>fn query_backend <a href="#query_backend">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">query_backend</span><span class="token punctuation">(</span><span class="token punctuation">)</span> Backend</code></pre>
+
+
+</section>
+						<section id="make_pass" class="doc-node">
+							<div class="title"><h2>fn make_pass <a href="#make_pass">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">make_pass</span><span class="token punctuation">(</span>desc <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_pass_desc<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_pass</code></pre>
+
+
+</section>
+						<section id="make_pipeline" class="doc-node">
+							<div class="title"><h2>fn make_pipeline <a href="#make_pipeline">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">make_pipeline</span><span class="token punctuation">(</span>desc <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_pipeline_desc<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_pipeline</code></pre>
+
+
+</section>
+						<section id="make_shader" class="doc-node">
+							<div class="title"><h2>fn make_shader <a href="#make_shader">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">make_shader</span><span class="token punctuation">(</span>desc <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_shader_desc<span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_shader</code></pre>
+
+
+</section>
+						<section id="PixelFormat" class="doc-node">
+							<div class="title"><h2>enum PixelFormat <a href="#PixelFormat">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">PixelFormat</span> <span class="token punctuation">{</span>
+	_default
+	@<span class="token builtin">none</span>
+	r8
+	r8sn
+	r8ui
+	r8si
+	r16
+	r16sn
+	r16ui
+	r16si
+	r16f
+	rg8
+	rg8sn
+	rg8ui
+	rg8si
+	r32ui
+	r32si
+	r32f
+	rg16
+	rg16sn
+	rg16ui
+	rg16si
+	rg16f
+	rgba8
+	rgba8sn
+	rgba8ui
+	rgba8si
+	bgra8
+	rgb10a2
+	rg11b10f
+	rg32ui
+	rg32si
+	rg32f
+	rgba16
+	rgba16sn
+	rgba16ui
+	rgba16si
+	rgba16f
+	rgba32ui
+	rgba32si
+	rgba32f
+	depth
+	depth_stencil
+	bc1_rgba
+	bc2_rgba
+	bc3_rgba
+	bc4_r
+	bc4_rsn
+	bc5_rg
+	bc5_rgsn
+	bc6h_rgbf
+	bc6h_rgbuf
+	bc7_rgba
+	pvrtc_rgb_2bpp
+	pvrtc_rgb_4bpp
+	pvrtc_rgba_2bpp
+	pvrtc_rgba_4bpp
+	etc2_rgb8
+	etc2_rgb8a1
+	etc2_rgba8
+	etc2_rg11
+	etc2_rg11sn
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="PrimitiveType" class="doc-node">
+							<div class="title"><h2>enum PrimitiveType <a href="#PrimitiveType">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">PrimitiveType</span> <span class="token punctuation">{</span>
+	_default
+	points
+	lines
+	line_strip
+	triangles
+	triangle_strip
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="ResourceState" class="doc-node">
+							<div class="title"><h2>enum ResourceState <a href="#ResourceState">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">ResourceState</span> <span class="token punctuation">{</span>
+	initial
+	alloc
+	valid
+	failed
+	invalid
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="ShaderStage" class="doc-node">
+							<div class="title"><h2>enum ShaderStage <a href="#ShaderStage">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">ShaderStage</span> <span class="token punctuation">{</span>
+	vs
+	fs
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="IndexType" class="doc-node">
+							<div class="title"><h2>enum IndexType <a href="#IndexType">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">IndexType</span> <span class="token punctuation">{</span>
+	_default
+	@<span class="token builtin">none</span>
+	uint16
+	uint32
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="ImageType" class="doc-node">
+							<div class="title"><h2>enum ImageType <a href="#ImageType">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">ImageType</span> <span class="token punctuation">{</span>
+	_default
+	_2d
+	cube
+	_3d
+	<span class="token builtin">array</span>
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Filter" class="doc-node">
+							<div class="title"><h2>enum Filter <a href="#Filter">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Filter</span> <span class="token punctuation">{</span>
+	_default
+	nearest
+	linear
+	nearest_mipmap_nearest
+	nearest_mipmap_linear
+	linear_mipmap_nearest
+	linear_mipmap_linear
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="FaceWinding" class="doc-node">
+							<div class="title"><h2>enum FaceWinding <a href="#FaceWinding">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">FaceWinding</span> <span class="token punctuation">{</span>
+	_facewinding_default
+	facewinding_ccw
+	facewinding_cw
+	_facewinding_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="StencilOp" class="doc-node">
+							<div class="title"><h2>enum StencilOp <a href="#StencilOp">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">StencilOp</span> <span class="token punctuation">{</span>
+	_default
+	keep
+	zero
+	replace
+	incr_clamp
+	decr_clamp
+	invert
+	incr_wrap
+	decr_wrap
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="ColorMask" class="doc-node">
+							<div class="title"><h2>enum ColorMask <a href="#ColorMask">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">ColorMask</span> <span class="token punctuation">{</span>
+	_default <span class="token operator">=</span> <span class="token number">0</span>
+	@<span class="token builtin">none</span> <span class="token operator">=</span> <span class="token number">0x10</span>
+	r <span class="token operator">=</span> <span class="token number">1</span>
+	g <span class="token operator">=</span> <span class="token number">2</span>
+	b <span class="token operator">=</span> <span class="token number">4</span>
+	a <span class="token operator">=</span> <span class="token number">8</span>
+	rgb <span class="token operator">=</span> <span class="token number">0x7</span>
+	rgba <span class="token operator">=</span> <span class="token number">0xF</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="UniformType" class="doc-node">
+							<div class="title"><h2>enum UniformType <a href="#UniformType">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">UniformType</span> <span class="token punctuation">{</span>
+	invalid
+	float
+	float2
+	float3
+	float4
+	mat4
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="CompareFunc" class="doc-node">
+							<div class="title"><h2>enum CompareFunc <a href="#CompareFunc">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">CompareFunc</span> <span class="token punctuation">{</span>
+	_default
+	never
+	less
+	equal
+	less_equal
+	greater
+	not_equal
+	greater_equal
+	always
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Usage" class="doc-node">
+							<div class="title"><h2>enum Usage <a href="#Usage">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Usage</span> <span class="token punctuation">{</span>
+	_default
+	immutable
+	dynamic
+	stream
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="VertexFormat" class="doc-node">
+							<div class="title"><h2>enum VertexFormat <a href="#VertexFormat">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">VertexFormat</span> <span class="token punctuation">{</span>
+	invalid
+	float
+	float2
+	float3
+	float4
+	byte4
+	byte4n
+	ubyte4
+	ubyte4n
+	short2
+	short2n
+	ushort2n
+	short4
+	short4n
+	ushort4n
+	uint10_n2
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="CubeFace" class="doc-node">
+							<div class="title"><h2>enum CubeFace <a href="#CubeFace">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">CubeFace</span> <span class="token punctuation">{</span>
+	pos_x
+	neg_x
+	pos_y
+	neg_y
+	pos_z
+	neg_z
+	num
+	_force_u32 <span class="token operator">=</span> <span class="token number">0x7fffffff</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="CullMode" class="doc-node">
+							<div class="title"><h2>enum CullMode <a href="#CullMode">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">CullMode</span> <span class="token punctuation">{</span>
+	_default
+	@<span class="token builtin">none</span>
+	front
+	back
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="VertexStep" class="doc-node">
+							<div class="title"><h2>enum VertexStep <a href="#VertexStep">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">VertexStep</span> <span class="token punctuation">{</span>
+	_default
+	per_vertex
+	per_instance
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="BufferType" class="doc-node">
+							<div class="title"><h2>enum BufferType <a href="#BufferType">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">BufferType</span> <span class="token punctuation">{</span>
+	_default
+	vertexbuffer
+	indexbuffer
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="BorderColor" class="doc-node">
+							<div class="title"><h2>enum BorderColor <a href="#BorderColor">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">BorderColor</span> <span class="token punctuation">{</span>
+	_default
+	transparent_black
+	opaque_black
+	opaque_white
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="BlendOp" class="doc-node">
+							<div class="title"><h2>enum BlendOp <a href="#BlendOp">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">BlendOp</span> <span class="token punctuation">{</span>
+	_default
+	add
+	subtract
+	reverse_subtract
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="BlendFactor" class="doc-node">
+							<div class="title"><h2>enum BlendFactor <a href="#BlendFactor">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">BlendFactor</span> <span class="token punctuation">{</span>
+	_default
+	zero
+	one
+	src_color
+	one_minus_src_color
+	src_alpha
+	one_minus_src_alpha
+	dst_color
+	one_minus_dst_color
+	dst_alpha
+	one_minus_dst_alpha
+	src_alpha_saturated
+	blend_color
+	one_minus_blend_color
+	blend_alpha
+	one_minus_blend_alpha
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Backend" class="doc-node">
+							<div class="title"><h2>enum Backend <a href="#Backend">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Backend</span> <span class="token punctuation">{</span>
+	glcore33
+	gles2
+	gles3
+	d3d11
+	metal_ios
+	metal_macos
+	metal_simulator
+	dummy
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Action" class="doc-node">
+							<div class="title"><h2>enum Action <a href="#Action">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Action</span> <span class="token punctuation">{</span>
+	_default
+	clear
+	load
+	dontcare
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="Wrap" class="doc-node">
+							<div class="title"><h2>enum Wrap <a href="#Wrap">#</a></h2></div><pre class="signature"><code><span class="token keyword">enum</span> <span class="token symbol">Wrap</span> <span class="token punctuation">{</span>
+	_default
+	repeat
+	clamp_to_edge
+	clamp_to_border
+	mirrored_repeat
+	_num
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_vertex_attr_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_vertex_attr_desc <a href="#C.sg_vertex_attr_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_vertex_attr_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	buffer_index <span class="token builtin">int</span>
+	offset       <span class="token builtin">int</span>
+	format       VertexFormat
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_stencil_state" class="doc-node">
+							<div class="title"><h2>struct C.sg_stencil_state <a href="#C.sg_stencil_state">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_stencil_state</span> <span class="token punctuation">{</span>
+	enabled    <span class="token builtin">bool</span>
+	front      C<span class="token punctuation">.</span>sg_stencil_face_state
+	back       C<span class="token punctuation">.</span>sg_stencil_face_state
+	read_mask  <span class="token builtin">byte</span>
+	write_mask <span class="token builtin">byte</span>
+	ref        <span class="token builtin">byte</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_stencil_face_state" class="doc-node">
+							<div class="title"><h2>struct C.sg_stencil_face_state <a href="#C.sg_stencil_face_state">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_stencil_face_state</span> <span class="token punctuation">{</span>
+	fail_op       StencilOp
+	depth_fail_op StencilOp
+	pass_op       StencilOp
+	compare_func  CompareFunc
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_stencil_attachment_action" class="doc-node">
+							<div class="title"><h2>struct C.sg_stencil_attachment_action <a href="#C.sg_stencil_attachment_action">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_stencil_attachment_action</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	action Action
+	value  <span class="token builtin">byte</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_shader_uniform_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_shader_uniform_desc <a href="#C.sg_shader_uniform_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_shader_uniform_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	name        <span class="token operator">&</span><span class="token builtin">char</span>
+	@type       UniformType
+	array_count <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_shader_uniform_block_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_shader_uniform_block_desc <a href="#C.sg_shader_uniform_block_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_shader_uniform_block_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	size     <span class="token builtin">size_t</span>
+	uniforms <span class="token punctuation">[</span><span class="token number">16</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sg_shader_uniform_desc
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_shader_stage_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_shader_stage_desc <a href="#C.sg_shader_stage_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_shader_stage_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	source         <span class="token operator">&</span><span class="token builtin">char</span>
+	bytecode       C<span class="token punctuation">.</span>sg_range
+	entry          <span class="token operator">&</span><span class="token builtin">char</span>
+	uniform_blocks <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sg_shader_uniform_block_desc
+	images         <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sg_shader_image_desc
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_shader_stage_desc.set_image" class="doc-node">
+							<div class="title"><h2>fn (C.sg_shader_stage_desc) set_image <a href="#C.sg_shader_stage_desc.set_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> desc C<span class="token punctuation">.</span>sg_shader_stage_desc<span class="token punctuation">)</span> <span class="token function">set_image</span><span class="token punctuation">(</span>index <span class="token builtin">int</span><span class="token punctuation">,</span> name <span class="token builtin">string</span><span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_shader_stage_desc</code></pre>
+
+
+</section>
+						<section id="C.sg_shader_info" class="doc-node">
+							<div class="title"><h2>struct C.sg_shader_info <a href="#C.sg_shader_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_shader_info</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_shader_image_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_shader_image_desc <a href="#C.sg_shader_image_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_shader_image_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	name       <span class="token operator">&</span><span class="token builtin">char</span>
+	image_type ImageType
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_shader_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_shader_desc <a href="#C.sg_shader_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_shader_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	_start_canary <span class="token builtin">u32</span>
+	attrs         <span class="token punctuation">[</span><span class="token number">16</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sg_shader_attr_desc
+	vs            C<span class="token punctuation">.</span>sg_shader_stage_desc
+	fs            C<span class="token punctuation">.</span>sg_shader_stage_desc
+	label         <span class="token operator">&</span><span class="token builtin">char</span>
+	_end_canary   <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_shader_desc.set_vert_src" class="doc-node">
+							<div class="title"><h2>fn (C.sg_shader_desc) set_vert_src <a href="#C.sg_shader_desc.set_vert_src">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> desc C<span class="token punctuation">.</span>sg_shader_desc<span class="token punctuation">)</span> <span class="token function">set_vert_src</span><span class="token punctuation">(</span>src <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_shader_desc</code></pre>
+
+
+</section>
+						<section id="C.sg_shader_desc.set_frag_src" class="doc-node">
+							<div class="title"><h2>fn (C.sg_shader_desc) set_frag_src <a href="#C.sg_shader_desc.set_frag_src">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> desc C<span class="token punctuation">.</span>sg_shader_desc<span class="token punctuation">)</span> <span class="token function">set_frag_src</span><span class="token punctuation">(</span>src <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_shader_desc</code></pre>
+
+
+</section>
+						<section id="C.sg_shader_desc.set_vert_image" class="doc-node">
+							<div class="title"><h2>fn (C.sg_shader_desc) set_vert_image <a href="#C.sg_shader_desc.set_vert_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> desc C<span class="token punctuation">.</span>sg_shader_desc<span class="token punctuation">)</span> <span class="token function">set_vert_image</span><span class="token punctuation">(</span>index <span class="token builtin">int</span><span class="token punctuation">,</span> name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_shader_desc</code></pre>
+
+
+</section>
+						<section id="C.sg_shader_desc.set_frag_image" class="doc-node">
+							<div class="title"><h2>fn (C.sg_shader_desc) set_frag_image <a href="#C.sg_shader_desc.set_frag_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> desc C<span class="token punctuation">.</span>sg_shader_desc<span class="token punctuation">)</span> <span class="token function">set_frag_image</span><span class="token punctuation">(</span>index <span class="token builtin">int</span><span class="token punctuation">,</span> name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_shader_desc</code></pre>
+
+
+</section>
+						<section id="C.sg_shader_desc.set_vert_uniform_block_size" class="doc-node">
+							<div class="title"><h2>fn (C.sg_shader_desc) set_vert_uniform_block_size <a href="#C.sg_shader_desc.set_vert_uniform_block_size">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> desc C<span class="token punctuation">.</span>sg_shader_desc<span class="token punctuation">)</span> <span class="token function">set_vert_uniform_block_size</span><span class="token punctuation">(</span>block_index <span class="token builtin">int</span><span class="token punctuation">,</span> size <span class="token builtin">size_t</span><span class="token punctuation">)</span> <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_shader_desc</code></pre>
+
+
+</section>
+						<section id="C.sg_shader_desc.set_frag_uniform_block_size" class="doc-node">
+							<div class="title"><h2>fn (C.sg_shader_desc) set_frag_uniform_block_size <a href="#C.sg_shader_desc.set_frag_uniform_block_size">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> desc C<span class="token punctuation">.</span>sg_shader_desc<span class="token punctuation">)</span> <span class="token function">set_frag_uniform_block_size</span><span class="token punctuation">(</span>block_index <span class="token builtin">int</span><span class="token punctuation">,</span> size <span class="token builtin">size_t</span><span class="token punctuation">)</span> <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_shader_desc</code></pre>
+
+
+</section>
+						<section id="C.sg_shader_desc.set_vert_uniform" class="doc-node">
+							<div class="title"><h2>fn (C.sg_shader_desc) set_vert_uniform <a href="#C.sg_shader_desc.set_vert_uniform">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> desc C<span class="token punctuation">.</span>sg_shader_desc<span class="token punctuation">)</span> <span class="token function">set_vert_uniform</span><span class="token punctuation">(</span>block_index <span class="token builtin">int</span><span class="token punctuation">,</span> uniform_index <span class="token builtin">int</span><span class="token punctuation">,</span> name <span class="token builtin">string</span><span class="token punctuation">,</span> @type UniformType<span class="token punctuation">,</span> array_count <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_shader_desc</code></pre>
+
+
+</section>
+						<section id="C.sg_shader_desc.set_frag_uniform" class="doc-node">
+							<div class="title"><h2>fn (C.sg_shader_desc) set_frag_uniform <a href="#C.sg_shader_desc.set_frag_uniform">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> desc C<span class="token punctuation">.</span>sg_shader_desc<span class="token punctuation">)</span> <span class="token function">set_frag_uniform</span><span class="token punctuation">(</span>block_index <span class="token builtin">int</span><span class="token punctuation">,</span> uniform_index <span class="token builtin">int</span><span class="token punctuation">,</span> name <span class="token builtin">string</span><span class="token punctuation">,</span> @type UniformType<span class="token punctuation">,</span> array_count <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_shader_desc</code></pre>
+
+
+</section>
+						<section id="C.sg_shader_desc.make_shader" class="doc-node">
+							<div class="title"><h2>fn (C.sg_shader_desc) make_shader <a href="#C.sg_shader_desc.make_shader">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>desc <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_shader_desc<span class="token punctuation">)</span> <span class="token function">make_shader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> C<span class="token punctuation">.</span>sg_shader</code></pre>
+
+
+</section>
+						<section id="C.sg_shader_attr_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_shader_attr_desc <a href="#C.sg_shader_attr_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_shader_attr_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	name      <span class="token operator">&</span><span class="token builtin">char</span>
+	sem_name  <span class="token operator">&</span><span class="token builtin">char</span>
+	sem_index <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_shader" class="doc-node">
+							<div class="title"><h2>struct C.sg_shader <a href="#C.sg_shader">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_shader</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	id <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_shader.free" class="doc-node">
+							<div class="title"><h2>fn (C.sg_shader) free <a href="#C.sg_shader.free">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>s C<span class="token punctuation">.</span>sg_shader<span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.sg_range" class="doc-node">
+							<div class="title"><h2>struct C.sg_range <a href="#C.sg_range">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_range</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	ptr  <span class="token builtin">voidptr</span>
+	size <span class="token builtin">size_t</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_pixelformat_info" class="doc-node">
+							<div class="title"><h2>struct C.sg_pixelformat_info <a href="#C.sg_pixelformat_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_pixelformat_info</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	sample <span class="token builtin">bool</span>
+	filter <span class="token builtin">bool</span>
+	render <span class="token builtin">bool</span>
+	blend  <span class="token builtin">bool</span>
+	msaa   <span class="token builtin">bool</span>
+	depth  <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_pipeline_info" class="doc-node">
+							<div class="title"><h2>struct C.sg_pipeline_info <a href="#C.sg_pipeline_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_pipeline_info</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_pipeline_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_pipeline_desc <a href="#C.sg_pipeline_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_pipeline_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	_start_canary             <span class="token builtin">u32</span>
+	shader                    C<span class="token punctuation">.</span>sg_shader
+	layout                    C<span class="token punctuation">.</span>sg_layout_desc
+	depth                     C<span class="token punctuation">.</span>sg_depth_state
+	stencil                   C<span class="token punctuation">.</span>sg_stencil_state
+	color_count               <span class="token builtin">int</span>
+	colors                    <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sg_color_state
+	primitive_type            PrimitiveType
+	index_type                IndexType
+	cull_mode                 CullMode
+	face_winding              FaceWinding
+	sample_count              <span class="token builtin">int</span>
+	blend_color               C<span class="token punctuation">.</span>sg_color
+	alpha_to_coverage_enabled <span class="token builtin">bool</span>
+	label                     <span class="token operator">&</span><span class="token builtin">char</span> <span class="token operator">=</span> <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+	_end_canary               <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_pipeline" class="doc-node">
+							<div class="title"><h2>struct C.sg_pipeline <a href="#C.sg_pipeline">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_pipeline</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	id <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_pipeline.free" class="doc-node">
+							<div class="title"><h2>fn (C.sg_pipeline) free <a href="#C.sg_pipeline.free">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>p C<span class="token punctuation">.</span>sg_pipeline<span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.sg_pass_info" class="doc-node">
+							<div class="title"><h2>struct C.sg_pass_info <a href="#C.sg_pass_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_pass_info</span> <span class="token punctuation">{</span>
+	info C<span class="token punctuation">.</span>sg_slot_info
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_pass_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_pass_desc <a href="#C.sg_pass_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_pass_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	_start_canary            <span class="token builtin">u32</span>
+	color_attachments        <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sg_pass_attachment_desc
+	depth_stencil_attachment C<span class="token punctuation">.</span>sg_pass_attachment_desc
+	label                    <span class="token operator">&</span><span class="token builtin">char</span>
+	_end_canary              <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_pass_attachment_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_pass_attachment_desc <a href="#C.sg_pass_attachment_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_pass_attachment_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	image     C<span class="token punctuation">.</span>sg_image
+	mip_level <span class="token builtin">int</span>
+	face      <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_pass_action" class="doc-node">
+							<div class="title"><h2>struct C.sg_pass_action <a href="#C.sg_pass_action">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_pass_action</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	_start_canary <span class="token builtin">u32</span>
+	colors        <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sg_color_attachment_action
+	depth         C<span class="token punctuation">.</span>sg_depth_attachment_action
+	stencil       C<span class="token punctuation">.</span>sg_stencil_attachment_action
+	_end_canary   <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_pass" class="doc-node">
+							<div class="title"><h2>struct C.sg_pass <a href="#C.sg_pass">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_pass</span> <span class="token punctuation">{</span>
+	id <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_pass.free" class="doc-node">
+							<div class="title"><h2>fn (C.sg_pass) free <a href="#C.sg_pass.free">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>p C<span class="token punctuation">.</span>sg_pass<span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.sg_metal_context_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_metal_context_desc <a href="#C.sg_metal_context_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_metal_context_desc</span> <span class="token punctuation">{</span>
+	device                   <span class="token builtin">voidptr</span>
+	renderpass_descriptor_cb <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span>
+	drawable_cb              <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_limits" class="doc-node">
+							<div class="title"><h2>struct C.sg_limits <a href="#C.sg_limits">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_limits</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	max_image_size_2d      <span class="token builtin">u32</span>
+	max_image_size_cube    <span class="token builtin">u32</span>
+	max_image_size_3d      <span class="token builtin">u32</span>
+	max_image_size_array   <span class="token builtin">u32</span>
+	max_image_array_layers <span class="token builtin">u32</span>
+	max_vertex_attrs       <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_layout_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_layout_desc <a href="#C.sg_layout_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_layout_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	buffers <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sg_buffer_layout_desc
+	attrs   <span class="token punctuation">[</span><span class="token number">16</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sg_vertex_attr_desc
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_image_info" class="doc-node">
+							<div class="title"><h2>struct C.sg_image_info <a href="#C.sg_image_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_image_info</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	slot            C<span class="token punctuation">.</span>sg_slot_info
+	upd_frame_index <span class="token builtin">u32</span>
+	num_slots       <span class="token builtin">int</span>
+	active_slot     <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_image_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_image_desc <a href="#C.sg_image_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_image_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	_start_canary  <span class="token builtin">u32</span>
+	@type          ImageType
+	render_target  <span class="token builtin">bool</span>
+	width          <span class="token builtin">int</span>
+	height         <span class="token builtin">int</span>
+	num_slices     <span class="token builtin">int</span>
+	num_mipmaps    <span class="token builtin">int</span>
+	usage          Usage
+	pixel_format   PixelFormat
+	sample_count   <span class="token builtin">int</span>
+	min_filter     Filter
+	mag_filter     Filter
+	wrap_u         Wrap
+	wrap_v         Wrap
+	wrap_w         Wrap
+	border_color   BorderColor
+	max_anisotropy <span class="token builtin">u32</span>
+	min_lod        <span class="token builtin">f32</span>
+	max_lod        <span class="token builtin">f32</span>
+	data           C<span class="token punctuation">.</span>sg_image_data
+	label          <span class="token operator">&</span><span class="token builtin">char</span>
+
+	gl_textures       <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token builtin">u32</span>
+	gl_texture_target <span class="token builtin">u32</span>
+
+	mtl_textures <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token builtin">voidptr</span>
+
+	d3d11_texture              <span class="token builtin">voidptr</span>
+	d3d11_shader_resource_view <span class="token builtin">voidptr</span>
+
+	wgpu_texture <span class="token builtin">voidptr</span>
+	_end_canary  <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_image_data" class="doc-node">
+							<div class="title"><h2>struct C.sg_image_data <a href="#C.sg_image_data">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_image_data</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	subimage <span class="token punctuation">[</span>sg_cubeface_num<span class="token punctuation">]</span><span class="token punctuation">[</span>sg_max_mipmaps<span class="token punctuation">]</span>C<span class="token punctuation">.</span>sg_range
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_image" class="doc-node">
+							<div class="title"><h2>struct C.sg_image <a href="#C.sg_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_image</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	id <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_image.free" class="doc-node">
+							<div class="title"><h2>fn (C.sg_image) free <a href="#C.sg_image.free">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>i C<span class="token punctuation">.</span>sg_image<span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.sg_gl_context_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_gl_context_desc <a href="#C.sg_gl_context_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_gl_context_desc</span> <span class="token punctuation">{</span>
+	force_gles2 <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_features" class="doc-node">
+							<div class="title"><h2>struct C.sg_features <a href="#C.sg_features">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_features</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	instancing                  <span class="token builtin">bool</span>
+	origin_top_left             <span class="token builtin">bool</span>
+	multiple_render_targets     <span class="token builtin">bool</span>
+	msaa_render_targets         <span class="token builtin">bool</span>
+	imagetype_3d                <span class="token builtin">bool</span>
+	imagetype_array             <span class="token builtin">bool</span>
+	image_clamp_to_border       <span class="token builtin">bool</span>
+	mrt_independent_blend_state <span class="token builtin">bool</span>
+	mrt_independent_write_mask  <span class="token builtin">bool</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_desc <a href="#C.sg_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_desc</span> <span class="token punctuation">{</span>
+	_start_canary      <span class="token builtin">u32</span>
+	buffer_pool_size   <span class="token builtin">int</span>
+	image_pool_size    <span class="token builtin">int</span>
+	shader_pool_size   <span class="token builtin">int</span>
+	pipeline_pool_size <span class="token builtin">int</span>
+	pass_pool_size     <span class="token builtin">int</span>
+	context_pool_size  <span class="token builtin">int</span>
+	context            C<span class="token punctuation">.</span>sg_context_desc
+
+	_end_canary <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_depth_state" class="doc-node">
+							<div class="title"><h2>struct C.sg_depth_state <a href="#C.sg_depth_state">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_depth_state</span> <span class="token punctuation">{</span>
+	pixel_format     PixelFormat
+	compare          CompareFunc
+	write_enabled    <span class="token builtin">bool</span>
+	bias             <span class="token builtin">f32</span>
+	bias_slope_scale <span class="token builtin">f32</span>
+	bias_clamp       <span class="token builtin">f32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_depth_attachment_action" class="doc-node">
+							<div class="title"><h2>struct C.sg_depth_attachment_action <a href="#C.sg_depth_attachment_action">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_depth_attachment_action</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	action Action
+	value  <span class="token builtin">f32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_d3d11_context_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_d3d11_context_desc <a href="#C.sg_d3d11_context_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_d3d11_context_desc</span> <span class="token punctuation">{</span>
+	device                <span class="token builtin">voidptr</span>
+	device_context        <span class="token builtin">voidptr</span>
+	render_target_view_cb <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span>
+	depth_stencil_view_cb <span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">voidptr</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_context_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_context_desc <a href="#C.sg_context_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_context_desc</span> <span class="token punctuation">{</span>
+	sample_count <span class="token builtin">int</span>
+	gl           C<span class="token punctuation">.</span>sg_gl_context_desc
+	metal        C<span class="token punctuation">.</span>sg_metal_context_desc
+	d3d11        C<span class="token punctuation">.</span>sg_d3d11_context_desc
+	color_format PixelFormat
+	depth_format PixelFormat
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_context" class="doc-node">
+							<div class="title"><h2>struct C.sg_context <a href="#C.sg_context">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_context</span> <span class="token punctuation">{</span>
+	id <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_color_state" class="doc-node">
+							<div class="title"><h2>struct C.sg_color_state <a href="#C.sg_color_state">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_color_state</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	pixel_format PixelFormat
+	write_mask   ColorMask
+	blend        C<span class="token punctuation">.</span>sg_blend_state
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_color_attachment_action" class="doc-node">
+							<div class="title"><h2>struct C.sg_color_attachment_action <a href="#C.sg_color_attachment_action">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_color_attachment_action</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	action Action
+	value  C<span class="token punctuation">.</span>sg_color
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_color" class="doc-node">
+							<div class="title"><h2>struct C.sg_color <a href="#C.sg_color">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_color</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	r <span class="token builtin">f32</span>
+	g <span class="token builtin">f32</span>
+	b <span class="token builtin">f32</span>
+	a <span class="token builtin">f32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_buffer_layout_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_buffer_layout_desc <a href="#C.sg_buffer_layout_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_buffer_layout_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	stride    <span class="token builtin">int</span>
+	step_func VertexStep
+	step_rate <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_buffer_info" class="doc-node">
+							<div class="title"><h2>struct C.sg_buffer_info <a href="#C.sg_buffer_info">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_buffer_info</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_buffer_desc" class="doc-node">
+							<div class="title"><h2>struct C.sg_buffer_desc <a href="#C.sg_buffer_desc">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_buffer_desc</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	_start_canary <span class="token builtin">u32</span>
+	size          <span class="token builtin">size_t</span>
+	@type         BufferType
+	usage         Usage
+	data          C<span class="token punctuation">.</span>sg_range
+	label         <span class="token operator">&</span><span class="token builtin">char</span>
+
+	gl_buffers <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token builtin">u32</span>
+
+	mtl_buffers <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token builtin">voidptr</span>
+
+	d3d11_buffer <span class="token builtin">voidptr</span>
+	_end_canary  <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_buffer" class="doc-node">
+							<div class="title"><h2>struct C.sg_buffer <a href="#C.sg_buffer">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_buffer</span> <span class="token punctuation">{</span>
+	id <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_buffer.free" class="doc-node">
+							<div class="title"><h2>fn (C.sg_buffer) free <a href="#C.sg_buffer.free">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>b C<span class="token punctuation">.</span>sg_buffer<span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.sg_blend_state" class="doc-node">
+							<div class="title"><h2>struct C.sg_blend_state <a href="#C.sg_blend_state">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_blend_state</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	enabled          <span class="token builtin">bool</span>
+	src_factor_rgb   BlendFactor
+	dst_factor_rgb   BlendFactor
+	op_rgb           BlendOp
+	src_factor_alpha BlendFactor
+	dst_factor_alpha BlendFactor
+	op_alpha         BlendOp
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_bindings" class="doc-node">
+							<div class="title"><h2>struct C.sg_bindings <a href="#C.sg_bindings">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">sg_bindings</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	_start_canary         <span class="token builtin">u32</span>
+	vertex_buffers        <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sg_buffer
+	vertex_buffer_offsets <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token builtin">int</span>
+	index_buffer          C<span class="token punctuation">.</span>sg_buffer
+	index_buffer_offset   <span class="token builtin">int</span>
+	vs_images             <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sg_image
+	fs_images             <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span>C<span class="token punctuation">.</span>sg_image
+	_end_canary           <span class="token builtin">u32</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="C.sg_bindings.set_vert_image" class="doc-node">
+							<div class="title"><h2>fn (C.sg_bindings) set_vert_image <a href="#C.sg_bindings.set_vert_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> b C<span class="token punctuation">.</span>sg_bindings<span class="token punctuation">)</span> <span class="token function">set_vert_image</span><span class="token punctuation">(</span>index <span class="token builtin">int</span><span class="token punctuation">,</span> img C<span class="token punctuation">.</span>sg_image<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.sg_bindings.set_frag_image" class="doc-node">
+							<div class="title"><h2>fn (C.sg_bindings) set_frag_image <a href="#C.sg_bindings.set_frag_image">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> b C<span class="token punctuation">.</span>sg_bindings<span class="token punctuation">)</span> <span class="token function">set_frag_image</span><span class="token punctuation">(</span>index <span class="token builtin">int</span><span class="token punctuation">,</span> img C<span class="token punctuation">.</span>sg_image<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.sg_bindings.update_vert_buffer" class="doc-node">
+							<div class="title"><h2>fn (C.sg_bindings) update_vert_buffer <a href="#C.sg_bindings.update_vert_buffer">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>b <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_bindings<span class="token punctuation">)</span> <span class="token function">update_vert_buffer</span><span class="token punctuation">(</span>index <span class="token builtin">int</span><span class="token punctuation">,</span> data <span class="token builtin">voidptr</span><span class="token punctuation">,</span> element_size <span class="token builtin">int</span><span class="token punctuation">,</span> element_count <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.sg_bindings.append_vert_buffer" class="doc-node">
+							<div class="title"><h2>fn (C.sg_bindings) append_vert_buffer <a href="#C.sg_bindings.append_vert_buffer">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>b <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_bindings<span class="token punctuation">)</span> <span class="token function">append_vert_buffer</span><span class="token punctuation">(</span>index <span class="token builtin">int</span><span class="token punctuation">,</span> data <span class="token builtin">voidptr</span><span class="token punctuation">,</span> element_size <span class="token builtin">int</span><span class="token punctuation">,</span> element_count <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="C.sg_bindings.update_index_buffer" class="doc-node">
+							<div class="title"><h2>fn (C.sg_bindings) update_index_buffer <a href="#C.sg_bindings.update_index_buffer">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>b <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_bindings<span class="token punctuation">)</span> <span class="token function">update_index_buffer</span><span class="token punctuation">(</span>data <span class="token builtin">voidptr</span><span class="token punctuation">,</span> element_size <span class="token builtin">int</span><span class="token punctuation">,</span> element_count <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="C.sg_bindings.append_index_buffer" class="doc-node">
+							<div class="title"><h2>fn (C.sg_bindings) append_index_buffer <a href="#C.sg_bindings.append_index_buffer">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>b <span class="token operator">&</span>C<span class="token punctuation">.</span>sg_bindings<span class="token punctuation">)</span> <span class="token function">append_index_buffer</span><span class="token punctuation">(</span>data <span class="token builtin">voidptr</span><span class="token punctuation">,</span> element_size <span class="token builtin">int</span><span class="token punctuation">,</span> element_count <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+
+
+</section>
+						<section id="DepthLayers" class="doc-node">
+							<div class="title"><h2>struct DepthLayers <a href="#DepthLayers">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">DepthLayers</span> <span class="token punctuation">{</span>
+	depth  <span class="token builtin">int</span>
+	layers <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:27
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#Constants">Constants</a></li>
+<li class="open"><a href="#activate_context">fn activate_context</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#append_buffer">fn append_buffer</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#apply_bindings">fn apply_bindings</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#apply_pipeline">fn apply_pipeline</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#apply_scissor_rect">fn apply_scissor_rect</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#apply_uniforms">fn apply_uniforms</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#apply_viewport">fn apply_viewport</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#destroy_shader">fn destroy_shader</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#begin_default_pass">fn begin_default_pass</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#begin_pass">fn begin_pass</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#destroy_pipeline">fn destroy_pipeline</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#destroy_pass">fn destroy_pass</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#destroy_image">fn destroy_image</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#destroy_buffer">fn destroy_buffer</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#draw">fn draw</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#create_clear_pass">fn create_clear_pass</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_pass_defaults">fn query_pass_defaults</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#update_image">fn update_image</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#update_buffer">fn update_buffer</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#commit">fn commit</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#end_pass">fn end_pass</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#shutdown">fn shutdown</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#make_buffer">fn make_buffer</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#setup_context">fn setup_context</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#setup">fn setup</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#make_image">fn make_image</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#reset_state_cache">fn reset_state_cache</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_shader_state">fn query_shader_state</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_shader_info">fn query_shader_info</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_shader_defaults">fn query_shader_defaults</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_pixelformat">fn query_pixelformat</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_pipeline_state">fn query_pipeline_state</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_pipeline_info">fn query_pipeline_info</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_pipeline_defaults">fn query_pipeline_defaults</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_pass_state">fn query_pass_state</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_pass_info">fn query_pass_info</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#discard_context">fn discard_context</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_limits">fn query_limits</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_image_state">fn query_image_state</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_image_info">fn query_image_info</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_image_defaults">fn query_image_defaults</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_features">fn query_features</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_desc">fn query_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_buffer_state">fn query_buffer_state</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_buffer_overflow">fn query_buffer_overflow</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_buffer_info">fn query_buffer_info</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_buffer_defaults">fn query_buffer_defaults</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#query_backend">fn query_backend</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#make_pass">fn make_pass</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#make_pipeline">fn make_pipeline</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#make_shader">fn make_shader</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#PixelFormat">enum PixelFormat</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#PrimitiveType">enum PrimitiveType</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ResourceState">enum ResourceState</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ShaderStage">enum ShaderStage</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#IndexType">enum IndexType</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ImageType">enum ImageType</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Filter">enum Filter</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#FaceWinding">enum FaceWinding</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#StencilOp">enum StencilOp</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ColorMask">enum ColorMask</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#UniformType">enum UniformType</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#CompareFunc">enum CompareFunc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Usage">enum Usage</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#VertexFormat">enum VertexFormat</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#CubeFace">enum CubeFace</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#CullMode">enum CullMode</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#VertexStep">enum VertexStep</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#BufferType">enum BufferType</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#BorderColor">enum BorderColor</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#BlendOp">enum BlendOp</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#BlendFactor">enum BlendFactor</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Backend">enum Backend</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Action">enum Action</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Wrap">enum Wrap</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_vertex_attr_desc">struct C.sg_vertex_attr_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_stencil_state">struct C.sg_stencil_state</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_stencil_face_state">struct C.sg_stencil_face_state</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_stencil_attachment_action">struct C.sg_stencil_attachment_action</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_shader_uniform_desc">struct C.sg_shader_uniform_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_shader_uniform_block_desc">struct C.sg_shader_uniform_block_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_shader_stage_desc">struct C.sg_shader_stage_desc</a>        <ul>
+<li><a href="#C.sg_shader_stage_desc.set_image">fn set_image</a></li>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_shader_info">struct C.sg_shader_info</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_shader_image_desc">struct C.sg_shader_image_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_shader_desc">struct C.sg_shader_desc</a>        <ul>
+<li><a href="#C.sg_shader_desc.set_vert_src">fn set_vert_src</a></li>
+<li><a href="#C.sg_shader_desc.set_frag_src">fn set_frag_src</a></li>
+<li><a href="#C.sg_shader_desc.set_vert_image">fn set_vert_image</a></li>
+<li><a href="#C.sg_shader_desc.set_frag_image">fn set_frag_image</a></li>
+<li><a href="#C.sg_shader_desc.set_vert_uniform_block_size">fn set_vert_uniform_block_size</a></li>
+<li><a href="#C.sg_shader_desc.set_frag_uniform_block_size">fn set_frag_uniform_block_size</a></li>
+<li><a href="#C.sg_shader_desc.set_vert_uniform">fn set_vert_uniform</a></li>
+<li><a href="#C.sg_shader_desc.set_frag_uniform">fn set_frag_uniform</a></li>
+<li><a href="#C.sg_shader_desc.make_shader">fn make_shader</a></li>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_shader_attr_desc">struct C.sg_shader_attr_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_shader">struct C.sg_shader</a>        <ul>
+<li><a href="#C.sg_shader.free">fn free</a></li>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_range">struct C.sg_range</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_pixelformat_info">struct C.sg_pixelformat_info</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_pipeline_info">struct C.sg_pipeline_info</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_pipeline_desc">struct C.sg_pipeline_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_pipeline">struct C.sg_pipeline</a>        <ul>
+<li><a href="#C.sg_pipeline.free">fn free</a></li>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_pass_info">struct C.sg_pass_info</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_pass_desc">struct C.sg_pass_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_pass_attachment_desc">struct C.sg_pass_attachment_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_pass_action">struct C.sg_pass_action</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_pass">struct C.sg_pass</a>        <ul>
+<li><a href="#C.sg_pass.free">fn free</a></li>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_metal_context_desc">struct C.sg_metal_context_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_limits">struct C.sg_limits</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_layout_desc">struct C.sg_layout_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_image_info">struct C.sg_image_info</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_image_desc">struct C.sg_image_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_image_data">struct C.sg_image_data</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_image">struct C.sg_image</a>        <ul>
+<li><a href="#C.sg_image.free">fn free</a></li>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_gl_context_desc">struct C.sg_gl_context_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_features">struct C.sg_features</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_desc">struct C.sg_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_depth_state">struct C.sg_depth_state</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_depth_attachment_action">struct C.sg_depth_attachment_action</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_d3d11_context_desc">struct C.sg_d3d11_context_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_context_desc">struct C.sg_context_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_context">struct C.sg_context</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_color_state">struct C.sg_color_state</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_color_attachment_action">struct C.sg_color_attachment_action</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_color">struct C.sg_color</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_buffer_layout_desc">struct C.sg_buffer_layout_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_buffer_info">struct C.sg_buffer_info</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_buffer_desc">struct C.sg_buffer_desc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_buffer">struct C.sg_buffer</a>        <ul>
+<li><a href="#C.sg_buffer.free">fn free</a></li>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_blend_state">struct C.sg_blend_state</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.sg_bindings">struct C.sg_bindings</a>        <ul>
+<li><a href="#C.sg_bindings.set_vert_image">fn set_vert_image</a></li>
+<li><a href="#C.sg_bindings.set_frag_image">fn set_frag_image</a></li>
+<li><a href="#C.sg_bindings.update_vert_buffer">fn update_vert_buffer</a></li>
+<li><a href="#C.sg_bindings.append_vert_buffer">fn append_vert_buffer</a></li>
+<li><a href="#C.sg_bindings.update_index_buffer">fn update_index_buffer</a></li>
+<li><a href="#C.sg_bindings.append_index_buffer">fn append_index_buffer</a></li>
+</ul>
+</li>
+<li class="open"><a href="#DepthLayers">struct DepthLayers</a>        <ul>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

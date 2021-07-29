@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>flag | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open active"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_flag" class="doc-node">
+							<div class="title"><h1> flag <a href="#readme_flag">#</a></h1></div><p>The <code>flag</code> module helps command-line flag parsing.
+Main features are:</p>
+<ul>
+<li>parses flags like <code>-f</code> or '--flag' or '--stuff=things' or '--things stuff'.</li>
+<li>handles bool, int, float and string args.</li>
+<li>can print usage information listing all the declrared flags.</li>
+<li>handles unknown arguments as error.</li>
+</ul>
+<p>Usage example:</p>
+<pre><code class="language-v">module main
+
+import os
+import flag
+
+fn main() {
+    mut fp := flag.new_flag_parser(os.args)
+    fp.application('flag_example_tool')
+    fp.version('v0.0.1')
+    fp.limit_free_args(0, 0) // comment this, if you expect arbitrary texts after the options
+    fp.description('This tool is only designed to show how the flag lib is working')
+    fp.skip_executable()
+    an_int := fp.int('an_int', 0, 0o123, 'some int to define 0o123 is its default value')
+    a_bool := fp.bool('a_bool', 0, false, 'some boolean flag. --a_bool will set it to true.')
+    a_float := fp.float('a_float', 0, 1.0, 'some floating point value, by default 1.0 .')
+    a_string := fp.string('a_string', `a`, 'no text', 'finally, some text with ' +
+        ' `-a` as an abbreviation, so you can pass --a_string abc or just -a abc')
+    additional_args := fp.finalize() or {
+        eprintln(err)
+        println(fp.usage())
+        return
+    }
+    println('an_int: $an_int | a_bool: $a_bool | a_float: $a_float | a_string: &quot;$a_string&quot; ')
+    println(additional_args.join_lines())
+}
+</code></pre>
+
+</section>
+
+						<section id="Constants" class="doc-node const">
+							<div class="title"><h2>Constants <a href="#Constants">#</a></h2></div>
+
+</section>
+						<section id="" class="doc-node const">
+<pre class="signature"><code><span class="token keyword">const</span> <span class="token punctuation">(</span>
+	space           <span class="token operator">=</span> <span class="token string">'                            '</span>
+	underline       <span class="token operator">=</span> <span class="token string">'-----------------------------------------------'</span>
+	max_args_number <span class="token operator">=</span> <span class="token number">4048</span>
+<span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="new_flag_parser" class="doc-node">
+							<div class="title"><h2>fn new_flag_parser <a href="#new_flag_parser">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_flag_parser</span><span class="token punctuation">(</span>args <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">&</span>FlagParser</code></pre>
+<p>create a new flag set for parsing command line arguments</p>
+
+</section>
+						<section id="[]Flag.str" class="doc-node">
+							<div class="title"><h2>fn ([]Flag) str <a href="#[]Flag.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>af <span class="token punctuation">[</span><span class="token punctuation">]</span>Flag<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+						<section id="FlagParser" class="doc-node">
+							<div class="title"><h2>struct FlagParser <a href="#FlagParser">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">FlagParser</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	original_args      <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	idx_dashdash       <span class="token builtin">int</span>
+	all_after_dashdash <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	usage_examples <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+
+	default_help_label      <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'display this help and exit'</span>
+	default_version_label   <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'output version information and exit'</span>
+	args                    <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	max_free_args           <span class="token builtin">int</span>
+	flags                   <span class="token punctuation">[</span><span class="token punctuation">]</span>Flag
+	application_name        <span class="token builtin">string</span>
+	application_version     <span class="token builtin">string</span>
+	application_description <span class="token builtin">string</span>
+	min_free_args           <span class="token builtin">int</span>
+	args_description        <span class="token builtin">string</span>
+	allow_unknown_args      <span class="token builtin">bool</span>
+	footers                 <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+						<section id="FlagParser.usage_example" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) usage_example <a href="#FlagParser.usage_example">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">usage_example</span><span class="token punctuation">(</span>example <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>usage_example - add an usage example  All examples will be listed in the help screen.  If you do not give any examples, then a default usage  will be shown, based on whether the application takes  options and expects additional parameters.</p>
+
+</section>
+						<section id="FlagParser.footer" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) footer <a href="#FlagParser.footer">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">footer</span><span class="token punctuation">(</span>footer <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>add_footer - add a footnote, that will be shown  at the bottom of the help screen.</p>
+
+</section>
+						<section id="FlagParser.application" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) application <a href="#FlagParser.application">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">application</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>change the application name to be used in 'usage' output</p>
+
+</section>
+						<section id="FlagParser.version" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) version <a href="#FlagParser.version">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">version</span><span class="token punctuation">(</span>vers <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>change the application version to be used in 'usage' output</p>
+
+</section>
+						<section id="FlagParser.description" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) description <a href="#FlagParser.description">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">description</span><span class="token punctuation">(</span>desc <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<p>description appends to the application description lines, shown  in the help/usage screen</p>
+
+</section>
+						<section id="FlagParser.skip_executable" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) skip_executable <a href="#FlagParser.skip_executable">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">skip_executable</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>in most cases you do not need the first argv for flag parsing</p>
+
+</section>
+						<section id="FlagParser.allow_unknown_args" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) allow_unknown_args <a href="#FlagParser.allow_unknown_args">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">allow_unknown_args</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>allow_unknown_args - if your program has sub commands, that have  their own arguments, you can call .allow_unknown_args(), so that  the subcommand arguments (which generally are not known to your  parent program), will not cause the validation in .finalize() to fail.</p>
+
+</section>
+						<section id="FlagParser.bool_opt" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) bool_opt <a href="#FlagParser.bool_opt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">bool_opt</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> abbr <span class="token builtin">byte</span><span class="token punctuation">,</span> usage <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">bool</span></code></pre>
+<p>bool_opt returns an optional that returns the value associated with the flag.  In the situation that the flag was not provided, it returns null.</p>
+
+</section>
+						<section id="FlagParser.bool" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) bool <a href="#FlagParser.bool">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token builtin">bool</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> abbr <span class="token builtin">byte</span><span class="token punctuation">,</span> bdefault <span class="token builtin">bool</span><span class="token punctuation">,</span> usage <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span></code></pre>
+<p>defining and parsing a bool flag  if defined  the value is returned (true/false)  else  the default value is returned  version with abbr  TODO error handling for invalid string to bool conversion</p>
+
+</section>
+						<section id="FlagParser.int_multi" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) int_multi <a href="#FlagParser.int_multi">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">int_multi</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> abbr <span class="token builtin">byte</span><span class="token punctuation">,</span> usage <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span></code></pre>
+<p>int_multi returns all instances of values associated with the flags provided  In the case that none were found, it returns an empty array.</p>
+
+</section>
+						<section id="FlagParser.int_opt" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) int_opt <a href="#FlagParser.int_opt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">int_opt</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> abbr <span class="token builtin">byte</span><span class="token punctuation">,</span> usage <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">int</span></code></pre>
+<p>int_opt returns an optional that returns the value associated with the flag.  In the situation that the flag was not provided, it returns null.</p>
+
+</section>
+						<section id="FlagParser.int" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) int <a href="#FlagParser.int">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token builtin">int</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> abbr <span class="token builtin">byte</span><span class="token punctuation">,</span> idefault <span class="token builtin">int</span><span class="token punctuation">,</span> usage <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>defining and parsing an int flag  if defined  the value is returned (int)  else  the default value is returned  version with abbr  TODO error handling for invalid string to int conversion</p>
+
+</section>
+						<section id="FlagParser.float_multi" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) float_multi <a href="#FlagParser.float_multi">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">float_multi</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> abbr <span class="token builtin">byte</span><span class="token punctuation">,</span> usage <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">f64</span></code></pre>
+<p>float_multi returns all instances of values associated with the flags provided  In the case that none were found, it returns an empty array.</p>
+
+</section>
+						<section id="FlagParser.float_opt" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) float_opt <a href="#FlagParser.float_opt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">float_opt</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> abbr <span class="token builtin">byte</span><span class="token punctuation">,</span> usage <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">f64</span></code></pre>
+<p>float_opt returns an optional that returns the value associated with the flag.  In the situation that the flag was not provided, it returns null.</p>
+
+</section>
+						<section id="FlagParser.float" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) float <a href="#FlagParser.float">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">float</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> abbr <span class="token builtin">byte</span><span class="token punctuation">,</span> fdefault <span class="token builtin">f64</span><span class="token punctuation">,</span> usage <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">f64</span></code></pre>
+<p>defining and parsing a float flag  if defined  the value is returned (float)  else  the default value is returned  version with abbr  TODO error handling for invalid string to float conversion</p>
+
+</section>
+						<section id="FlagParser.string_multi" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) string_multi <a href="#FlagParser.string_multi">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">string_multi</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> abbr <span class="token builtin">byte</span><span class="token punctuation">,</span> usage <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>string_multi returns all instances of values associated with the flags provided  In the case that none were found, it returns an empty array.</p>
+
+</section>
+						<section id="FlagParser.string_opt" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) string_opt <a href="#FlagParser.string_opt">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">string_opt</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> abbr <span class="token builtin">byte</span><span class="token punctuation">,</span> usage <span class="token builtin">string</span><span class="token punctuation">)</span> ?<span class="token builtin">string</span></code></pre>
+<p>string_opt returns an optional that returns the value associated with the flag.  In the situation that the flag was not provided, it returns null.</p>
+
+</section>
+						<section id="FlagParser.string" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) string <a href="#FlagParser.string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token builtin">string</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> abbr <span class="token builtin">byte</span><span class="token punctuation">,</span> sdefault <span class="token builtin">string</span><span class="token punctuation">,</span> usage <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>defining and parsing a string flag  if defined  the value is returned (string)  else  the default value is returned  version with abbr</p>
+
+</section>
+						<section id="FlagParser.limit_free_args_to_at_least" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) limit_free_args_to_at_least <a href="#FlagParser.limit_free_args_to_at_least">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">limit_free_args_to_at_least</span><span class="token punctuation">(</span>n <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="FlagParser.limit_free_args_to_exactly" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) limit_free_args_to_exactly <a href="#FlagParser.limit_free_args_to_exactly">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">limit_free_args_to_exactly</span><span class="token punctuation">(</span>n <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="FlagParser.limit_free_args" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) limit_free_args <a href="#FlagParser.limit_free_args">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">limit_free_args</span><span class="token punctuation">(</span>min <span class="token builtin">int</span><span class="token punctuation">,</span> max <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<p>this will cause an error in finalize() if free args are out of range  (min, ..., max)</p>
+
+</section>
+						<section id="FlagParser.arguments_description" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) arguments_description <a href="#FlagParser.arguments_description">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">arguments_description</span><span class="token punctuation">(</span>description <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+
+
+</section>
+						<section id="FlagParser.usage" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) usage <a href="#FlagParser.usage">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>fs FlagParser<span class="token punctuation">)</span> <span class="token function">usage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>collect all given information and</p>
+
+</section>
+						<section id="FlagParser.finalize" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) finalize <a href="#FlagParser.finalize">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">finalize</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ?<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>finalize - return all remaining arguments (non options).  Call .finalize() after all arguments are defined.  The remaining arguments are returned in the same order they are  defined on the command line. If additional flags are found, i.e.  (things starting with '--' or '-'), it returns an error.</p>
+
+</section>
+						<section id="FlagParser.remaining_parameters" class="doc-node">
+							<div class="title"><h2>fn (FlagParser) remaining_parameters <a href="#FlagParser.remaining_parameters">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> fs FlagParser<span class="token punctuation">)</span> <span class="token function">remaining_parameters</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<p>remaining_parameters will return all remaining parameters.  Call .remaining_parameters() <em>AFTER</em> you have defined all options  that your program needs. remaining_parameters will also print any  parsing errors and stop the program. Use .finalize() instead, if  you want more control over the error handling.</p>
+
+</section>
+						<section id="Flag" class="doc-node">
+							<div class="title"><h2>struct Flag <a href="#Flag">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Flag</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	name     <span class="token builtin">string</span>
+	abbr     <span class="token builtin">byte</span>
+	usage    <span class="token builtin">string</span>
+	val_desc <span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+<p>data object storing information about a defined flag</p>
+
+</section>
+						<section id="Flag.str" class="doc-node">
+							<div class="title"><h2>fn (Flag) str <a href="#Flag.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>f Flag<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:26
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#readme_flag">README</a></li>
+<li class="open"><a href="#Constants">Constants</a></li>
+<li class="open"><a href="#new_flag_parser">fn new_flag_parser</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#[]Flag.str">type []Flag</a>        <ul>
+<li><a href="#[]Flag.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#FlagParser">struct FlagParser</a>        <ul>
+<li><a href="#FlagParser.usage_example">fn usage_example</a></li>
+<li><a href="#FlagParser.footer">fn footer</a></li>
+<li><a href="#FlagParser.application">fn application</a></li>
+<li><a href="#FlagParser.version">fn version</a></li>
+<li><a href="#FlagParser.description">fn description</a></li>
+<li><a href="#FlagParser.skip_executable">fn skip_executable</a></li>
+<li><a href="#FlagParser.allow_unknown_args">fn allow_unknown_args</a></li>
+<li><a href="#FlagParser.bool_opt">fn bool_opt</a></li>
+<li><a href="#FlagParser.bool">fn bool</a></li>
+<li><a href="#FlagParser.int_multi">fn int_multi</a></li>
+<li><a href="#FlagParser.int_opt">fn int_opt</a></li>
+<li><a href="#FlagParser.int">fn int</a></li>
+<li><a href="#FlagParser.float_multi">fn float_multi</a></li>
+<li><a href="#FlagParser.float_opt">fn float_opt</a></li>
+<li><a href="#FlagParser.float">fn float</a></li>
+<li><a href="#FlagParser.string_multi">fn string_multi</a></li>
+<li><a href="#FlagParser.string_opt">fn string_opt</a></li>
+<li><a href="#FlagParser.string">fn string</a></li>
+<li><a href="#FlagParser.limit_free_args_to_at_least">fn limit_free_args_to_at_least</a></li>
+<li><a href="#FlagParser.limit_free_args_to_exactly">fn limit_free_args_to_exactly</a></li>
+<li><a href="#FlagParser.limit_free_args">fn limit_free_args</a></li>
+<li><a href="#FlagParser.arguments_description">fn arguments_description</a></li>
+<li><a href="#FlagParser.usage">fn usage</a></li>
+<li><a href="#FlagParser.finalize">fn finalize</a></li>
+<li><a href="#FlagParser.remaining_parameters">fn remaining_parameters</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Flag">struct Flag</a>        <ul>
+<li><a href="#Flag.str">fn str</a></li>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>

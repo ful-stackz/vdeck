@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>rand | vdoc</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module"></div>
+							<div class="toggle-version-container">
+								<span></span>
+								<div id="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<input type="text" id="search" placeholder="Search... (beta)" autocomplete="off">
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><div class="menu-row"><a href="./arrays.html">arrays</a></div></li><li class="open"><div class="menu-row"><a href="./benchmark.html">benchmark</a></div></li><li class="open"><div class="menu-row"><a href="./bitfield.html">bitfield</a></div></li><li class="open"><div class="menu-row"><a href="./builtin.html">builtin</a></div></li><li class="open"><div class="menu-row"><a href="./cli.html">cli</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./clipboard.html">clipboard</a></div><ul><li><a href="./clipboard.dummy.html">dummy</a></li><li><a href="./clipboard.x11.html">x11</a></li></ul></li><li class="open"><div class="menu-row"><a href="./context.html">context</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./crypto.html">crypto</a></div><ul><li><a href="./crypto.aes.html">aes</a></li><li><a href="./crypto.cipher.html">cipher</a></li><li><a href="./crypto.hmac.html">hmac</a></li><li><a href="./crypto.internal.subtle.html">internal.subtle</a></li><li><a href="./crypto.md5.html">md5</a></li><li><a href="./crypto.rand.html">rand</a></li><li><a href="./crypto.rc4.html">rc4</a></li><li><a href="./crypto.sha1.html">sha1</a></li><li><a href="./crypto.sha256.html">sha256</a></li><li><a href="./crypto.sha512.html">sha512</a></li></ul></li><li class="open"><div class="menu-row"><a href="./darwin.html">darwin</a></div></li><li class="open"><div class="menu-row"><a href="./dl.html">dl</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">encoding</a></div><ul><li><a href="./encoding.base64.html">base64</a></li><li><a href="./encoding.binary.html">binary</a></li><li><a href="./encoding.csv.html">csv</a></li><li><a href="./encoding.utf8.html">utf8</a></li><li><a href="./encoding.utf8.east_asian.html">utf8.east_asian</a></li></ul></li><li class="open"><div class="menu-row"><a href="./eventbus.html">eventbus</a></div></li><li class="open"><div class="menu-row"><a href="./flag.html">flag</a></div></li><li class="open"><div class="menu-row"><a href="./fontstash.html">fontstash</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./gg.html">gg</a></div><ul><li><a href="./gg.m4.html">m4</a></li></ul></li><li class="open"><div class="menu-row"><a href="./glm.html">glm</a></div></li><li class="open"><div class="menu-row"><a href="./gx.html">gx</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./hash.html">hash</a></div><ul><li><a href="./hash.crc32.html">crc32</a></li><li><a href="./hash.fnv1a.html">fnv1a</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./io.html">io</a></div><ul><li><a href="./io.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./json.html">json</a></div></li><li class="open"><div class="menu-row"><a href="./log.html">log</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./math.html">math</a></div><ul><li><a href="./math.big.html">big</a></li><li><a href="./math.bits.html">bits</a></li><li><a href="./math.complex.html">complex</a></li><li><a href="./math.factorial.html">factorial</a></li><li><a href="./math.fractions.html">fractions</a></li><li><a href="./math.mathutil.html">mathutil</a></li><li><a href="./math.stats.html">stats</a></li><li><a href="./math.util.html">util</a></li></ul></li><li class="open"><div class="menu-row"><a href="./mssql.html">mssql</a></div></li><li class="open"><div class="menu-row"><a href="./mysql.html">mysql</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./net.html">net</a></div><ul><li><a href="./net.ftp.html">ftp</a></li><li><a href="./net.html.html">html</a></li><li><a href="./net.http.html">http</a></li><li><a href="./net.http.chunked.html">http.chunked</a></li><li><a href="./net.openssl.html">openssl</a></li><li><a href="./net.smtp.html">smtp</a></li><li><a href="./net.unix.html">unix</a></li><li><a href="./net.urllib.html">urllib</a></li><li><a href="./net.websocket.html">websocket</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./os.html">os</a></div><ul><li><a href="./os.cmdline.html">cmdline</a></li><li><a href="./os.notify.html">notify</a></li></ul></li><li class="open"><div class="menu-row"><a href="./pg.html">pg</a></div></li><li class="open"><div class="menu-row"><a href="./picoev.html">picoev</a></div></li><li class="open"><div class="menu-row"><a href="./picohttpparser.html">picohttpparser</a></div></li><li class="open active"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./rand.html">rand</a></div><ul><li><a href="./rand.constants.html">constants</a></li><li><a href="./rand.dist.html">dist</a></li><li><a href="./rand.mt19937.html">mt19937</a></li><li><a href="./rand.musl.html">musl</a></li><li><a href="./rand.pcg32.html">pcg32</a></li><li><a href="./rand.seed.html">seed</a></li><li><a href="./rand.splitmix64.html">splitmix64</a></li><li><a href="./rand.sys.html">sys</a></li><li><a href="./rand.util.html">util</a></li><li><a href="./rand.wyrand.html">wyrand</a></li></ul></li><li class="open"><div class="menu-row"><a href="./readline.html">readline</a></div></li><li class="open"><div class="menu-row"><a href="./regex.html">regex</a></div></li><li class="open"><div class="menu-row"><a href="./runtime.html">runtime</a></div></li><li class="open"><div class="menu-row"><a href="./semver.html">semver</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sokol.html">sokol</a></div><ul><li><a href="./sokol.audio.html">audio</a></li><li><a href="./sokol.c.html">c</a></li><li><a href="./sokol.f.html">f</a></li><li><a href="./sokol.gfx.html">gfx</a></li><li><a href="./sokol.sapp.html">sapp</a></li><li><a href="./sokol.sfons.html">sfons</a></li><li><a href="./sokol.sgl.html">sgl</a></li></ul></li><li class="open"><div class="menu-row"><a href="./sqlite.html">sqlite</a></div></li><li class="open"><div class="menu-row"><a href="./stbi.html">stbi</a></div></li><li class="open"><div class="menu-row"><a href="./strconv.html">strconv</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./strings.html">strings</a></div><ul><li><a href="./strings.textscanner.html">textscanner</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./sync.html">sync</a></div><ul><li><a href="./sync.atomic2.html">atomic2</a></li><li><a href="./sync.pool.html">pool</a></li></ul></li><li class="open"><div class="menu-row"><a href="./szip.html">szip</a></div></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./term.html">term</a></div><ul><li><a href="./term.ui.html">ui</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./time.html">time</a></div><ul><li><a href="./time.misc.html">misc</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">v</a></div><ul><li><a href="./v.ast.html">ast</a></li><li><a href="./v.ast.walker.html">ast.walker</a></li><li><a href="./v.builder.html">builder</a></li><li><a href="./v.cflag.html">cflag</a></li><li><a href="./v.checker.html">checker</a></li><li><a href="./v.depgraph.html">depgraph</a></li><li><a href="./v.doc.html">doc</a></li><li><a href="./v.embed_file.html">embed_file</a></li><li><a href="./v.errors.html">errors</a></li><li><a href="./v.eval.html">eval</a></li><li><a href="./v.fmt.html">fmt</a></li><li><a href="./v.gen.c.html">gen.c</a></li><li><a href="./v.gen.js.html">gen.js</a></li><li><a href="./v.gen.js.sourcemap.html">gen.js.sourcemap</a></li><li><a href="./v.gen.js.sourcemap.vlq.html">gen.js.sourcemap.vlq</a></li><li><a href="./v.gen.native.html">gen.native</a></li><li><a href="./v.live.html">live</a></li><li><a href="./v.live.executable.html">live.executable</a></li><li><a href="./v.live.sharedlib.html">live.sharedlib</a></li><li><a href="./v.markused.html">markused</a></li><li><a href="./v.parser.html">parser</a></li><li><a href="./v.pkgconfig.html">pkgconfig</a></li><li><a href="./v.pref.html">pref</a></li><li><a href="./v.scanner.html">scanner</a></li><li><a href="./v.token.html">token</a></li><li><a href="./v.util.html">util</a></li><li><a href="./v.util.diff.html">util.diff</a></li><li><a href="./v.util.recompilation.html">util.recompilation</a></li><li><a href="./v.util.vtest.html">util.vtest</a></li><li><a href="./v.vcache.html">vcache</a></li><li><a href="./v.vet.html">vet</a></li><li><a href="./v.vmod.html">vmod</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="./vweb.html">vweb</a></div><ul><li><a href="./vweb.assets.html">assets</a></li><li><a href="./vweb.sse.html">sse</a></li></ul></li><li class="open"><div class="menu-row"><svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg><a href="#">x</a></div><ul><li><a href="./x.json2.html">json2</a></li><li><a href="./x.ttf.html">ttf</a></li><li><a href="./x.websocket.html">websocket</a></li></ul></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview">
+				<div class="doc-container">
+					<div class="doc-content">
+						<section id="readme_rand" class="doc-node">
+							<div class="title"><h1> rand <a href="#readme_rand">#</a></h1></div><h1>Quickstart</h1>
+<p>The V <code>rand</code> module provides two main ways in which users can generate pseudorandom numbers:</p>
+<ol>
+<li>Through top-level functions in the <code>rand</code> module.<ul>
+<li><code>import rand</code> - Import the <code>rand</code> module.</li>
+<li><code>rand.seed(seed_data)</code> to seed (optional).</li>
+<li>Use <code>rand.int()</code>, <code>rand.u32n(max)</code>, etc.</li>
+</ul>
+</li>
+<li>Through a generator of choice. The PRNGs are included in their respective submodules.<ul>
+<li><code>import rand.pcg32</code> - Import the module of the PRNG required.</li>
+<li><code>mut rng := pcg32.PCG32RNG{}</code> - Initialize the struct. Note that the <strong><code>mut</code></strong> is important.</li>
+<li><code>rng.seed(seed_data)</code> - optionally seed it with an array of <code>u32</code> values.</li>
+<li>Use <code>rng.int()</code>, <code>rng.u32n(max)</code>, etc.</li>
+</ul>
+</li>
+</ol>
+<p>You can change the default generator to a different one. The only requirement is that
+the generator must implement the <code>PRNG</code> interface. See <code>get_current_rng()</code> and <code>set_rng()</code>.</p>
+<p>For non-uniform distributions, refer to the <code>rand.dist</code> module which defined functions for
+sampling from non-uniform distributions. These functions make use of the global RNG.</p>
+<p><strong>Note:</strong> The global PRNG is not thread safe. It is recommended to use separate generators for
+separate threads in multi-threaded applications. If you need to use non-uniform sampling functions,
+it is recommended to generate them before use in a multi-threaded context.</p>
+<p>For sampling functions and generating random strings, see <code>string_from_set()</code> and other related
+functions defined in this top-level module.</p>
+<p>For arrays, see <code>rand.util</code>.</p>
+<h1>General Background</h1>
+<p>A PRNG is a Pseudo Random Number Generator.
+Computers cannot generate truly random numbers without an external source of noise or entropy.
+We can use algorithms to generate sequences of seemingly random numbers,
+but their outputs will always be deterministic.
+This is often useful for simulations that need the same starting seed.</p>
+<p>If you need truly random numbers that are going to be used for cryptography,
+use the <code>crypto.rand</code> module.</p>
+<h1>Guaranteed functions</h1>
+<p>The following 21 functions are guaranteed to be supported by <code>rand</code>
+as well as the individual PRNGs.</p>
+<ul>
+<li><code>seed(seed_data)</code> where <code>seed_data</code> is an array of <code>u32</code> values.
+Different generators require different number of bits as the initial seed.
+The smallest is 32-bits, required by <code>sys.SysRNG</code>.
+Most others require 64-bits or 2 <code>u32</code> values.</li>
+<li><code>u32()</code>, <code>u64()</code>, <code>int()</code>, <code>i64()</code>, <code>f32()</code>, <code>f64()</code></li>
+<li><code>u32n(max)</code>, <code>u64n(max)</code>, <code>intn(max)</code>, <code>i64n(max)</code>, <code>f32n(max)</code>, <code>f64n(max)</code></li>
+<li><code>u32_in_range(min, max)</code>, <code>u64_in_range(min, max)</code>, <code>int_in_range(min, max)</code>,
+<code>i64_in_range(min, max)</code>, <code>f32_in_range(min, max)</code>, <code>f64_in_range(min, max)</code></li>
+<li><code>int31()</code>, <code>int63()</code></li>
+</ul>
+<p>There are several additional functions defined in the top-level module that rely
+on the global RNG. If you want to make use of those functions with a different
+PRNG, you can can change the global RNG to do so.</p>
+<h1>Seeding Functions</h1>
+<p>All the generators are time-seeded.
+The helper functions publicly available in <code>rand.seed</code> module are:</p>
+<ol>
+<li><code>time_seed_array()</code> - returns a <code>[]u32</code> that can be directly plugged into the <code>seed()</code> functions.</li>
+<li><code>time_seed_32()</code> and <code>time_seed_64()</code> - 32-bit and 64-bit values respectively
+that are generated from the current time.</li>
+</ol>
+<h1>Caveats</h1>
+<p>Note that the <code>sys.SysRNG</code> struct (in the C backend) uses <code>C.srand()</code> which sets the seed globally.
+Consequently, all instances of the RNG will be affected.
+This problem does not arise for the other RNGs.
+A workaround (if you <em>must</em> use the libc RNG) is to:</p>
+<ol>
+<li>Seed the first instance.</li>
+<li>Generate all values required.</li>
+<li>Seed the second instance.</li>
+<li>Generate all values required.</li>
+<li>And so on...</li>
+</ol>
+<h1>Notes</h1>
+<p>Please note that <a href="https://en.wikipedia.org/wiki/Interval_(mathematics)#Including_or_excluding_endpoints">math interval</a> notation is used throughout
+the function documentation to denote what numbers ranges include.
+An example of <code>[0, max)</code> thus denotes a range with all posible values
+between <code>0</code> and <code>max</code> <strong>including</strong> 0 but <strong>excluding</strong> <code>max</code>.</p>
+
+</section>
+
+						<section id="ascii" class="doc-node">
+							<div class="title"><h2>fn ascii <a href="#ascii">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">ascii</span><span class="token punctuation">(</span>len <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>ascii returns a random string of the printable ASCII characters with length <code>len</code>.</p>
+
+</section>
+						<section id="byte" class="doc-node">
+							<div class="title"><h2>fn byte <a href="#byte">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token builtin">byte</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">byte</span></code></pre>
+<p>byte returns a uniformly distributed pseudorandom 8-bit unsigned positive <code>byte</code>.</p>
+
+</section>
+						<section id="f32" class="doc-node">
+							<div class="title"><h2>fn f32 <a href="#f32">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token builtin">f32</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">f32</span></code></pre>
+<p>f32 returns a uniformly distributed 32-bit floating point in range <code>[0, 1)</code>.</p>
+
+</section>
+						<section id="f32_in_range" class="doc-node">
+							<div class="title"><h2>fn f32_in_range <a href="#f32_in_range">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">f32_in_range</span><span class="token punctuation">(</span>min <span class="token builtin">f32</span><span class="token punctuation">,</span> max <span class="token builtin">f32</span><span class="token punctuation">)</span> <span class="token builtin">f32</span></code></pre>
+<p>f32_in_range returns a uniformly distributed 32-bit floating point in range <code>[min, max)</code>.</p>
+
+</section>
+						<section id="f32n" class="doc-node">
+							<div class="title"><h2>fn f32n <a href="#f32n">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">f32n</span><span class="token punctuation">(</span>max <span class="token builtin">f32</span><span class="token punctuation">)</span> <span class="token builtin">f32</span></code></pre>
+<p>f32n returns a uniformly distributed 32-bit floating point in range <code>[0, max)</code>.</p>
+
+</section>
+						<section id="f64" class="doc-node">
+							<div class="title"><h2>fn f64 <a href="#f64">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token builtin">f64</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">f64</span></code></pre>
+<p>f64 returns a uniformly distributed 64-bit floating point in range <code>[0, 1)</code>.</p>
+
+</section>
+						<section id="f64_in_range" class="doc-node">
+							<div class="title"><h2>fn f64_in_range <a href="#f64_in_range">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">f64_in_range</span><span class="token punctuation">(</span>min <span class="token builtin">f64</span><span class="token punctuation">,</span> max <span class="token builtin">f64</span><span class="token punctuation">)</span> <span class="token builtin">f64</span></code></pre>
+<p>f64_in_range returns a uniformly distributed 64-bit floating point in range <code>[min, max)</code>.</p>
+
+</section>
+						<section id="f64n" class="doc-node">
+							<div class="title"><h2>fn f64n <a href="#f64n">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">f64n</span><span class="token punctuation">(</span>max <span class="token builtin">f64</span><span class="token punctuation">)</span> <span class="token builtin">f64</span></code></pre>
+<p>f64n returns a uniformly distributed 64-bit floating point in range <code>[0, max)</code>.</p>
+
+</section>
+						<section id="get_current_rng" class="doc-node">
+							<div class="title"><h2>fn get_current_rng <a href="#get_current_rng">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">get_current_rng</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&</span>PRNG</code></pre>
+<p>get_current_rng returns the PRNG instance currently in use. If it is not changed, it will be an instance of wyrand.WyRandRNG.</p>
+
+</section>
+						<section id="hex" class="doc-node">
+							<div class="title"><h2>fn hex <a href="#hex">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">hex</span><span class="token punctuation">(</span>len <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>hex returns a hexadecimal number of length <code>len</code> containing random characters in range <code>[a-f0-9]</code>.</p>
+
+</section>
+						<section id="i64" class="doc-node">
+							<div class="title"><h2>fn i64 <a href="#i64">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token builtin">i64</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">i64</span></code></pre>
+<p>i64 returns a uniformly distributed pseudorandom 64-bit signed (possibly negative) <code>i64</code>.</p>
+
+</section>
+						<section id="i64_in_range" class="doc-node">
+							<div class="title"><h2>fn i64_in_range <a href="#i64_in_range">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">i64_in_range</span><span class="token punctuation">(</span>min <span class="token builtin">i64</span><span class="token punctuation">,</span> max <span class="token builtin">i64</span><span class="token punctuation">)</span> <span class="token builtin">i64</span></code></pre>
+<p>i64_in_range returns a uniformly distributed pseudorandom 64-bit signed <code>i64</code> in range <code>[min, max)</code>.</p>
+
+</section>
+						<section id="i64n" class="doc-node">
+							<div class="title"><h2>fn i64n <a href="#i64n">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">i64n</span><span class="token punctuation">(</span>max <span class="token builtin">i64</span><span class="token punctuation">)</span> <span class="token builtin">i64</span></code></pre>
+<p>i64n returns a uniformly distributed pseudorandom 64-bit signed positive <code>i64</code> in range <code>[0, max)</code>.</p>
+
+</section>
+						<section id="int" class="doc-node">
+							<div class="title"><h2>fn int <a href="#int">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>int returns a uniformly distributed pseudorandom 32-bit signed (possibly negative) <code>int</code>.</p>
+
+</section>
+						<section id="int31" class="doc-node">
+							<div class="title"><h2>fn int31 <a href="#int31">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">int31</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>int31 returns a uniformly distributed pseudorandom 31-bit signed positive <code>int</code>.</p>
+
+</section>
+						<section id="int63" class="doc-node">
+							<div class="title"><h2>fn int63 <a href="#int63">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">int63</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">i64</span></code></pre>
+<p>int63 returns a uniformly distributed pseudorandom 63-bit signed positive <code>i64</code>.</p>
+
+</section>
+						<section id="int_in_range" class="doc-node">
+							<div class="title"><h2>fn int_in_range <a href="#int_in_range">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">int_in_range</span><span class="token punctuation">(</span>min <span class="token builtin">int</span><span class="token punctuation">,</span> max <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>int_in_range returns a uniformly distributed pseudorandom  32-bit signed int in range <code>[min, max)</code>.  Both <code>min</code> and <code>max</code> can be negative, but we must have <code>min &amp;lt; max</code>.</p>
+
+</section>
+						<section id="intn" class="doc-node">
+							<div class="title"><h2>fn intn <a href="#intn">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">intn</span><span class="token punctuation">(</span>max <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>intn returns a uniformly distributed pseudorandom 32-bit signed positive <code>int</code> in range <code>[0, max)</code>.</p>
+
+</section>
+						<section id="new_default" class="doc-node">
+							<div class="title"><h2>fn new_default <a href="#new_default">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_default</span><span class="token punctuation">(</span>config PRNGConfigStruct<span class="token punctuation">)</span> <span class="token operator">&</span>PRNG</code></pre>
+<p>new_default returns a new instance of the default RNG. If the seed is not provided, the current time will be used to seed the instance.</p>
+
+</section>
+						<section id="ulid_at_millisecond" class="doc-node">
+							<div class="title"><h2>fn ulid_at_millisecond <a href="#ulid_at_millisecond">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">ulid_at_millisecond</span><span class="token punctuation">(</span>unix_time_milli <span class="token builtin">u64</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>ulid_at_millisecond does the same as <code>ulid</code> but takes a custom Unix millisecond timestamp via <code>unix_time_milli</code>.</p>
+
+</section>
+						<section id="ulid" class="doc-node">
+							<div class="title"><h2>fn ulid <a href="#ulid">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">ulid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>ulid generates an Unique Lexicographically sortable IDentifier.  See <a href="https://github.com/ulid/spec">https://github.com/ulid/spec</a> .  NB: ULIDs can leak timing information, if you make them public, because  you can infer the rate at which some resource is being created, like  users or business transactions.  (<a href="https://news.ycombinator.com/item?id=14526173">https://news.ycombinator.com/item?id=14526173</a>)</p>
+
+</section>
+						<section id="seed" class="doc-node">
+							<div class="title"><h2>fn seed <a href="#seed">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">seed</span><span class="token punctuation">(</span>seed <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">u32</span><span class="token punctuation">)</span></code></pre>
+<p>seed sets the given array of <code>u32</code> values as the seed for the <code>default_rng</code>. The default_rng is  an instance of WyRandRNG which takes 2 u32 values. When using a custom RNG, make sure to use  the correct number of u32s.</p>
+
+</section>
+						<section id="set_rng" class="doc-node">
+							<div class="title"><h2>fn set_rng <a href="#set_rng">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">set_rng</span><span class="token punctuation">(</span>rng <span class="token operator">&</span>PRNG<span class="token punctuation">)</span></code></pre>
+<p>set_rng changes the default RNG from wyrand.WyRandRNG (or whatever the last RNG was) to the one  provided by the user. Note that this new RNG must be seeded manually with a constant seed or the  <code>seed.time_seed_array()</code> method. Also, it is recommended to store the old RNG in a variable and  should be restored if work with the custom RNG is complete. It is not necessary to restore if the  program terminates soon afterwards.</p>
+
+</section>
+						<section id="string" class="doc-node">
+							<div class="title"><h2>fn string <a href="#string">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token builtin">string</span><span class="token punctuation">(</span>len <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>string returns a string of length <code>len</code> containing random characters in range <code>[a-zA-Z]</code>.</p>
+
+</section>
+						<section id="string_from_set" class="doc-node">
+							<div class="title"><h2>fn string_from_set <a href="#string_from_set">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">string_from_set</span><span class="token punctuation">(</span>charset <span class="token builtin">string</span><span class="token punctuation">,</span> len <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>string_from_set returns a string of length <code>len</code> containing random characters sampled from the given <code>charset</code></p>
+
+</section>
+						<section id="u32" class="doc-node">
+							<div class="title"><h2>fn u32 <a href="#u32">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token builtin">u32</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">u32</span></code></pre>
+<p>u32 returns a uniformly distributed <code>u32</code> in range <code>[0, 2³²)</code>.</p>
+
+</section>
+						<section id="u32_in_range" class="doc-node">
+							<div class="title"><h2>fn u32_in_range <a href="#u32_in_range">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">u32_in_range</span><span class="token punctuation">(</span>min <span class="token builtin">u32</span><span class="token punctuation">,</span> max <span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">u32</span></code></pre>
+<p>u32_in_range returns a uniformly distributed pseudorandom 32-bit unsigned <code>u32</code> in range <code>[min, max)</code>.</p>
+
+</section>
+						<section id="u32n" class="doc-node">
+							<div class="title"><h2>fn u32n <a href="#u32n">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">u32n</span><span class="token punctuation">(</span>max <span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">u32</span></code></pre>
+<p>u32n returns a uniformly distributed pseudorandom 32-bit signed positive <code>u32</code> in range <code>[0, max)</code>.</p>
+
+</section>
+						<section id="u64" class="doc-node">
+							<div class="title"><h2>fn u64 <a href="#u64">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token builtin">u64</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">u64</span></code></pre>
+<p>u64 returns a uniformly distributed <code>u64</code> in range <code>[0, 2⁶⁴)</code>.</p>
+
+</section>
+						<section id="u64_in_range" class="doc-node">
+							<div class="title"><h2>fn u64_in_range <a href="#u64_in_range">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">u64_in_range</span><span class="token punctuation">(</span>min <span class="token builtin">u64</span><span class="token punctuation">,</span> max <span class="token builtin">u64</span><span class="token punctuation">)</span> <span class="token builtin">u64</span></code></pre>
+<p>u64_in_range returns a uniformly distributed pseudorandom 64-bit unsigned <code>u64</code> in range <code>[min, max)</code>.</p>
+
+</section>
+						<section id="u64n" class="doc-node">
+							<div class="title"><h2>fn u64n <a href="#u64n">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">u64n</span><span class="token punctuation">(</span>max <span class="token builtin">u64</span><span class="token punctuation">)</span> <span class="token builtin">u64</span></code></pre>
+<p>u64n returns a uniformly distributed pseudorandom 64-bit signed positive <code>u64</code> in range <code>[0, max)</code>.</p>
+
+</section>
+						<section id="uuid_v4" class="doc-node">
+							<div class="title"><h2>fn uuid_v4 <a href="#uuid_v4">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">uuid_v4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>uuid_v4 generates a random (v4) UUID  See <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)">https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)</a></p>
+
+</section>
+						<section id="PRNG" class="doc-node">
+							<div class="title"><h2>interface PRNG <a href="#PRNG">#</a></h2></div><pre class="signature"><code><span class="token keyword">interface</span> <span class="token symbol">PRNG</span> <span class="token punctuation">{</span>
+	<span class="token function">seed</span><span class="token punctuation">(</span>seed_data <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">u32</span><span class="token punctuation">)</span>
+	<span class="token builtin">u32</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">u32</span>
+	<span class="token builtin">u64</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">u64</span>
+	<span class="token function">u32n</span><span class="token punctuation">(</span>max <span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">u32</span>
+	<span class="token function">u64n</span><span class="token punctuation">(</span>max <span class="token builtin">u64</span><span class="token punctuation">)</span> <span class="token builtin">u64</span>
+	<span class="token function">u32_in_range</span><span class="token punctuation">(</span>min <span class="token builtin">u32</span><span class="token punctuation">,</span> max <span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">u32</span>
+	<span class="token function">u64_in_range</span><span class="token punctuation">(</span>min <span class="token builtin">u64</span><span class="token punctuation">,</span> max <span class="token builtin">u64</span><span class="token punctuation">)</span> <span class="token builtin">u64</span>
+	<span class="token builtin">int</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span>
+	<span class="token builtin">i64</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">i64</span>
+	<span class="token function">int31</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span>
+	<span class="token function">int63</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">i64</span>
+	<span class="token function">intn</span><span class="token punctuation">(</span>max <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span>
+	<span class="token function">i64n</span><span class="token punctuation">(</span>max <span class="token builtin">i64</span><span class="token punctuation">)</span> <span class="token builtin">i64</span>
+	<span class="token function">int_in_range</span><span class="token punctuation">(</span>min <span class="token builtin">int</span><span class="token punctuation">,</span> max <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span>
+	<span class="token function">i64_in_range</span><span class="token punctuation">(</span>min <span class="token builtin">i64</span><span class="token punctuation">,</span> max <span class="token builtin">i64</span><span class="token punctuation">)</span> <span class="token builtin">i64</span>
+	<span class="token builtin">f32</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">f32</span>
+	<span class="token builtin">f64</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">f64</span>
+	<span class="token function">f32n</span><span class="token punctuation">(</span>max <span class="token builtin">f32</span><span class="token punctuation">)</span> <span class="token builtin">f32</span>
+	<span class="token function">f64n</span><span class="token punctuation">(</span>max <span class="token builtin">f64</span><span class="token punctuation">)</span> <span class="token builtin">f64</span>
+	<span class="token function">f32_in_range</span><span class="token punctuation">(</span>min <span class="token builtin">f32</span><span class="token punctuation">,</span> max <span class="token builtin">f32</span><span class="token punctuation">)</span> <span class="token builtin">f32</span>
+	<span class="token function">f64_in_range</span><span class="token punctuation">(</span>min <span class="token builtin">f64</span><span class="token punctuation">,</span> max <span class="token builtin">f64</span><span class="token punctuation">)</span> <span class="token builtin">f64</span>
+<span class="token punctuation">}</span></code></pre>
+<p>PRNG is a common interface for all PRNGs that can be used seamlessly with the rand  modules's API. It defines all the methods that a PRNG (in the vlib or custom made) must  implement in order to ensure that <em>all</em> functions can be used with the generator.</p>
+
+</section>
+						<section id="PRNGConfigStruct" class="doc-node">
+							<div class="title"><h2>struct PRNGConfigStruct <a href="#PRNGConfigStruct">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">PRNGConfigStruct</span> <span class="token punctuation">{</span>
+	seed <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">u32</span> <span class="token operator">=</span> seed<span class="token punctuation">.</span><span class="token function">time_seed_array</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>PRNGConfigStruct is a configuration struct for creating a new instance of the default RNG.  Note that the RNGs may have a different number of u32s required for seeding. The default  generator WyRand used 64 bits, ie. 2 u32s so that is the default. In case your desired generator  uses a different number of u32s, use the <code>seed.time_seed_array()</code> method with the correct  number of u32s.</p>
+
+</section>
+
+						<div class="footer">
+							Powered by vdoc. Generated on: 29 Jul 2021 22:25:27
+						</div>
+					</div>
+					<div class="doc-toc"><ul><li class="open"><a href="#readme_rand">README</a></li>
+<li class="open"><a href="#ascii">fn ascii</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#byte">fn byte</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#f32">fn f32</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#f32_in_range">fn f32_in_range</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#f32n">fn f32n</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#f64">fn f64</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#f64_in_range">fn f64_in_range</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#f64n">fn f64n</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#get_current_rng">fn get_current_rng</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#hex">fn hex</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#i64">fn i64</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#i64_in_range">fn i64_in_range</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#i64n">fn i64n</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#int">fn int</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#int31">fn int31</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#int63">fn int63</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#int_in_range">fn int_in_range</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#intn">fn intn</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#new_default">fn new_default</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ulid_at_millisecond">fn ulid_at_millisecond</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#ulid">fn ulid</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#seed">fn seed</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#set_rng">fn set_rng</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#string">fn string</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#string_from_set">fn string_from_set</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#u32">fn u32</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#u32_in_range">fn u32_in_range</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#u32n">fn u32n</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#u64">fn u64</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#u64_in_range">fn u64_in_range</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#u64n">fn u64n</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#uuid_v4">fn uuid_v4</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#PRNG">interface PRNG</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#PRNGConfigStruct">struct PRNGConfigStruct</a>        <ul>
+</ul>
+</li>
+</ul></div>
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js" type="text/javascript"></script>
+	</body>
+</html>
